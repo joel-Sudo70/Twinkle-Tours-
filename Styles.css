@@ -155,20 +155,33 @@ nav a:hover {
     width: 100%;
 }
 
+.hero .overlay > p:first-child {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
 .hero h1 {
     font-size: clamp(42px, 7vw, 78px);
     line-height: 1.05;
-    margin-bottom: 20px;
+    margin: 0 0 8px;
     color: white;
+    letter-spacing: -1px;
 }
 
 .hero h2 {
+    font-size: clamp(24px, 4vw, 36px);
+    margin: 0 0 22px;
     color: white;
+    font-weight: 500;
 }
 
 .hero p {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.6;
+    margin-bottom: 18px;
 }
 
 @media (max-width: 768px) {
