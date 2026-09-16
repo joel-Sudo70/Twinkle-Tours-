@@ -158,14 +158,10 @@ nav a:hover {
 
 .hero {
     min-height: 600px;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(20, 20, 15, 0.65),
-            rgba(20, 20, 15, 0.30)
-        ),
-        url("photo-1761602940558-767baef18fd0.jpeg")
-        center / cover no-repeat;
+    background-image: url("photo-1761602940558-767baef18fd0.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     padding: 90px 6%;
