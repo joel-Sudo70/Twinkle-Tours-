@@ -570,3 +570,55 @@ button:focus-visible {
         width: 145px;
     }
 }
+
+/* MOBILE HEADER IMPROVEMENT */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 12px 5%;
+    background: #ffffff;
+}
+
+.brand img {
+    width: 210px;
+    height: auto;
+    display: block;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    color: #075b43;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 15px;
+    }
+
+    .brand img {
+        width: 145px;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+}
