@@ -765,3 +765,33 @@ button:focus-visible {
     padding: 12px 22px !important;
     border-radius: 30px !important;
 }
+
+/* FINAL FIX FOR OLD NAVBAR LINKS */
+
+.navbar nav a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.navbar nav a.btn {
+    background: var(--gold) !important;
+    color: #173f35 !important;
+    padding: 12px 22px !important;
+    border-radius: 30px !important;
+}
+
+.navbar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+.navbar .brand {
+    margin-right: auto !important;
+}
+
+.navbar nav {
+    display: flex !important;
+    gap: 18px !important;
+    margin-left: auto !important;
+}
