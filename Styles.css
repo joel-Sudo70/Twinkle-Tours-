@@ -162,15 +162,9 @@ nav a:hover {
         linear-gradient(
             90deg,
             rgba(0, 45, 32, 0.82),
-rgba(0, 45, 32, 0.40)
+            rgba(0, 45, 32, 0.40)
+        ),
         url("photo-1761602940558-767baef18fd0.jpeg")
-        center / cover no-repeat;
-    display: flex;
-    align-items: center;
-    padding: 90px 6%;
-    color: white;
-}
-        url("https://images.pexels.com/photos/37362937/pexels-photo-37362937/free-photo-of-african-elephants-cross-road-on-kenyan-safari.jpeg?auto=compress&dpr=1&h=750&w=1260")
         center / cover no-repeat;
     display: flex;
     align-items: center;
