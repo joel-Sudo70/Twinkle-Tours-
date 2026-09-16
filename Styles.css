@@ -60,7 +60,7 @@ a {
     background: transparent;
     padding: 12px 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
     position: absolute;
@@ -69,6 +69,26 @@ a {
     width: 100%;
     z-index: 1000;
     box-shadow: none;
+}
+
+.navbar .brand {
+    margin-right: auto;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar nav .btn {
+    background: var(--gold);
+    color: #173f35;
 }
 
 .navbar h2 {
