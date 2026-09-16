@@ -498,3 +498,24 @@ button:focus-visible {
     outline: 3px solid var(--gold);
     outline-offset: 3px;
 }
+
+/* TWINKLE TOURS LOGO */
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand img {
+    width: 220px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .brand img {
+        width: 170px;
+    }
+}
