@@ -705,3 +705,9 @@ button:focus-visible {
     align-items: center;
     margin-right: 20px;
 }
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+}
