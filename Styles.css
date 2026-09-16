@@ -669,3 +669,22 @@ button:focus-visible {
         font-size: 13px;
     }
 }
+
+/* Twinkle Tours - Transparent Navbar */
+.navbar {
+    background: transparent !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: none !important;
+}
+
+.navbar nav a {
+    color: white;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+}
