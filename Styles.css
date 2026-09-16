@@ -100,7 +100,7 @@ a {
 }
 
 .navbar h2::after {
-    content: "Travel & Tourism Company";
+    
     display: block;
     font-family: Arial, sans-serif;
     font-size: 9px;
