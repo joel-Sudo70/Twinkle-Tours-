@@ -519,3 +519,23 @@ button:focus-visible {
         width: 170px;
     }
 }
+
+/* TWINKLE TOURS LOGO */
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand img {
+    width: 220px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .brand img {
+        width: 145px;
+    }
+}
