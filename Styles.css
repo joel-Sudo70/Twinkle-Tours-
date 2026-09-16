@@ -1,14 +1,500 @@
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#f5f5ef;color:#123}
-.navbar{background:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
-.navbar h2{color:#0b6a45}
-nav a{margin:0 8px;text-decoration:none;color:#0b6a45;font-weight:bold}
-.btn{background:#f4c430;padding:10px 18px;border-radius:30px;color:#123;text-decoration:none}
-.hero{height:80vh;background:url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1600&q=80') center/cover}
-.overlay{height:100%;background:rgba(0,0,0,.45);display:flex;flex-direction:column;justify-content:center;padding:8%;color:#fff}
-.overlay h1{font-size:56px}
-.overlay h3{color:#f4c430;font-size:32px}
-.section{max-width:1100px;margin:auto;padding:40px 20px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
-.card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.1)}
-footer{background:#063826;color:#fff;text-align:center;padding:25px}
+
+/* ========================================
+   TWINKLE TOURS - PROFESSIONAL DESIGN
+   Travel & Tourism Company
+   ======================================== */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background: #f4f8f5;
+    color: #173f35;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ========================================
+   COLORS
+   ======================================== */
+
+:root {
+    --green: #075b43;
+    --dark-green: #003d2d;
+    --light-green: #e9f5ef;
+    --gold: #f4c430;
+    --dark-gold: #d9a900;
+    --white: #ffffff;
+    --text: #173f35;
+    --muted: #65766f;
+    --shadow: 0 4px 18px rgba(0, 55, 40, 0.12);
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
+.navbar {
+    background: var(--white);
+    padding: 12px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.navbar h2 {
+    color: var(--green);
+    font-family: Georgia, serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.navbar h2::after {
+    content: "Travel & Tourism Company";
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #b08a00;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+nav a {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #173f35;
+    padding: 12px 23px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--dark-gold);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+    min-height: 540px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 45, 32, 0.85),
+            rgba(0, 45, 32, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    width: 100%;
+    padding: 80px 7%;
+    color: white;
+}
+
+.overlay h1 {
+    font-size: clamp(38px, 6vw, 72px);
+    font-family: Georgia, serif;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+
+.overlay h2 {
+    font-size: clamp(28px, 4vw, 52px);
+    color: var(--gold);
+    font-family: Georgia, serif;
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.overlay p {
+    font-size: 22px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.overlay .btn {
+    margin-top: 10px;
+}
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 25px;
+}
+
+.section > h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.section > h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+.section > p {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+/* ========================================
+   TOUR PACKAGE CARDS
+   ======================================== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid #e0ebe4;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 60, 40, 0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: var(--green);
+    font-family: Georgia, serif;
+    font-size: 21px;
+    padding: 15px 18px 3px;
+}
+
+.card p {
+    padding: 0 18px 18px;
+    color: var(--green);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+/* ========================================
+   WILDLIFE GALLERY
+   ======================================== */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* ========================================
+   TRAVEL E-BOOKS & CONSULTATION
+   ======================================== */
+
+.ebook-section,
+.consultation-section {
+    background: var(--light-green);
+    border-radius: 18px;
+    padding: 35px;
+    margin: 25px auto;
+    max-width: 1200px;
+    border: 1px solid #d8e9df;
+}
+
+.ebook-section h2,
+.consultation-section h2 {
+    color: var(--green);
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+}
+
+.ebook-section p,
+.consultation-section p {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.price {
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--green);
+    margin: 15px 0;
+}
+
+/* ========================================
+   ABOUT US
+   ======================================== */
+
+#about {
+    background: white;
+    border-radius: 18px;
+    margin-top: 25px;
+}
+
+#about strong {
+    color: var(--green);
+    font-size: 20px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    background: var(--dark-green);
+    color: white;
+    text-align: center;
+    padding: 45px 25px 25px;
+    margin-top: 35px;
+}
+
+footer h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 8px 0;
+    color: #e5f1eb;
+}
+
+footer small {
+    display: block;
+    max-width: 850px;
+    margin: 25px auto 0;
+    padding: 18px;
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    color: #e5f1eb;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - TABLETS
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - PHONES
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        padding: 12px 15px;
+        gap: 10px;
+    }
+
+    .navbar h2 {
+        font-size: 21px;
+    }
+
+    .navbar h2::after {
+        font-size: 8px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        order: 3;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .navbar > .btn {
+        padding: 9px 14px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+        background-position: center;
+    }
+
+    .overlay {
+        padding: 55px 22px;
+    }
+
+    .overlay h1 {
+        font-size: 42px;
+    }
+
+    .overlay h2 {
+        font-size: 31px;
+    }
+
+    .overlay p {
+        font-size: 19px;
+    }
+
+    .section {
+        padding: 38px 18px;
+    }
+
+    .section > h2 {
+        font-size: 27px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card img {
+        height: 210px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .gallery img {
+        height: 150px;
+    }
+
+    .ebook-section,
+    .consultation-section {
+        padding: 25px 20px;
+        margin: 20px 15px;
+    }
+
+    footer {
+        padding: 35px 18px 20px;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
