@@ -161,9 +161,8 @@ nav a:hover {
     background:
         linear-gradient(
             90deg,
-            rgba(0, 45, 32, 0.72),
-            rgba(0, 45, 32, 0.25)
-        ),
+            rgba(0, 45, 32, 0.82),
+rgba(0, 45, 32, 0.40)
         url("photo-1761602940558-767baef18fd0.jpeg")
         center / cover no-repeat;
     display: flex;
