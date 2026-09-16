@@ -688,3 +688,20 @@ button:focus-visible {
 .navbar nav a:hover {
     color: var(--gold);
 }
+
+/* Keep logo on the left */
+.navbar {
+    justify-content: flex-start;
+}
+
+/* Keep the menu on the right */
+.navbar nav {
+    margin-left: auto;
+}
+
+/* Logo size and position */
+.navbar .brand {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
