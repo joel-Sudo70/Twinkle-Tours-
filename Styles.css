@@ -178,39 +178,7 @@ nav a:hover {
         background-position: 65% center;
     }
 
-    .hero .overlay {
-        max-width: 100%;
-    }
-
-    .hero .overlay > p:first-child {
-        font-size: 12px;
-        letter-spacing: 2px;
-        margin-bottom: 15px;
-    }
-
-    .hero h1 {
-        font-size: 45px;
-        line-height: 1.05;
-        margin-bottom: 8px;
-    }
-
-    .hero h2 {
-        font-size: 25px;
-        margin-bottom: 20px;
-    }
-
-    .hero p {
-        font-size: 17px;
-        line-height: 1.55;
-        margin-bottom: 16px;
-    }
-
-    .hero .btn {
-        margin-top: 8px;
-        padding: 14px 25px;
-        font-size: 15px;
-    }
-}
+    photo-1761602940558-767baef18fd0.jpeg
 
 .overlay h1 {
     font-size: clamp(38px, 6vw, 72px);
