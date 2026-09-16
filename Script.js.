@@ -1,5 +1,193 @@
-document.querySelectorAll(".btn").forEach(button=>{
-  button.addEventListener("click",()=>{
-    alert("Thank you for choosing Twinkle Tours! Online booking will be available soon.");
-  });
+
+/* ========================================
+   TWINKLE TOURS - WEBSITE JAVASCRIPT
+   ======================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* ===============================
+       SMOOTH SCROLLING
+    =============================== */
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const targetId = this.getAttribute("href");
+
+            if (targetId === "#") return;
+
+            const target = document.querySelector(targetId);
+
+            if (target) {
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+
+        });
+
+    });
+
+
+    /* ===============================
+       BOOKING FORM
+    =============================== */
+
+    const bookingForm = document.getElementById("bookingForm");
+
+    if (bookingForm) {
+
+        bookingForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const packageName = document.getElementById("package").value;
+            const date = document.getElementById("date").value;
+            const guests = document.getElementById("guests").value;
+            const message = document.getElementById("message").value.trim();
+
+            if (!name || !email || !phone || !packageName || !date) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            const bookingMessage =
+                "Hello Twinkle Tours!%0A%0A" +
+                "NEW BOOKING REQUEST%0A%0A" +
+                "Full Name: " + encodeURIComponent(name) + "%0A" +
+                "Email: " + encodeURIComponent(email) + "%0A" +
+                "Phone: " + encodeURIComponent(phone) + "%0A" +
+                "Package: " + encodeURIComponent(packageName) + "%0A" +
+                "Travel Date: " + encodeURIComponent(date) + "%0A" +
+                "Guests: " + encodeURIComponent(guests || "Not specified") + "%0A" +
+                "Special Requests: " + encodeURIComponent(message || "None");
+
+            const whatsappURL =
+                "https://wa.me/254713354736?text=" + bookingMessage;
+
+            const confirmation = confirm(
+                "Your booking details are ready. Open WhatsApp to send your request to Twinkle Tours?"
+            );
+
+            if (confirmation) {
+                window.open(whatsappURL, "_blank");
+            }
+
+        });
+
+    }
+
+
+    /* ===============================
+       CUSTOMER FEEDBACK
+    =============================== */
+
+    const feedbackForm = document.getElementById("feedbackForm");
+
+    if (feedbackForm) {
+
+        feedbackForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const feedbackName =
+                document.getElementById("feedbackName").value.trim();
+
+            const feedbackMessage =
+                document.getElementById("feedbackMessage").value.trim();
+
+            if (!feedbackName || !feedbackMessage) {
+                alert("Please fill in your name and feedback.");
+                return;
+            }
+
+            const feedbackText =
+                "Hello Twinkle Tours!%0A%0A" +
+                "CUSTOMER FEEDBACK%0A%0A" +
+                "Name: " + encodeURIComponent(feedbackName) + "%0A" +
+                "Feedback: " + encodeURIComponent(feedbackMessage);
+
+            const whatsappURL =
+                "https://wa.me/254713354736?text=" + feedbackText;
+
+            const confirmation = confirm(
+                "Thank you for your feedback! Open WhatsApp to send it?"
+            );
+
+            if (confirmation) {
+                window.open(whatsappURL, "_blank");
+            }
+
+        });
+
+    }
+
+
+    /* ===============================
+       BOOK NOW BUTTONS
+    =============================== */
+
+    document.querySelectorAll(".btn").forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const href = this.getAttribute("href");
+
+            if (href && href.startsWith("#")) {
+                return;
+            }
+
+            if (href && href.includes("videos.html")) {
+                return;
+            }
+
+        });
+
+    });
+
+
+    /* ===============================
+       SCROLL ANIMATION
+    =============================== */
+
+    const animatedSections = document.querySelectorAll(".section");
+
+    if ("IntersectionObserver" in window) {
+
+        const observer = new IntersectionObserver(function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+
+                }
+
+            });
+
+        }, {
+            threshold: 0.1
+        });
+
+        animatedSections.forEach(function (section) {
+
+            section.style.opacity = "0";
+            section.style.transform = "translateY(20px)";
+            section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+
+            observer.observe(section);
+
+        });
+
+    }
+
 });
