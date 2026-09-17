@@ -158,13 +158,13 @@ nav a:hover {
 
 .hero {
     min-height: 600px;
-    background-image:
+    background:
         linear-gradient(
             90deg,
             rgba(20, 20, 15, 0.45),
             rgba(20, 20, 15, 0.15)
         ),
-        url("elephant-safari-hero.png")
+        url("./elephant-safari-hero.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
