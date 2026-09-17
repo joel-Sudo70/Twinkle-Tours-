@@ -2086,3 +2086,7 @@ button:focus-visible {
         font-size: 12px !important;
     }
 }
+
+.navbar {
+    background: red !important;
+}
