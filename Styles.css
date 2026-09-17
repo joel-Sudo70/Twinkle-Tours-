@@ -857,3 +857,19 @@ button:focus-visible {
     color: #173f35 !important;
     border-color: #f4c430 !important;
 }
+
+/* Make package booking buttons visible */
+.card .btn {
+    display: inline-block !important;
+    background: #f4c430 !important;
+    color: #173f35 !important;
+    border: 2px solid #f4c430 !important;
+    padding: 10px 20px !important;
+    border-radius: 25px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
