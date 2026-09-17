@@ -2101,3 +2101,111 @@ button:focus-visible {
 .navbar nav a {
     color: #ffffff !important;
 }
+
+/* FINAL PROFESSIONAL WHITE HEADER */
+
+.navbar {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    min-height: 175px !important;
+    padding: 8px 10px 14px !important;
+    gap: 8px !important;
+
+    background: #ffffff !important;
+    background-image: none !important;
+
+    border-bottom: 3px solid #d9a900 !important;
+    box-shadow: 0 4px 18px rgba(0, 61, 45, 0.12) !important;
+}
+
+/* Keep original logo centered and small */
+.navbar .brand-area {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+/* Hide twin background image */
+.navbar .twin-image,
+.navbar .twin-background {
+    display: none !important;
+}
+
+.navbar .brand {
+    display: block !important;
+    margin: 0 !important;
+}
+
+.navbar .brand img {
+    width: 155px !important;
+    max-width: 155px !important;
+    height: auto !important;
+    max-height: 65px !important;
+    object-fit: contain !important;
+}
+
+/* Navigation below logo */
+.navbar nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+
+    width: 100% !important;
+    margin: 0 !important;
+    gap: 8px 16px !important;
+}
+
+.navbar nav a {
+    color: #075b43 !important;
+    background: transparent !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+}
+
+.navbar nav a:hover {
+    color: #d9a900 !important;
+}
+
+/* Remove old heading text */
+.navbar h2,
+.navbar h2::after {
+    display: none !important;
+}
+
+/* Phone view */
+@media (max-width: 768px) {
+    .navbar {
+        min-height: 175px !important;
+        padding: 8px 7px 14px !important;
+    }
+
+    .navbar .brand img {
+        width: 145px !important;
+        max-width: 145px !important;
+    }
+
+    .navbar nav {
+        gap: 8px 14px !important;
+    }
+
+    .navbar nav a {
+        font-size: 12px !important;
+    }
+}
