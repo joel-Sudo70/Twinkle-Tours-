@@ -1554,3 +1554,70 @@ button:focus-visible {
         max-height: 68px;
     }
 }
+
+/* ==================================================
+   TWIN PHOTO BEHIND ORIGINAL LOGO
+   ================================================== */
+
+.brand-area {
+    position: relative !important;
+    width: 360px !important;
+    height: 82px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    margin-right: auto !important;
+    background: #ffffff !important;
+}
+
+/* Twin photo fills the logo area */
+.twin-background {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    z-index: 1 !important;
+}
+
+/* Original logo sits ABOVE the twin photo */
+.brand {
+    position: relative !important;
+    z-index: 5 !important;
+    display: block !important;
+}
+
+.brand img {
+    position: relative !important;
+    z-index: 5 !important;
+    max-height: 72px !important;
+    width: auto !important;
+    display: block !important;
+}
+
+/* Navigation remains on the right */
+.navbar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+.navbar nav {
+    margin-left: auto !important;
+}
+
+/* Remove old separate twin styling */
+.twin-image {
+    display: none !important;
+}
+
+/* Phone */
+@media (max-width: 768px) {
+    .brand-area {
+        width: 100% !important;
+        max-width: 360px !important;
+        height: 78px !important;
+    }
+}
