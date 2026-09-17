@@ -229,3 +229,42 @@ function sendToWhatsApp() {
 
     window.open(whatsappURL, "_blank");
 }
+
+function sendToWhatsApp() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const destination = document.getElementById("destination").value;
+    const travelDate = document.getElementById("travel-date").value;
+    const travelers = document.getElementById("travelers").value;
+    const message = document.getElementById("message").value.trim();
+
+    if (
+        name === "" ||
+        email === "" ||
+        phone === "" ||
+        destination === "" ||
+        travelDate === "" ||
+        travelers === ""
+    ) {
+        alert("Please fill in all required booking details first.");
+        return;
+    }
+
+    const bookingMessage =
+        "Hello Twinkle Tours!%0A%0A" +
+        "NEW BOOKING REQUEST%0A%0A" +
+        "Full Name: " + encodeURIComponent(name) + "%0A" +
+        "Email: " + encodeURIComponent(email) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A" +
+        "Destination: " + encodeURIComponent(destination) + "%0A" +
+        "Travel Date: " + encodeURIComponent(travelDate) + "%0A" +
+        "Number of Travelers: " + encodeURIComponent(travelers) + "%0A" +
+        "Additional Information: " +
+        encodeURIComponent(message || "None");
+
+    const whatsappURL =
+        "https://wa.me/254713354736?text=" + bookingMessage;
+
+    window.location.href = whatsappURL;
+}
