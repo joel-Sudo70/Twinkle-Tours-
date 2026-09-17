@@ -1332,3 +1332,83 @@ button:focus-visible {
         gap: 10px;
     }
 }
+
+/* ================= PROFESSIONAL HEADER FINISH ================= */
+
+.navbar {
+    background: #ffffff;
+    padding: 10px 3%;
+    min-height: 82px;
+    border-bottom: 2px solid #d9a900;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.brand-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand img {
+    display: block;
+    max-height: 65px;
+    width: auto;
+}
+
+.twin-image {
+    width: 62px;
+    height: 62px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #d9a900;
+    display: block;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-left: auto;
+}
+
+.navbar nav a {
+    color: #075b43 !important;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #d9a900 !important;
+}
+
+/* Mobile header */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 8px 4%;
+    }
+
+    .brand img {
+        max-height: 58px;
+    }
+
+    .twin-image {
+        width: 52px;
+        height: 52px;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        margin-left: 0;
+        gap: 9px;
+        width: 100%;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+}
