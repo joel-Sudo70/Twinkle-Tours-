@@ -605,13 +605,17 @@ button:focus-visible {
 
 /* Twinkle Tours - Transparent Navbar */
 .navbar {
-    background: transparent !important;
-    position: absolute;
-    top: 0;
-    left: 0;
+    .navbar {
+    background: #ffffff !important;
+    padding: 8px 3%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    position: relative !important;
     width: 100%;
     z-index: 1000;
-    box-shadow: none !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
 }
 
 .navbar nav a {
