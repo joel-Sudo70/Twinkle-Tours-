@@ -57,18 +57,31 @@ a {
    ======================================== */
 
 .navbar {
-    background: transparent;
-    padding: 12px 5%;
+    background: #ffffff;
+    padding: 8px 3%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     z-index: 1000;
-    box-shadow: none;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.navbar .brand {
+    margin-right: auto;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar nav a {
+    color: var(--green);
+    text-decoration: none;
 }
 
 .navbar .brand {
