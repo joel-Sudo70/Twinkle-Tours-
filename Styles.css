@@ -2090,3 +2090,14 @@ button:focus-visible {
 .navbar {
     background: red !important;
 }
+
+/* FINAL HEADER TEST */
+
+.navbar {
+    background: #075b43 !important;
+    min-height: 185px !important;
+}
+
+.navbar nav a {
+    color: #ffffff !important;
+}
