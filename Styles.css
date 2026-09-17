@@ -1021,3 +1021,67 @@ button:focus-visible {
         height: 230px;
     }
 }
+
+/* BOOKING FORM */
+.booking-section {
+    background: var(--light-green);
+    text-align: center;
+}
+
+.booking-form {
+    max-width: 650px;
+    margin: 30px auto 0;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.booking-form label {
+    display: block;
+    margin: 15px 0 7px;
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbdcd3;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: var(--green);
+}
+
+.booking-form textarea {
+    resize: vertical;
+}
+
+.booking-form button {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    cursor: pointer;
+    border: none;
+}
+
+/* PHONE FORM DESIGN */
+@media (max-width: 600px) {
+    .booking-form {
+        padding: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
