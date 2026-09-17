@@ -816,3 +816,14 @@ button:focus-visible {
     }
 }
 
+.hero a.btn {
+    background: #f4c430 !important;
+    color: #173f35 !important;
+    border: 2px solid #f4c430 !important;
+}
+
+.hero a.btn:hover {
+    background: #d9a900 !important;
+    color: #173f35 !important;
+    border-color: #d9a900 !important;
+}
