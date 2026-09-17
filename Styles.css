@@ -56,64 +56,114 @@ a {
    NAVIGATION
    ======================================== */
 
+/* ================= FULL TWIN HEADER ================= */
+
 .navbar {
-    background: #ffffff;
-    padding: 8px 3%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
     position: relative;
     width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-}
-
-.navbar .brand {
-    margin-right: auto;
-}
-
-.navbar nav {
+    min-height: 95px;
+    padding: 0 3%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 1000;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("file_00000000dc588211ad4c0991b2c1a406.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+/* Logo area */
+.navbar .brand-area {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+/* Keep the original Twinkle Tours logo */
+.navbar .brand img {
+    display: block;
+    width: auto;
+    max-width: 230px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+/* Navigation */
+.navbar nav {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     gap: 15px;
+    flex-wrap: wrap;
+    margin-left: auto;
 }
 
 .navbar nav a {
-    color: var(--green);
+    color: #ffffff !important;
     text-decoration: none;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.8);
     transition: 0.3s;
 }
 
 .navbar nav a:hover {
-    color: var(--gold);
+    color: #f4c430 !important;
 }
 
-.navbar nav .btn {
-    background: var(--gold);
-    color: #173f35;
-}
-
-.navbar h2 {
-    color: var(--green);
-    font-family: Georgia, serif;
-    font-size: 25px;
-    text-transform: uppercase;
-    line-height: 1.2;
-}
-
+/* Remove old text styling */
+.navbar h2,
 .navbar h2::after {
-    display: block;
-    font-family: Arial, sans-serif;
-    font-size: 9px;
-    font-weight: normal;
-    letter-spacing: 1px;
-    color: #b08a00;
-    text-transform: uppercase;
+    display: none;
 }
 
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: 125px;
+        padding: 8px 10px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+
+        background-position: center;
+    }
+
+    .navbar .brand img {
+        max-width: 190px;
+        max-height: 60px;
+    }
+
+    .navbar nav {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+        margin: 0;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+}
 nav {
     display: flex;
     align-items: center;
