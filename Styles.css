@@ -2590,3 +2590,92 @@ header.navbar .main-nav a.book-now {
         margin-left: 0 !important;
     }
 }
+
+/* ========================================
+   PROFESSIONAL FULL-WIDTH FOOTER
+   ======================================== */
+
+footer {
+    width: 100%;
+    background: var(--dark-green);
+    color: white;
+    padding: 45px 5% 25px;
+    margin-top: 35px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    text-align: left;
+}
+
+.footer-content h3 {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    color: #e5f1eb;
+    margin: 8px 0;
+    line-height: 1.7;
+}
+
+.footer-content a {
+    display: block;
+    color: #e5f1eb;
+    margin: 8px 0;
+    transition: 0.3s;
+}
+
+.footer-content a:hover {
+    color: var(--gold);
+    padding-left: 5px;
+}
+
+footer small {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 18px 10px;
+    border-top: 1px solid var(--gold);
+    color: #e5f1eb;
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* PHONE FOOTER */
+@media (max-width: 768px) {
+    footer {
+        padding: 35px 20px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .footer-content h3 {
+        font-size: 22px;
+    }
+
+    .footer-content a:hover {
+        padding-left: 0;
+    }
+
+    footer small {
+        padding: 18px 5px;
+        font-size: 12px;
+    }
+}
