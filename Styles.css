@@ -2491,3 +2491,145 @@ header.navbar .main-nav a.book-now:hover {
         padding: 9px 15px !important;
     }
 }
+
+/* =================================================
+   FINAL WHITE PROFESSIONAL HEADER
+   ================================================= */
+
+header.navbar {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+
+    width: 100% !important;
+    min-height: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 8px 10px 14px !important;
+    margin: 0 !important;
+    gap: 8px !important;
+
+    background: #ffffff !important;
+    background-image: none !important;
+
+    border-bottom: 3px solid #f4c430 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Keep only the original logo */
+header.navbar .brand-area {
+    width: 100% !important;
+    height: auto !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Hide twin image from header */
+header.navbar .twin-image,
+header.navbar .twin-background {
+    display: none !important;
+}
+
+/* Make original logo smaller */
+header.navbar .brand {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+header.navbar .brand img {
+    width: 135px !important;
+    max-width: 135px !important;
+    height: auto !important;
+    max-height: 62px !important;
+    object-fit: contain !important;
+}
+
+/* Navigation */
+header.navbar nav,
+header.navbar .main-nav {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 8px 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Navigation links */
+header.navbar nav a,
+header.navbar .main-nav a {
+    color: #075b43 !important;
+    background: transparent !important;
+
+    font-family: Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+
+    text-decoration: none !important;
+    text-shadow: none !important;
+
+    padding: 4px 0 !important;
+}
+
+/* Active Home underline */
+header.navbar nav a.active,
+header.navbar .main-nav a.active {
+    border-bottom: 3px solid #f4c430 !important;
+}
+
+/* Book Now button */
+header.navbar nav a.book-now,
+header.navbar .main-nav a.book-now {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #003d2d !important;
+    color: #ffffff !important;
+
+    border: 2px solid #f4c430 !important;
+    border-radius: 25px !important;
+
+    padding: 9px 17px !important;
+}
+
+/* Phone adjustment */
+@media (max-width: 600px) {
+    header.navbar {
+        padding: 8px 8px 13px !important;
+        gap: 7px !important;
+    }
+
+    header.navbar .brand img {
+        width: 125px !important;
+        max-width: 125px !important;
+        max-height: 58px !important;
+    }
+
+    header.navbar nav,
+    header.navbar .main-nav {
+        gap: 7px 15px !important;
+    }
+
+    header.navbar nav a,
+    header.navbar .main-nav a {
+        font-size: 12px !important;
+    }
+}
