@@ -2679,3 +2679,42 @@ footer small {
         font-size: 12px;
     }
 }
+
+/* FINAL FOOTER SPACE FIX */
+
+footer {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 30px 15px 20px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+footer .section,
+footer .container,
+footer .footer-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+footer > div {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+footer small {
+    display: block !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 25px auto 0 !important;
+    padding: 15px 5px !important;
+    border: 0 !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
