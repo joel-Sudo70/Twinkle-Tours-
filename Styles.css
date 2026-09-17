@@ -56,31 +56,7 @@ a {
    NAVIGATION
    ======================================== */
 
-/* ================= FULL TWIN HEADER ================= */
 
-.navbar {
-    position: relative;
-    width: 100%;
-    min-height: 95px;
-    padding: 0 3%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    z-index: 1000;
-
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.25),
-            rgba(0, 0, 0, 0.25)
-        ),
-        url("file_00000000dc588211ad4c0991b2c1a406.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
 }
 
 /* Logo area */
