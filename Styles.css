@@ -909,3 +909,39 @@ button:focus-visible {
     font-weight: 700;
     padding-bottom: 8px;
 }
+
+/* Package card layout */
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card .btn {
+    display: inline-block;
+    align-self: flex-start;
+    margin: 0 18px 18px;
+    padding: 10px 22px;
+    background: #f4c430;
+    color: #173f35;
+    border: 2px solid #f4c430;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Keep package details readable */
+.card p {
+    padding: 0 18px 8px;
+    color: var(--green);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card p:last-of-type {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 8px;
+}
