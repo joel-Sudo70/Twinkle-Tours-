@@ -2633,3 +2633,10 @@ header.navbar .main-nav a.book-now {
         font-size: 12px !important;
     }
 }
+
+/* CSS CONNECTION TEST */
+body header.navbar {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    border: 8px solid red !important;
+}
