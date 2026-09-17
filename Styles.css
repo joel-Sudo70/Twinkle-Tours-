@@ -1659,3 +1659,130 @@ button:focus-visible {
 .brand-area .twin-image {
     display: none !important;
 }
+
+/* =========================================================
+   TWINKLE TOURS — FULL HEADER TWIN PHOTO
+   ========================================================= */
+
+.navbar {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 90px !important;
+    padding: 0 3% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    overflow: hidden !important;
+
+    /* Twin photo becomes the complete header background */
+    background-image: url("file_00000000dc588211ad4c0991b2c1a406.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Natural dark transparent layer so navigation remains readable */
+.navbar::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: rgba(0, 0, 0, 0.28) !important;
+    z-index: 0 !important;
+}
+
+/* Logo area */
+.brand-area {
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    overflow: visible !important;
+}
+
+/* Hide the separate twin image because it is now the header background */
+.brand-area .twin-background,
+.brand-area .twin-image {
+    display: none !important;
+}
+
+/* Keep the ORIGINAL logo */
+.brand {
+    position: relative !important;
+    z-index: 3 !important;
+    display: block !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.brand img {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    max-height: 78px !important;
+    max-width: 230px !important;
+    object-fit: contain !important;
+}
+
+/* Navigation */
+.navbar nav {
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+    margin-left: auto !important;
+}
+
+.navbar nav a {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
+}
+
+.navbar nav a:hover {
+    color: #f4c430 !important;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: 105px !important;
+        padding: 8px 12px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        background-position: center !important;
+    }
+
+    .brand img {
+        max-height: 58px !important;
+        max-width: 190px !important;
+    }
+
+    .navbar nav {
+        width: 100% !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        margin: 0 !important;
+    }
+
+    .navbar nav a {
+        font-size: 12px !important;
+    }
+}
