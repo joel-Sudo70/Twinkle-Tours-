@@ -2830,3 +2830,69 @@ footer {
     }
 
 }
+
+/* ================= FOOTER SIZE FIX ================= */
+
+footer {
+    padding: 28px 20px 0 !important;
+    min-height: auto !important;
+    height: auto !important;
+}
+
+.footer-container {
+    max-width: 1100px !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 18px !important;
+}
+
+.footer-column h3 {
+    font-size: 18px !important;
+    margin-bottom: 8px !important;
+}
+
+.footer-column h4 {
+    font-size: 15px !important;
+    margin-bottom: 8px !important;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 6px !important;
+}
+
+.footer-bottom {
+    margin-top: 20px !important;
+    padding: 12px 0 !important;
+}
+
+.footer-bottom p {
+    font-size: 12px !important;
+}
+
+@media (max-width: 768px) {
+
+    footer {
+        padding: 25px 15px 0 !important;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+    }
+
+    .footer-column h3 {
+        font-size: 19px !important;
+    }
+
+    .footer-column h4 {
+        font-size: 16px !important;
+    }
+
+    .footer-column p,
+    .footer-column a {
+        font-size: 13px !important;
+    }
+
+}
