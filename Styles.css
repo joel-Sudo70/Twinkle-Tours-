@@ -629,188 +629,8 @@ button:focus-visible {
     }
 }
 
-/* Twinkle Tours - Transparent Navbar */
-.navbar {
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.30),
-            rgba(0, 0, 0, 0.30)
-        ),
-        url("file_00000000dc588211ad4c0991b2c1a406.png");
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
-    padding: 8px 3%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    position: relative !important;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
-}
-
-.navbar nav a {
-    color: white;
-}
-
-.navbar nav a:hover {
-    color: var(--gold);
-}
-
-/* Keep logo on the left */
-.navbar {
-    justify-content: flex-start;
-}
-
-/* Keep the menu on the right */
-.navbar nav {
-    margin-left: auto;
-}
-
-/* Logo size and position */
-.navbar .brand {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.navbar nav {
-    display: flex;
-    gap: 20px;
-    margin-left: auto;
-}
-
-/* FINAL NAVBAR POSITION AND COLOUR FIX */
-
-.navbar {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 25px !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    padding: 12px 5% !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    z-index: 1000 !important;
-}
-
-.navbar .brand {
-    display: flex !important;
-    align-items: center !important;
-    margin: 0 !important;
-    margin-right: auto !important;
-}
-
-.navbar .brand img {
-    width: 145px !important;
-    height: auto !important;
-    display: block !important;
-}
-
-.navbar nav {
-    display: flex !important;
-    align-items: center !important;
-    gap: 18px !important;
-    margin: 0 !important;
-}
-
-.navbar nav a {
-    color: white !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-}
-
-.navbar nav a:hover {
-    color: var(--gold) !important;
-}
-
-.navbar nav a.btn {
-    background: var(--gold) !important;
-    color: #173f35 !important;
-    padding: 12px 22px !important;
-    border-radius: 30px !important;
-}
-
-/* FINAL FIX FOR OLD NAVBAR LINKS */
-
-.navbar nav a {
-    color: white !important;
-    text-decoration: none !important;
-}
-
-.navbar nav a.btn {
-    background: var(--gold) !important;
-    color: #173f35 !important;
-    padding: 12px 22px !important;
-    border-radius: 30px !important;
-}
-
-.navbar {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-}
-
-.navbar .brand {
-    margin-right: auto !important;
-}
-
-.navbar nav {
-    display: flex !important;
-    gap: 18px !important;
-    margin-left: auto !important;
-}
-.navbar {
-    background: transparent;
-    padding: 12px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: none;
-}
-
-.navbar .brand {
-    margin: 0;
-}
-
-.navbar .brand img {
-    width: 145px;
-    height: auto;
-}
-
-.navbar nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 12px;
-    width: 100%;
-}
-
-.navbar nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 12px;
-}
-
-.navbar nav .btn {
-    background: var(--gold);
-    color: #173f35;
-    padding: 9px 14px;
-    border-radius: 25px;
-}
 /* FIX MOBILE MENU OVERLAP */
 
 @media (max-width: 768px) {
@@ -2610,3 +2430,104 @@ header.navbar .main-nav a.book-now {
     }
 }
 
+/* ========================================
+   FINAL CLEAN TWINKLE TOURS HEADER
+   ======================================== */
+
+.navbar {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    min-height: 95px;
+    padding: 10px 4% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 20px;
+    background: #ffffff !important;
+    background-image: none !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12) !important;
+    border: none !important;
+    z-index: 1000;
+}
+
+.navbar .brand {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    margin-right: auto !important;
+}
+
+.navbar .brand img {
+    width: 180px !important;
+    height: auto !important;
+    max-height: 80px !important;
+    object-fit: contain;
+}
+
+.navbar nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-wrap: wrap;
+    gap: 14px !important;
+    margin-left: auto !important;
+}
+
+.navbar nav a {
+    color: #075b43 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+}
+
+.navbar nav a:hover {
+    color: #d9a900 !important;
+}
+
+.navbar nav a.book-now {
+    background: #f4c430 !important;
+    color: #173f35 !important;
+    padding: 10px 18px !important;
+    border-radius: 25px !important;
+    border: 2px solid #f4c430 !important;
+}
+
+.navbar nav a.book-now:hover {
+    background: #d9a900 !important;
+    border-color: #d9a900 !important;
+}
+
+/* PHONE HEADER */
+@media (max-width: 768px) {
+    .navbar {
+        position: relative !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding: 12px 10px !important;
+        gap: 12px !important;
+    }
+
+    .navbar .brand {
+        margin: 0 !important;
+    }
+
+    .navbar .brand img {
+        width: 150px !important;
+    }
+
+    .navbar nav {
+        width: 100% !important;
+        justify-content: center !important;
+        gap: 8px 12px !important;
+    }
+
+    .navbar nav a {
+        font-size: 11px !important;
+    }
+
+    .navbar nav a.book-now {
+        padding: 8px 13px !important;
+    }
+}
