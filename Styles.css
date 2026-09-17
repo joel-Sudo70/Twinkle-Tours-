@@ -1269,3 +1269,21 @@ button:focus-visible {
     }
 }
 
+/* Twin image in header */
+.twin-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #d9a900;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* Keep twin image smaller on phones */
+@media (max-width: 768px) {
+    .twin-image {
+        width: 55px;
+        height: 55px;
+    }
+}
