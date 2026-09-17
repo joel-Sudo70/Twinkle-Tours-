@@ -208,7 +208,7 @@ nav a:hover {
         background-position: 65% center;
     }
 
-    photo-1761602940558-767baef18fd0.jpeg
+    }
 
 .overlay h1 {
     font-size: clamp(38px, 6vw, 72px);
@@ -2634,9 +2634,3 @@ header.navbar .main-nav a.book-now {
     }
 }
 
-/* CSS CONNECTION TEST */
-body header.navbar {
-    background-color: #ffffff !important;
-    background-image: none !important;
-    border: 8px solid red !important;
-}
