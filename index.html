@@ -515,7 +515,54 @@
 
 </footer>
 
+<!-- BOOKING SECTION -->
+<section id="booking" class="section booking-section">
 
+    <h2>Book Your Adventure</h2>
+
+    <p>Fill in the form below and our team will contact you to confirm your booking.</p>
+
+    <form class="booking-form" action="https://formsubmit.co/lumwachi03@gmail.com" method="POST">
+
+        <input type="hidden" name="_subject" value="New Twinkle Tours Booking">
+
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="hidden" name="_template" value="table">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="Full Name" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="Email Address" placeholder="Enter your email address" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="Phone Number" placeholder="e.g. 0712345678" required>
+
+        <label for="destination">Choose Destination</label>
+        <select id="destination" name="Destination" required>
+            <option value="">Select a destination</option>
+            <option value="Maasai Mara Migration Trail">Maasai Mara Migration Trail</option>
+            <option value="Amboseli & Kilimanjaro">Amboseli & Kilimanjaro</option>
+            <option value="Serengeti & Ngorongoro">Serengeti & Ngorongoro</option>
+            <option value="Tsavo & Diani Combo">Tsavo & Diani Combo</option>
+            <option value="Other destination">Other destination</option>
+        </select>
+
+        <label for="travel-date">Preferred Travel Date</label>
+        <input type="date" id="travel-date" name="Preferred Travel Date" required>
+
+        <label for="travelers">Number of Travelers</label>
+        <input type="number" id="travelers" name="Number of Travelers" min="1" placeholder="e.g. 2" required>
+
+        <label for="message">Additional Information</label>
+        <textarea id="message" name="Additional Information" rows="5" placeholder="Tell us anything important about your trip"></textarea>
+
+        <button type="submit" class="btn">Submit Booking Request</button>
+
+    </form>
+
+</section>
 <!-- JAVASCRIPT -->
 
 <script src="Script.js"></script>
