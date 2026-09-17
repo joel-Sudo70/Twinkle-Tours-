@@ -1621,3 +1621,41 @@ button:focus-visible {
         height: 78px !important;
     }
 }
+
+/* ===== TWIN PHOTO BEHIND LOGO - FINAL FIX ===== */
+
+.brand-area {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+}
+
+/* Twin photo */
+.brand-area .twin-background {
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    z-index: 0 !important;
+    opacity: 1 !important;
+}
+
+/* Original logo stays above the photo */
+.brand-area .brand {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.brand-area .brand img {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* Make sure the old twin image doesn't interfere */
+.brand-area .twin-image {
+    display: none !important;
+}
