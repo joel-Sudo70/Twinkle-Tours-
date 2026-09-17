@@ -839,3 +839,15 @@ button:focus-visible {
     color: #173f35 !important;
     border-color: #d9a900 !important;
 }
+
+.hero .overlay a.btn {
+    background-color: #f4c430 !important;
+    color: #173f35 !important;
+    border-color: #f4c430 !important;
+}
+
+.hero .overlay a.btn:hover {
+    background-color: #d9a900 !important;
+    color: #173f35 !important;
+    border-color: #d9a900 !important;
+}
