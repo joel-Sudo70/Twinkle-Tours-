@@ -1836,3 +1836,106 @@ button:focus-visible {
         font-size: 12px !important;
     }
 }
+
+/* =====================================================
+   TWIN PHOTO BEHIND THE WHOLE HEADER
+   KEEP LOGO AND MENU POSITIONS
+   ===================================================== */
+
+.navbar {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+
+    width: 100% !important;
+    min-height: 190px !important;
+    padding: 10px 8px 14px !important;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.30),
+            rgba(0, 0, 0, 0.30)
+        ),
+        url("file_00000000dc588211ad4c0991b2c1a406.png") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    box-shadow: none !important;
+}
+
+/* Keep logo in its current position */
+.navbar .brand-area {
+    position: relative !important;
+    z-index: 5 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+}
+
+/* Hide separate twin image */
+.navbar .twin-background,
+.navbar .twin-image {
+    display: none !important;
+}
+
+/* Original logo stays unchanged */
+.navbar .brand {
+    display: block !important;
+    position: relative !important;
+    z-index: 6 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.navbar .brand img {
+    display: block !important;
+    width: auto !important;
+    max-width: 230px !important;
+    max-height: 85px !important;
+    object-fit: contain !important;
+}
+
+/* Keep menu below the logo */
+.navbar nav {
+    position: relative !important;
+    z-index: 5 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+
+    width: 100% !important;
+    gap: 12px !important;
+    margin: 0 !important;
+}
+
+.navbar nav a {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.9) !important;
+}
+
+.navbar nav a:hover {
+    color: #f4c430 !important;
+}
+
+/* Remove old unwanted heading text */
+.navbar h2,
+.navbar h2::after {
+    display: none !important;
+}
