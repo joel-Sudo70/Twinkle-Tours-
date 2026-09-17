@@ -412,65 +412,214 @@
 
 </section>
 
-<!-- BOOKING SECTION -->
+<!-- ================= BOOKING SECTION ================= -->
+
 <section id="booking" class="section booking-section">
 
     <h2>Book Your Adventure</h2>
 
-    <p>Fill in the form below and our team will contact you to confirm your booking.</p>
+    <p>
+        Fill in the form below and our team will contact you
+        to confirm your booking.
+    </p>
 
-    <form class="booking-form" action="https://formsubmit.co/lumwachi03@gmail.com" method="POST">
+    <form
+        class="booking-form"
+        action="https://formsubmit.co/lumwachi03@gmail.com"
+        method="POST"
+    >
 
-        <input type="hidden" name="_subject" value="New Twinkle Tours Booking">
+        <input
+            type="hidden"
+            name="_subject"
+            value="New Twinkle Tours Booking"
+        >
 
-        <input type="hidden" name="_captcha" value="false">
+        <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+        >
 
-        <input type="hidden" name="_template" value="table">
+        <input
+            type="hidden"
+            name="_template"
+            value="table"
+        >
 
         <label for="name">Full Name</label>
-        <input type="text" id="name" name="Full Name" placeholder="Enter your full name" required>
+        <input
+            type="text"
+            id="name"
+            name="Full Name"
+            placeholder="Enter your full name"
+            required
+        >
 
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="Email Address" placeholder="Enter your email address" required>
+        <input
+            type="email"
+            id="email"
+            name="Email Address"
+            placeholder="Enter your email address"
+            required
+        >
 
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="Phone Number" placeholder="e.g. 0712345678" required>
+        <input
+            type="tel"
+            id="phone"
+            name="Phone Number"
+            placeholder="e.g. 0712345678"
+            required
+        >
 
         <label for="destination">Choose Destination</label>
-        <select id="destination" name="Destination" required>
+
+        <select
+            id="destination"
+            name="Destination"
+            required
+        >
             <option value="">Select a destination</option>
-            <option value="Maasai Mara Migration Trail">Maasai Mara Migration Trail</option>
-            <option value="Amboseli & Kilimanjaro">Amboseli & Kilimanjaro</option>
-            <option value="Serengeti & Ngorongoro">Serengeti & Ngorongoro</option>
-            <option value="Tsavo & Diani Combo">Tsavo & Diani Combo</option>
-            <option value="Other destination">Other destination</option>
+            <option value="Maasai Mara Migration Trail">
+                Maasai Mara Migration Trail
+            </option>
+            <option value="Amboseli & Kilimanjaro">
+                Amboseli & Kilimanjaro
+            </option>
+            <option value="Serengeti & Ngorongoro">
+                Serengeti & Ngorongoro
+            </option>
+            <option value="Tsavo & Diani Combo">
+                Tsavo & Diani Combo
+            </option>
+            <option value="Other destination">
+                Other destination
+            </option>
         </select>
 
         <label for="travel-date">Preferred Travel Date</label>
-        <input type="date" id="travel-date" name="Preferred Travel Date" required>
+
+        <input
+            type="date"
+            id="travel-date"
+            name="Preferred Travel Date"
+            required
+        >
 
         <label for="travelers">Number of Travelers</label>
-        <input type="number" id="travelers" name="Number of Travelers" min="1" placeholder="e.g. 2" required>
+
+        <input
+            type="number"
+            id="travelers"
+            name="Number of Travelers"
+            min="1"
+            placeholder="e.g. 2"
+            required
+        >
 
         <label for="message">Additional Information</label>
-        <textarea id="message" name="Additional Information" rows="5" placeholder="Tell us anything important about your trip"></textarea>
+
+        <textarea
+            id="message"
+            name="Additional Information"
+            rows="5"
+            placeholder="Tell us anything important about your trip"
+        ></textarea>
 
         <button type="submit" class="btn">
-    Submit Booking Request
-</button>
+            Submit Booking Request
+        </button>
 
-<button type="button" class="whatsapp-btn" onclick="sendToWhatsApp()">
-    Send Booking via WhatsApp
-</button>
+        <button
+            type="button"
+            class="whatsapp-btn"
+            onclick="sendToWhatsApp()"
+        >
+            Send Booking via WhatsApp
+        </button>
 
+    </form>
 
 </section>
-<!-- JAVASCRIPT -->
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>TWINKLE TOURS</h3>
+
+            <p>Travel & Tourism Company</p>
+
+            <p>Travel with us and us with you.</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+
+            <p>
+                📞
+                <a href="tel:0713354736">
+                    0713354736
+                </a>
+            </p>
+
+            <p>
+                📧
+                <a href="mailto:lumwachi03@gmail.com">
+                    lumwachi03@gmail.com
+                </a>
+            </p>
+
+            <p>📍 Nairobi, Kenya</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#packages">Packages</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About Us</a>
+            <a href="#booking">Book Now</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Disclaimer</h4>
+
+            <p>
+                Twinkle Tours is not a licensed tour operator.
+                We connect clients with fully registered and
+                licensed tourism companies for travel services.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Twinkle Tours. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script src="Script.js."></script>
 
-</script>
-<!-- FLOATING WHATSAPP BUTTON -->
+
+<!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+
 <a
     href="https://wa.me/254713354736?text=Hello%20Twinkle%20Tours%2C%20I%20would%20like%20to%20make%20an%20inquiry."
     target="_blank"
@@ -495,20 +644,24 @@
     "
 >
     <svg
-    viewBox="0 0 32 32"
-    width="34"
-    height="34"
-    aria-hidden="true"
->
-    <path
-        fill="white"
-        d="M19.11 17.2c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.34-1.56-1.5-1.83-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.57.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
-    />
-    <path
-        fill="white"
-        d="M16.02 3.2c-7.08 0-12.84 5.76-12.84 12.84 0 2.26.59 4.46 1.72 6.4L3.1 28.8l6.51-1.71a12.8 12.8 0 0 0 6.41 1.72h.01c7.08 0 12.84-5.76 12.84-12.84S23.1 3.2 16.02 3.2zm0 23.46h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.86 1.01 1.03-3.76-.25-.39a10.62 10.62 0 1 1 8.88 4.85z"
-    />
-</svg>
+        viewBox="0 0 32 32"
+        width="34"
+        height="34"
+        aria-hidden="true"
+    >
+        <path
+            fill="white"
+            d="M19.11 17.2c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.34-1.56-1.5-1.83-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.57.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
+        />
+
+        <path
+            fill="white"
+            d="M16.02 3.2c-7.08 0-12.84 5.76-12.84 12.84 0 2.26.59 4.46 1.72 6.4L3.1 28.8l6.51-1.71a12.8 12.8 0 0 0 6.41 1.72h.01c7.08 0 12.84-5.76 12.84-12.84S23.1 3.2 16.02 3.2zm0 23.46h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.86 1.01 1.03-3.76-.25-.39a10.62 10.62 0 1 1 8.88 4.85z"
+        />
+    </svg>
+
 </a>
+
+
 </body>
 </html>
