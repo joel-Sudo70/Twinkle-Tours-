@@ -3032,3 +3032,115 @@ footer#contact .footer-bottom p {
     }
 
 }
+
+/* ================= FINAL FOOTER FIX ================= */
+
+footer#contact {
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 22px 14px 0 !important;
+    box-sizing: border-box !important;
+    background: #123b32 !important;
+    color: #ffffff !important;
+    text-align: center !important;
+}
+
+/* Footer main area */
+footer#contact > div:first-of-type {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 650px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Footer columns */
+footer#contact > div:first-of-type > div {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+/* Top and disclaimer sections use full width */
+footer#contact > div:first-of-type > div:first-child,
+footer#contact > div:first-of-type > div:last-child {
+    grid-column: 1 / -1 !important;
+}
+
+/* Footer headings */
+footer#contact h3 {
+    font-size: 19px !important;
+    line-height: 1.2 !important;
+    margin: 0 0 7px !important;
+    color: #f4c430 !important;
+}
+
+footer#contact h4 {
+    font-size: 15px !important;
+    line-height: 1.2 !important;
+    margin: 0 0 7px !important;
+    color: #f4c430 !important;
+}
+
+/* Footer text */
+footer#contact p {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    margin: 4px 0 !important;
+    padding: 0 !important;
+    overflow-wrap: anywhere !important;
+}
+
+/* Footer links */
+footer#contact a {
+    display: block !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    margin: 4px 0 !important;
+    padding: 0 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Copyright area */
+footer#contact > div:last-child {
+    width: 100% !important;
+    margin: 15px 0 0 !important;
+    padding: 12px 0 !important;
+    border-top: 1px solid rgba(255,255,255,0.3) !important;
+    box-sizing: border-box !important;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+
+    footer#contact {
+        padding: 20px 12px 0 !important;
+    }
+
+    footer#contact > div:first-of-type {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+
+    footer#contact h3 {
+        font-size: 18px !important;
+    }
+
+    footer#contact h4 {
+        font-size: 14px !important;
+    }
+
+    footer#contact p,
+    footer#contact a {
+        font-size: 11px !important;
+    }
+
+}
