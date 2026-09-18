@@ -4076,3 +4076,142 @@ footer.twinkle-footer .footer-bottom {
 
 }
 
+
+/* ========================================
+   TWINKLE TOURS - FOOTER FINAL FIX
+   ======================================== */
+
+footer.twinkle-footer {
+    background: #ffffff !important;
+    color: #173f35 !important;
+    padding: 40px 20px 20px !important;
+    border-top: 5px solid #f4c430 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+footer.twinkle-footer .footer-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 25px !important;
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+/* BRAND */
+footer.twinkle-footer .footer-brand {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+footer.twinkle-footer .footer-brand h3 {
+    color: #075b43 !important;
+    font-size: 28px !important;
+    margin: 0 0 8px !important;
+}
+
+footer.twinkle-footer .footer-brand p {
+    color: #555555 !important;
+    margin: 5px 0 !important;
+}
+
+/* CONTACT + QUICK LINKS */
+footer.twinkle-footer .footer-columns {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 30px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    align-items: start !important;
+}
+
+footer.twinkle-footer .footer-column {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+    color: #173f35 !important;
+}
+
+footer.twinkle-footer .footer-column h4 {
+    color: #075b43 !important;
+    font-size: 20px !important;
+    margin: 0 0 12px !important;
+}
+
+footer.twinkle-footer .footer-column p {
+    color: #555555 !important;
+    margin: 6px 0 !important;
+}
+
+footer.twinkle-footer .footer-column a {
+    color: #555555 !important;
+    text-decoration: none !important;
+    margin: 5px 0 !important;
+}
+
+/* DISCLAIMER */
+footer.twinkle-footer .footer-disclaimer {
+    order: 3 !important;
+    background: #f4f8f5 !important;
+    border: 1px solid #dce8e1 !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    color: #555555 !important;
+}
+
+footer.twinkle-footer .footer-disclaimer h4 {
+    color: #075b43 !important;
+    font-size: 20px !important;
+    margin: 0 0 10px !important;
+}
+
+footer.twinkle-footer .footer-disclaimer p {
+    color: #555555 !important;
+    margin: 0 !important;
+}
+
+/* COPYRIGHT */
+footer.twinkle-footer .footer-bottom {
+    order: 4 !important;
+    border-top: 1px solid #dce8e1 !important;
+    padding-top: 18px !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+footer.twinkle-footer .footer-bottom p {
+    color: #555555 !important;
+    margin: 0 !important;
+}
+
+/* PHONE */
+@media (max-width: 768px) {
+
+    footer.twinkle-footer {
+        padding: 35px 20px 20px !important;
+    }
+
+    footer.twinkle-footer .footer-columns {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+    }
+
+    footer.twinkle-footer .footer-column {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    footer.twinkle-footer .footer-brand h3 {
+        font-size: 25px !important;
+    }
+
+}
+
