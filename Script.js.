@@ -268,3 +268,24 @@ function sendToWhatsApp() {
 
     window.location.href = whatsappURL;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("newsletter-form");
+  const emailInput = document.getElementById("email-input");
+  const msg = document.getElementById("form-msg");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (emailInput.value) {
+        msg.style.color = "#22c55e"; // Success green
+        msg.textContent = "Thank you for subscribing!";
+        emailInput.value = ""; // Clear input
+      } else {
+        msg.style.color = "#ef4444"; // Error red
+        msg.textContent = "Please enter a valid email address.";
+      }
+    });
+  }
+});
