@@ -4841,3 +4841,8 @@ grid-template-columns: 1fr;
 }
 
 }
+
+<video controls preload="metadata" class="lion-video">
+    <source src="Lion hunting.mp4" type="video/mp4">
+    Your browser does not support video playback.
+</video>
