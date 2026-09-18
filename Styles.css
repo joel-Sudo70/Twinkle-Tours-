@@ -4846,3 +4846,108 @@ grid-template-columns: 1fr;
     <source src="Lion hunting.mp4" type="video/mp4">
     Your browser does not support video playback.
 </video>
+
+/* ========================================
+SEPARATE PHOTO & VIDEO GALLERIES
+======================================== */
+
+.gallery-section {
+padding-bottom: 55px;
+}
+
+/* VIDEO GALLERY SECTION */
+
+.video-gallery-section {
+padding: 55px 5% 80px;
+background: #ffffff;
+}
+
+.video-gallery-section .section-title {
+text-align: center;
+max-width: 750px;
+margin: 0 auto 35px;
+}
+
+.video-gallery-section .eyebrow {
+color: #075b43;
+font-weight: 700;
+letter-spacing: 2px;
+font-size: 13px;
+margin-bottom: 8px;
+}
+
+.video-gallery-section .section-title h2 {
+color: #173f35;
+font-size: 36px;
+margin-bottom: 10px;
+}
+
+.video-gallery-section .section-title p {
+color: #65766f;
+}
+
+/* VIDEO CARDS */
+
+.video-gallery {
+width: 100%;
+max-width: 900px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 22px;
+}
+
+.video-item {
+width: 100% !important;
+max-width: 438px !important;
+min-width: 0 !important;
+margin: 0 auto;
+overflow: hidden;
+border-radius: 14px;
+background: #ffffff;
+box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+}
+
+.video-item video {
+width: 100% !important;
+max-width: 100% !important;
+height: 245px !important;
+min-height: 0 !important;
+object-fit: cover !important;
+display: block !important;
+background: #111111;
+}
+
+.video-item h3 {
+padding: 14px 18px;
+margin: 0;
+color: #173f35;
+font-size: 17px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+.video-gallery-section {
+padding: 45px 5% 60px;
+}
+
+.video-gallery-section .section-title h2 {
+    font-size: 30px;
+}
+
+.video-gallery {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    gap: 18px;
+}
+
+.video-item {
+    max-width: 100% !important;
+}
+
+.video-item video {
+    height: 245px !important;
+}
+
+}
