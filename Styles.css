@@ -4793,3 +4793,51 @@ max-width: 440px;
 }
 
 }
+
+/* FINAL FIX - ALL SAFARI VIDEOS SAME SIZE */
+
+.video-gallery {
+width: 100%;
+max-width: 900px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 24px;
+}
+
+.video-item {
+width: 100% !important;
+max-width: 438px !important;
+min-width: 0 !important;
+margin: 0 auto;
+overflow: hidden;
+border-radius: 14px;
+}
+
+.video-item video {
+width: 100% !important;
+max-width: 100% !important;
+height: 245px !important;
+min-height: 0 !important;
+object-fit: cover !important;
+display: block !important;
+}
+
+@media (max-width: 600px) {
+.video-gallery {
+width: 100%;
+max-width: 440px;
+grid-template-columns: 1fr;
+}
+
+.video-item {
+    width: 100% !important;
+    max-width: 440px !important;
+}
+
+.video-item video {
+    width: 100% !important;
+    height: 245px !important;
+}
+
+}
