@@ -4490,3 +4490,57 @@ footer.twinkle-footer .footer-bottom p {
     }
 
 }
+
+.videos-section {
+    padding: 80px 6%;
+    background: #f4f8f5;
+    text-align: center;
+}
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.video-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    text-align: left;
+}
+
+.video-card video {
+    width: 100%;
+    height: 220px;
+    display: block;
+    background: #000000;
+    object-fit: cover;
+}
+
+.video-card h3 {
+    color: #075b43;
+    padding: 18px 20px 5px;
+}
+
+.video-card p {
+    color: #65766f;
+    padding: 0 20px 20px;
+}
+
+@media (max-width: 900px) {
+    .video-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .video-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .video-card video {
+        height: auto;
+    }
+}
