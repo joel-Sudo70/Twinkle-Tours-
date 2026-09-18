@@ -3556,3 +3556,195 @@ footer .copyright {
     }
 
 }
+
+
+/* ========================================
+   FINAL TWINKLE TOURS FOOTER FIX
+   ======================================== */
+
+/* Footer main container */
+.twinkle-footer {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #123b32 !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 35px 15px 20px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+/* Inner footer */
+.twinkle-footer .footer-inner {
+    display: block !important;
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Footer brand */
+.twinkle-footer .footer-brand {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 25px !important;
+}
+
+.twinkle-footer .footer-brand h3 {
+    color: #f4c430 !important;
+    font-size: 30px !important;
+    margin: 0 0 8px !important;
+}
+
+.twinkle-footer .footer-brand p {
+    color: white !important;
+    font-size: 15px !important;
+    margin: 5px 0 !important;
+}
+
+/* Contact and Quick Links row */
+.twinkle-footer .footer-columns {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 35px !important;
+    width: 100% !important;
+    max-width: 750px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Each footer column */
+.twinkle-footer .footer-column {
+    display: block !important;
+    flex: 1 1 0 !important;
+    width: 50% !important;
+    min-width: 0 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+/* Footer headings */
+.twinkle-footer .footer-column h4,
+.twinkle-footer .footer-disclaimer h4 {
+    color: #f4c430 !important;
+    font-size: 21px !important;
+    margin: 0 0 12px !important;
+}
+
+/* Footer text */
+.twinkle-footer .footer-column p {
+    color: white !important;
+    font-size: 14px !important;
+    margin: 8px 0 !important;
+    overflow-wrap: anywhere !important;
+}
+
+/* Footer links */
+.twinkle-footer .footer-column a {
+    display: block !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    margin: 8px 0 !important;
+    overflow-wrap: anywhere !important;
+}
+
+/* Disclaimer MUST be below both columns */
+.twinkle-footer .footer-disclaimer {
+    display: block !important;
+    clear: both !important;
+    width: 100% !important;
+    max-width: 800px !important;
+    margin: 30px auto 0 !important;
+    padding: 20px 15px !important;
+    border-top: 1px solid rgba(255,255,255,0.35) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.35) !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+/* Disclaimer text */
+.twinkle-footer .footer-disclaimer p {
+    color: white !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+    overflow-wrap: anywhere !important;
+}
+
+/* Copyright */
+.twinkle-footer .footer-bottom {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding-top: 20px !important;
+}
+
+.twinkle-footer .footer-bottom p {
+    color: white !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+}
+
+/* ========================================
+   MOBILE FOOTER
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .twinkle-footer {
+        padding: 30px 15px 18px !important;
+    }
+
+    .twinkle-footer .footer-brand h3 {
+        font-size: 27px !important;
+    }
+
+    .twinkle-footer .footer-columns {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 25px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .twinkle-footer .footer-column {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    .twinkle-footer .footer-column h4 {
+        font-size: 21px !important;
+    }
+
+    .twinkle-footer .footer-column p,
+    .twinkle-footer .footer-column a {
+        font-size: 15px !important;
+    }
+
+    .twinkle-footer .footer-disclaimer {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 25px !important;
+        padding: 18px 8px !important;
+    }
+
+    .twinkle-footer .footer-disclaimer p {
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+    }
+
+    .twinkle-footer .footer-bottom p {
+        font-size: 13px !important;
+    }
+
+}
+
