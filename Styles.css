@@ -4544,3 +4544,66 @@ footer.twinkle-footer .footer-bottom p {
     height: 210px;
     object-fit: contain;
 }
+
+.gallery-section {
+    padding: 80px 6%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 260px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-caption {
+    padding: 18px;
+    text-align: left;
+}
+
+.gallery-caption h3 {
+    color: #075b43;
+    margin-bottom: 6px;
+}
+
+.gallery-caption p {
+    color: #65766f;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 240px;
+    }
+}
