@@ -4541,6 +4541,6 @@ footer.twinkle-footer .footer-bottom p {
     }
 
     .video-card video {
-        height: auto;
-    }
+    height: 210px;
+    object-fit: contain;
 }
