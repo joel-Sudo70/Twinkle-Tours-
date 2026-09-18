@@ -12,6 +12,143 @@
     <link rel="stylesheet" href="Styles.css">
 </head>
 
+<style>
+/* ========================================
+   TWINKLE TOURS - HEADER & HERO FIX
+   ======================================== */
+
+/* HEADER */
+.navbar {
+    background: #ffffff !important;
+    padding: 10px 4% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    position: relative !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+    z-index: 1000 !important;
+}
+
+.brand-area {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+}
+
+.brand {
+    display: block !important;
+}
+
+.brand img {
+    display: block !important;
+    width: 170px !important;
+    height: auto !important;
+    max-width: 100% !important;
+}
+
+/* NAVIGATION */
+.main-nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-wrap: wrap !important;
+    gap: 18px !important;
+    margin-left: auto !important;
+}
+
+.main-nav a {
+    color: #075b43 !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+}
+
+.main-nav .book-now {
+    background: #075b43 !important;
+    color: #ffffff !important;
+    border: 3px solid #f4c430 !important;
+    border-radius: 30px !important;
+    padding: 12px 22px !important;
+}
+
+/* HERO */
+.hero {
+    min-height: 650px !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.hero .overlay {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 60px 8% !important;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.60),
+        rgba(0,0,0,0.10)
+    ) !important;
+}
+
+.hero .overlay p {
+    max-width: 650px !important;
+    color: #ffffff !important;
+}
+
+/* PHONE */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    .brand-area {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .brand img {
+        width: 170px !important;
+    }
+
+    .main-nav {
+        width: 100% !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        margin-left: 0 !important;
+    }
+
+    .main-nav a {
+        font-size: 14px !important;
+    }
+
+    .main-nav .book-now {
+        padding: 10px 18px !important;
+    }
+
+    .hero {
+        min-height: 650px !important;
+        background-position: center center !important;
+    }
+
+    .hero .overlay {
+        padding: 80px 7% 50px !important;
+        background: linear-gradient(
+            90deg,
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.20)
+        ) !important;
+    }
+}
+</style>
+
 
 <body>
 
