@@ -2905,3 +2905,130 @@ footer {
 .footer-container br {
     display: none !important;
 }
+
+/* ================= COMPACT MOBILE FOOTER FIX ================= */
+
+footer#contact {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 25px 15px 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    background: #123b32 !important;
+    color: white !important;
+}
+
+footer#contact .footer-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 22px 18px !important;
+    box-sizing: border-box !important;
+}
+
+footer#contact .footer-column {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+}
+
+footer#contact .footer-column:first-child,
+footer#contact .footer-column:last-child {
+    grid-column: 1 / -1 !important;
+    text-align: center !important;
+}
+
+footer#contact h3 {
+    margin: 0 0 7px !important;
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+}
+
+footer#contact h4 {
+    margin: 0 0 9px !important;
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+}
+
+footer#contact p {
+    margin: 0 0 7px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    overflow-wrap: anywhere !important;
+}
+
+footer#contact a {
+    display: block !important;
+    margin: 0 0 7px !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+footer#contact .footer-bottom {
+    width: 100% !important;
+    margin: 22px 0 0 !important;
+    padding: 14px 0 !important;
+    border-top: 1px solid rgba(255,255,255,0.3) !important;
+    text-align: center !important;
+}
+
+footer#contact .footer-bottom p {
+    margin: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+}
+
+/* Desktop footer */
+@media (min-width: 769px) {
+
+    footer#contact .footer-container {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 25px !important;
+    }
+
+    footer#contact .footer-column {
+        text-align: left !important;
+    }
+
+    footer#contact .footer-column:first-child,
+    footer#contact .footer-column:last-child {
+        grid-column: auto !important;
+        text-align: left !important;
+    }
+
+}
+
+/* Smaller phones */
+@media (max-width: 380px) {
+
+    footer#contact {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    footer#contact .footer-container {
+        gap: 18px 12px !important;
+    }
+
+    footer#contact h3 {
+        font-size: 18px !important;
+    }
+
+    footer#contact h4 {
+        font-size: 15px !important;
+    }
+
+    footer#contact p,
+    footer#contact a {
+        font-size: 12px !important;
+    }
+
+}
