@@ -7,6 +7,48 @@
     <title>Photos | Twinkle Tours</title>
 
     <link rel="stylesheet" href="Styles.css">
+<style>
+.photo-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+    max-width: 1000px !important;
+    margin: 25px auto !important;
+    padding: 0 15px !important;
+}
+
+.photo-card {
+    width: 100% !important;
+    overflow: hidden !important;
+    background: white !important;
+    border-radius: 12px !important;
+}
+
+.photo-card img {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.photo-card h3 {
+    font-size: 15px !important;
+    padding: 10px !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+@media (max-width: 480px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .photo-card img {
+        height: 160px !important;
+    }
+}
+</style>
+
 </head>
 
 <body>
@@ -135,4 +177,4 @@
 <footer class="site-footer">
 
     <p>
-        © 2026 Twinkle Tours. All
+        © 2026 Twinkle Tours. All RIGHTS RESERVED.
