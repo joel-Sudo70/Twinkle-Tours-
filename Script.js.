@@ -269,3 +269,10 @@ function sendToWhatsApp() {
     window.location.href = whatsappURL;
 }
 
+function buyEbook(bookName) {
+alert("Thank you for choosing " + bookName + "! Payment and download options will be available soon.");
+}
+
+function comingSoon() {
+alert("This e-book is coming soon. Please check back later!");
+}
