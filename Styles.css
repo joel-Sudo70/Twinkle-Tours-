@@ -5485,3 +5485,143 @@ padding: 45px 5% 60px;
         margin-bottom: 20px !important;
     }
 }
+
+/* ========================================
+TWINKLE TOURS E-BOOK STORE
+======================================== */
+
+.ebooks-section {
+padding: 80px 6%;
+background: #f7f9f7;
+}
+
+.ebook-store {
+max-width: 1200px;
+margin: 40px auto 0;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 28px;
+}
+
+.ebook-card {
+background: #ffffff;
+border-radius: 16px;
+overflow: hidden;
+box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+border: 1px solid #e2e8e3;
+transition: 0.3s ease;
+}
+
+.ebook-card:hover {
+transform: translateY(-7px);
+box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.ebook-cover {
+height: 330px;
+position: relative;
+overflow: hidden;
+background: #173f35;
+}
+
+.ebook-cover img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.ebook-badge {
+position: absolute;
+top: 15px;
+left: 15px;
+background: #f4c430;
+color: #173f35;
+padding: 7px 12px;
+border-radius: 20px;
+font-size: 12px;
+font-weight: bold;
+}
+
+.ebook-placeholder {
+display: flex;
+align-items: center;
+justify-content: center;
+color: #f4c430;
+font-size: 20px;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+.ebook-info {
+padding: 24px;
+}
+
+.ebook-category {
+color: #8b6b16;
+font-size: 12px;
+font-weight: bold;
+letter-spacing: 1px;
+margin-bottom: 8px;
+}
+
+.ebook-info h3 {
+color: #173f35;
+font-size: 24px;
+margin-bottom: 12px;
+}
+
+.ebook-info p:not(.ebook-category) {
+color: #65766f;
+line-height: 1.6;
+font-size: 15px;
+}
+
+.ebook-bottom {
+margin-top: 22px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+}
+
+.ebook-bottom strong {
+color: #173f35;
+font-size: 20px;
+}
+
+.ebook-btn {
+border: none;
+background: #075b43;
+color: #ffffff;
+padding: 12px 20px;
+border-radius: 8px;
+cursor: pointer;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.ebook-btn:hover {
+background: #f4c430;
+color: #173f35;
+}
+
+@media (max-width: 900px) {
+.ebook-store {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 600px) {
+.ebooks-section {
+padding: 60px 5%;
+}
+
+.ebook-store {
+    grid-template-columns: 1fr;
+}
+
+.ebook-cover {
+    height: 380px;
+}
+
+}
