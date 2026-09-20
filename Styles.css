@@ -5661,3 +5661,20 @@ transition: 0.3s ease;
 background: #003087;
 transform: translateY(-2px);
 }
+
+/* MAKE ALL E-BOOK BUTTONS THE SAME SIZE */
+.ebook-bottom .ebook-btn,
+.ebook-bottom .paypal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 145px;
+    height: 38px;
+    padding: 0 12px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
