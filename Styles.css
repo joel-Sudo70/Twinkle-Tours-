@@ -5049,3 +5049,75 @@ padding: 45px 5% 60px;
         height: 220px;
     }
 }
+
+/* ========================================
+   HOMEPAGE PHOTO & VIDEO PREVIEWS
+   ======================================== */
+
+.media-preview {
+    padding: 45px 20px;
+    background: #f4f8f5;
+    text-align: center;
+}
+
+.media-preview .section-title {
+    margin-bottom: 25px;
+}
+
+.media-preview .section-title h2 {
+    color: #075b43;
+    margin: 8px 0;
+}
+
+.preview-card {
+    display: block;
+    width: 90%;
+    max-width: 480px;
+    margin: 25px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #173f35;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+
+.preview-card img,
+.preview-card video {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.preview-content {
+    padding: 18px;
+}
+
+.preview-content h3 {
+    color: #075b43;
+    margin-bottom: 7px;
+    font-size: 20px;
+}
+
+.preview-content p {
+    color: #65766f;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .preview-card {
+        width: 94%;
+    }
+
+    .preview-card img,
+    .preview-card video {
+        height: 200px;
+    }
+}
