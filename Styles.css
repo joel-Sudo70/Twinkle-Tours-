@@ -5700,4 +5700,13 @@ transform: translateY(-2px);
     margin: 0;
     font-size: 11px;
     color: #65766f;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .ebook-download {
+        font-size: 10px;
+        white-space: normal;
+    }
 }
