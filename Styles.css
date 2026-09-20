@@ -5678,3 +5678,10 @@ transform: translateY(-2px);
     white-space: nowrap;
     box-sizing: border-box;
 }
+
+.ebook-bottom a {
+    font-size: 12px !important;
+    padding: 0 12px !important;
+    height: 38px !important;
+    min-width: 145px !important;
+}
