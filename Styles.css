@@ -5753,3 +5753,26 @@ transform: translateY(-2px);
         padding: 20px;
     }
 }
+
+/* E-BOOK COVER DISPLAY */
+
+.ebook-cover {
+    width: 100%;
+    height: 360px;
+    background: #173f35;
+    overflow: hidden;
+}
+
+.ebook-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .ebook-cover {
+        height: 390px;
+    }
+}
