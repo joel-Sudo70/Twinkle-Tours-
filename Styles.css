@@ -5776,3 +5776,22 @@ transform: translateY(-2px);
         height: 390px;
     }
 }
+
+/* FEATURED E-BOOK BADGE */
+
+.ebook-cover {
+    position: relative;
+}
+
+.ebook-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: #f4c430;
+    color: #173f35;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
