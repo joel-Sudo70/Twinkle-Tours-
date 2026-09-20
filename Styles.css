@@ -5899,3 +5899,210 @@ transform: translateY(-2px);
         font-size: 10px !important;
     }
 }
+
+/* ========================================
+   TWINKLE TOURS - 15 PACKAGE CARDS
+   RESPONSIVE DESIGN
+   ======================================== */
+
+.cards {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+/* PACKAGE CARD */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e1e8e3;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.13);
+}
+
+
+/* PACKAGE IMAGE */
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background: #e8eee9;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+
+/* PACKAGE BADGE */
+
+.package-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 7px 11px;
+    border-radius: 20px;
+    background: #f4c430;
+    color: #173f35;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    line-height: 1;
+}
+
+
+/* PACKAGE CONTENT */
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 22px;
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+    color: #173f35;
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+.package-description {
+    margin: 0;
+    color: #65766f;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* DURATION + PRICE */
+
+.package-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.package-details span {
+    color: #65766f;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.package-details strong {
+    color: #075b43;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+
+/* BOOKING BUTTON */
+
+.package-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 42px;
+    margin-top: 16px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   TABLET / SMALL LAPTOP
+   ======================================== */
+
+@media (max-width: 1000px) {
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .card-image {
+        height: 220px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+}
+
+
+/* ========================================
+   PHONE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-top: 30px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-image {
+        height: 240px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-content h3 {
+        font-size: 20px;
+    }
+
+    .package-description {
+        font-size: 14px;
+    }
+
+    .package-details {
+        align-items: flex-start;
+    }
+
+    .package-details strong {
+        font-size: 16px;
+    }
+
+    .package-btn {
+        min-height: 44px;
+    }
+
+}
