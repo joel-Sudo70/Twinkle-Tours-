@@ -5795,3 +5795,107 @@ transform: translateY(-2px);
     font-weight: bold;
     letter-spacing: 0.5px;
 }
+
+/* ========================================
+   E-BOOK PURCHASE AREA
+   RESPONSIVE — PC, TABLET & MOBILE
+   ======================================== */
+
+.ebook-bottom {
+    display: block !important;
+    width: 100%;
+    margin-top: 22px;
+    padding-top: 20px;
+}
+
+.ebook-purchase {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+.ebook-purchase strong {
+    color: #173f35;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.ebook-purchase .ebook-btn {
+    width: auto !important;
+    min-width: 0 !important;
+    height: 38px !important;
+    padding: 0 14px !important;
+    font-size: 12px !important;
+    white-space: nowrap;
+    flex-shrink: 1;
+}
+
+.ebook-secure {
+    display: block !important;
+    width: 100% !important;
+    margin: 12px 0 3px !important;
+    padding: 0 !important;
+    color: #075b43 !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+}
+
+.ebook-download {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #65766f !important;
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+}
+
+
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    .ebook-purchase {
+        gap: 12px;
+    }
+
+    .ebook-purchase .ebook-btn {
+        font-size: 12px !important;
+    }
+}
+
+
+/* ========================================
+   PHONE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .ebook-purchase {
+        gap: 10px;
+    }
+
+    .ebook-purchase strong {
+        font-size: 19px;
+    }
+
+    .ebook-purchase .ebook-btn {
+        height: 36px !important;
+        padding: 0 11px !important;
+        font-size: 11px !important;
+    }
+
+    .ebook-secure {
+        font-size: 11px !important;
+    }
+
+    .ebook-download {
+        font-size: 10px !important;
+    }
+}
