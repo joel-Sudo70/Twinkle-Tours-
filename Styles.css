@@ -5685,3 +5685,19 @@ transform: translateY(-2px);
     height: 38px !important;
     min-width: 145px !important;
 }
+
+/* E-BOOK PURCHASE INFORMATION */
+
+.ebook-secure {
+    margin-top: 12px;
+    margin-bottom: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #075b43;
+}
+
+.ebook-download {
+    margin: 0;
+    font-size: 11px;
+    color: #65766f;
+}
