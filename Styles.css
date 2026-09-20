@@ -4952,3 +4952,46 @@ padding: 45px 5% 60px;
 
 }
 
+/* ========================================
+   PHOTO & VIDEO PREVIEW
+   ======================================== */
+
+.media-preview {
+    padding: 45px 20px;
+    background: #f4f8f5;
+    text-align: center;
+}
+
+.preview-card {
+    display: block;
+    width: 90%;
+    max-width: 500px;
+    margin: 25px auto;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #173f35;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.preview-card img,
+.preview-card video {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.preview-content {
+    padding: 18px;
+}
+
+.preview-content h3 {
+    color: #075b43;
+    margin-bottom: 8px;
+}
+
+.preview-content p {
+    color: #65766f;
+}
