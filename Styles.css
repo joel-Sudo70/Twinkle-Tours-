@@ -5710,3 +5710,46 @@ transform: translateY(-2px);
         white-space: normal;
     }
 }
+
+/* E-BOOK STORE RESPONSIVE LAYOUT */
+
+.ebook-store {
+    align-items: stretch;
+}
+
+.ebook-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ebook-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ebook-bottom {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+/* PHONE */
+@media (max-width: 600px) {
+    .ebook-store {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .ebook-card {
+        width: 100%;
+    }
+
+    .ebook-cover {
+        height: 350px;
+    }
+
+    .ebook-info {
+        padding: 20px;
+    }
+}
