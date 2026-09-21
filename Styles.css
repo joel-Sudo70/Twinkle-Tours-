@@ -6821,7 +6821,10 @@ transform: translateY(-2px);
 
 .contact-intro {
     color: #65766f;
-    font-size: 17
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
 
 /* ========================================
    CONTACT MOBILE OVERFLOW FIX
