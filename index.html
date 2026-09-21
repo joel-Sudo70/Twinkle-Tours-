@@ -2064,95 +2064,84 @@ function sendBookingToWhatsApp() {
 </a>
 
 <style>
-/* =================================================
-   TWINKLE TOURS — CLEAN MOBILE HEADER
-   ================================================= */
+/* =========================================
+   TWINKLE TOURS — CLEAN WHITE HEADER
+   BASED ON CURRENT MOBILE DESIGN
+   ========================================= */
 
 @media (max-width: 768px) {
 
-    /* PAGE */
+    /* REMOVE GREY AROUND THE HEADER */
     html,
     body {
-        width: 100%;
-        margin: 0;
-        padding: 0;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
         background: #ffffff !important;
         overflow-x: hidden !important;
     }
 
-    /* ================= HEADER ================= */
-
-    .navbar {
-        position: relative !important;
-        left: auto !important;
-        right: auto !important;
-        transform: none !important;
-
+    /* ONE CONTINUOUS WHITE HEADER */
+    header.navbar {
         width: 100% !important;
         max-width: 100% !important;
 
         margin: 0 !important;
         padding: 0 !important;
 
-        display: block !important;
-
         background: #ffffff !important;
 
-        border: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+
+        border: none !important;
         border-bottom: 3px solid #f4c430 !important;
 
         box-shadow: none !important;
 
-        overflow: visible !important;
-
         box-sizing: border-box !important;
     }
 
-
-    /* ================= LOGO ================= */
-
-    .brand-area {
-        position: relative !important;
-
+    /* LOGO AREA */
+    header.navbar .brand-area {
         width: 100% !important;
-        height: 82px !important;
-        min-height: 82px !important;
+        height: 86px !important;
+        min-height: 86px !important;
 
         margin: 0 !important;
         padding: 0 !important;
-
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
 
         background: #ffffff !important;
 
-        border: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
 
+        border: none !important;
         box-sizing: border-box !important;
     }
 
-    .brand {
+    /* ORIGINAL LOGO — CENTERED */
+    header.navbar .brand {
         display: flex !important;
-
-        width: auto !important;
-        height: 100% !important;
+        align-items: center !important;
+        justify-content: center !important;
 
         margin: 0 !important;
         padding: 0 !important;
 
-        align-items: center !important;
-        justify-content: center !important;
+        width: auto !important;
+        height: 100% !important;
     }
 
-    .brand img {
+    header.navbar .brand img {
         display: block !important;
 
         width: 140px !important;
         max-width: 140px !important;
 
         height: auto !important;
-        max-height: 72px !important;
+        max-height: 76px !important;
 
         margin: 0 !important;
         padding: 0 !important;
@@ -2160,53 +2149,44 @@ function sendBookingToWhatsApp() {
         object-fit: contain !important;
     }
 
-    /* Make absolutely sure there are NO decorations */
-    .brand-area::before,
-    .brand-area::after {
-        content: none !important;
+    /* NO EXTRA DECORATIONS */
+    header.navbar .brand-area::before,
+    header.navbar .brand-area::after {
         display: none !important;
+        content: none !important;
     }
 
-
-    /* ================= NAVIGATION ================= */
-
-    .main-nav {
+    /* NAVIGATION — SAME WHITE HEADER */
+    header.navbar .main-nav {
         width: 100% !important;
         max-width: 100% !important;
 
-        height: auto !important;
-        min-height: 0 !important;
-
         margin: 0 !important;
-        padding: 2px 4px 4px !important;
+        padding: 2px 5px 5px !important;
+
+        background: #ffffff !important;
 
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
 
-        align-items: center !important;
         justify-content: center !important;
+        align-items: center !important;
 
         gap: 0 !important;
 
-        background: #ffffff !important;
-
-        border: 0 !important;
+        border: none !important;
 
         overflow: visible !important;
 
         box-sizing: border-box !important;
     }
 
-
     /* NAVIGATION LINKS */
-
-    .main-nav a {
-        position: relative !important;
-
+    header.navbar .main-nav a {
         flex: 0 0 auto !important;
 
-        height: 30px !important;
+        height: 31px !important;
 
         margin: 0 !important;
         padding: 5px 7px !important;
@@ -2216,29 +2196,23 @@ function sendBookingToWhatsApp() {
         justify-content: center !important;
 
         background: transparent !important;
-
         color: #075b43 !important;
 
-        font-family: Arial, sans-serif !important;
         font-size: 12px !important;
         font-weight: 700 !important;
 
         line-height: 1 !important;
-
         white-space: nowrap !important;
-        text-decoration: none !important;
 
         box-sizing: border-box !important;
     }
 
-
-    /* HOME */
-
-    .main-nav a.active {
+    /* ACTIVE HOME */
+    header.navbar .main-nav a.active {
         color: #003d2d !important;
     }
 
-    .main-nav a.active::after {
+    header.navbar .main-nav a.active::after {
         content: "" !important;
 
         position: absolute !important;
@@ -2250,15 +2224,12 @@ function sendBookingToWhatsApp() {
         height: 3px !important;
 
         background: #f4c430 !important;
-
         border-radius: 2px !important;
     }
 
-
     /* BOOK NOW */
-
-    .main-nav .book-now {
-        height: 28px !important;
+    header.navbar .main-nav .book-now {
+        height: 29px !important;
 
         margin: 1px 3px !important;
         padding: 5px 10px !important;
@@ -2272,9 +2243,7 @@ function sendBookingToWhatsApp() {
         font-size: 11px !important;
     }
 
-
-    /* HERO DIRECTLY BELOW HEADER */
-
+    /* HERO TOUCHES HEADER */
     .hero {
         width: 100% !important;
         margin: 0 !important;
@@ -2282,31 +2251,30 @@ function sendBookingToWhatsApp() {
 }
 
 
-/* ================= VERY SMALL PHONES ================= */
-
+/* SMALL PHONES */
 @media (max-width: 390px) {
 
-    .brand-area {
-        height: 76px !important;
-        min-height: 76px !important;
+    header.navbar .brand-area {
+        height: 80px !important;
+        min-height: 80px !important;
     }
 
-    .brand img {
-        width: 125px !important;
-        max-width: 125px !important;
-        max-height: 68px !important;
+    header.navbar .brand img {
+        width: 130px !important;
+        max-width: 130px !important;
+        max-height: 70px !important;
     }
 
-    .main-nav a {
+    header.navbar .main-nav a {
         padding-left: 6px !important;
         padding-right: 6px !important;
         font-size: 11px !important;
     }
 
-    .main-nav .book-now {
+    header.navbar .main-nav .book-now {
+        font-size: 10px !important;
         padding-left: 8px !important;
         padding-right: 8px !important;
-        font-size: 10px !important;
     }
 }
 </style>
