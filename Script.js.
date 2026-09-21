@@ -276,3 +276,22 @@ alert("Thank you for choosing " + bookName + "! Payment and download options wil
 function comingSoon() {
 alert("This e-book is coming soon. Please check back later!");
 }
+
+// ========================================
+// TWINKLE TOURS - PACKAGE BOOKING BUTTONS
+// ========================================
+
+document.querySelectorAll(".package-btn").forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        const packageName = this.getAttribute("data-package");
+        const destination = document.getElementById("destination");
+
+        if (destination && packageName) {
+            destination.value = packageName;
+        }
+
+    });
+
+});
