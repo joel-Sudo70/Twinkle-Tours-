@@ -2064,53 +2064,169 @@ function sendBookingToWhatsApp() {
 </a>
 
 <style>
-/* ========================================
-   FINAL MOBILE NAV - ALL ITEMS VISIBLE
-   NO HORIZONTAL SCROLL
-   ======================================== */
+/* =========================================
+   TWINKLE TOURS - BEAUTIFUL MOBILE HEADER
+   WHITE BACKGROUND + CENTERED LOGO
+   ========================================= */
 
 @media (max-width: 768px) {
 
-    .navbar {
+    /* REMOVE ALL GREY AROUND HEADER */
+    html,
+    body {
         width: 100% !important;
-        height: auto !important;
-        min-height: 0 !important;
-        padding: 5px 0 0 !important;
         margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+    }
+
+    /* FULL-WIDTH WHITE HEADER */
+    .navbar {
+        width: 100vw !important;
+        max-width: none !important;
+        min-height: 0 !important;
+        height: auto !important;
+
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: 0 !important;
+
+        padding: 0 !important;
+
         background: #ffffff !important;
         display: block !important;
         overflow: visible !important;
+
         border-bottom: 3px solid #f4c430 !important;
-        box-shadow: none !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.06) !important;
+
+        box-sizing: border-box !important;
     }
 
-    /* COMPACT LOGO */
+
+    /* =====================================
+       LOGO AREA
+       ===================================== */
+
     .brand-area {
+        position: relative !important;
+
         width: 100% !important;
-        height: 62px !important;
-        min-height: 62px !important;
-        padding: 2px 10px !important;
+        height: 92px !important;
+        min-height: 92px !important;
+
         margin: 0 !important;
+        padding: 0 !important;
+
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+
+        background: #ffffff !important;
+
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+
+    /* CENTER LOGO */
+    .brand {
+        position: relative !important;
+        z-index: 5 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: auto !important;
+        height: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .brand img {
-        width: 120px !important;
-        max-width: 120px !important;
-        max-height: 55px !important;
+        display: block !important;
+
+        width: 145px !important;
+        max-width: 145px !important;
+
         height: auto !important;
+        max-height: 82px !important;
+
         object-fit: contain !important;
+        margin: 0 !important;
     }
 
-    /* COMPACT NAVIGATION AREA */
+
+    /* =====================================
+       LEFT DECORATION
+       ===================================== */
+
+    .brand-area::before {
+        content: "✦  ─────  ✧" !important;
+
+        position: absolute !important;
+        left: 8px !important;
+        top: 50% !important;
+
+        transform: translateY(-50%) !important;
+
+        color: #075b43 !important;
+
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        letter-spacing: 1px !important;
+
+        white-space: nowrap !important;
+        opacity: 0.9 !important;
+
+        z-index: 1 !important;
+    }
+
+
+    /* =====================================
+       RIGHT DECORATION
+       ===================================== */
+
+    .brand-area::after {
+        content: "✧  ─────  ✦" !important;
+
+        position: absolute !important;
+        right: 8px !important;
+        top: 50% !important;
+
+        transform: translateY(-50%) !important;
+
+        color: #075b43 !important;
+
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        letter-spacing: 1px !important;
+
+        white-space: nowrap !important;
+        opacity: 0.9 !important;
+
+        z-index: 1 !important;
+    }
+
+
+    /* GOLD DETAIL LINES */
+    .brand-area {
+        border-bottom: 1px solid #f4c430 !important;
+    }
+
+
+    /* =====================================
+       NAVIGATION
+       ===================================== */
+
     .main-nav {
         width: 100% !important;
         height: auto !important;
         min-height: 0 !important;
-        padding: 3px 4px 5px !important;
+
         margin: 0 !important;
+        padding: 4px 4px 5px !important;
 
         display: flex !important;
         flex-direction: row !important;
@@ -2120,20 +2236,25 @@ function sendBookingToWhatsApp() {
         justify-content: center !important;
 
         gap: 0 !important;
+
         overflow: visible !important;
 
         background: #ffffff !important;
-        border-top: 1px solid #eeeeee !important;
+
+        border: none !important;
+
         box-sizing: border-box !important;
     }
 
-    /* ALL NAVIGATION LINKS */
+
+    /* NAV LINKS */
     .main-nav a {
         flex: 0 0 auto !important;
 
-        height: 32px !important;
-        padding: 5px 8px !important;
+        height: 31px !important;
+
         margin: 0 !important;
+        padding: 5px 8px !important;
 
         display: inline-flex !important;
         align-items: center !important;
@@ -2144,12 +2265,15 @@ function sendBookingToWhatsApp() {
 
         font-size: 12px !important;
         font-weight: 700 !important;
-        line-height: 1 !important;
 
+        line-height: 1 !important;
         white-space: nowrap !important;
+
         text-decoration: none !important;
+
         box-sizing: border-box !important;
     }
+
 
     /* ACTIVE HOME */
     .main-nav a.active {
@@ -2159,51 +2283,84 @@ function sendBookingToWhatsApp() {
     .main-nav a.active::after {
         height: 3px !important;
         bottom: 0 !important;
+
         background: #f4c430 !important;
-        border-radius: 2px !important;
+        border-radius: 3px !important;
     }
+
 
     /* BOOK NOW */
     .main-nav .book-now {
         height: 29px !important;
-        padding: 5px 10px !important;
+
         margin: 1px 3px !important;
+        padding: 5px 10px !important;
 
         background: #003d2d !important;
         color: #ffffff !important;
 
-        border: 1px solid #f4c430 !important;
-        border-radius: 18px !important;
+        border: 2px solid #f4c430 !important;
+        border-radius: 20px !important;
 
         font-size: 11px !important;
     }
+
 
     .main-nav .book-now span {
         margin-right: 3px !important;
     }
 
-    /* HERO STARTS DIRECTLY AFTER NAV */
+
+    /* HERO TOUCHES HEADER DIRECTLY */
     .hero {
         margin-top: 0 !important;
     }
 }
 
-/* VERY SMALL PHONES */
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
 @media (max-width: 390px) {
 
+    .brand-area {
+        height: 84px !important;
+        min-height: 84px !important;
+    }
+
+    .brand img {
+        width: 125px !important;
+        max-width: 125px !important;
+        max-height: 75px !important;
+    }
+
+    .brand-area::before,
+    .brand-area::after {
+        font-size: 10px !important;
+        letter-spacing: 0 !important;
+    }
+
+    .brand-area::before {
+        left: 3px !important;
+    }
+
+    .brand-area::after {
+        right: 3px !important;
+    }
+
     .main-nav a {
+        font-size: 11px !important;
         padding-left: 6px !important;
         padding-right: 6px !important;
-        font-size: 11px !important;
     }
 
     .main-nav .book-now {
+        font-size: 10px !important;
         padding-left: 8px !important;
         padding-right: 8px !important;
-        font-size: 10px !important;
     }
 }
 </style>
-
 </body>
 </html>
