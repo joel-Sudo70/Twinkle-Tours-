@@ -1203,7 +1203,48 @@
 
 </section>
 
+<script>
+function sendBookingToWhatsApp() {
 
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const destination = document.getElementById("destination").value;
+    const travelDate = document.getElementById("travel-date").value;
+    const travelers = document.getElementById("travelers").value;
+    const message = document.getElementById("message").value.trim();
+
+    if (
+        !name ||
+        !email ||
+        !phone ||
+        !destination ||
+        !travelDate ||
+        !travelers
+    ) {
+        alert("Please fill in all required booking details first.");
+        return;
+    }
+
+    const bookingText =
+        "Hello Twinkle Tours!\n\n" +
+        "NEW BOOKING REQUEST\n\n" +
+        "Full Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Phone: " + phone + "\n" +
+        "Destination: " + destination + "\n" +
+        "Travel Date: " + travelDate + "\n" +
+        "Number of Travelers: " + travelers + "\n" +
+        "Additional Information: " +
+        (message || "None");
+
+    const whatsappURL =
+        "https://wa.me/254713354736?text=" +
+        encodeURIComponent(bookingText);
+
+    window.location.href = whatsappURL;
+}
+</script>
 
 <!-- ================= PROFESSIONAL FOOTER ================= -->
 
