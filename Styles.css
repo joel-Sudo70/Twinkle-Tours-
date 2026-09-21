@@ -6738,3 +6738,43 @@ transform: translateY(-2px);
     }
 
 }
+
+/* ========================================
+   CONSULTANT PHOTO - FULL IMAGE FIX
+   ======================================== */
+
+.consultant-photo {
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+}
+
+.consultant-photo img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+}
+
+/* MOBILE FULL IMAGE */
+
+@media (max-width: 768px) {
+
+    .consultant-photo {
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .consultant-photo img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+    }
+
+}
