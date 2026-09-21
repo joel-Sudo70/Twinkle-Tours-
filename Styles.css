@@ -6290,3 +6290,184 @@ transform: translateY(-2px);
         padding: 35px 24px;
     }
 }
+
+/* ========================================
+   PROFESSIONAL TRAVEL CONSULTATION
+   ======================================== */
+
+.consultation-section {
+    background: #ffffff;
+    padding: 80px 6%;
+}
+
+.consultation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 55px;
+    align-items: center;
+}
+
+/* CONSULTANT PHOTO */
+
+.consultant-photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 61, 45, 0.18);
+}
+
+.consultant-photo img {
+    display: block;
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* CONTENT */
+
+.consultation-content {
+    text-align: left;
+}
+
+.consultation-eyebrow {
+    color: #d9a900;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.consultation-content h2 {
+    color: #003d2d;
+    font-size: 40px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.consultation-intro {
+    color: #65766f;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* FEATURES */
+
+.consultation-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.consultation-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.consultation-item > span {
+    width: 29px;
+    height: 29px;
+    min-width: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #075b43;
+    color: #ffffff;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.consultation-item h3 {
+    color: #003d2d;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.consultation-item p {
+    color: #65766f;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* PRICE */
+
+.consultation-price {
+    margin: 25px 0;
+    padding: 18px 22px;
+    background: #f1f8f4;
+    border-left: 5px solid #f4c430;
+    border-radius: 8px;
+}
+
+.consultation-price span {
+    display: block;
+    color: #003d2d;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.consultation-price small {
+    color: #65766f;
+    font-size: 14px;
+}
+
+/* BUTTON */
+
+.consultation-button {
+    display: inline-block;
+    background: #f4c430;
+    color: #003d2d;
+    padding: 15px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.consultation-button:hover {
+    background: #d9a900;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .consultation-section {
+        padding: 60px 20px;
+    }
+
+    .consultation-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .consultant-photo img {
+        height: 430px;
+    }
+
+    .consultation-content h2 {
+        font-size: 31px;
+    }
+
+    .consultation-features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .consultation-price {
+        margin-top: 25px;
+    }
+
+    .consultation-button {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
