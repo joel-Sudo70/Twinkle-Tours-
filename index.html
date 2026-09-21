@@ -999,11 +999,11 @@
     </p>
 
     <form
-    id="bookingForm"
-    class="booking-form"
-    action="https://formsubmit.co/lumwachi03@gmail.com"
-    method="POST"
->
+        id="bookingForm"
+        class="booking-form"
+        action="https://formsubmit.co/lumwachi03@gmail.com"
+        method="POST"
+    >
 
         <input
             type="hidden"
@@ -1023,7 +1023,9 @@
             value="table"
         >
 
+        <!-- FULL NAME -->
         <label for="name">Full Name</label>
+
         <input
             type="text"
             id="name"
@@ -1032,7 +1034,10 @@
             required
         >
 
+
+        <!-- EMAIL -->
         <label for="email">Email Address</label>
+
         <input
             type="email"
             id="email"
@@ -1041,7 +1046,10 @@
             required
         >
 
+
+        <!-- PHONE -->
         <label for="phone">Phone Number</label>
+
         <input
             type="tel"
             id="phone"
@@ -1050,80 +1058,93 @@
             required
         >
 
-        <label for="destination">Choose Destination</label>
+
+        <!-- DESTINATION -->
+        <label for="destination">
+            Choose Destination
+        </label>
 
         <select
-    id="destination"
-    name="Destination"
-    required
->
-    <option value="">Select a package</option>
+            id="destination"
+            name="Destination"
+            required
+        >
 
-    <option value="Maasai Mara Migration Trail">
-        Maasai Mara Migration Trail
-    </option>
+            <option value="">
+                Select a destination
+            </option>
 
-    <option value="Amboseli & Kilimanjaro">
-        Amboseli & Kilimanjaro
-    </option>
+            <option value="Maasai Mara Migration Trail">
+                Maasai Mara Migration Trail
+            </option>
 
-    <option value="Serengeti & Ngorongoro">
-        Serengeti & Ngorongoro
-    </option>
+            <option value="Amboseli & Kilimanjaro">
+                Amboseli & Kilimanjaro
+            </option>
 
-    <option value="Tsavo & Diani Combo">
-        Tsavo & Diani Combo
-    </option>
+            <option value="Serengeti & Ngorongoro">
+                Serengeti & Ngorongoro
+            </option>
 
-    <option value="Samburu National Reserve">
-        Samburu National Reserve
-    </option>
+            <option value="Tsavo & Diani Combo">
+                Tsavo & Diani Combo
+            </option>
 
-    <option value="Hell's Gate & Olkaria Geothermal Spa">
-        Hell's Gate & Olkaria Geothermal Spa
-    </option>
+            <option value="Samburu National Reserve">
+                Samburu National Reserve
+            </option>
 
-    <option value="Mount Kenya Adventure">
-        Mount Kenya Adventure
-    </option>
+            <option value="Hell's Gate & Olkaria Geothermal Spa">
+                Hell's Gate & Olkaria Geothermal Spa
+            </option>
 
-    <option value="Ngong Hills Adventure">
-        Ngong Hills Adventure
-    </option>
+            <option value="Mount Kenya Adventure">
+                Mount Kenya Adventure
+            </option>
 
-    <option value="Lake Nakuru Wildlife Safari">
-        Lake Nakuru Wildlife Safari
-    </option>
+            <option value="Ngong Hills Adventure">
+                Ngong Hills Adventure
+            </option>
 
-    <option value="Nairobi National Park Safari">
-        Nairobi National Park Safari
-    </option>
+            <option value="Lake Nakuru Wildlife Safari">
+                Lake Nakuru Wildlife Safari
+            </option>
 
-    <option value="Diani Beach Escape">
-        Diani Beach Escape
-    </option>
+            <option value="Nairobi National Park Safari">
+                Nairobi National Park Safari
+            </option>
 
-    <option value="Mombasa Beach Holiday">
-        Mombasa Beach Holiday
-    </option>
+            <option value="Diani Beach Escape">
+                Diani Beach Escape
+            </option>
 
-    <option value="Aberdare Forest Safari">
-        Aberdare Forest Safari
-    </option>
+            <option value="Mombasa Beach Holiday">
+                Mombasa Beach Holiday
+            </option>
 
-    <option value="Tsavo East & West Safari">
-        Tsavo East & West Safari
-    </option>
+            <option value="Aberdare Forest Safari">
+                Aberdare Forest Safari
+            </option>
 
-    <option value="Nairobi Railway Museum Experience">
-        Nairobi Railway Museum Experience
-    </option>
+            <option value="Tsavo East & West Safari">
+                Tsavo East & West Safari
+            </option>
 
-    <option value="Other destination">
-        Other destination
-    </option>
-</select>
-        <label for="travel-date">Preferred Travel Date</label>
+            <option value="Nairobi Railway Museum Experience">
+                Nairobi Railway Museum Experience
+            </option>
+
+            <option value="Other destination">
+                Other destination
+            </option>
+
+        </select>
+
+
+        <!-- TRAVEL DATE -->
+        <label for="travel-date">
+            Preferred Travel Date
+        </label>
 
         <input
             type="date"
@@ -1132,7 +1153,11 @@
             required
         >
 
-        <label for="travelers">Number of Travelers</label>
+
+        <!-- TRAVELERS -->
+        <label for="travelers">
+            Number of Travelers
+        </label>
 
         <input
             type="number"
@@ -1143,7 +1168,11 @@
             required
         >
 
-        <label for="message">Additional Information</label>
+
+        <!-- ADDITIONAL INFORMATION -->
+        <label for="message">
+            Additional Information
+        </label>
 
         <textarea
             id="message"
@@ -1152,12 +1181,26 @@
             placeholder="Tell us anything important about your trip"
         ></textarea>
 
+
+        <!-- EMAIL BOOKING BUTTON -->
         <button
-    type="button"
-    id="whatsappBookingBtn"
-    class="whatsapp-btn">
-    Send Booking via WhatsApp
-</button>
+            type="submit"
+            class="btn"
+        >
+            Submit Booking Request
+        </button>
+
+
+        <!-- WHATSAPP BOOKING BUTTON -->
+        <button
+            type="button"
+            id="whatsappBookingBtn"
+            class="whatsapp-btn"
+        >
+            Send Booking via WhatsApp
+        </button>
+
+    </form>
 
 </section>
 
