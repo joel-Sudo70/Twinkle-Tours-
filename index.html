@@ -2063,6 +2063,147 @@ function sendBookingToWhatsApp() {
 
 </a>
 
+<style>
+/* ========================================
+   FINAL MOBILE NAV - ALL ITEMS VISIBLE
+   NO HORIZONTAL SCROLL
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 5px 0 0 !important;
+        margin: 0 !important;
+        background: #ffffff !important;
+        display: block !important;
+        overflow: visible !important;
+        border-bottom: 3px solid #f4c430 !important;
+        box-shadow: none !important;
+    }
+
+    /* COMPACT LOGO */
+    .brand-area {
+        width: 100% !important;
+        height: 62px !important;
+        min-height: 62px !important;
+        padding: 2px 10px !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .brand img {
+        width: 120px !important;
+        max-width: 120px !important;
+        max-height: 55px !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* COMPACT NAVIGATION AREA */
+    .main-nav {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 3px 4px 5px !important;
+        margin: 0 !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 0 !important;
+        overflow: visible !important;
+
+        background: #ffffff !important;
+        border-top: 1px solid #eeeeee !important;
+        box-sizing: border-box !important;
+    }
+
+    /* ALL NAVIGATION LINKS */
+    .main-nav a {
+        flex: 0 0 auto !important;
+
+        height: 32px !important;
+        padding: 5px 8px !important;
+        margin: 0 !important;
+
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        color: #075b43 !important;
+        background: transparent !important;
+
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+        text-decoration: none !important;
+        box-sizing: border-box !important;
+    }
+
+    /* ACTIVE HOME */
+    .main-nav a.active {
+        color: #003d2d !important;
+    }
+
+    .main-nav a.active::after {
+        height: 3px !important;
+        bottom: 0 !important;
+        background: #f4c430 !important;
+        border-radius: 2px !important;
+    }
+
+    /* BOOK NOW */
+    .main-nav .book-now {
+        height: 29px !important;
+        padding: 5px 10px !important;
+        margin: 1px 3px !important;
+
+        background: #003d2d !important;
+        color: #ffffff !important;
+
+        border: 1px solid #f4c430 !important;
+        border-radius: 18px !important;
+
+        font-size: 11px !important;
+    }
+
+    .main-nav .book-now span {
+        margin-right: 3px !important;
+    }
+
+    /* HERO STARTS DIRECTLY AFTER NAV */
+    .hero {
+        margin-top: 0 !important;
+    }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 390px) {
+
+    .main-nav a {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        font-size: 11px !important;
+    }
+
+    .main-nav .book-now {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        font-size: 10px !important;
+    }
+}
+</style>
 
 </body>
 </html>
