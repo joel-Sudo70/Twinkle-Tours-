@@ -6321,8 +6321,9 @@ transform: translateY(-2px);
 .consultant-photo img {
     display: block;
     width: 100%;
-    height: 560px;
-    object-fit: cover;
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
     object-position: center;
 }
 
@@ -6449,8 +6450,10 @@ transform: translateY(-2px);
     }
 
     .consultant-photo img {
-        height: 430px;
-    }
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+}
 
     .consultation-content h2 {
         font-size: 31px;
