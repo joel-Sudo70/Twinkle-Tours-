@@ -6778,3 +6778,47 @@ transform: translateY(-2px);
     }
 
 }
+
+/* ========================================
+   CONTACT US - TWINKLE TOURS
+   ======================================== */
+
+.contact-section {
+    background: #f1f8f4;
+    padding: 85px 6%;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+
+/* CONTACT INFORMATION */
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-eyebrow {
+    color: #d9a900;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.contact-info h2 {
+    color: #003d2d;
+    font-size: 40px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.contact-intro {
+    color: #65766f;
+    font-size: 17
