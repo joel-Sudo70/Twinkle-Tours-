@@ -1,180 +1,970 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Photos | Twinkle Tours</title>
 
+    <meta
+        name="description"
+        content="Explore wildlife, culture and beautiful destinations with Twinkle Tours."
+    >
+
     <link rel="stylesheet" href="Styles.css">
-<style>
-.photo-gallery {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 15px !important;
-    max-width: 1000px !important;
-    margin: 25px auto !important;
-    padding: 0 15px !important;
-}
 
-.photo-card {
-    width: 100% !important;
-    overflow: hidden !important;
-    background: white !important;
-    border-radius: 12px !important;
-}
+    <style>
 
-.photo-card img {
-    width: 100% !important;
-    height: 180px !important;
-    object-fit: cover !important;
-    display: block !important;
-}
+        /* ========================================
+           TWINKLE TOURS PHOTO GALLERY
+        ======================================== */
 
-.photo-card h3 {
-    font-size: 15px !important;
-    padding: 10px !important;
-    margin: 0 !important;
-    text-align: center !important;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-@media (max-width: 480px) {
-    .photo-gallery {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
+        body {
+            margin: 0;
+            background: #f4f8f5;
+        }
 
-    .photo-card img {
-        height: 160px !important;
-    }
-}
-</style>
+
+        /* HEADER */
+
+        .photos-header {
+            background: #ffffff;
+            padding: 12px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .photos-logo img {
+            width: 165px;
+            height: auto;
+            display: block;
+        }
+
+        .photos-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .photos-nav a {
+            color: #075b43;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .photos-nav a:hover {
+            color: #d9a900;
+        }
+
+
+        /* PAGE INTRO */
+
+        .photos-hero {
+            background:
+                linear-gradient(
+                    rgba(0, 45, 32, 0.72),
+                    rgba(0, 45, 32, 0.72)
+                ),
+                url("elephant-safari-hero.png");
+
+            background-size: cover;
+            background-position: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 80px 20px;
+        }
+
+        .photos-hero p {
+            margin: 0 0 12px;
+            color: #f4c430;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .photos-hero h1 {
+            margin: 0 0 15px;
+            font-size: 42px;
+        }
+
+        .photos-hero span {
+            display: block;
+            max-width: 700px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* GALLERY */
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 5%;
+        }
+
+        .gallery-intro {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .gallery-intro h2 {
+            color: #003d2d;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .gallery-intro p {
+            color: #65766f;
+            font-size: 16px;
+        }
+
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+
+        /* PHOTO CARD */
+
+        .photo-card {
+            background: #ffffff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,55,40,0.12);
+            cursor: pointer;
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,55,40,0.18);
+        }
+
+
+        .photo-image {
+            width: 100%;
+            height: 230px;
+            overflow: hidden;
+            background: #e9eee9;
+        }
+
+        .photo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .photo-card:hover .photo-image img {
+            transform: scale(1.08);
+        }
+
+
+        .photo-caption {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .photo-caption h3 {
+            margin: 0;
+            color: #075b43;
+            font-size: 17px;
+        }
+
+
+        /* LIGHTBOX */
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.90);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 92%;
+            max-height: 82vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            color: white;
+            font-size: 38px;
+            font-weight: 700;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .lightbox-title {
+            position: absolute;
+            bottom: 25px;
+            left: 20px;
+            right: 20px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+
+        /* FOOTER */
+
+        .photos-footer {
+            background: #003d2d;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .photos-footer strong {
+            color: #f4c430;
+        }
+
+
+        /* TABLET */
+
+        @media (max-width: 900px) {
+
+            .photo-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .photo-image {
+                height: 210px;
+            }
+
+        }
+
+
+        /* PHONE */
+
+        @media (max-width: 600px) {
+
+            .photos-header {
+                flex-direction: column;
+                padding: 12px 15px;
+            }
+
+            .photos-nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .photos-nav a {
+                font-size: 13px;
+            }
+
+            .photos-hero {
+                padding: 60px 20px;
+            }
+
+            .photos-hero h1 {
+                font-size: 30px;
+            }
+
+            .photos-hero span {
+                font-size: 15px;
+            }
+
+            .gallery-container {
+                padding: 40px 15px;
+            }
+
+            .gallery-intro h2 {
+                font-size: 27px;
+            }
+
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+
+            .photo-image {
+                height: 165px;
+            }
+
+            .photo-caption {
+                padding: 10px 5px;
+            }
+
+            .photo-caption h3 {
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
-<header class="navbar">
 
-    <div class="brand">
+<!-- ================= HEADER ================= -->
+
+<header class="photos-header">
+
+    <a
+        href="Index.html"
+        class="photos-logo"
+    >
+
+        <img
+            src="twinkle_logo_1.png"
+            alt="Twinkle Tours Travel and Tourism logo"
+        >
+
+    </a>
+
+
+    <nav class="photos-nav">
+
         <a href="Index.html">
-            <img src="twinkle_logo_1.png"
-                 alt="Twinkle Tours Travel and Tourism logo">
+            Home
         </a>
-    </div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="photos.html">Photos</a>
-        <a href="videos.html">Videos</a>
+        <a href="photos.html">
+            Photos
+        </a>
+
+        <a href="videos.html">
+            Videos
+        </a>
+
+        <a href="Index.html#packages">
+            Packages
+        </a>
+
+        <a href="Index.html#booking">
+            Book Now
+        </a>
+
     </nav>
 
 </header>
 
 
-<section class="photos-section">
 
-    <div class="section-heading">
+<!-- ================= HERO ================= -->
 
-        <p>EXPLORE • DISCOVER • EXPERIENCE</p>
+<section class="photos-hero">
 
-        <h2>Wildlife & Culture Gallery</h2>
+    <p>
+        EXPLORE • DISCOVER • EXPERIENCE
+    </p>
 
-        <span>
-            Explore beautiful wildlife, landscapes and cultural
-            experiences from Kenya and beyond.
-        </span>
+    <h1>
+        Wildlife & Culture Gallery
+    </h1>
+
+    <span>
+        Discover the beauty of Kenya through wildlife,
+        culture, landscapes and unforgettable travel moments.
+    </span>
+
+</section>
+
+
+
+<!-- ================= GALLERY ================= -->
+
+<main class="gallery-container">
+
+    <div class="gallery-intro">
+
+        <h2>
+            Explore Kenya
+        </h2>
+
+        <p>
+            Tap any photo to view it in full size.
+        </p>
 
     </div>
 
 
     <div class="photo-gallery">
 
-        <div class="photo-card">
-            <img src="Maasai people.jpg" alt="Maasai people">
-            <h3>Maasai People</h3>
+
+        <!-- MAASAI -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="Maasai people.jpg"
+                    alt="Maasai people"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    Maasai People
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="Rhino.jpg" alt="Rhinoceros">
-            <h3>Rhinoceros</h3>
+
+
+        <!-- RHINO -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="Rhino.jpg"
+                    alt="Rhinoceros"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    Rhinoceros
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="antelope.jpg" alt="Antelope">
-            <h3>Antelope</h3>
+
+
+        <!-- ANTELOPE -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="antelope.jpg"
+                    alt="Antelope"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    Antelope
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="buffalo.jpg" alt="African buffalo">
-            <h3>African Buffalo</h3>
+
+
+        <!-- BUFFALO -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="buffalo.jpg"
+                    alt="African buffalo"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    African Buffalo
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="cheetah 1.jpg" alt="Cheetah">
-            <h3>Cheetah</h3>
+
+
+        <!-- CHEETAH 1 -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="cheetah 1.jpg"
+                    alt="Cheetah"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    Cheetah
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="cheetah 2.jpg" alt="Cheetah in the wild">
-            <h3>Cheetah in the Wild</h3>
+
+
+        <!-- CHEETAH 2 -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="cheetah 2.jpg"
+                    alt="Cheetah in the wild"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    Cheetah in the Wild
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="elephant 1.jpg" alt="African elephant">
-            <h3>African Elephant</h3>
+
+
+        <!-- ELEPHANT 1 -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="elephant 1.jpg"
+                    alt="African elephant"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    African Elephant
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="elephant 2.jpg" alt="African elephant">
-            <h3>Elephants</h3>
+
+
+        <!-- ELEPHANT 2 -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="elephant 2.jpg"
+                    alt="African elephants"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    Elephants
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="elephant 3.jpg" alt="African elephants">
-            <h3>Elephants in the Savannah</h3>
+
+
+        <!-- ELEPHANT 3 -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="elephant 3.jpg"
+                    alt="African elephants in the savannah"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    Elephants in the Savannah
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="giraffe 1.jpg" alt="Giraffe">
-            <h3>African Giraffe</h3>
+
+
+        <!-- GIRAFFE 1 -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="giraffe 1.jpg"
+                    alt="African giraffe"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    African Giraffe
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="giraffe 2.jpg" alt="Giraffe">
-            <h3>Giraffe</h3>
+
+
+        <!-- GIRAFFE 2 -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="giraffe 2.jpg"
+                    alt="Giraffe"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    Giraffe
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="giraffe 3.jpg" alt="Giraffe">
-            <h3>Giraffe in the Wild</h3>
+
+
+        <!-- GIRAFFE 3 -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="giraffe 3.jpg"
+                    alt="Giraffe in the wild"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    Giraffe in the Wild
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="hippo.jpg" alt="Hippopotamus">
-            <h3>Hippopotamus</h3>
+
+
+        <!-- HIPPO -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="hippo.jpg"
+                    alt="Hippopotamus"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    Hippopotamus
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="lion 1.jpg" alt="African lion">
-            <h3>African Lion</h3>
+
+
+        <!-- LION -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="lion 1.jpg"
+                    alt="African lion"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    African Lion
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="wildebeest.jpg" alt="Wildebeest">
-            <h3>Wildebeest</h3>
+
+
+        <!-- WILDEBEEST -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="wildebeest.jpg"
+                    alt="Wildebeest"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    Wildebeest
+                </h3>
+
+            </div>
+
         </div>
 
-        <div class="photo-card">
-            <img src="zebra 1.jpg" alt="Zebra">
-            <h3>African Zebra</h3>
+
+
+        <!-- ZEBRA -->
+
+        <div class="photo-card"
+             onclick="openLightbox(this)">
+
+            <div class="photo-image">
+
+                <img
+                    src="zebra 1.jpg"
+                    alt="African zebra"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+
+                <h3>
+                    African Zebra
+                </h3>
+
+            </div>
+
         </div>
+
 
     </div>
 
-</section>
+</main>
 
 
-<footer class="site-footer">
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    onclick="closeLightbox(event)"
+>
+
+    <span
+        class="lightbox-close"
+        onclick="closeLightbox(event)"
+    >
+        ×
+    </span>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt=""
+    >
+
+    <div
+        class="lightbox-title"
+        id="lightboxTitle"
+    ></div>
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="photos-footer">
 
     <p>
-        © 2026 Twinkle Tours. All RIGHTS RESERVED.
+        © 2026 <strong>Twinkle Tours</strong>.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Travel with us and us with you.
+    </p>
+
+</footer>
+
+
+
+<!-- ================= GALLERY JAVASCRIPT ================= -->
+
+<script>
+
+function openLightbox(card) {
+
+    const image =
+        card.querySelector("img");
+
+    const title =
+        card.querySelector("h3");
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    const lightboxImage =
+        document.getElementById("lightboxImage");
+
+    const lightboxTitle =
+        document.getElementById("lightboxTitle");
+
+
+    lightboxImage.src =
+        image.src;
+
+    lightboxImage.alt =
+        image.alt;
+
+    lightboxTitle.textContent =
+        title.textContent;
+
+
+    lightbox.classList.add("active");
+
+}
+
+
+function closeLightbox(event) {
+
+    if (
+        event.target.id === "lightbox" ||
+        event.target.classList.contains("lightbox-close")
+    ) {
+
+        document
+            .getElementById("lightbox")
+            .classList.remove("active");
+
+    }
+
+}
+
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            document
+                .getElementById("lightbox")
+                .classList.remove("active");
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
