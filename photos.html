@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Photos | Twinkle Tours</title>
 
     <meta
         name="description"
-        content="Explore wildlife, culture and beautiful destinations with Twinkle Tours."
+        content="Explore wildlife, landscapes and cultural photography from Kenya with Twinkle Tours."
     >
 
     <link rel="stylesheet" href="Styles.css">
 
     <style>
 
-        /* ========================================
-           TWINKLE TOURS PHOTO GALLERY
-        ======================================== */
+        /* =====================================================
+           TWINKLE TOURS - PHOTOS PAGE
+        ===================================================== */
 
         * {
             box-sizing: border-box;
@@ -31,26 +25,33 @@
 
         body {
             margin: 0;
+            font-family: Arial, sans-serif;
             background: #f4f8f5;
+            color: #173f35;
         }
 
-
-        /* HEADER */
+        /* ================= HEADER ================= */
 
         .photos-header {
             background: #ffffff;
-            padding: 12px 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         }
 
-        .photos-logo img {
+        .photos-header-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 12px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .photos-logo {
             width: 165px;
             height: auto;
             display: block;
@@ -58,156 +59,191 @@
 
         .photos-nav {
             display: flex;
-            align-items: center;
-            gap: 20px;
             flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
         }
 
         .photos-nav a {
-            color: #075b43;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 15px;
+            color: #075b43;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: 0.3s ease;
         }
 
         .photos-nav a:hover {
-            color: #d9a900;
+            background: #e9f5ef;
+            color: #003d2d;
         }
 
-
-        /* PAGE INTRO */
+        /* ================= HERO ================= */
 
         .photos-hero {
+            min-height: 360px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            padding: 70px 20px;
+
             background:
                 linear-gradient(
-                    rgba(0, 45, 32, 0.72),
-                    rgba(0, 45, 32, 0.72)
+                    rgba(0, 45, 34, 0.68),
+                    rgba(0, 45, 34, 0.55)
                 ),
                 url("elephant-safari-hero.png");
 
             background-size: cover;
             background-position: center;
-
-            text-align: center;
-            color: white;
-
-            padding: 80px 20px;
         }
 
-        .photos-hero p {
-            margin: 0 0 12px;
+        .photos-hero-content {
+            max-width: 850px;
+            color: white;
+        }
+
+        .photos-hero .eyebrow {
             color: #f4c430;
-            font-weight: 700;
+            font-weight: bold;
             letter-spacing: 2px;
-            font-size: 13px;
+            margin-bottom: 10px;
         }
 
         .photos-hero h1 {
+            font-size: clamp(34px, 5vw, 56px);
             margin: 0 0 15px;
-            font-size: 42px;
         }
 
-        .photos-hero span {
-            display: block;
-            max-width: 700px;
-            margin: auto;
-            font-size: 17px;
+        .photos-hero p {
+            font-size: 18px;
             line-height: 1.7;
+            margin: 0 auto;
+            max-width: 720px;
         }
 
-
-        /* GALLERY */
+        /* ================= GALLERY ================= */
 
         .gallery-container {
-            max-width: 1200px;
+            max-width: 1250px;
             margin: auto;
-            padding: 60px 5%;
+            padding: 65px 25px;
         }
 
         .gallery-intro {
             text-align: center;
-            margin-bottom: 35px;
+            max-width: 750px;
+            margin: 0 auto 40px;
         }
 
         .gallery-intro h2 {
-            color: #003d2d;
-            font-size: 32px;
             margin-bottom: 10px;
+            font-size: 32px;
+            color: #003d2d;
         }
 
         .gallery-intro p {
             color: #65766f;
-            font-size: 16px;
+            line-height: 1.7;
         }
-
 
         .photo-gallery {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 22px;
+            gap: 24px;
         }
 
-
-        /* PHOTO CARD */
-
         .photo-card {
-            background: #ffffff;
-            border-radius: 14px;
+            background: white;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,55,40,0.12);
+
+            box-shadow:
+                0 7px 25px rgba(0,0,0,0.08);
+
             cursor: pointer;
-            transition: transform 0.3s ease,
-                        box-shadow 0.3s ease;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
         }
 
         .photo-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 28px rgba(0,55,40,0.18);
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.15);
         }
 
+        .photo-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 240px;
+        }
 
         .photo-image {
-            width: 100%;
-            height: 230px;
-            overflow: hidden;
-            background: #e9eee9;
-        }
-
-        .photo-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
+
             transition: transform 0.5s ease;
         }
 
-        .photo-card:hover .photo-image img {
-            transform: scale(1.08);
+        .photo-card:hover .photo-image {
+            transform: scale(1.07);
         }
 
+        .photo-number {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+
+            background: rgba(0, 61, 45, 0.85);
+            color: white;
+
+            padding: 5px 9px;
+            border-radius: 20px;
+
+            font-size: 12px;
+            font-weight: bold;
+        }
 
         .photo-caption {
-            padding: 15px;
+            padding: 16px 14px 18px;
             text-align: center;
         }
 
         .photo-caption h3 {
             margin: 0;
-            color: #075b43;
             font-size: 17px;
+            color: #075b43;
         }
 
+        .photo-caption p {
+            margin: 6px 0 0;
+            color: #65766f;
+            font-size: 13px;
+        }
 
-        /* LIGHTBOX */
+        /* ================= LIGHTBOX ================= */
 
         .lightbox {
             display: none;
+
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.90);
-            z-index: 9999;
+
+            z-index: 2000;
+
+            background: rgba(0,0,0,0.92);
+
             align-items: center;
             justify-content: center;
+
             padding: 25px;
         }
 
@@ -215,102 +251,125 @@
             display: flex;
         }
 
+        .lightbox-content {
+            position: relative;
+
+            width: 100%;
+            max-width: 1100px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .lightbox img {
-            max-width: 92%;
-            max-height: 82vh;
+            max-width: 95%;
+            max-height: 78vh;
+
             object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-title {
+            color: white;
+            text-align: center;
+
+            margin-top: 15px;
+
+            font-size: 19px;
+            font-weight: bold;
         }
 
         .lightbox-close {
             position: absolute;
-            top: 20px;
-            right: 25px;
-            color: white;
-            font-size: 38px;
-            font-weight: 700;
+
+            top: -45px;
+            right: 5px;
+
+            width: 42px;
+            height: 42px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: #f4c430;
+            color: #003d2d;
+
+            font-size: 25px;
+            font-weight: bold;
+
             cursor: pointer;
-            line-height: 1;
         }
 
-        .lightbox-title {
-            position: absolute;
-            bottom: 25px;
-            left: 20px;
-            right: 20px;
-            text-align: center;
-            color: white;
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-
-        /* FOOTER */
+        /* ================= FOOTER ================= */
 
         .photos-footer {
-            background: #003d2d;
+            background: #173f35;
             color: white;
+
             text-align: center;
-            padding: 30px 20px;
+
+            padding: 35px 20px;
         }
 
         .photos-footer strong {
             color: #f4c430;
         }
 
+        .photos-footer p {
+            margin: 6px 0;
+        }
 
-        /* TABLET */
+        /* ================= TABLET ================= */
 
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
+
+            .photos-header-inner {
+                flex-direction: column;
+            }
 
             .photo-gallery {
                 grid-template-columns: repeat(3, 1fr);
             }
 
-            .photo-image {
-                height: 210px;
-            }
-
         }
 
+        /* ================= MOBILE ================= */
 
-        /* PHONE */
+        @media (max-width: 700px) {
 
-        @media (max-width: 600px) {
-
-            .photos-header {
-                flex-direction: column;
+            .photos-header-inner {
                 padding: 12px 15px;
             }
 
+            .photos-logo {
+                width: 145px;
+            }
+
             .photos-nav {
-                justify-content: center;
-                gap: 12px;
+                gap: 3px;
             }
 
             .photos-nav a {
                 font-size: 13px;
+                padding: 6px 8px;
             }
 
             .photos-hero {
-                padding: 60px 20px;
+                min-height: 300px;
+                padding: 55px 18px;
             }
 
-            .photos-hero h1 {
-                font-size: 30px;
-            }
-
-            .photos-hero span {
-                font-size: 15px;
+            .photos-hero p {
+                font-size: 16px;
             }
 
             .gallery-container {
-                padding: 40px 15px;
-            }
-
-            .gallery-intro h2 {
-                font-size: 27px;
+                padding: 45px 15px;
             }
 
             .photo-gallery {
@@ -318,97 +377,130 @@
                 gap: 14px;
             }
 
-            .photo-image {
-                height: 165px;
+            .photo-image-wrapper {
+                height: 175px;
             }
 
             .photo-caption {
-                padding: 10px 5px;
+                padding: 12px 8px 14px;
             }
 
             .photo-caption h3 {
                 font-size: 14px;
             }
 
+            .photo-caption p {
+                font-size: 11px;
+            }
+
+        }
+
+        /* ================= SMALL PHONES ================= */
+
+        @media (max-width: 430px) {
+
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-image-wrapper {
+                height: 230px;
+            }
+
+            .photo-caption h3 {
+                font-size: 16px;
+            }
+
         }
 
     </style>
-
 </head>
 
 
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="photos-header">
 
-    <a
-        href="Index.html"
-        class="photos-logo"
-    >
+    <div class="photos-header-inner">
 
-        <img
-            src="twinkle_logo_1.png"
-            alt="Twinkle Tours Travel and Tourism logo"
-        >
+        <a href="index.html">
 
-    </a>
+            <img
+                src="twinkle_logo_1.png"
+                alt="Twinkle Tours"
+                class="photos-logo"
+            >
 
-
-    <nav class="photos-nav">
-
-        <a href="Index.html">
-            Home
         </a>
 
-        <a href="photos.html">
-            Photos
-        </a>
 
-        <a href="videos.html">
-            Videos
-        </a>
+        <nav class="photos-nav">
 
-        <a href="Index.html#packages">
-            Packages
-        </a>
+            <a href="index.html">Home</a>
 
-        <a href="Index.html#booking">
-            Book Now
-        </a>
+            <a href="index.html#packages">
+                Packages
+            </a>
 
-    </nav>
+            <a href="photos.html">
+                Photos
+            </a>
+
+            <a href="videos.html">
+                Videos
+            </a>
+
+            <a href="index.html#booking">
+                Book Now
+            </a>
+
+        </nav>
+
+    </div>
 
 </header>
 
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="photos-hero">
 
-    <p>
-        EXPLORE • DISCOVER • EXPERIENCE
-    </p>
+    <div class="photos-hero-content">
 
-    <h1>
-        Wildlife & Culture Gallery
-    </h1>
+        <p class="eyebrow">
+            TWINKLE TOURS
+        </p>
 
-    <span>
-        Discover the beauty of Kenya through wildlife,
-        culture, landscapes and unforgettable travel moments.
-    </span>
+        <h1>
+            Wildlife & Culture Gallery
+        </h1>
+
+        <p>
+            Discover the beauty of Kenya through wildlife,
+            culture, landscapes, beaches and unforgettable
+            safari moments.
+        </p>
+
+    </div>
 
 </section>
 
 
 
-<!-- ================= GALLERY ================= -->
+<!-- =====================================================
+     PHOTO GALLERY
+===================================================== -->
 
 <main class="gallery-container">
+
 
     <div class="gallery-intro">
 
@@ -417,7 +509,10 @@
         </h2>
 
         <p>
-            Tap any photo to view it in full size.
+            From magnificent wildlife and open savannahs
+            to mountain landscapes, beaches and vibrant
+            cultures, explore some of the experiences
+            that make Kenya unforgettable.
         </p>
 
     </div>
@@ -426,416 +521,1132 @@
     <div class="photo-gallery">
 
 
-        <!-- MAASAI -->
+        <!-- =================================================
+             EXISTING 16 PHOTOS
+        ================================================= -->
 
-        <div class="photo-card"
-             onclick="openLightbox(this)">
 
-            <div class="photo-image">
+        <!-- 01 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Maasai People"
+        >
+
+            <div class="photo-image-wrapper">
 
                 <img
                     src="Maasai people.jpg"
-                    alt="Maasai people"
+                    alt="Maasai people in Kenya"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">01</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    Maasai People
-                </h3>
-
+                <h3>Maasai People</h3>
+                <p>Culture & Heritage</p>
             </div>
 
         </div>
 
 
+        <!-- 02 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Rhinoceros"
+        >
 
-        <!-- RHINO -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="Rhino.jpg"
-                    alt="Rhinoceros"
+                    alt="Rhinoceros in Kenya"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">02</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    Rhinoceros
-                </h3>
-
+                <h3>Rhinoceros</h3>
+                <p>Kenyan Wildlife</p>
             </div>
 
         </div>
 
 
+        <!-- 03 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Antelope"
+        >
 
-        <!-- ANTELOPE -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="antelope.jpg"
-                    alt="Antelope"
+                    alt="Antelope in Kenya"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">03</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    Antelope
-                </h3>
-
+                <h3>Antelope</h3>
+                <p>Savannah Wildlife</p>
             </div>
 
         </div>
 
 
+        <!-- 04 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="African Buffalo"
+        >
 
-        <!-- BUFFALO -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="buffalo.jpg"
                     alt="African buffalo"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">04</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    African Buffalo
-                </h3>
-
+                <h3>African Buffalo</h3>
+                <p>Big Five Wildlife</p>
             </div>
 
         </div>
 
 
+        <!-- 05 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Cheetah"
+        >
 
-        <!-- CHEETAH 1 -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="cheetah 1.jpg"
-                    alt="Cheetah"
+                    alt="Cheetah in Kenya"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">05</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    Cheetah
-                </h3>
-
+                <h3>Cheetah</h3>
+                <p>Predators of Kenya</p>
             </div>
 
         </div>
 
 
+        <!-- 06 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Cheetah in the Wild"
+        >
 
-        <!-- CHEETAH 2 -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="cheetah 2.jpg"
                     alt="Cheetah in the wild"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">06</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    Cheetah in the Wild
-                </h3>
-
+                <h3>Cheetah in the Wild</h3>
+                <p>Safari Wildlife</p>
             </div>
 
         </div>
 
 
+        <!-- 07 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="African Elephant"
+        >
 
-        <!-- ELEPHANT 1 -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="elephant 1.jpg"
                     alt="African elephant"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">07</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    African Elephant
-                </h3>
-
+                <h3>African Elephant</h3>
+                <p>Kenyan Wildlife</p>
             </div>
 
         </div>
 
 
+        <!-- 08 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Elephants"
+        >
 
-        <!-- ELEPHANT 2 -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="elephant 2.jpg"
-                    alt="African elephants"
+                    alt="Elephants in Kenya"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">08</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    Elephants
-                </h3>
-
+                <h3>Elephants</h3>
+                <p>Safari Experience</p>
             </div>
 
         </div>
 
 
+        <!-- 09 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Elephants in the Savannah"
+        >
 
-        <!-- ELEPHANT 3 -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="elephant 3.jpg"
-                    alt="African elephants in the savannah"
+                    alt="Elephants in the savannah"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">09</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    Elephants in the Savannah
-                </h3>
-
+                <h3>Elephants in the Savannah</h3>
+                <p>Wild Kenya</p>
             </div>
 
         </div>
 
 
+        <!-- 10 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="African Giraffe"
+        >
 
-        <!-- GIRAFFE 1 -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="giraffe 1.jpg"
                     alt="African giraffe"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">10</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    African Giraffe
-                </h3>
-
+                <h3>African Giraffe</h3>
+                <p>Kenyan Wildlife</p>
             </div>
 
         </div>
 
 
+        <!-- 11 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Giraffe"
+        >
 
-        <!-- GIRAFFE 2 -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="giraffe 2.jpg"
-                    alt="Giraffe"
+                    alt="Giraffe in Kenya"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">11</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    Giraffe
-                </h3>
-
+                <h3>Giraffe</h3>
+                <p>Savannah Wildlife</p>
             </div>
 
         </div>
 
 
+        <!-- 12 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Giraffe in the Wild"
+        >
 
-        <!-- GIRAFFE 3 -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="giraffe 3.jpg"
                     alt="Giraffe in the wild"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">12</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    Giraffe in the Wild
-                </h3>
-
+                <h3>Giraffe in the Wild</h3>
+                <p>Kenyan Savannah</p>
             </div>
 
         </div>
 
 
+        <!-- 13 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Hippopotamus"
+        >
 
-        <!-- HIPPO -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="hippo.jpg"
-                    alt="Hippopotamus"
+                    alt="Hippopotamus in Kenya"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">13</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    Hippopotamus
-                </h3>
-
+                <h3>Hippopotamus</h3>
+                <p>Kenyan Waterways</p>
             </div>
 
         </div>
 
 
+        <!-- 14 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="African Lion"
+        >
 
-        <!-- LION -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="lion 1.jpg"
                     alt="African lion"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">14</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    African Lion
-                </h3>
-
+                <h3>African Lion</h3>
+                <p>Big Five Wildlife</p>
             </div>
 
         </div>
 
 
+        <!-- 15 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Wildebeest"
+        >
 
-        <!-- WILDEBEEST -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="wildebeest.jpg"
-                    alt="Wildebeest"
+                    alt="Wildebeest in Kenya"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">15</span>
 
             </div>
 
             <div class="photo-caption">
-
-                <h3>
-                    Wildebeest
-                </h3>
-
+                <h3>Wildebeest</h3>
+                <p>Great Migration</p>
             </div>
 
         </div>
 
 
+        <!-- 16 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="African Zebra"
+        >
 
-        <!-- ZEBRA -->
-
-        <div class="photo-card"
-             onclick="openLightbox(this)">
-
-            <div class="photo-image">
+            <div class="photo-image-wrapper">
 
                 <img
                     src="zebra 1.jpg"
                     alt="African zebra"
+                    class="photo-image"
+                    loading="lazy"
                 >
+
+                <span class="photo-number">16</span>
 
             </div>
 
             <div class="photo-caption">
+                <h3>African Zebra</h3>
+                <p>Kenyan Savannah</p>
+            </div>
 
-                <h3>
-                    African Zebra
-                </h3>
+        </div>
 
+
+
+        <!-- =================================================
+             NEW 24 PHOTOS
+        ================================================= -->
+
+
+        <!-- 17 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="African Leopard"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="leopard.jpg"
+                    alt="African leopard in Kenya"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">17</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>African Leopard</h3>
+                <p>Wild Predator</p>
+            </div>
+
+        </div>
+
+
+        <!-- 18 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Leopard in the Savannah"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="leopard-safari.jpg"
+                    alt="Leopard in the Kenyan savannah"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">18</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Leopard in the Savannah</h3>
+                <p>Safari Wildlife</p>
+            </div>
+
+        </div>
+
+
+        <!-- 19 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="African Wild Dog"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="african-wild-dog.jpg"
+                    alt="African wild dog"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">19</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>African Wild Dog</h3>
+                <p>Rare Wildlife</p>
+            </div>
+
+        </div>
+
+
+        <!-- 20 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Warthog"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="warthog.jpg"
+                    alt="Warthog in Kenya"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">20</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Warthog</h3>
+                <p>Savannah Wildlife</p>
+            </div>
+
+        </div>
+
+
+        <!-- 21 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Spotted Hyena"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="spotted-hyena.jpg"
+                    alt="Spotted hyena in Kenya"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">21</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Spotted Hyena</h3>
+                <p>Night & Day Wildlife</p>
+            </div>
+
+        </div>
+
+
+        <!-- 22 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Baboon"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="baboon.jpg"
+                    alt="Baboon in Kenya"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">22</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Baboon</h3>
+                <p>Kenyan Wildlife</p>
+            </div>
+
+        </div>
+
+
+        <!-- 23 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="African Ostrich"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="ostrich.jpg"
+                    alt="African ostrich"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">23</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>African Ostrich</h3>
+                <p>Safari Birds</p>
+            </div>
+
+        </div>
+
+
+        <!-- 24 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Flamingos at Lake Nakuru"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="flamingos-lake-nakuru.jpg"
+                    alt="Flamingos at Lake Nakuru"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">24</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Flamingos at Lake Nakuru</h3>
+                <p>Lake Nakuru</p>
+            </div>
+
+        </div>
+
+
+        <!-- 25 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Zebra Herd"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="zebra-herd.jpg"
+                    alt="Zebra herd in Kenya"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">25</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Zebra Herd</h3>
+                <p>Kenyan Savannah</p>
+            </div>
+
+        </div>
+
+
+        <!-- 26 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Giraffes on the Savannah"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="giraffes-savannah.jpg"
+                    alt="Giraffes on the savannah"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">26</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Giraffes on the Savannah</h3>
+                <p>Kenyan Landscape</p>
+            </div>
+
+        </div>
+
+
+        <!-- 27 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Buffalo Herd"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="buffalo-herd.jpg"
+                    alt="Buffalo herd in Kenya"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">27</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Buffalo Herd</h3>
+                <p>Big Five Wildlife</p>
+            </div>
+
+        </div>
+
+
+        <!-- 28 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Black Rhino"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="black-rhino.jpg"
+                    alt="Black rhinoceros in Kenya"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">28</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Black Rhino</h3>
+                <p>Conservation Wildlife</p>
+            </div>
+
+        </div>
+
+
+        <!-- 29 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Lion on the Savannah"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="lion-savannah.jpg"
+                    alt="Lion on the Kenyan savannah"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">29</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Lion on the Savannah</h3>
+                <p>Big Five Wildlife</p>
+            </div>
+
+        </div>
+
+
+        <!-- 30 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Cheetah on the Plains"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="cheetah-plains.jpg"
+                    alt="Cheetah on the plains"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">30</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Cheetah on the Plains</h3>
+                <p>Kenyan Safari</p>
+            </div>
+
+        </div>
+
+
+        <!-- 31 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Maasai Mara Savannah"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="maasai-mara-savannah.jpg"
+                    alt="Maasai Mara savannah landscape"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">31</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Maasai Mara Savannah</h3>
+                <p>Maasai Mara</p>
+            </div>
+
+        </div>
+
+
+        <!-- 32 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Amboseli & Mount Kilimanjaro"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="amboseli-kilimanjaro.jpg"
+                    alt="Amboseli and Mount Kilimanjaro"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">32</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Amboseli & Mount Kilimanjaro</h3>
+                <p>Amboseli National Park</p>
+            </div>
+
+        </div>
+
+
+        <!-- 33 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Mount Kenya Landscape"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="mount-kenya.jpg"
+                    alt="Mount Kenya landscape"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">33</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Mount Kenya Landscape</h3>
+                <p>Mount Kenya</p>
+            </div>
+
+        </div>
+
+
+        <!-- 34 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Samburu Landscape"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="samburu-landscape.jpg"
+                    alt="Samburu landscape in Kenya"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">34</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Samburu Landscape</h3>
+                <p>Samburu National Reserve</p>
+            </div>
+
+        </div>
+
+
+        <!-- 35 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Hell's Gate Landscape"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="hells-gate.jpg"
+                    alt="Hell's Gate landscape in Kenya"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">35</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Hell's Gate Landscape</h3>
+                <p>Hell's Gate National Park</p>
+            </div>
+
+        </div>
+
+
+        <!-- 36 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Lake Nakuru Landscape"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="lake-nakuru.jpg"
+                    alt="Lake Nakuru landscape"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">36</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Lake Nakuru Landscape</h3>
+                <p>Rift Valley</p>
+            </div>
+
+        </div>
+
+
+        <!-- 37 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Diani Beach"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="diani-beach.jpg"
+                    alt="Diani Beach Kenya"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">37</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Diani Beach</h3>
+                <p>Kenyan Coast</p>
+            </div>
+
+        </div>
+
+
+        <!-- 38 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Kenyan Coast"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="kenyan-coast.jpg"
+                    alt="Kenyan coast"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">38</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Kenyan Coast</h3>
+                <p>Beach & Ocean</p>
+            </div>
+
+        </div>
+
+
+        <!-- 39 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="Maasai Cultural Experience"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="maasai-culture.jpg"
+                    alt="Maasai cultural experience in Kenya"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">39</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>Maasai Cultural Experience</h3>
+                <p>Culture & Heritage</p>
+            </div>
+
+        </div>
+
+
+        <!-- 40 -->
+        <div
+            class="photo-card"
+            onclick="openLightbox(this)"
+            data-title="African Safari Landscape"
+        >
+
+            <div class="photo-image-wrapper">
+
+                <img
+                    src="african-safari-landscape.jpg"
+                    alt="African safari landscape in Kenya"
+                    class="photo-image"
+                    loading="lazy"
+                >
+
+                <span class="photo-number">40</span>
+
+            </div>
+
+            <div class="photo-caption">
+                <h3>African Safari Landscape</h3>
+                <p>Explore Kenya</p>
             </div>
 
         </div>
@@ -847,7 +1658,9 @@
 
 
 
-<!-- ================= LIGHTBOX ================= -->
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
 
 <div
     class="lightbox"
@@ -855,29 +1668,39 @@
     onclick="closeLightbox(event)"
 >
 
-    <span
-        class="lightbox-close"
-        onclick="closeLightbox(event)"
-    >
-        ×
-    </span>
-
-    <img
-        id="lightboxImage"
-        src=""
-        alt=""
-    >
-
     <div
-        class="lightbox-title"
-        id="lightboxTitle"
-    ></div>
+        class="lightbox-content"
+        onclick="event.stopPropagation()"
+    >
+
+        <button
+            class="lightbox-close"
+            onclick="closeLightbox()"
+            aria-label="Close image"
+        >
+            ×
+        </button>
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt=""
+        >
+
+        <div
+            class="lightbox-title"
+            id="lightboxTitle"
+        ></div>
+
+    </div>
 
 </div>
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="photos-footer">
 
@@ -894,17 +1717,19 @@
 
 
 
-<!-- ================= GALLERY JAVASCRIPT ================= -->
+<!-- =====================================================
+     LIGHTBOX JAVASCRIPT
+===================================================== -->
 
 <script>
 
 function openLightbox(card) {
 
     const image =
-        card.querySelector("img");
+        card.querySelector(".photo-image");
 
     const title =
-        card.querySelector("h3");
+        card.getAttribute("data-title");
 
     const lightbox =
         document.getElementById("lightbox");
@@ -916,34 +1741,33 @@ function openLightbox(card) {
         document.getElementById("lightboxTitle");
 
 
-    lightboxImage.src =
-        image.src;
+    lightboxImage.src = image.src;
 
-    lightboxImage.alt =
-        image.alt;
+    lightboxImage.alt = image.alt;
 
-    lightboxTitle.textContent =
-        title.textContent;
-
+    lightboxTitle.textContent = title;
 
     lightbox.classList.add("active");
 
+    document.body.style.overflow = "hidden";
 }
 
 
 function closeLightbox(event) {
 
     if (
-        event.target.id === "lightbox" ||
-        event.target.classList.contains("lightbox-close")
+        event &&
+        event.target !== event.currentTarget
     ) {
-
-        document
-            .getElementById("lightbox")
-            .classList.remove("active");
-
+        return;
     }
 
+    const lightbox =
+        document.getElementById("lightbox");
+
+    lightbox.classList.remove("active");
+
+    document.body.style.overflow = "";
 }
 
 
@@ -953,9 +1777,12 @@ document.addEventListener(
 
         if (event.key === "Escape") {
 
-            document
-                .getElementById("lightbox")
-                .classList.remove("active");
+            const lightbox =
+                document.getElementById("lightbox");
+
+            lightbox.classList.remove("active");
+
+            document.body.style.overflow = "";
 
         }
 
@@ -966,5 +1793,4 @@ document.addEventListener(
 
 
 </body>
-
 </html>
