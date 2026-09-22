@@ -1,645 +1,754 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Videos | Twinkle Tours</title>
+<meta name="description" content="Watch wildlife, safari and travel videos from Twinkle Tours Kenya.">
 
-    <title>Videos | Twinkle Tours</title>
+<link rel="stylesheet" href="Styles.css">
 
-    <link rel="stylesheet" href="Styles.css">
+<style>
+    /* ========================================
+       TWINKLE TOURS - PROFESSIONAL VIDEOS PAGE
+       ======================================== */
 
-    <style>
-        /* ========================================
-           TWINKLE TOURS - VIDEOS PAGE
-           ======================================== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f8f6;
+        color: #173f35;
+        line-height: 1.6;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f8f5;
-            color: #173f35;
-            line-height: 1.6;
-        }
+    /* ========================================
+       HEADER
+       ======================================== */
 
-        /* ================================
-           HEADER
-           ================================ */
+    .videos-header {
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        padding: 10px 5%;
+        box-shadow: 0 2px 12px rgba(0, 61, 45, 0.12);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .videos-logo img {
+        width: 165px;
+        max-width: 100%;
+        display: block;
+    }
+
+    .videos-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .videos-nav a {
+        text-decoration: none;
+        color: #075b43;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 8px 10px;
+        border-radius: 7px;
+        transition: all 0.3s ease;
+    }
+
+    .videos-nav a:hover,
+    .videos-nav a.active {
+        background: #075b43;
+        color: #ffffff;
+    }
+
+    .videos-nav .book-link {
+        background: #f4c430;
+        color: #003d2d;
+        padding: 9px 14px;
+    }
+
+    .videos-nav .book-link:hover {
+        background: #d9a900;
+        color: #ffffff;
+    }
+
+    /* ========================================
+       HERO
+       ======================================== */
+
+    .videos-hero {
+        min-height: 390px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 20px;
+        position: relative;
+        overflow: hidden;
+
+        background:
+            linear-gradient(
+                rgba(0, 35, 25, 0.68),
+                rgba(0, 35, 25, 0.68)
+            ),
+            url("elephant-safari-hero.png") center / cover no-repeat;
+    }
+
+    .videos-hero-content {
+        max-width: 850px;
+        color: #ffffff;
+        position: relative;
+        z-index: 2;
+    }
+
+    .videos-hero-content .eyebrow {
+        color: #f4c430;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        margin-bottom: 14px;
+    }
+
+    .videos-hero-content h1 {
+        font-size: clamp(36px, 6vw, 60px);
+        margin-bottom: 18px;
+        line-height: 1.1;
+    }
+
+    .videos-hero-content p {
+        max-width: 720px;
+        margin: 0 auto;
+        font-size: 17px;
+        color: #f1f5f3;
+    }
+
+    /* ========================================
+       MAIN VIDEO SECTION
+       ======================================== */
+
+    .video-container {
+        max-width: 1250px;
+        margin: 0 auto;
+        padding: 70px 22px 80px;
+    }
+
+    .video-intro {
+        text-align: center;
+        max-width: 780px;
+        margin: 0 auto 45px;
+    }
+
+    .video-intro .eyebrow {
+        color: #075b43;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+
+    .video-intro h2 {
+        color: #003d2d;
+        font-size: clamp(30px, 4vw, 40px);
+        margin-bottom: 12px;
+    }
+
+    .video-intro p {
+        color: #65766f;
+        font-size: 16px;
+        max-width: 700px;
+        margin: auto;
+    }
+
+    /* ========================================
+       VIDEO GRID
+       ======================================== */
+
+    .video-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px;
+    }
+
+    .video-card {
+        background: #ffffff;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 8px 28px rgba(0, 61, 45, 0.12);
+        border: 1px solid rgba(7, 91, 67, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .video-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 34px rgba(0, 61, 45, 0.18);
+    }
+
+    .video-wrapper {
+        width: 100%;
+        background: #111111;
+        position: relative;
+    }
+
+    .video-wrapper video {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        display: block;
+        object-fit: contain;
+        background: #111111;
+    }
+
+    .video-info {
+        padding: 21px 20px 23px;
+        text-align: center;
+    }
+
+    .video-info h3 {
+        color: #003d2d;
+        font-size: 21px;
+        margin-bottom: 7px;
+    }
+
+    .video-info p {
+        color: #65766f;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* ========================================
+       VIDEO NUMBER
+       ======================================== */
+
+    .video-number {
+        display: inline-block;
+        margin-bottom: 9px;
+        color: #075b43;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+
+    /* ========================================
+       CALL TO ACTION
+       ======================================== */
+
+    .video-cta {
+        margin-top: 60px;
+        padding: 45px 25px;
+        background: #003d2d;
+        border-radius: 20px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .video-cta h2 {
+        font-size: clamp(25px, 4vw, 32px);
+        margin-bottom: 10px;
+    }
+
+    .video-cta p {
+        color: #e5eee9;
+        margin: 0 auto 24px;
+        max-width: 650px;
+    }
+
+    .video-cta a {
+        display: inline-block;
+        text-decoration: none;
+        background: #f4c430;
+        color: #003d2d;
+        font-weight: 700;
+        padding: 13px 25px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .video-cta a:hover {
+        background: #d9a900;
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+
+    .videos-footer {
+        background: #003d2d;
+        color: #ffffff;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .videos-footer h3 {
+        color: #f4c430;
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+
+    .videos-footer p {
+        font-size: 14px;
+        color: #dce9e3;
+        margin: 4px 0;
+    }
+
+    /* ========================================
+       TABLET
+       ======================================== */
+
+    @media (max-width: 900px) {
 
         .videos-header {
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-            padding: 10px 5%;
-            box-shadow: 0 2px 12px rgba(0, 61, 45, 0.12);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .videos-logo img {
-            width: 170px;
-            max-width: 100%;
-            display: block;
+            flex-direction: column;
+            padding: 12px 18px 15px;
+            gap: 10px;
         }
 
         .videos-nav {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            flex-wrap: wrap;
-            gap: 8px;
+            justify-content: center;
+        }
+
+        .video-gallery {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* ========================================
+       MOBILE
+       ======================================== */
+
+    @media (max-width: 768px) {
+
+        .videos-logo img {
+            width: 150px;
+        }
+
+        .videos-nav {
+            gap: 4px;
         }
 
         .videos-nav a {
-            text-decoration: none;
-            color: #075b43;
-            font-weight: 700;
-            font-size: 14px;
-            padding: 9px 11px;
-            border-radius: 6px;
-            transition: 0.3s ease;
-        }
-
-        .videos-nav a:hover,
-        .videos-nav a.active {
-            background: #075b43;
-            color: #ffffff;
+            font-size: 12px;
+            padding: 7px 8px;
         }
 
         .videos-nav .book-link {
-            background: #f4c430;
-            color: #003d2d;
-            padding: 10px 15px;
+            padding: 8px 10px;
         }
-
-        .videos-nav .book-link:hover {
-            background: #d9a900;
-            color: #ffffff;
-        }
-
-        /* ================================
-           HERO
-           ================================ */
 
         .videos-hero {
-            min-height: 360px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 70px 20px;
-            position: relative;
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    rgba(0, 35, 25, 0.72),
-                    rgba(0, 35, 25, 0.72)
-                ),
-                url("elephant-safari-hero.png") center / cover no-repeat;
-        }
-
-        .videos-hero-content {
-            max-width: 850px;
-            color: #ffffff;
-            position: relative;
-            z-index: 2;
+            min-height: 320px;
+            padding: 65px 18px;
+            background-position: center;
         }
 
         .videos-hero-content .eyebrow {
-            color: #f4c430;
-            font-size: 14px;
-            font-weight: 700;
+            font-size: 11px;
             letter-spacing: 2px;
-            margin-bottom: 12px;
         }
 
         .videos-hero-content h1 {
-            font-size: clamp(34px, 6vw, 58px);
-            margin-bottom: 15px;
-            line-height: 1.1;
+            font-size: 36px;
         }
 
         .videos-hero-content p {
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 17px;
-            color: #f1f5f3;
+            font-size: 15px;
         }
 
-        /* ================================
-           VIDEO SECTION
-           ================================ */
-
         .video-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 65px 20px 80px;
+            padding: 50px 15px 60px;
         }
 
         .video-intro {
-            text-align: center;
-            max-width: 750px;
-            margin: 0 auto 40px;
+            margin-bottom: 32px;
         }
 
         .video-intro h2 {
-            color: #003d2d;
-            font-size: 36px;
-            margin-bottom: 10px;
+            font-size: 30px;
         }
-
-        .video-intro p {
-            color: #65766f;
-            font-size: 16px;
-        }
-
-        /* ================================
-           VIDEO GRID
-           ================================ */
 
         .video-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
+            grid-template-columns: 1fr;
+            gap: 24px;
         }
 
         .video-card {
-            background: #ffffff;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 7px 25px rgba(0, 61, 45, 0.12);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .video-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 61, 45, 0.18);
-        }
-
-        .video-wrapper {
-            width: 100%;
-            background: #000000;
-            position: relative;
-        }
-
-        .video-wrapper video {
-            width: 100%;
-            height: 310px;
-            display: block;
-            object-fit: cover;
-            background: #000000;
+            border-radius: 15px;
         }
 
         .video-info {
-            padding: 20px;
-            text-align: center;
+            padding: 18px 16px 20px;
         }
 
         .video-info h3 {
-            color: #003d2d;
-            font-size: 21px;
-            margin-bottom: 7px;
+            font-size: 19px;
         }
-
-        .video-info p {
-            color: #65766f;
-            font-size: 14px;
-        }
-
-        /* ================================
-           CALL TO ACTION
-           ================================ */
 
         .video-cta {
-            margin-top: 55px;
-            padding: 40px 25px;
-            background: #003d2d;
-            border-radius: 18px;
-            text-align: center;
-            color: #ffffff;
+            margin-top: 42px;
+            padding: 34px 18px;
+            border-radius: 16px;
         }
 
         .video-cta h2 {
-            font-size: 30px;
-            margin-bottom: 10px;
+            font-size: 25px;
+        }
+    }
+
+    /* ========================================
+       SMALL PHONES
+       ======================================== */
+
+    @media (max-width: 480px) {
+
+        .videos-header {
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
-        .video-cta p {
-            color: #e5eee9;
-            margin-bottom: 22px;
+        .videos-logo img {
+            width: 140px;
         }
 
-        .video-cta a {
-            display: inline-block;
-            text-decoration: none;
-            background: #f4c430;
-            color: #003d2d;
-            font-weight: 700;
-            padding: 13px 25px;
-            border-radius: 8px;
-            transition: 0.3s ease;
+        .videos-nav {
+            gap: 3px;
         }
 
-        .video-cta a:hover {
-            background: #d9a900;
-            color: #ffffff;
-            transform: translateY(-2px);
+        .videos-nav a {
+            font-size: 11px;
+            padding: 6px 6px;
         }
 
-        /* ================================
-           FOOTER
-           ================================ */
-
-        .videos-footer {
-            background: #003d2d;
-            color: #ffffff;
-            text-align: center;
-            padding: 28px 20px;
+        .videos-nav .book-link {
+            padding: 7px 8px;
         }
 
-        .videos-footer h3 {
-            color: #f4c430;
-            margin-bottom: 8px;
+        .videos-hero {
+            min-height: 295px;
+            padding: 55px 16px;
         }
 
-        .videos-footer p {
+        .videos-hero-content h1 {
+            font-size: 32px;
+        }
+
+        .videos-hero-content p {
             font-size: 14px;
-            color: #dce9e3;
         }
 
-        /* ================================
-           MOBILE
-           ================================ */
-
-        @media (max-width: 768px) {
-
-            .videos-header {
-                flex-direction: column;
-                padding: 10px 15px 15px;
-                gap: 8px;
-            }
-
-            .videos-logo img {
-                width: 150px;
-            }
-
-            .videos-nav {
-                justify-content: center;
-                gap: 4px;
-            }
-
-            .videos-nav a {
-                font-size: 13px;
-                padding: 7px 8px;
-            }
-
-            .videos-hero {
-                min-height: 320px;
-                padding: 60px 18px;
-            }
-
-            .videos-hero-content p {
-                font-size: 15px;
-            }
-
-            .video-container {
-                padding: 45px 15px 60px;
-            }
-
-            .video-intro h2 {
-                font-size: 30px;
-            }
-
-            .video-gallery {
-                grid-template-columns: 1fr;
-                gap: 22px;
-            }
-
-            .video-wrapper video {
-                height: 230px;
-            }
-
-            .video-info {
-                padding: 17px;
-            }
-
-            .video-info h3 {
-                font-size: 19px;
-            }
-
-            .video-cta {
-                margin-top: 40px;
-                padding: 32px 20px;
-            }
-
-            .video-cta h2 {
-                font-size: 25px;
-            }
+        .video-container {
+            padding-left: 12px;
+            padding-right: 12px;
         }
 
-        @media (max-width: 480px) {
-
-            .videos-nav a {
-                font-size: 12px;
-                padding: 6px 7px;
-            }
-
-            .videos-nav .book-link {
-                padding: 8px 10px;
-            }
-
-            .videos-hero {
-                min-height: 290px;
-            }
-
-            .videos-hero-content h1 {
-                font-size: 34px;
-            }
-
-            .video-wrapper video {
-                height: 210px;
-            }
+        .video-info h3 {
+            font-size: 18px;
         }
-    </style>
-</head>
 
-<body>
+        .video-info p {
+            font-size: 13px;
+        }
+    }
+</style>
 
-    <!-- ========================================
-         HEADER
-         ======================================== -->
+</head><body><!-- ========================================
+     HEADER
+     ======================================== -->
 
-    <header class="videos-header">
+<header class="videos-header">
 
-        <div class="videos-logo">
-            <a href="Index.html">
-                <img src="twinkle_logo_1.png"
-                     alt="Twinkle Tours Travel and Tourism logo">
-            </a>
-        </div>
+    <div class="videos-logo">
+        <a href="index.html">
+            <img src="twinkle_logo_1.png"
+                 alt="Twinkle Tours Travel and Tourism logo">
+        </a>
+    </div>
 
-        <nav class="videos-nav">
+    <nav class="videos-nav">
 
-            <a href="Index.html">Home</a>
+        <a href="index.html">Home</a>
 
-            <a href="photos.html">Photos</a>
+        <a href="photos.html">Photos</a>
 
-            <a href="videos.html" class="active">Videos</a>
+        <a href="videos.html" class="active">Videos</a>
 
-            <a href="Index.html#destinations">Destinations</a>
+        <a href="index.html#destinations">Destinations</a>
 
-            <a href="Index.html#packages">Packages</a>
+        <a href="index.html#packages">Packages</a>
 
-            <a href="Index.html#ebooks">E-Books</a>
+        <a href="index.html#ebooks">E-Books</a>
 
-            <a href="Index.html#consultation">Consultation</a>
+        <a href="index.html#consultation">Consultation</a>
 
-            <a href="Index.html#about">About Us</a>
+        <a href="index.html#about">About Us</a>
 
-            <a href="Index.html#contact">Contact</a>
+        <a href="index.html#contact">Contact</a>
 
-            <a href="Index.html#booking" class="book-link">
-                Book Now
-            </a>
+        <a href="index.html#booking" class="book-link">
+            Book Now
+        </a>
 
-        </nav>
+    </nav>
 
-    </header>
+</header>
 
 
-    <!-- ========================================
-         HERO
-         ======================================== -->
+<!-- ========================================
+     HERO
+     ======================================== -->
 
-    <section class="videos-hero">
+<section class="videos-hero">
 
-        <div class="videos-hero-content">
+    <div class="videos-hero-content">
 
-            <p class="eyebrow">
-                EXPLORE • DISCOVER • EXPERIENCE
-            </p>
+        <p class="eyebrow">
+            EXPLORE • DISCOVER • EXPERIENCE
+        </p>
 
-            <h1>
-                Wildlife & Travel Videos
-            </h1>
+        <h1>
+            Wildlife & Travel Videos
+        </h1>
 
-            <p>
-                Experience the beauty of Kenya through unforgettable
-                wildlife, landscapes and cultural moments captured on video.
-            </p>
+        <p>
+            Experience the beauty of Kenya through unforgettable
+            wildlife, landscapes and cultural moments captured on video.
+        </p>
 
-        </div>
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     VIDEO GALLERY
+     ======================================== -->
+
+<main class="video-container">
+
+    <div class="video-intro">
+
+        <p class="eyebrow">
+            TWINKLE TOURS
+        </p>
+
+        <h2>
+            Experience Kenya
+        </h2>
+
+        <p>
+            Watch wildlife and travel moments from Kenya and discover
+            the experiences waiting for you on your next adventure.
+        </p>
+
+    </div>
+
+
+    <div class="video-gallery">
+
+
+        <!-- VIDEO 01 - BIRD -->
+
+        <article class="video-card">
+
+            <div class="video-wrapper">
+
+                <video controls preload="metadata" playsinline>
+
+                    <source src="Bird 1.mp4" type="video/mp4">
+
+                    Your browser does not support video playback.
+
+                </video>
+
+            </div>
+
+            <div class="video-info">
+
+                <span class="video-number">
+                    Wildlife • 01
+                </span>
+
+                <h3>
+                    Birdlife of Kenya
+                </h3>
+
+                <p>
+                    Discover the beautiful birdlife found across
+                    Kenya's natural landscapes.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- VIDEO 02 - GIRAFFE -->
+
+        <article class="video-card">
+
+            <div class="video-wrapper">
+
+                <video controls preload="metadata" playsinline>
+
+                    <source src="Giraffe.mp4" type="video/mp4">
+
+                    Your browser does not support video playback.
+
+                </video>
+
+            </div>
+
+            <div class="video-info">
+
+                <span class="video-number">
+                    Wildlife • 02
+                </span>
+
+                <h3>
+                    African Giraffe
+                </h3>
+
+                <p>
+                    Watch the graceful giraffe moving through
+                    its natural African environment.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- VIDEO 03 - HYENA -->
+
+        <article class="video-card">
+
+            <div class="video-wrapper">
+
+                <video controls preload="metadata" playsinline>
+
+                    <source src="Hyena.mp4" type="video/mp4">
+
+                    Your browser does not support video playback.
+
+                </video>
+
+            </div>
+
+            <div class="video-info">
+
+                <span class="video-number">
+                    Wildlife • 03
+                </span>
+
+                <h3>
+                    Hyena in the Wild
+                </h3>
+
+                <p>
+                    Get closer to one of Africa's fascinating
+                    and highly adaptable predators.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- VIDEO 04 - LION -->
+
+        <article class="video-card">
+
+            <div class="video-wrapper">
+
+                <video controls preload="metadata" playsinline>
+
+                    <source src="Lion hunting.mp4" type="video/mp4">
+
+                    Your browser does not support video playback.
+
+                </video>
+
+            </div>
+
+            <div class="video-info">
+
+                <span class="video-number">
+                    Wildlife • 04
+                </span>
+
+                <h3>
+                    Lion Hunting
+                </h3>
+
+                <p>
+                    Witness the power and drama of lions in
+                    the African wild.
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <!-- CALL TO ACTION -->
+
+    <section class="video-cta">
+
+        <h2>
+            Ready for Your Own Adventure?
+        </h2>
+
+        <p>
+            Explore our safari packages and start planning
+            your unforgettable Kenyan adventure.
+        </p>
+
+        <a href="index.html#packages">
+            Explore Our Packages →
+        </a>
 
     </section>
 
+</main>
 
-    <!-- ========================================
-         VIDEO GALLERY
-         ======================================== -->
 
-    <main class="video-container">
+<!-- ========================================
+     FOOTER
+     ======================================== -->
 
-        <div class="video-intro">
+<footer class="videos-footer">
 
-            <h2>
-                Experience Kenya
-            </h2>
+    <h3>
+        Twinkle Tours
+    </h3>
 
-            <p>
-                Watch some of the amazing wildlife and cultural experiences
-                that make Kenya a truly unforgettable destination.
-            </p>
+    <p>
+        Travel with us and us with you
+    </p>
 
-        </div>
+    <p>
+        © 2026 Twinkle Tours. All Rights Reserved.
+    </p>
 
-
-        <div class="video-gallery">
-
-
-            <!-- BIRD VIDEO -->
-
-            <article class="video-card">
-
-                <div class="video-wrapper">
-
-                    <video controls preload="metadata">
-
-                        <source src="Bird 1.mp4" type="video/mp4">
-
-                        Your browser does not support video playback.
-
-                    </video>
-
-                </div>
-
-                <div class="video-info">
-
-                    <h3>
-                        Birdlife of Kenya
-                    </h3>
-
-                    <p>
-                        Discover the beautiful birdlife found across Kenya.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- GIRAFFE VIDEO -->
-
-            <article class="video-card">
-
-                <div class="video-wrapper">
-
-                    <video controls preload="metadata">
-
-                        <source src="Giraffe.mp4" type="video/mp4">
-
-                        Your browser does not support video playback.
-
-                    </video>
-
-                </div>
-
-                <div class="video-info">
-
-                    <h3>
-                        African Giraffe
-                    </h3>
-
-                    <p>
-                        Watch the graceful giraffe in its natural environment.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- HYENA VIDEO -->
-
-            <article class="video-card">
-
-                <div class="video-wrapper">
-
-                    <video controls preload="metadata">
-
-                        <source src="Hyena.mp4" type="video/mp4">
-
-                        Your browser does not support video playback.
-
-                    </video>
-
-                </div>
-
-                <div class="video-info">
-
-                    <h3>
-                        Hyena in the Wild
-                    </h3>
-
-                    <p>
-                        Get closer to one of Africa's fascinating predators.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- LION VIDEO -->
-
-            <article class="video-card">
-
-                <div class="video-wrapper">
-
-                    <video controls preload="metadata">
-
-                        <source src="Lion hunting.mp4" type="video/mp4">
-
-                        Your browser does not support video playback.
-
-                    </video>
-
-                </div>
-
-                <div class="video-info">
-
-                    <h3>
-                        Lion Hunting
-                    </h3>
-
-                    <p>
-                        Witness the power and drama of lions in the wild.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            
-
-        </div>
-
-
-        <!-- ========================================
-             CALL TO ACTION
-             ======================================== -->
-
-        <section class="video-cta">
-
-            <h2>
-                Ready for Your Own Adventure?
-            </h2>
-
-            <p>
-                Explore our safari packages and start planning
-                your unforgettable Kenyan adventure.
-            </p>
-
-            <a href="Index.html#packages">
-                Explore Our Packages →
-            </a>
-
-        </section>
-
-    </main>
-
-
-    <!-- ========================================
-         FOOTER
-         ======================================== -->
-
-    <footer class="videos-footer">
-
-        <h3>
-            Twinkle Tours
-        </h3>
-
-        <p>
-            Travel with us and us with you
-        </p>
-
-        <p>
-            © 2026 Twinkle Tours. All Rights Reserved.
-        </p>
-
-    </footer>
+</footer>
 
 </body>
 </html>
