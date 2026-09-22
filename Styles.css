@@ -2023,3 +2023,102 @@ body::after {
 
 .booking-form-header > span {
     color
+
+/* =====================================================
+   TWINKLE TOURS - GLOBAL LAYOUT FIX
+   Prevent sections from becoming narrow or shifting left
+===================================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 0;
+}
+
+
+/* Make all major sections use the full browser width */
+
+section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Prevent images from forcing the page wider */
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Prevent long text, links or buttons from creating overflow */
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+button,
+input,
+select,
+textarea {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Keep containers centered without shrinking the page */
+
+.booking-container,
+.consultation-container,
+.ebook-store,
+.gallery-grid,
+.video-grid,
+.packages-grid,
+.destinations-grid,
+.photo-preview-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MOBILE WIDTH FIX
+===================================================== */
+
+@media (max-width: 600px) {
+
+    section {
+        width: 100%;
+    }
+
+    .booking-section,
+    .consultation-section {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .booking-container,
+    .consultation-container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
