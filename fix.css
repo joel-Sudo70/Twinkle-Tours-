@@ -1,504 +1,345 @@
 /* =========================================
-   TWINKLE TOURS — FINAL RESPONSIVE FIX
-   Clean white header + compact mobile layout
+   TWINKLE TOURS — FINAL MOBILE OVERRIDE
    ========================================= */
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 html,
 body {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    background: #ffffff !important;
 }
 
-body {
-    background: #f4f8f5;
-}
-
-
-/* =========================================
+/* =========================
    HEADER
-   ========================================= */
+   ========================= */
 
 .navbar {
-    width: 100%;
-    background: #ffffff;
-    border-bottom: 3px solid #f4c430;
-    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    border: 0 !important;
+    border-bottom: 2px solid #f4c430 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    position: relative !important;
 }
 
 .brand-area {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100% !important;
+    height: 68px !important;
+    min-height: 68px !important;
+    margin: 0 !important;
+    padding: 3px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #ffffff !important;
+}
+
+.brand {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .brand img {
-    display: block;
-    width: 180px;
-    height: auto;
-    max-height: 100px;
-    object-fit: contain;
+    width: 125px !important;
+    max-width: 125px !important;
+    height: auto !important;
+    max-height: 60px !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
 }
 
+/* =========================
+   NAVIGATION
+   ========================= */
+
 .main-nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 20px;
-    padding: 4px 10px;
-    overflow-x: auto;
-    scrollbar-width: none;
+    width: 100% !important;
+    max-width: none !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    margin: 0 !important;
+    padding: 2px 6px !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    background: #ffffff !important;
+    border: 0 !important;
+    scrollbar-width: none !important;
 }
 
 .main-nav::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
 
 .main-nav a {
-    flex: 0 0 auto;
-    position: relative;
-    color: #075b43;
-    background: transparent;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    white-space: nowrap;
-    padding: 7px 0;
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    height: 36px !important;
+    margin: 0 !important;
+    padding: 7px 9px !important;
+
+    color: #075b43 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    font-size: 11px !important;
+    line-height: 1 !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
 }
 
 .main-nav a.active {
-    color: #003d2d;
+    color: #003d2d !important;
+    background: transparent !important;
 }
 
 .main-nav a.active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 3px;
-    background: #f4c430;
+    content: "" !important;
+    position: absolute !important;
+    left: 9px !important;
+    right: 9px !important;
+    bottom: 0 !important;
+    height: 3px !important;
+    background: #f4c430 !important;
 }
 
 .main-nav .book-now {
-    padding: 8px 15px;
-    background: #003d2d;
-    color: #ffffff;
-    border: 2px solid #f4c430;
-    border-radius: 22px;
+    height: 30px !important;
+    margin-left: 3px !important;
+    padding: 6px 11px !important;
+
+    color: #ffffff !important;
+    background: #003d2d !important;
+    border: 1px solid #f4c430 !important;
+    border-radius: 18px !important;
+
+    font-size: 10px !important;
 }
 
-
-/* =========================================
+/* =========================
    HERO
-   ========================================= */
+   ========================= */
 
 .hero {
-    width: 100%;
-    min-height: 600px;
-    margin: 0;
-    background-size: cover;
-    background-position: center;
+    width: 100% !important;
+    max-width: none !important;
+    height: 470px !important;
+    min-height: 470px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background-size: cover !important;
+    background-position: 65% center !important;
+    border: 0 !important;
 }
 
 .hero .overlay {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 6%;
+    width: 100% !important;
+    max-width: none !important;
+    height: 470px !important;
+    min-height: 470px !important;
+
+    margin: 0 !important;
+    padding: 35px 20px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
 }
 
 .hero .overlay p:first-child {
-    font-size: 17px;
-    letter-spacing: 3px;
+    width: auto !important;
+    max-width: 100% !important;
+
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+
+    font-size: 9px !important;
+    line-height: 1.3 !important;
+    letter-spacing: 1.5px !important;
 }
 
 .hero .overlay p:nth-of-type(2) {
-    max-width: 650px;
-    font-size: 46px;
-    line-height: 1.18;
+    width: 100% !important;
+    max-width: 430px !important;
+
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+
+    font-size: 23px !important;
+    line-height: 1.18 !important;
+    letter-spacing: 0 !important;
 }
 
 .hero .overlay .btn {
-    font-size: 16px;
-    padding: 14px 26px;
+    display: inline-flex !important;
+    width: auto !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 10px 17px !important;
+
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+
+    border-radius: 30px !important;
 }
 
-
-/* =========================================
-   GENERAL SECTIONS
-   ========================================= */
+/* =========================
+   CONTENT WIDTH
+   ========================= */
 
 .section,
 .media-preview,
 .ebooks-section,
 .consultation-section,
 .contact-section {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
 }
 
 .section {
-    padding: 45px 20px;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
 }
 
 .section-title {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 25px;
-    text-align: center;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 18px !important;
+    padding: 0 !important;
 }
 
 .section-title h2,
 .section > h2 {
-    font-size: 30px;
-    line-height: 1.2;
-    margin-bottom: 10px;
+    font-size: 25px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 7px !important;
 }
 
 .section-title p {
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
 }
 
-
-/* =========================================
-   CARDS
-   ========================================= */
-
 .cards {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
 }
 
 .card {
-    width: 100%;
-    min-width: 0;
+    width: 100% !important;
+    min-width: 0 !important;
 }
 
 .card img {
-    width: 100%;
-    max-width: 100%;
-    object-fit: cover;
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
 }
 
-
-/* =========================================
-   MEDIA PREVIEWS
-   ========================================= */
-
 .media-preview {
-    padding: 35px 20px;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
 }
 
 .preview-card {
-    display: block;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
 }
 
 .preview-card img,
 .preview-card video {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 210px !important;
+    object-fit: cover !important;
 }
 
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 768px) {
-
-    /* PAGE */
-    html,
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-
-    /* HEADER */
-    .navbar {
-        width: 100%;
-        min-height: 0;
-        padding: 0;
-        background: #ffffff;
-        border-bottom: 2px solid #f4c430;
-    }
-
-    .brand-area {
-        height: 68px;
-        min-height: 68px;
-        padding: 3px 10px;
-    }
-
-    .brand img {
-        width: 125px;
-        max-width: 125px;
-        max-height: 60px;
-    }
-
-
-    /* COMPACT HORIZONTAL NAV */
-    .main-nav {
-        height: 40px;
-        min-height: 40px;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-
-        justify-content: flex-start;
-        align-items: center;
-
-        gap: 0;
-        padding: 2px 7px;
-
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        background: #ffffff;
-    }
-
-    .main-nav a {
-        height: 34px;
-        padding: 8px 9px;
-
-        font-size: 11px;
-        line-height: 1;
-    }
-
-    .main-nav .book-now {
-        height: 30px;
-        padding: 6px 11px;
-        margin-left: 3px;
-
-        font-size: 10px;
-    }
-
-
-    /* HERO */
-    .hero {
-        min-height: 450px;
-        height: 450px;
-
-        background-position: 65% center;
-    }
-
-    .hero .overlay {
-        height: 450px;
-        min-height: 450px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        padding: 35px 20px;
-    }
-
-    .hero .overlay p:first-child {
-        max-width: 100%;
-        margin-bottom: 12px;
-
-        font-size: 9px;
-        letter-spacing: 1.5px;
-        line-height: 1.3;
-    }
-
-    .hero .overlay p:nth-of-type(2) {
-        max-width: 100%;
-
-        margin-bottom: 20px;
-
-        font-size: 23px;
-        line-height: 1.18;
-    }
-
-    .hero .overlay .btn {
-        align-self: flex-start;
-
-        padding: 10px 17px;
-
-        font-size: 12px;
-        line-height: 1.2;
-    }
-
-
-    /* SECTIONS */
-    .section,
-    .media-preview,
-    .ebooks-section,
-    .consultation-section,
-    .contact-section {
-        width: 100%;
-        max-width: 100%;
-
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .section {
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
-
-    .media-preview {
-        padding-top: 25px;
-        padding-bottom: 25px;
-    }
-
-    .section-title {
-        margin-bottom: 18px;
-    }
-
-    .section-title h2,
-    .section > h2 {
-        font-size: 24px;
-        line-height: 1.2;
-        margin-bottom: 7px;
-    }
-
-    .section-title p {
-        font-size: 13px;
-        line-height: 1.45;
-    }
-
-
-    /* ONE COLUMN ON PHONE */
-    .cards {
-        width: 100%;
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .card {
-        width: 100%;
-    }
-
-    .card img {
-        height: 200px;
-    }
-
-
-    /* PHOTO / VIDEO PREVIEW */
-    .preview-card {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .preview-card img,
-    .preview-card video {
-        width: 100%;
-        height: 210px;
-        object-fit: cover;
-    }
-
-
-    /* E-BOOKS */
-    .ebook-store {
-        width: 100%;
-    }
-
-
-    /* BOOKING */
-    .booking-section {
-        padding: 35px 16px;
-    }
-
-    .booking-section h2 {
-        font-size: 27px;
-    }
-
-
-    /* CONTACT */
-    .contact-section {
-        padding-top: 35px;
-        padding-bottom: 35px;
-    }
-}
-
-
-/* =========================================
-   SMALL PHONES
-   ========================================= */
+/* =========================
+   MOBILE — VERY SMALL
+   ========================= */
 
 @media (max-width: 390px) {
 
     .brand-area {
-        height: 64px;
-        min-height: 64px;
+        height: 64px !important;
+        min-height: 64px !important;
     }
 
     .brand img {
-        width: 118px;
-        max-width: 118px;
-        max-height: 56px;
+        width: 115px !important;
+        max-width: 115px !important;
+        max-height: 55px !important;
     }
 
     .main-nav {
-        height: 38px;
-        min-height: 38px;
+        height: 40px !important;
+        min-height: 40px !important;
     }
 
     .main-nav a {
-        height: 32px;
-        padding-left: 8px;
-        padding-right: 8px;
-        font-size: 10.5px;
-    }
-
-    .main-nav .book-now {
-        height: 28px;
-        padding-left: 9px;
-        padding-right: 9px;
-        font-size: 9.5px;
+        height: 34px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        font-size: 10px !important;
     }
 
     .hero,
     .hero .overlay {
-        height: 430px;
-        min-height: 430px;
+        height: 440px !important;
+        min-height: 440px !important;
     }
 
     .hero .overlay {
-        padding: 30px 17px;
+        padding: 30px 17px !important;
     }
 
     .hero .overlay p:first-child {
-        font-size: 8px;
-        letter-spacing: 1.2px;
+        font-size: 8px !important;
+        letter-spacing: 1px !important;
     }
 
     .hero .overlay p:nth-of-type(2) {
-        font-size: 21px;
+        font-size: 21px !important;
+        line-height: 1.18 !important;
     }
 
     .hero .overlay .btn {
-        font-size: 11px;
-        padding: 9px 15px;
-    }
-
-    .section,
-    .media-preview {
-        padding-left: 13px;
-        padding-right: 13px;
+        font-size: 11px !important;
+        padding: 9px 15px !important;
     }
 }
