@@ -1,10 +1,27 @@
+/* =========================================================
+   TWINKLE TOURS
+   CLEAN PROFESSIONAL RESPONSIVE STYLES
+   ========================================================= */
 
-/* ========================================
-   TWINKLE TOURS - PROFESSIONAL DESIGN
-   Travel & Tourism Company
-   ======================================== */
+:root {
+    --green: #075b43;
+    --dark-green: #003d2d;
+    --deep-green: #022f25;
+    --gold: #d9a900;
+    --bright-gold: #f4c430;
+    --cream: #fbfaf6;
+    --light: #f4f7f5;
+    --white: #ffffff;
+    --text: #173f35;
+    --muted: #65766f;
+    --border: #e4ebe7;
+    --shadow: 0 8px 25px rgba(0, 55, 40, 0.10);
+    --radius: 14px;
+    --max-width: 1180px;
+}
 
-/* RESET */
+/* ================= RESET ================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,22 +30,32 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 110px;
 }
 
 body {
-    font-family: "Arial", sans-serif;
-    background: #f4f8f5;
-    color: #173f35;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--text);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-img {
+img,
+video {
     max-width: 100%;
     display: block;
 }
 
 a {
-    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
 }
 
 button,
@@ -36,7521 +63,1591 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* ========================================
-   COLORS
-   ======================================== */
-
-:root {
-    --green: #075b43;
-    --dark-green: #003d2d;
-    --light-green: #e9f5ef;
-    --gold: #f4c430;
-    --dark-gold: #d9a900;
-    --white: #ffffff;
-    --text: #173f35;
-    --muted: #65766f;
-    --shadow: 0 4px 18px rgba(0, 55, 40, 0.12);
+section {
+    width: 100%;
 }
 
-/* ========================================
-   NAVIGATION
-   ======================================== */
+/* ================= HEADER ================= */
 
-
-}
-
-/* Logo area */
-.navbar .brand-area {
+.navbar {
     position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    background: transparent;
-}
-
-/* Keep the original Twinkle Tours logo */
-.navbar .brand img {
-    display: block;
-    width: auto;
-    max-width: 230px;
-    max-height: 80px;
-    object-fit: contain;
-}
-
-/* Navigation */
-.navbar nav {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-left: auto;
-}
-
-.navbar nav a {
-    color: #ffffff !important;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.8);
-    transition: 0.3s;
-}
-
-.navbar nav a:hover {
-    color: #f4c430 !important;
-}
-
-/* Remove old text styling */
-.navbar h2,
-.navbar h2::after {
-    display: none;
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        min-height: 125px;
-        padding: 8px 10px;
-        flex-direction: column;
-        justify-content: center;
-        gap: 8px;
-
-        background-position: center;
-    }
-
-    .navbar .brand img {
-        max-width: 190px;
-        max-height: 60px;
-    }
-
-    .navbar nav {
-        width: 100%;
-        justify-content: center;
-        gap: 8px;
-        margin: 0;
-    }
-
-    .navbar nav a {
-        font-size: 11px;
-    }
-}
-nav {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-nav a {
-    color: var(--green);
-    font-size: 13px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: var(--gold);
-}
-/* ========================================
-   HERO SECTION
-   ======================================== */
-
-.hero {
-    min-height: 600px;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(20, 20, 15, 0.45),
-            rgba(20, 20, 15, 0.15)
-        ),
-        url("./elephant-safari-hero.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    padding: 90px 6%;
-    color: white;
-}
-@media (max-width: 768px) {
-    .hero {
-        min-height: 650px;
-        padding: 80px 25px;
-        background-position: 65% center;
-    }
-
-    }
-
-.overlay h1 {
-    font-size: clamp(38px, 6vw, 72px);
-    font-family: Georgia, serif;
-    font-weight: bold;
-    line-height: 1.1;
-    margin-bottom: 5px;
-}
-
-.overlay h2 {
-    font-size: clamp(28px, 4vw, 52px);
-    color: var(--gold);
-    font-family: Georgia, serif;
-    line-height: 1.15;
-    margin-bottom: 15px;
-}
-
-.overlay p {
-    font-size: 22px;
-    font-family: Georgia, serif;
-    font-style: italic;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.overlay .btn {
-    margin-top: 10px;
-}
-
-/* ========================================
-   SECTIONS
-   ======================================== */
-
-.section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 55px 25px;
-}
-
-.section > h2 {
-    font-family: Georgia, serif;
-    font-size: 32px;
-    color: var(--green);
-    margin-bottom: 10px;
-}
-
-.section > h2::after {
-    content: "";
-    display: block;
-    width: 55px;
-    height: 4px;
-    background: var(--gold);
-    border-radius: 10px;
-    margin-top: 8px;
-}
-
-.section > p {
-    color: var(--muted);
-    margin-bottom: 25px;
-}
-
-/* ========================================
-   TOUR PACKAGE CARDS
-   ======================================== */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    margin-top: 25px;
-}
-
-.card {
-    background: var(--white);
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    border: 1px solid #e0ebe4;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 25px rgba(0, 60, 40, 0.18);
-}
-
-.card img {
-    width: 100%;
-    height: 205px;
-    object-fit: cover;
-}
-
-.card h3 {
-    color: var(--green);
-    font-family: Georgia, serif;
-    font-size: 21px;
-    padding: 15px 18px 3px;
-}
-
-.card p {
-    padding: 0 18px 18px;
-    color: var(--green);
-    font-size: 21px;
-    font-weight: bold;
-}
-
-/* ========================================
-   WILDLIFE GALLERY
-   ======================================== */
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    margin-top: 25px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.03);
-}
-
-/* ========================================
-   TRAVEL E-BOOKS & CONSULTATION
-   ======================================== */
-
-.ebook-section,
-.consultation-section {
-    background: var(--light-green);
-    border-radius: 18px;
-    padding: 35px;
-    margin: 25px auto;
-    max-width: 1200px;
-    border: 1px solid #d8e9df;
-}
-
-.ebook-section h2,
-.consultation-section h2 {
-    color: var(--green);
-    font-family: Georgia, serif;
-    margin-bottom: 10px;
-}
-
-.ebook-section p,
-.consultation-section p {
-    color: var(--muted);
-    margin-bottom: 18px;
-}
-
-.price {
-    font-size: 34px;
-    font-weight: bold;
-    color: var(--green);
-    margin: 15px 0;
-}
-
-/* ========================================
-   ABOUT US
-   ======================================== */
-
-#about {
-    background: white;
-    border-radius: 18px;
-    margin-top: 25px;
-}
-
-#about strong {
-    color: var(--green);
-    font-size: 20px;
-}
-
-/* ========================================
-   FOOTER
-   ======================================== */
-
-footer {
-    background: var(--dark-green);
-    color: white;
-    text-align: center;
-    padding: 45px 25px 25px;
-    margin-top: 35px;
-}
-
-footer h3 {
-    font-family: Georgia, serif;
-    font-size: 28px;
-    color: var(--gold);
-    margin-bottom: 15px;
-}
-
-footer p {
-    margin: 8px 0;
-    color: #e5f1eb;
-}
-
-footer small {
-    display: block;
-    max-width: 850px;
-    margin: 25px auto 0;
-    padding: 18px;
-    border: 1px solid var(--gold);
-    border-radius: 10px;
-    color: #e5f1eb;
-    font-size: 12px;
-    line-height: 1.7;
-}
-
-/* ========================================
-   RESPONSIVE DESIGN - TABLETS
-   ======================================== */
-
-@media (max-width: 900px) {
-
-    .navbar {
-        padding: 12px 20px;
-    }
-
-    nav {
-        gap: 10px;
-    }
-
-    nav a {
-        font-size: 12px;
-    }
-
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .hero {
-        min-height: 480px;
-    }
-}
-
-/* ========================================
-   RESPONSIVE DESIGN - PHONES
-   ======================================== */
-
-@media (max-width: 600px) {
-
-    .navbar {
-        flex-wrap: wrap;
-        padding: 12px 15px;
-        gap: 10px;
-    }
-
-    .navbar h2 {
-        font-size: 21px;
-    }
-
-    .navbar h2::after {
-        font-size: 8px;
-    }
-
-    nav {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-        order: 3;
-    }
-
-    nav a {
-        font-size: 11px;
-    }
-
-    .navbar > .btn {
-        padding: 9px 14px;
-        font-size: 12px;
-    }
-
-    .hero {
-        min-height: 500px;
-        background-position: center;
-    }
-
-    .overlay {
-        padding: 55px 22px;
-    }
-
-    .overlay h1 {
-        font-size: 42px;
-    }
-
-    .overlay h2 {
-        font-size: 31px;
-    }
-
-    .overlay p {
-        font-size: 19px;
-    }
-
-    .section {
-        padding: 38px 18px;
-    }
-
-    .section > h2 {
-        font-size: 27px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .card img {
-        height: 210px;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .gallery img {
-        height: 150px;
-    }
-
-    .ebook-section,
-    .consultation-section {
-        padding: 25px 20px;
-        margin: 20px 15px;
-    }
-
-    footer {
-        padding: 35px 18px 20px;
-    }
-}
-
-/* ========================================
-   ACCESSIBILITY
-   ======================================== */
-
-a:focus-visible,
-button:focus-visible {
-    outline: 3px solid var(--gold);
-    outline-offset: 3px;
-}
-
-/* TWINKLE TOURS LOGO */
-
-.brand {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.brand img {
-    width: 220px;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
-@media (max-width: 768px) {
-    .brand img {
-        width: 170px;
-    }
-}
-
-/* TWINKLE TOURS LOGO */
-
-.brand {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.brand img {
-    width: 220px;
-    height: auto;
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .brand img {
-        width: 145px;
-    }
-}
-
-/* MOBILE HEADER IMPROVEMENT */
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    padding: 12px 5%;
-    background: #ffffff;
-}
-
-.brand img {
-    width: 210px;
-    height: auto;
-    display: block;
-}
-
-.navbar nav {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-.navbar nav a {
-    color: #075b43;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 12px;
-        padding: 12px 15px;
-    }
-
-    .brand img {
-        width: 145px;
-    }
-
-    .navbar nav {
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .navbar nav a {
-        font-size: 13px;
-    }
-}
-
-
-
-/* FIX MOBILE MENU OVERLAP */
-
-@media (max-width: 768px) {
-    .navbar {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        padding: 12px 10px;
-    }
-
-    .navbar .brand {
-        margin: 0;
-    }
-
-    .navbar nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px 12px;
-        width: 100%;
-    }
-
-    .navbar nav a {
-        font-size: 12px;
-        line-height: 1.4;
-        color: white !important;
-    }
-
-    .navbar nav .btn {
-        padding: 8px 12px;
-        font-size: 12px;
-    }
-
-    .hero {
-        padding-top: 230px;
-    }
-}
-
-.hero a.btn {
-    background: #f4c430 !important;
-    color: #173f35 !important;
-    border: 2px solid #f4c430 !important;
-}
-
-.hero a.btn:hover {
-    background: #d9a900 !important;
-    color: #173f35 !important;
-    border-color: #d9a900 !important;
-}
-
-.hero a.btn {
-    background: #f4c430 !important;
-    color: #173f35 !important;
-    border: 2px solid #f4c430 !important;
-}
-
-.hero a.btn:hover {
-    background: #d9a900 !important;
-    color: #173f35 !important;
-    border-color: #d9a900 !important;
-}
-
-.hero .overlay a.btn {
-    background-color: #f4c430 !important;
-    color: #173f35 !important;
-    border-color: #f4c430 !important;
-}
-
-.hero .overlay a.btn:hover {
-    background-color: #d9a900 !important;
-    color: #173f35 !important;
-    border-color: #d9a900 !important;
-}
-
-.hero .overlay a.btn {
-    background-color: #f4c430 !important;
-    color: #173f35 !important;
-    border-color: #f4c430 !important;
-}
-
-/* Make package booking buttons visible */
-.card .btn {
-    display: inline-block !important;
-    background: #f4c430 !important;
-    color: #173f35 !important;
-    border: 2px solid #f4c430 !important;
-    padding: 10px 20px !important;
-    border-radius: 25px !important;
-    font-weight: 700 !important;
-    text-decoration: none !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: relative !important;
-    z-index: 5 !important;
-}
-
-/* Package card layout */
-.card {
-    display: flex;
-    flex-direction: column;
-}
-
-.card .btn {
-    display: inline-block;
-    align-self: flex-start;
-    margin: 0 18px 18px;
-    padding: 10px 22px;
-    background: #f4c430;
-    color: #173f35;
-    border: 2px solid #f4c430;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 14px;
-    text-decoration: none;
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Keep package details readable */
-.card p {
-    padding: 0 18px 8px;
-    color: var(--green);
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.card p:last-of-type {
-    font-size: 20px;
-    font-weight: 700;
-    padding-bottom: 8px;
-}
-
-/* Package card layout */
-.card {
-    display: flex;
-    flex-direction: column;
-}
-
-.card .btn {
-    display: inline-block;
-    align-self: flex-start;
-    margin: 0 18px 18px;
-    padding: 10px 22px;
-    background: #f4c430;
-    color: #173f35;
-    border: 2px solid #f4c430;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 14px;
-    text-decoration: none;
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Keep package details readable */
-.card p {
-    padding: 0 18px 8px;
-    color: var(--green);
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.card p:last-of-type {
-    font-size: 20px;
-    font-weight: 700;
-    padding-bottom: 8px;
-}
-
-/* PACKAGE CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-    margin-top: 25px;
-}
-
-.card {
-    background: var(--white);
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    border: 1px solid #e0ebe4;
-    transition: 0.3s ease;
-    text-align: center;
-    padding-bottom: 22px;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-}
-
-.card img {
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-    display: block;
-}
-
-.card h3 {
-    color: var(--dark-green);
-    font-size: 20px;
-    margin: 18px 12px 10px;
-}
-
-.card p {
-    color: var(--muted);
-    margin: 8px 12px;
-}
-
-.card .btn {
-    display: inline-block;
-    background-color: #f4c430 !important;
-    color: #173f35 !important;
-    padding: 12px 24px;
-    margin-top: 14px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    border: 2px solid #f4c430;
-}
-
-.card .btn:hover {
-    background-color: #d9a900 !important;
-    color: white !important;
-}
-
-/* TABLET */
-@media (max-width: 1000px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* PHONE */
-@media (max-width: 600px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .card img {
-        height: 230px;
-    }
-}
-
-/* BOOKING FORM */
-.booking-section {
-    background: var(--light-green);
-    text-align: center;
-}
-
-.booking-form {
-    max-width: 650px;
-    margin: 30px auto 0;
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: var(--shadow);
-    text-align: left;
-}
-
-.booking-form label {
-    display: block;
-    margin: 15px 0 7px;
-    color: var(--dark-green);
-    font-weight: bold;
-}
-
-.booking-form input,
-.booking-form select,
-.booking-form textarea {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #cbdcd3;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 15px;
-    box-sizing: border-box;
-    background: #ffffff;
-}
-
-.booking-form input:focus,
-.booking-form select:focus,
-.booking-form textarea:focus {
-    outline: none;
-    border-color: var(--green);
-}
-
-.booking-form textarea {
-    resize: vertical;
-}
-
-.booking-form button {
-    display: block;
-    width: 100%;
-    margin-top: 25px;
-    cursor: pointer;
-    border: none;
-}
-
-/* PHONE FORM DESIGN */
-@media (max-width: 600px) {
-    .booking-form {
-        padding: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-}
-
-/* MODERN BOOKING FORM DESIGN */
-
-.booking-section {
-    background: #f1f8f4;
-    padding: 70px 6%;
-    text-align: center;
-}
-
-.booking-section h2 {
-    color: var(--dark-green);
-    font-size: 36px;
-    margin-bottom: 12px;
-}
-
-.booking-section > p {
-    color: var(--muted);
-    font-size: 17px;
-    margin-bottom: 30px;
-}
-
-.booking-form {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 35px;
-    background: #ffffff;
-    border-radius: 18px;
-    box-shadow: 0 8px 30px rgba(0, 61, 45, 0.12);
-    text-align: left;
-}
-
-.booking-form label {
-    display: block;
-    margin-top: 18px;
-    margin-bottom: 8px;
-    color: var(--dark-green);
-    font-size: 15px;
-    font-weight: 700;
-}
-
-.booking-form input,
-.booking-form select,
-.booking-form textarea {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 14px 16px;
-    background: #fbfdfc;
-    border: 1px solid #cbded4;
-    border-radius: 9px;
-    color: #173f35;
-    font-family: inherit;
-    font-size: 16px;
-    transition: 0.3s ease;
-}
-
-.booking-form input:focus,
-.booking-form select:focus,
-.booking-form textarea:focus {
-    outline: none;
-    border-color: var(--green);
-    box-shadow: 0 0 0 3px rgba(7, 91, 67, 0.12);
-    background: #ffffff;
-}
-
-.booking-form textarea {
-    min-height: 130px;
-    resize: vertical;
-}
-
-.booking-form button {
-    width: 100%;
-    margin-top: 28px;
-    padding: 15px;
-    border: none;
-    border-radius: 9px;
-    background: var(--gold);
-    color: var(--dark-green);
-    font-size: 17px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.booking-form button:hover {
-    background: var(--dark-gold);
-    color: #ffffff;
-    transform: translateY(-2px);
-}
-
-/* MOBILE BOOKING FORM */
-@media (max-width: 600px) {
-    .booking-section {
-        padding: 45px 18px;
-    }
-
-    .booking-section h2 {
-        font-size: 30px;
-    }
-
-    .booking-section > p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    .booking-form {
-        padding: 22px 18px;
-        border-radius: 14px;
-    }
-
-    .booking-form input,
-    .booking-form select,
-    .booking-form textarea {
-        font-size: 16px;
-        padding: 13px;
-    }
-}
-
-/* WHATSAPP BOOKING BUTTON */
-
-.whatsapp-btn {
-    display: block;
-    width: 100%;
-    margin-top: 14px;
-    padding: 15px;
-    border: none;
-    border-radius: 9px;
-    background: #25d366;
-    color: white;
-    font-size: 17px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.whatsapp-btn:hover {
-    background: #128c7e;
-    transform: translateY(-2px);
-}
-
-/* FLOATING WHATSAPP BUTTON */
-
-.floating-whatsapp {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #25D366;
-    color: white;
-    padding: 13px 18px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: bold;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
-}
-
-.floating-whatsapp:hover {
-    background: #128C7E;
-}
-
-@media (max-width: 600px) {
-    .floating-whatsapp {
-        right: 14px;
-        bottom: 14px;
-        width: 54px;
-        height: 54px;
-        padding: 13px;
-        justify-content: center;
-        border-radius: 50%;
-    }
-
-    .floating-whatsapp strong {
-        display: none;
-    }
-
-    .floating-whatsapp span {
-        font-size: 28px;
-    }
-}
-
-/* Twin image in header */
-.twin-image {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #d9a900;
-    display: block;
-    flex-shrink: 0;
-}
-
-/* Keep twin image smaller on phones */
-@media (max-width: 768px) {
-    .twin-image {
-        width: 55px;
-        height: 55px;
-    }
-}
-
-.brand-area {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-shrink: 0;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.navbar nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin-left: auto;
-}
-
-.navbar nav a {
-    white-space: nowrap;
-}
-
-/* Mobile layout */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .brand-area {
-        justify-content: center;
-    }
-
-    .navbar nav {
-        justify-content: center;
-        margin-left: 0;
-        gap: 10px;
-    }
-}
-
-/* ================= PROFESSIONAL HEADER FINISH ================= */
-
-.navbar {
-    background: #ffffff;
-    padding: 10px 3%;
-    min-height: 82px;
-    border-bottom: 2px solid #d9a900;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-}
-
-.brand-area {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.brand img {
-    display: block;
-    max-height: 65px;
-    width: auto;
-}
-
-.twin-image {
-    width: 62px;
-    height: 62px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #d9a900;
-    display: block;
-}
-
-.navbar nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-left: auto;
-}
-
-.navbar nav a {
-    color: #075b43 !important;
-    font-weight: 600;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: 0.3s ease;
-}
-
-.navbar nav a:hover {
-    color: #d9a900 !important;
-}
-
-/* Mobile header */
-@media (max-width: 768px) {
-
-    .navbar {
-        padding: 8px 4%;
-    }
-
-    .brand img {
-        max-height: 58px;
-    }
-
-    .twin-image {
-        width: 52px;
-        height: 52px;
-    }
-
-    .navbar nav {
-        justify-content: center;
-        margin-left: 0;
-        gap: 9px;
-        width: 100%;
-    }
-
-    .navbar nav a {
-        font-size: 13px;
-    }
-}
-
-/* ================= HEADER POSITION FIX ================= */
-
-.navbar {
-    display: flex;
-    flex-direction: row !important;
-    align-items: center;
-    justify-content: flex-start !important;
-    padding: 8px 3%;
-    background: #ffffff;
-}
-
-.brand-area {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start !important;
-    gap: 12px;
-    margin-right: auto;
-}
-
-/* KEEP ORIGINAL LOGO */
-.brand img {
-    width: auto;
-    height: auto;
-    max-height: 70px;
-    display: block;
-}
-
-/* TWIN PHOTO - NOT CIRCULAR */
-.twin-image {
-    width: 85px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 4px !important;
-    border: none !important;
-    display: block;
-}
-
-/* NAVIGATION STAYS ON THE RIGHT */
-.navbar nav {
-    margin-left: auto !important;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column !important;
-        align-items: center;
-    }
-
-    .brand-area {
-        margin-right: 0;
-        justify-content: center !important;
-    }
-
-    .twin-image {
-        width: 75px;
-        height: 62px;
-        border-radius: 4px !important;
-    }
-
-    .navbar nav {
-        margin-left: 0 !important;
-        justify-content: center;
-    }
-}
-
-/* =====================================================
-   TWIN PHOTO BEHIND ORIGINAL TWINKLE TOURS LOGO
-   ===================================================== */
-
-.brand-area {
-    position: relative;
-    width: 360px;
-    height: 82px;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    margin-right: auto;
-    overflow: hidden;
-
-    /* Twin photo becomes the background */
-    background-image: url("file_00000000dc588211ad4c0991b2c1a406.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Original Twinkle Tours logo stays IN FRONT */
-.brand {
-    position: relative;
-    z-index: 2;
-    display: block;
-}
-
-.brand img {
-    position: relative;
-    z-index: 2;
-    display: block;
-    max-height: 72px;
-    width: auto;
-}
-
-/* Hide the separate twin image.
-   The same photo is now used as the background. */
-.twin-image {
-    display: none !important;
-}
-
-/* Header */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background: #ffffff;
-}
-
-/* Navigation stays on the right */
-.navbar nav {
-    margin-left: auto !important;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-
-    .brand-area {
-        width: 100%;
-        max-width: 360px;
-        height: 78px;
-    }
-
-    .brand img {
-        max-height: 68px;
-    }
-}
-
-/* ==================================================
-   TWIN PHOTO BEHIND ORIGINAL LOGO
-   ================================================== */
-
-.brand-area {
-    position: relative !important;
-    width: 360px !important;
-    height: 82px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    overflow: hidden !important;
-    margin-right: auto !important;
-    background: #ffffff !important;
-}
-
-/* Twin photo fills the logo area */
-.twin-background {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    z-index: 1 !important;
-}
-
-/* Original logo sits ABOVE the twin photo */
-.brand {
-    position: relative !important;
-    z-index: 5 !important;
-    display: block !important;
-}
-
-.brand img {
-    position: relative !important;
-    z-index: 5 !important;
-    max-height: 72px !important;
-    width: auto !important;
-    display: block !important;
-}
-
-/* Navigation remains on the right */
-.navbar {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-}
-
-.navbar nav {
-    margin-left: auto !important;
-}
-
-/* Remove old separate twin styling */
-.twin-image {
-    display: none !important;
-}
-
-/* Phone */
-@media (max-width: 768px) {
-    .brand-area {
-        width: 100% !important;
-        max-width: 360px !important;
-        height: 78px !important;
-    }
-}
-
-/* ===== TWIN PHOTO BEHIND LOGO - FINAL FIX ===== */
-
-.brand-area {
-    position: relative !important;
-    overflow: hidden !important;
-    isolation: isolate !important;
-}
-
-/* Twin photo */
-.brand-area .twin-background {
-    display: block !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    z-index: 0 !important;
-    opacity: 1 !important;
-}
-
-/* Original logo stays above the photo */
-.brand-area .brand {
-    position: relative !important;
-    z-index: 10 !important;
-}
-
-.brand-area .brand img {
-    position: relative !important;
-    z-index: 10 !important;
-}
-
-/* Make sure the old twin image doesn't interfere */
-.brand-area .twin-image {
-    display: none !important;
-}
-
-/* =========================================================
-   TWINKLE TOURS — FULL HEADER TWIN PHOTO
-   ========================================================= */
-
-.navbar {
-    position: relative !important;
-    width: 100% !important;
-    min-height: 90px !important;
-    padding: 0 3% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    overflow: hidden !important;
-
-    /* Twin photo becomes the complete header background */
-    background-image: url("file_00000000dc588211ad4c0991b2c1a406.png") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-}
-
-/* Natural dark transparent layer so navigation remains readable */
-.navbar::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    background: rgba(0, 0, 0, 0.28) !important;
-    z-index: 0 !important;
-}
-
-/* Logo area */
-.brand-area {
-    position: relative !important;
-    z-index: 2 !important;
-    display: flex !important;
-    align-items: center !important;
-    flex-shrink: 0 !important;
-    width: auto !important;
-    height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-    overflow: visible !important;
-}
-
-/* Hide the separate twin image because it is now the header background */
-.brand-area .twin-background,
-.brand-area .twin-image {
-    display: none !important;
-}
-
-/* Keep the ORIGINAL logo */
-.brand {
-    position: relative !important;
-    z-index: 3 !important;
-    display: block !important;
-    background: transparent !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.brand img {
-    display: block !important;
-    width: auto !important;
-    height: auto !important;
-    max-height: 78px !important;
-    max-width: 230px !important;
-    object-fit: contain !important;
-}
-
-/* Navigation */
-.navbar nav {
-    position: relative !important;
-    z-index: 2 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    flex-wrap: wrap !important;
-    gap: 15px !important;
-    margin-left: auto !important;
-}
-
-.navbar nav a {
-    color: #ffffff !important;
-    font-weight: 700 !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.8) !important;
-}
-
-.navbar nav a:hover {
-    color: #f4c430 !important;
-}
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        min-height: 105px !important;
-        padding: 8px 12px !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 6px !important;
-        background-position: center !important;
-    }
-
-    .brand img {
-        max-height: 58px !important;
-        max-width: 190px !important;
-    }
-
-    .navbar nav {
-        width: 100% !important;
-        justify-content: center !important;
-        gap: 8px !important;
-        margin: 0 !important;
-    }
-
-    .navbar nav a {
-        font-size: 12px !important;
-    }
-}
-
-/* =====================================================
-   TWIN PHOTO BEHIND THE WHOLE HEADER
-   KEEP LOGO AND MENU POSITIONS
-   ===================================================== */
-
-.navbar {
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
-
-    width: 100% !important;
-    min-height: 190px !important;
-    padding: 10px 8px 14px !important;
-
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.30),
-            rgba(0, 0, 0, 0.30)
-        ),
-        url("file_00000000dc588211ad4c0991b2c1a406.png") !important;
-
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-
-    box-shadow: none !important;
-}
-
-/* Keep logo in its current position */
-.navbar .brand-area {
-    position: relative !important;
-    z-index: 5 !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: auto !important;
-    height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-
-    background: transparent !important;
-}
-
-/* Hide separate twin image */
-.navbar .twin-background,
-.navbar .twin-image {
-    display: none !important;
-}
-
-/* Original logo stays unchanged */
-.navbar .brand {
-    display: block !important;
-    position: relative !important;
-    z-index: 6 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-}
-
-.navbar .brand img {
-    display: block !important;
-    width: auto !important;
-    max-width: 230px !important;
-    max-height: 85px !important;
-    object-fit: contain !important;
-}
-
-/* Keep menu below the logo */
-.navbar nav {
-    position: relative !important;
-    z-index: 5 !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-
-    width: 100% !important;
-    gap: 12px !important;
-    margin: 0 !important;
-}
-
-.navbar nav a {
-    color: #ffffff !important;
-    font-weight: 700 !important;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.9) !important;
-}
-
-.navbar nav a:hover {
-    color: #f4c430 !important;
-}
-
-/* Remove old unwanted heading text */
-.navbar h2,
-.navbar h2::after {
-    display: none !important;
-}
-
-/* =====================================================
-   SMART WHITE TWINKLE TOURS HEADER
-   ===================================================== */
-
-.navbar {
-    background: #ffffff !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: 100% !important;
-    min-height: 185px !important;
-    padding: 12px 10px 15px !important;
-
-    gap: 10px !important;
-    border-bottom: 4px solid #d9a900 !important;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10) !important;
-
-    background-image: none !important;
-}
-
-/* Keep your original logo centered */
-.navbar .brand-area {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: auto !important;
-    height: auto !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    background: transparent !important;
-}
-
-/* Hide the separate twin image */
-.navbar .twin-image,
-.navbar .twin-background {
-    display: none !important;
-}
-
-/* Original Twinkle Tours logo */
-.navbar .brand {
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.navbar .brand img {
-    display: block !important;
-    width: auto !important;
-    max-width: 230px !important;
-    max-height: 85px !important;
-    object-fit: contain !important;
-}
-
-/* Navigation row */
-.navbar nav {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-
-    width: 100% !important;
-    gap: 8px 18px !important;
-    margin: 0 !important;
-}
-
-/* Navigation links */
-.navbar nav a {
-    position: relative !important;
-
-    color: #075b43 !important;
-    background: transparent !important;
-
-    text-decoration: none !important;
-    font-size: 13px !important;
-    font-weight: 700 !important;
-
-    padding: 5px 2px !important;
-    text-shadow: none !important;
-    transition: color 0.3s ease !important;
-}
-
-/* Gold underline */
-.navbar nav a::after {
-    content: "" !important;
-    position: absolute !important;
-    left: 0 !important;
-    bottom: 0 !important;
-
-    width: 0 !important;
-    height: 3px !important;
-    background: #d9a900 !important;
-
-    transition: width 0.3s ease !important;
-}
-
-/* Hover and tap effect */
-.navbar nav a:hover,
-.navbar nav a:active {
-    color: #b08a00 !important;
-}
-
-.navbar nav a:hover::after,
-.navbar nav a:active::after {
-    width: 100% !important;
-}
-
-/* Remove old unwanted heading text */
-.navbar h2,
-.navbar h2::after {
-    display: none !important;
-}
-
-/* Mobile appearance */
-@media (max-width: 768px) {
-
-    .navbar {
-        min-height: 185px !important;
-        padding: 10px 8px 16px !important;
-        gap: 10px !important;
-    }
-
-    .navbar .brand img {
-        max-width: 205px !important;
-        max-height: 78px !important;
-    }
-
-    .navbar nav {
-        gap: 9px 15px !important;
-    }
-
-    .navbar nav a {
-        font-size: 12px !important;
-    }
-}
-
-.navbar {
-    background: red !important;
-}
-
-/* FINAL HEADER TEST */
-
-.navbar {
-    background: #075b43 !important;
-    min-height: 185px !important;
-}
-
-.navbar nav a {
-    color: #ffffff !important;
-}
-
-/* FINAL PROFESSIONAL WHITE HEADER */
-
-.navbar {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: 100% !important;
-    min-height: 175px !important;
-    padding: 8px 10px 14px !important;
-    gap: 8px !important;
-
-    background: #ffffff !important;
-    background-image: none !important;
-
-    border-bottom: 3px solid #d9a900 !important;
-    box-shadow: 0 4px 18px rgba(0, 61, 45, 0.12) !important;
-}
-
-/* Keep original logo centered and small */
-.navbar .brand-area {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: auto !important;
-    height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-}
-
-/* Hide twin background image */
-.navbar .twin-image,
-.navbar .twin-background {
-    display: none !important;
-}
-
-.navbar .brand {
-    display: block !important;
-    margin: 0 !important;
-}
-
-.navbar .brand img {
-    width: 155px !important;
-    max-width: 155px !important;
-    height: auto !important;
-    max-height: 65px !important;
-    object-fit: contain !important;
-}
-
-/* Navigation below logo */
-.navbar nav {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-
-    width: 100% !important;
-    margin: 0 !important;
-    gap: 8px 16px !important;
-}
-
-.navbar nav a {
-    color: #075b43 !important;
-    background: transparent !important;
-    font-size: 12px !important;
-    font-weight: 700 !important;
-    text-decoration: none !important;
-    text-shadow: none !important;
-}
-
-.navbar nav a:hover {
-    color: #d9a900 !important;
-}
-
-/* Remove old heading text */
-.navbar h2,
-.navbar h2::after {
-    display: none !important;
-}
-
-/* Phone view */
-@media (max-width: 768px) {
-    .navbar {
-        min-height: 175px !important;
-        padding: 8px 7px 14px !important;
-    }
-
-    .navbar .brand img {
-        width: 145px !important;
-        max-width: 145px !important;
-    }
-
-    .navbar nav {
-        gap: 8px 14px !important;
-    }
-
-    .navbar nav a {
-        font-size: 12px !important;
-    }
-}
-
-/* FINAL WHITE HEADER DESIGN */
-
-.navbar {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: 100% !important;
-    min-height: 165px !important;
-    padding: 8px 10px 12px !important;
-    gap: 7px !important;
-
-    background: #ffffff !important;
-    background-image: none !important;
-
-    border-bottom: 3px solid #d9a900 !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12) !important;
-}
-
-/* Smaller original logo */
-.navbar .brand img {
-    width: 145px !important;
-    max-width: 145px !important;
-    height: auto !important;
-    max-height: 62px !important;
-}
-
-/* Navigation below logo */
-.navbar nav {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    gap: 8px 15px !important;
-    margin: 0 !important;
-}
-
-.navbar nav a {
-    color: #075b43 !important;
-    font-size: 12px !important;
-    font-weight: 700 !important;
-    text-shadow: none !important;
-    text-decoration: none !important;
-}
-
-.navbar nav a:hover {
-    color: #d9a900 !important;
-}
-
-/* Remove extra images or old heading text */
-.navbar .twin-image,
-.navbar .twin-background,
-.navbar h2,
-.navbar h2::after {
-    display: none !important;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        min-height: 165px !important;
-        padding: 8px 7px 12px !important;
-    }
-
-    .navbar .brand img {
-        width: 140px !important;
-        max-width: 140px !important;
-    }
-
-    .navbar nav {
-        gap: 8px 13px !important;
-    }
-
-    .navbar nav a {
-        font-size: 12px !important;
-    }
-}
-
-/* =====================================================
-   TWINKLE TOURS - REFERENCE HEADER DESIGN
-   ===================================================== */
-
-/* Main white header */
-header.navbar {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: 100% !important;
-    min-height: 185px !important;
-
-    padding: 10px 3% 18px !important;
-    gap: 12px !important;
-
-    background: #ffffff !important;
-    background-image: none !important;
-
-    border-bottom: 4px solid #f4c430 !important;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08) !important;
-}
-
-/* Keep the logo centered and smaller */
-header.navbar .brand-area {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: 100% !important;
-    height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-
-    background: transparent !important;
-}
-
-/* Hide the twin image */
-header.navbar .twin-image,
-header.navbar .twin-background {
-    display: none !important;
-}
-
-/* Original logo */
-header.navbar .brand {
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-header.navbar .brand img {
-    display: block !important;
-    width: 175px !important;
-    max-width: 175px !important;
-    height: auto !important;
-    max-height: 78px !important;
-    object-fit: contain !important;
-}
-
-/* One horizontal navigation row */
-header.navbar .main-nav {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: 100% !important;
-    flex-wrap: nowrap !important;
-    gap: 25px !important;
-    margin: 0 !important;
-}
-
-/* Navigation links */
-header.navbar .main-nav a {
-    position: relative !important;
-
-    color: #075b43 !important;
-    background: transparent !important;
-
-    font-family: Arial, sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 700 !important;
-
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    text-shadow: none !important;
-
-    padding: 8px 0 !important;
-    transition: color 0.3s ease !important;
-}
-
-/* Gold active underline */
-header.navbar .main-nav a::after {
-    content: "" !important;
-    position: absolute !important;
-    left: 0 !important;
-    bottom: 0 !important;
-
-    width: 0 !important;
-    height: 3px !important;
-    background: #f4c430 !important;
-
-    transition: width 0.3s ease !important;
-}
-
-header.navbar .main-nav a:hover,
-header.navbar .main-nav a.active {
-    color: #003d2d !important;
-}
-
-header.navbar .main-nav a:hover::after,
-header.navbar .main-nav a.active::after {
-    width: 100% !important;
-}
-
-/* Book Now button */
-header.navbar .main-nav a.book-now {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
-
-    padding: 12px 22px !important;
-    border-radius: 28px !important;
-
-    background: #003d2d !important;
-    color: #ffffff !important;
-    border: 2px solid #f4c430 !important;
-}
-
-header.navbar .main-nav a.book-now::after {
-    display: none !important;
-}
-
-header.navbar .main-nav a.book-now:hover {
-    background: #075b43 !important;
-    color: #ffffff !important;
-}
-
-/* Desktop spacing */
-@media (min-width: 1001px) {
-    header.navbar .brand img {
-        width: 175px !important;
-    }
-
-    header.navbar .main-nav {
-        gap: 24px !important;
-    }
-}
-
-/* Tablet and phone layout */
-@media (max-width: 1000px) {
-    header.navbar {
-        min-height: 180px !important;
-        padding: 10px 8px 16px !important;
-    }
-
-    header.navbar .main-nav {
-        flex-wrap: wrap !important;
-        gap: 8px 18px !important;
-    }
-
-    header.navbar .main-nav a {
-        font-size: 13px !important;
-    }
-}
-
-/* Small phone layout */
-@media (max-width: 600px) {
-    header.navbar {
-        min-height: 175px !important;
-        gap: 8px !important;
-    }
-
-    header.navbar .brand img {
-        width: 150px !important;
-        max-width: 150px !important;
-        max-height: 65px !important;
-    }
-
-    header.navbar .main-nav {
-        gap: 8px 15px !important;
-    }
-
-    header.navbar .main-nav a {
-        font-size: 12px !important;
-        padding: 4px 0 !important;
-    }
-
-    header.navbar .main-nav a.book-now {
-        padding: 9px 15px !important;
-    }
-}
-
-/* =================================================
-   FINAL WHITE PROFESSIONAL HEADER
-   ================================================= */
-
-header.navbar {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-
-    width: 100% !important;
-    min-height: 0 !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    padding: 8px 10px 14px !important;
-    margin: 0 !important;
-    gap: 8px !important;
-
-    background: #ffffff !important;
-    background-image: none !important;
-
-    border-bottom: 3px solid #f4c430 !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
-}
-
-/* Keep only the original logo */
-header.navbar .brand-area {
-    width: 100% !important;
-    height: auto !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    background: #ffffff !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Hide twin image from header */
-header.navbar .twin-image,
-header.navbar .twin-background {
-    display: none !important;
-}
-
-/* Make original logo smaller */
-header.navbar .brand {
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-header.navbar .brand img {
-    width: 135px !important;
-    max-width: 135px !important;
-    height: auto !important;
-    max-height: 62px !important;
-    object-fit: contain !important;
-}
-
-/* Navigation */
-header.navbar nav,
-header.navbar .main-nav {
-    width: 100% !important;
-
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-
-    align-items: center !important;
-    justify-content: center !important;
-
-    gap: 8px 20px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Navigation links */
-header.navbar nav a,
-header.navbar .main-nav a {
-    color: #075b43 !important;
-    background: transparent !important;
-
-    font-family: Arial, sans-serif !important;
-    font-size: 12px !important;
-    font-weight: 700 !important;
-
-    text-decoration: none !important;
-    text-shadow: none !important;
-
-    padding: 4px 0 !important;
-}
-
-/* Active Home underline */
-header.navbar nav a.active,
-header.navbar .main-nav a.active {
-    border-bottom: 3px solid #f4c430 !important;
-}
-
-/* Book Now button */
-header.navbar nav a.book-now,
-header.navbar .main-nav a.book-now {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    background: #003d2d !important;
-    color: #ffffff !important;
-
-    border: 2px solid #f4c430 !important;
-    border-radius: 25px !important;
-
-    padding: 9px 17px !important;
-}
-
-/* Phone adjustment */
-@media (max-width: 600px) {
-    header.navbar {
-        padding: 8px 8px 13px !important;
-        gap: 7px !important;
-    }
-
-    header.navbar .brand img {
-        width: 125px !important;
-        max-width: 125px !important;
-        max-height: 58px !important;
-    }
-
-    header.navbar nav,
-    header.navbar .main-nav {
-        gap: 7px 15px !important;
-    }
-
-    header.navbar nav a,
-    header.navbar .main-nav a {
-        font-size: 12px !important;
-    }
-}
-
-/* ========================================
-   FINAL CLEAN TWINKLE TOURS HEADER
-   ======================================== */
-
-.navbar {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    width: 100% !important;
-    min-height: 95px;
-    padding: 10px 4% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 20px;
-    background: #ffffff !important;
-    background-image: none !important;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12) !important;
-    border: none !important;
     z-index: 1000;
-}
-
-.navbar .brand {
-    display: flex !important;
-    align-items: center !important;
-    margin: 0 !important;
-    margin-right: auto !important;
-}
-
-.navbar .brand img {
-    width: 180px !important;
-    height: auto !important;
-    max-height: 80px !important;
-    object-fit: contain;
-}
-
-.navbar nav {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    flex-wrap: wrap;
-    gap: 14px !important;
-    margin-left: auto !important;
-}
-
-.navbar nav a {
-    color: #075b43 !important;
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    text-shadow: none !important;
-}
-
-.navbar nav a:hover {
-    color: #d9a900 !important;
-}
-
-.navbar nav a.book-now {
-    background: #f4c430 !important;
-    color: #173f35 !important;
-    padding: 10px 18px !important;
-    border-radius: 25px !important;
-    border: 2px solid #f4c430 !important;
-}
-
-.navbar nav a.book-now:hover {
-    background: #d9a900 !important;
-    border-color: #d9a900 !important;
-}
-
-/* PHONE HEADER */
-@media (max-width: 768px) {
-    .navbar {
-        position: relative !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        padding: 12px 10px !important;
-        gap: 12px !important;
-    }
-
-    .navbar .brand {
-        margin: 0 !important;
-    }
-
-    .navbar .brand img {
-        width: 150px !important;
-    }
-
-    .navbar nav {
-        width: 100% !important;
-        justify-content: center !important;
-        gap: 8px 12px !important;
-    }
-
-    .navbar nav a {
-        font-size: 11px !important;
-    }
-
-    .navbar nav a.book-now {
-        padding: 8px 13px !important;
-    }
-}
-
-/* FINAL LOGO AND NAVIGATION SPACING FIX */
-
-.navbar {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 35px !important;
-    padding: 10px 4% !important;
-    background: #ffffff !important;
-    background-image: none !important;
-    position: relative !important;
-}
-
-.navbar .brand {
-    flex-shrink: 0 !important;
-    margin-right: 25px !important;
-}
-
-.navbar .brand img {
-    width: 180px !important;
-    height: auto !important;
-}
-
-.navbar nav {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    flex-wrap: wrap !important;
-    gap: 15px !important;
-    margin-left: auto !important;
-}
-
-.navbar nav a {
-    color: #075b43 !important;
-    white-space: nowrap !important;
-}
-
-/* Phone spacing */
-@media (max-width: 768px) {
-    .navbar {
-        gap: 10px !important;
-        padding: 12px 10px !important;
-    }
-
-    .navbar .brand {
-        margin-right: 0 !important;
-    }
-
-    .navbar .brand img {
-        width: 150px !important;
-    }
-
-    .navbar nav {
-        justify-content: center !important;
-        gap: 8px 12px !important;
-        margin-left: 0 !important;
-    }
-}
-
-/* ========================================
-   PROFESSIONAL FULL-WIDTH FOOTER
-   ======================================== */
-
-footer {
     width: 100%;
-    background: var(--dark-green);
-    color: white;
-    padding: 45px 5% 25px;
-    margin-top: 35px;
-    text-align: center;
-    box-sizing: border-box;
+    background: var(--white);
+    border-bottom: 1px solid #e8eee9;
+    box-shadow: 0 2px 12px rgba(0, 50, 35, 0.06);
 }
 
-.footer-content {
+.brand-area {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-    text-align: left;
-}
-
-.footer-content h3 {
-    color: var(--gold);
-    font-family: Georgia, serif;
-    font-size: 23px;
-    margin-bottom: 15px;
-}
-
-.footer-content p {
-    color: #e5f1eb;
-    margin: 8px 0;
-    line-height: 1.7;
-}
-
-.footer-content a {
-    display: block;
-    color: #e5f1eb;
-    margin: 8px 0;
-    transition: 0.3s;
-}
-
-.footer-content a:hover {
-    color: var(--gold);
-    padding-left: 5px;
-}
-
-footer small {
-    display: block;
-    width: 100%;
-    max-width: 1200px;
-    margin: 30px auto 0;
-    padding: 18px 10px;
-    border-top: 1px solid var(--gold);
-    color: #e5f1eb;
-    font-size: 13px;
-    line-height: 1.7;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-/* PHONE FOOTER */
-@media (max-width: 768px) {
-    footer {
-        padding: 35px 20px 20px;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        text-align: center;
-    }
-
-    .footer-content h3 {
-        font-size: 22px;
-    }
-
-    .footer-content a:hover {
-        padding-left: 0;
-    }
-
-    footer small {
-        padding: 18px 5px;
-        font-size: 12px;
-    }
-}
-
-/* FINAL FOOTER SPACE FIX */
-
-footer {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 30px 15px 20px !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-}
-
-footer .section,
-footer .container,
-footer .footer-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-}
-
-footer > div {
-    width: 100% !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-}
-
-footer small {
-    display: block !important;
-    width: 100% !important;
-    max-width: 1200px !important;
-    margin: 25px auto 0 !important;
-    padding: 15px 5px !important;
-    border: 0 !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-}
-
-/* ================= PROFESSIONAL FOOTER ================= */
-
-footer {
-    width: 100%;
-    margin: 0;
-    padding: 55px 6% 0;
-    background: #123b32;
-    color: #ffffff;
-    box-sizing: border-box;
-    text-align: left;
-}
-
-.footer-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 35px;
-    box-sizing: border-box;
-}
-
-.footer-column {
-    min-width: 0;
-}
-
-.footer-column h3 {
-    margin: 0 0 15px;
-    color: #f4c430;
-    font-size: 23px;
-    letter-spacing: 1px;
-}
-
-.footer-column h4 {
-    margin: 0 0 15px;
-    color: #f4c430;
-    font-size: 18px;
-}
-
-.footer-column p {
-    margin: 0 0 12px;
-    color: #e8f1ed;
-    line-height: 1.7;
-    overflow-wrap: anywhere;
-}
-
-.footer-column a {
-    display: block;
-    width: fit-content;
-    margin-bottom: 10px;
-    color: #ffffff;
-    text-decoration: none;
-    line-height: 1.6;
-}
-
-.footer-column a:hover {
-    color: #f4c430;
-}
-
-.footer-bottom {
-    width: 100%;
-    margin-top: 40px;
-    padding: 20px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.footer-bottom p {
-    margin: 0;
-    color: #dce8e2;
-    font-size: 14px;
-}
-
-/* ================= MOBILE FOOTER ================= */
-
-@media (max-width: 768px) {
-
-    footer {
-        padding: 40px 22px 0;
-        text-align: center;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        text-align: center;
-    }
-
-    .footer-column a {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .footer-column h3 {
-        font-size: 21px;
-    }
-
-    .footer-column h4 {
-        font-size: 17px;
-    }
-
-    .footer-column p {
-        font-size: 14px;
-    }
-
-    .footer-bottom {
-        margin-top: 30px;
-    }
-
-}
-
-/* ================= FOOTER SIZE FIX ================= */
-
-footer {
-    padding: 28px 20px 0 !important;
-    min-height: auto !important;
-    height: auto !important;
-}
-
-.footer-container {
-    max-width: 1100px !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 18px !important;
-}
-
-.footer-column h3 {
-    font-size: 18px !important;
-    margin-bottom: 8px !important;
-}
-
-.footer-column h4 {
-    font-size: 15px !important;
-    margin-bottom: 8px !important;
-}
-
-.footer-column p,
-.footer-column a {
-    font-size: 13px !important;
-    line-height: 1.45 !important;
-    margin-bottom: 6px !important;
-}
-
-.footer-bottom {
-    margin-top: 20px !important;
-    padding: 12px 0 !important;
-}
-
-.footer-bottom p {
-    font-size: 12px !important;
-}
-
-@media (max-width: 768px) {
-
-    footer {
-        padding: 25px 15px 0 !important;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr !important;
-        gap: 18px !important;
-    }
-
-    .footer-column h3 {
-        font-size: 19px !important;
-    }
-
-    .footer-column h4 {
-        font-size: 16px !important;
-    }
-
-    .footer-column p,
-    .footer-column a {
-        font-size: 13px !important;
-    }
-
-}
-
-.footer-column {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.footer-container br {
-    display: none !important;
-}
-
-/* ================= COMPACT MOBILE FOOTER FIX ================= */
-
-footer#contact {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 25px 15px 0 !important;
-    min-height: 0 !important;
-    height: auto !important;
-    box-sizing: border-box !important;
-    background: #123b32 !important;
-    color: white !important;
-}
-
-footer#contact .footer-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 22px 18px !important;
-    box-sizing: border-box !important;
-}
-
-footer#contact .footer-column {
-    width: 100% !important;
-    min-width: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: left !important;
-}
-
-footer#contact .footer-column:first-child,
-footer#contact .footer-column:last-child {
-    grid-column: 1 / -1 !important;
-    text-align: center !important;
-}
-
-footer#contact h3 {
-    margin: 0 0 7px !important;
-    font-size: 20px !important;
-    line-height: 1.2 !important;
-}
-
-footer#contact h4 {
-    margin: 0 0 9px !important;
-    font-size: 16px !important;
-    line-height: 1.2 !important;
-}
-
-footer#contact p {
-    margin: 0 0 7px !important;
-    font-size: 13px !important;
-    line-height: 1.45 !important;
-    overflow-wrap: anywhere !important;
-}
-
-footer#contact a {
-    display: block !important;
-    margin: 0 0 7px !important;
-    font-size: 13px !important;
-    line-height: 1.4 !important;
-    color: white !important;
-    text-decoration: none !important;
-}
-
-footer#contact .footer-bottom {
-    width: 100% !important;
-    margin: 22px 0 0 !important;
-    padding: 14px 0 !important;
-    border-top: 1px solid rgba(255,255,255,0.3) !important;
-    text-align: center !important;
-}
-
-footer#contact .footer-bottom p {
-    margin: 0 !important;
-    font-size: 12px !important;
-    line-height: 1.4 !important;
-}
-
-/* Desktop footer */
-@media (min-width: 769px) {
-
-    footer#contact .footer-container {
-        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-        gap: 25px !important;
-    }
-
-    footer#contact .footer-column {
-        text-align: left !important;
-    }
-
-    footer#contact .footer-column:first-child,
-    footer#contact .footer-column:last-child {
-        grid-column: auto !important;
-        text-align: left !important;
-    }
-
-}
-
-/* Smaller phones */
-@media (max-width: 380px) {
-
-    footer#contact {
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-    }
-
-    footer#contact .footer-container {
-        gap: 18px 12px !important;
-    }
-
-    footer#contact h3 {
-        font-size: 18px !important;
-    }
-
-    footer#contact h4 {
-        font-size: 15px !important;
-    }
-
-    footer#contact p,
-    footer#contact a {
-        font-size: 12px !important;
-    }
-
-}
-
-/* ================= FINAL FOOTER FIX ================= */
-
-footer#contact {
-    width: 100% !important;
-    min-height: 0 !important;
-    height: auto !important;
-    margin: 0 !important;
-    padding: 22px 14px 0 !important;
-    box-sizing: border-box !important;
-    background: #123b32 !important;
-    color: #ffffff !important;
-    text-align: center !important;
-}
-
-/* Footer main area */
-footer#contact > div:first-of-type {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 14px !important;
-    width: 100% !important;
-    max-width: 650px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-}
-
-/* Footer columns */
-footer#contact > div:first-of-type > div {
-    width: 100% !important;
-    min-width: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: center !important;
-}
-
-/* Top and disclaimer sections use full width */
-footer#contact > div:first-of-type > div:first-child,
-footer#contact > div:first-of-type > div:last-child {
-    grid-column: 1 / -1 !important;
-}
-
-/* Footer headings */
-footer#contact h3 {
-    font-size: 19px !important;
-    line-height: 1.2 !important;
-    margin: 0 0 7px !important;
-    color: #f4c430 !important;
-}
-
-footer#contact h4 {
-    font-size: 15px !important;
-    line-height: 1.2 !important;
-    margin: 0 0 7px !important;
-    color: #f4c430 !important;
-}
-
-/* Footer text */
-footer#contact p {
-    font-size: 12px !important;
-    line-height: 1.4 !important;
-    margin: 4px 0 !important;
-    padding: 0 !important;
-    overflow-wrap: anywhere !important;
-}
-
-/* Footer links */
-footer#contact a {
-    display: block !important;
-    font-size: 12px !important;
-    line-height: 1.4 !important;
-    margin: 4px 0 !important;
-    padding: 0 !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
-}
-
-/* Copyright area */
-footer#contact > div:last-child {
-    width: 100% !important;
-    margin: 15px 0 0 !important;
-    padding: 12px 0 !important;
-    border-top: 1px solid rgba(255,255,255,0.3) !important;
-    box-sizing: border-box !important;
-}
-
-/* Mobile layout */
-@media (max-width: 768px) {
-
-    footer#contact {
-        padding: 20px 12px 0 !important;
-    }
-
-    footer#contact > div:first-of-type {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 12px !important;
-    }
-
-    footer#contact h3 {
-        font-size: 18px !important;
-    }
-
-    footer#contact h4 {
-        font-size: 14px !important;
-    }
-
-    footer#contact p,
-    footer#contact a {
-        font-size: 11px !important;
-    }
-
-}
-
-
-/* ========================================
-   TWINKLE TOURS - FOOTER MOBILE FIX
-   ======================================== */
-
-/* Prevent horizontal overflow */
-html,
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* Main footer */
-footer {
-    width: 100%;
-    max-width: 100%;
-    background: #073f35;
-    color: #ffffff;
-    text-align: center;
-    padding: 45px 20px 25px;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-/* Footer headings */
-footer h2,
-footer h3 {
-    color: #f4c430;
-    text-align: center;
-    margin: 0 0 15px;
-    overflow-wrap: anywhere;
-}
-
-/* Footer paragraphs */
-footer p {
-    max-width: 650px;
-    margin: 10px auto;
-    text-align: center;
-    line-height: 1.7;
-    overflow-wrap: anywhere;
-    word-wrap: break-word;
-}
-
-/* Footer links */
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-    overflow-wrap: anywhere;
-}
-
-footer a:hover {
-    color: #f4c430;
-}
-
-/* Footer sections */
-.footer-container,
-.footer-content,
-.footer-grid {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-/* Footer columns */
-.footer-container,
-.footer-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.footer-column {
-    flex: 1 1 200px;
-    min-width: 0;
-    text-align: center;
-}
-
-/* Contact details */
-footer .contact,
-footer .contact-info {
-    text-align: center;
-    overflow-wrap: anywhere;
-}
-
-/* Quick links */
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-}
-
-footer li {
-    margin: 8px 0;
-    overflow-wrap: anywhere;
-}
-
-/* Disclaimer */
-.disclaimer {
-    width: 100%;
-    max-width: 900px;
-    margin: 25px auto 0;
-    padding: 20px 15px;
-    box-sizing: border-box;
-    border-top: 1px solid rgba(255, 255, 255, 0.35);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-    text-align: center;
-    overflow: hidden;
-}
-
-.disclaimer h3 {
-    color: #f4c430;
-    margin-bottom: 12px;
-}
-
-.disclaimer p {
-    width: 100%;
-    max-width: 750px;
-    margin: 0 auto;
-    font-size: 16px;
-    line-height: 1.8;
-    overflow-wrap: anywhere;
-    word-break: normal;
-}
-
-/* Copyright */
-footer .copyright {
-    margin-top: 25px;
-    text-align: center;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-
-/* ========================================
-   MOBILE FOOTER
-   ======================================== */
-
-@media (max-width: 768px) {
-
-    footer {
-        padding: 35px 15px 25px;
-    }
-
-    .footer-container,
-    .footer-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 22px;
-    }
-
-    .footer-column {
-        width: 100%;
-        max-width: 100%;
-        text-align: center;
-    }
-
-    footer h2 {
-        font-size: 28px;
-    }
-
-    footer h3 {
-        font-size: 24px;
-    }
-
-    footer p {
-        font-size: 16px;
-        max-width: 100%;
-    }
-
-    .disclaimer {
-        width: 100%;
-        max-width: 100%;
-        padding: 20px 10px;
-        margin-top: 20px;
-    }
-
-    .disclaimer p {
-        font-size: 15px;
-        line-height: 1.7;
-        max-width: 100%;
-    }
-
-    footer .copyright {
-        font-size: 14px;
-        line-height: 1.6;
-    }
-}
-
-/* Extra-small phones */
-@media (max-width: 400px) {
-
-    footer {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    footer h2 {
-        font-size: 25px;
-    }
-
-    footer h3 {
-        font-size: 22px;
-    }
-
-    footer p {
-        font-size: 15px;
-    }
-
-    .disclaimer {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .disclaimer p {
-        font-size: 14px;
-    }
-}
-
-/* WhatsApp button stays inside the screen */
-.whatsapp-float {
-    max-width: 70px;
-    max-height: 70px;
-    box-sizing: border-box;
-}
-
-/* ========================================
-   TWINKLE TOURS
-   PROFESSIONAL FOOTER DESIGN
-   ======================================== */
-
-.twinkle-footer {
-    width: 100%;
-    background: #123b32;
-    color: #ffffff;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 38px 20px 20px;
-    overflow: hidden;
-}
-
-.footer-inner {
-    width: 100%;
-    max-width: 1050px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-/* BRAND */
-
-.footer-brand h3 {
-    color: #f4c430;
-    font-family: Georgia, serif;
-    font-size: 30px;
-    margin: 0 0 8px;
-    letter-spacing: 1px;
-}
-
-.footer-brand p {
-    font-size: 15px;
-    margin: 5px 0;
-    color: #f1f5f3;
-}
-
-/* FOOTER COLUMNS */
-
-.footer-columns {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 70px;
-    margin: 30px auto 0;
-    max-width: 700px;
-}
-
-.footer-column {
-    flex: 1;
-    min-width: 0;
-    text-align: center;
-}
-
-.footer-column h4 {
-    color: #f4c430;
-    font-size: 21px;
-    margin: 0 0 14px;
-}
-
-.footer-column p {
-    font-size: 15px;
-    margin: 8px 0;
-    overflow-wrap: anywhere;
-}
-
-.footer-column a {
-    color: #ffffff;
-    text-decoration: none;
-    overflow-wrap: anywhere;
-}
-
-.footer-column a:hover {
-    color: #f4c430;
-}
-
-/* QUICK LINKS */
-
-.footer-column a[href^="#"] {
-    display: block;
-    margin: 8px 0;
-}
-
-/* DISCLAIMER */
-
-.footer-disclaimer {
-    width: 100%;
-    max-width: 760px;
-    margin: 30px auto 0;
-    padding: 20px 15px;
-    border-top: 1px solid rgba(255,255,255,0.35);
-    border-bottom: 1px solid rgba(255,255,255,0.35);
-    box-sizing: border-box;
-}
-
-.footer-disclaimer h4 {
-    color: #f4c430;
-    font-size: 21px;
-    margin: 0 0 12px;
-}
-
-.footer-disclaimer p {
-    max-width: 680px;
-    margin: 0 auto;
-    font-size: 15px;
-    line-height: 1.7;
-    overflow-wrap: anywhere;
-}
-
-/* COPYRIGHT */
-
-.footer-bottom {
-    padding-top: 20px;
-}
-
-.footer-bottom p {
-    font-size: 14px;
-    margin: 0;
-    color: #e8efec;
-}
-
-/* ========================================
-   MOBILE FOOTER
-   ======================================== */
-
-@media (max-width: 600px) {
-
-    .twinkle-footer {
-        padding: 30px 15px 18px;
-    }
-
-    .footer-brand h3 {
-        font-size: 26px;
-    }
-
-    .footer-brand p {
-        font-size: 14px;
-    }
-
-    .footer-columns {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-        width: 100%;
-        margin-top: 25px;
-    }
-
-    .footer-column {
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-column h4 {
-        font-size: 20px;
-    }
-
-    .footer-column p,
-    .footer-column a {
-        font-size: 15px;
-    }
-
-    .footer-disclaimer {
-        margin-top: 25px;
-        padding: 18px 8px;
-    }
-
-    .footer-disclaimer h4 {
-        font-size: 20px;
-    }
-
-    .footer-disclaimer p {
-        font-size: 14px;
-        line-height: 1.7;
-        max-width: 100%;
-    }
-
-    .footer-bottom p {
-        font-size: 13px;
-    }
-
-}
-
-
-/* ========================================
-   FINAL TWINKLE TOURS FOOTER FIX
-   ======================================== */
-
-/* Footer main container */
-.twinkle-footer {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    background: #123b32 !important;
-    color: white !important;
-    text-align: center !important;
-    padding: 35px 15px 20px !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-}
-
-/* Inner footer */
-.twinkle-footer .footer-inner {
-    display: block !important;
-    width: 100% !important;
-    max-width: 1100px !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-}
-
-/* Footer brand */
-.twinkle-footer .footer-brand {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    margin-bottom: 25px !important;
-}
-
-.twinkle-footer .footer-brand h3 {
-    color: #f4c430 !important;
-    font-size: 30px !important;
-    margin: 0 0 8px !important;
-}
-
-.twinkle-footer .footer-brand p {
-    color: white !important;
-    font-size: 15px !important;
-    margin: 5px 0 !important;
-}
-
-/* Contact and Quick Links row */
-.twinkle-footer .footer-columns {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    gap: 35px !important;
-    width: 100% !important;
-    max-width: 750px !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-}
-
-/* Each footer column */
-.twinkle-footer .footer-column {
-    display: block !important;
-    flex: 1 1 0 !important;
-    width: 50% !important;
-    min-width: 0 !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-}
-
-/* Footer headings */
-.twinkle-footer .footer-column h4,
-.twinkle-footer .footer-disclaimer h4 {
-    color: #f4c430 !important;
-    font-size: 21px !important;
-    margin: 0 0 12px !important;
-}
-
-/* Footer text */
-.twinkle-footer .footer-column p {
-    color: white !important;
-    font-size: 14px !important;
-    margin: 8px 0 !important;
-    overflow-wrap: anywhere !important;
-}
-
-/* Footer links */
-.twinkle-footer .footer-column a {
-    display: block !important;
-    color: white !important;
-    text-decoration: none !important;
-    font-size: 14px !important;
-    margin: 8px 0 !important;
-    overflow-wrap: anywhere !important;
-}
-
-/* Disclaimer MUST be below both columns */
-.twinkle-footer .footer-disclaimer {
-    display: block !important;
-    clear: both !important;
-    width: 100% !important;
-    max-width: 800px !important;
-    margin: 30px auto 0 !important;
-    padding: 20px 15px !important;
-    border-top: 1px solid rgba(255,255,255,0.35) !important;
-    border-bottom: 1px solid rgba(255,255,255,0.35) !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-}
-
-/* Disclaimer text */
-.twinkle-footer .footer-disclaimer p {
-    color: white !important;
-    font-size: 14px !important;
-    line-height: 1.7 !important;
-    max-width: 700px !important;
-    margin: 0 auto !important;
-    overflow-wrap: anywhere !important;
-}
-
-/* Copyright */
-.twinkle-footer .footer-bottom {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    padding-top: 20px !important;
-}
-
-.twinkle-footer .footer-bottom p {
-    color: white !important;
-    font-size: 14px !important;
-    margin: 0 !important;
-}
-
-/* ========================================
-   MOBILE FOOTER
-   ======================================== */
-
-@media (max-width: 600px) {
-
-    .twinkle-footer {
-        padding: 30px 15px 18px !important;
-    }
-
-    .twinkle-footer .footer-brand h3 {
-        font-size: 27px !important;
-    }
-
-    .twinkle-footer .footer-columns {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 25px !important;
-        width: 100% !important;
-        margin: 0 auto !important;
-    }
-
-    .twinkle-footer .footer-column {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        text-align: center !important;
-    }
-
-    .twinkle-footer .footer-column h4 {
-        font-size: 21px !important;
-    }
-
-    .twinkle-footer .footer-column p,
-    .twinkle-footer .footer-column a {
-        font-size: 15px !important;
-    }
-
-    .twinkle-footer .footer-disclaimer {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-top: 25px !important;
-        padding: 18px 8px !important;
-    }
-
-    .twinkle-footer .footer-disclaimer p {
-        font-size: 14px !important;
-        line-height: 1.7 !important;
-    }
-
-    .twinkle-footer .footer-bottom p {
-        font-size: 13px !important;
-    }
-
-}
-
-
-/* =====================================
-   TWINKLE TOURS - DIRECT FOOTER FIX
-   ===================================== */
-
-.twinkle-footer .footer-columns {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 25px !important;
-    width: 100% !important;
-    max-width: 750px !important;
-    margin: 25px auto 0 !important;
-    align-items: start !important;
-}
-
-.twinkle-footer .footer-column {
-    width: 100% !important;
-    min-width: 0 !important;
-    text-align: center !important;
-}
-
-/* Force Disclaimer to full width below columns */
-.twinkle-footer .footer-disclaimer {
-    display: block !important;
-    width: 100% !important;
-    max-width: 800px !important;
-    margin: 30px auto 0 !important;
-    clear: both !important;
-    box-sizing: border-box !important;
-}
-
-/* Keep disclaimer text inside screen */
-.twinkle-footer .footer-disclaimer p {
-    width: 100% !important;
-    max-width: 700px !important;
-    margin: 0 auto !important;
-    overflow-wrap: anywhere !important;
-    word-break: normal !important;
-    text-align: center !important;
-}
-
-/* Mobile phone */
-@media (max-width: 600px) {
-
-    .twinkle-footer .footer-columns {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 25px !important;
-        width: 100% !important;
-    }
-
-    .twinkle-footer .footer-column {
-        width: 100% !important;
-        text-align: center !important;
-    }
-
-    .twinkle-footer .footer-disclaimer {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 25px auto 0 !important;
-        padding: 18px 8px !important;
-        box-sizing: border-box !important;
-    }
-
-    .twinkle-footer .footer-disclaimer p {
-        font-size: 14px !important;
-        line-height: 1.7 !important;
-    }
-
-}
-
-
-
-/* ========================================
-   TWINKLE TOURS
-   FINAL FOOTER LAYOUT FIX
-   ======================================== */
-
-/* Main footer */
-footer.twinkle-footer {
-    display: block !important;
-    width: 100% !important;
-    background: #123b32 !important;
-    color: white !important;
-    text-align: center !important;
-    padding: 35px 15px 20px !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-}
-
-/* Footer inner */
-footer.twinkle-footer .footer-inner {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    max-width: 1100px !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-}
-
-/* Brand */
-footer.twinkle-footer .footer-brand {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    margin-bottom: 25px !important;
-}
-
-footer.twinkle-footer .footer-brand h3 {
-    color: #f4c430 !important;
-    font-size: 30px !important;
-    margin: 0 0 8px !important;
-}
-
-/* Contact + Quick Links */
-footer.twinkle-footer .footer-columns {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    gap: 35px !important;
-    width: 100% !important;
-    max-width: 750px !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-}
-
-/* Each column */
-footer.twinkle-footer .footer-column {
-    display: block !important;
-    flex: 1 1 0 !important;
-    width: 50% !important;
-    min-width: 0 !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-}
-
-/* Footer headings */
-footer.twinkle-footer h4 {
-    color: #f4c430 !important;
-    font-size: 21px !important;
-}
-
-/* Footer text */
-footer.twinkle-footer p {
-    color: white !important;
-    overflow-wrap: anywhere !important;
-}
-
-/* ========================================
-   DISCLAIMER BELOW BOTH COLUMNS
-   ======================================== */
-
-footer.twinkle-footer .footer-disclaimer {
-    display: block !important;
-    flex: none !important;
-    width: 100% !important;
-    max-width: 800px !important;
-    margin: 30px auto 0 !important;
-    padding: 20px 15px !important;
-    border-top: 1px solid rgba(255,255,255,0.35) !important;
-    border-bottom: 1px solid rgba(255,255,255,0.35) !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-    clear: both !important;
-    order: 3 !important;
-}
-
-footer.twinkle-footer .footer-disclaimer h4 {
-    color: #f4c430 !important;
-    margin: 0 0 12px !important;
-}
-
-footer.twinkle-footer .footer-disclaimer p {
-    width: 100% !important;
-    max-width: 700px !important;
-    margin: 0 auto !important;
-    font-size: 14px !important;
-    line-height: 1.7 !important;
-    overflow-wrap: anywhere !important;
-}
-
-/* Copyright */
-footer.twinkle-footer .footer-bottom {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    margin-top: 0 !important;
-    padding-top: 20px !important;
-}
-
-/* ========================================
-   MOBILE PHONE
-   ======================================== */
-
-@media (max-width: 600px) {
-
-    footer.twinkle-footer {
-        padding: 30px 15px 18px !important;
-    }
-
-    footer.twinkle-footer .footer-columns {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 25px !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    footer.twinkle-footer .footer-column {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        text-align: center !important;
-    }
-
-    footer.twinkle-footer .footer-disclaimer {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 25px auto 0 !important;
-        padding: 18px 8px !important;
-        box-sizing: border-box !important;
-    }
-
-    footer.twinkle-footer .footer-disclaimer p {
-        font-size: 14px !important;
-        line-height: 1.7 !important;
-    }
-
-}
-
-
-/* ========================================
-   TWINKLE TOURS - FOOTER FINAL OVERRIDE
-   ======================================== */
-
-/* Force footer sections into correct order */
-footer.twinkle-footer .footer-inner {
-    display: block !important;
-    width: 100% !important;
-    max-width: 1100px !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-}
-
-/* Brand at top */
-footer.twinkle-footer .footer-brand {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    margin-bottom: 30px !important;
-}
-
-/* Contact and Quick Links */
-footer.twinkle-footer .footer-columns {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    gap: 35px !important;
-    width: 100% !important;
-    max-width: 750px !important;
-    margin: 0 auto !important;
-}
-
-/* Each column */
-footer.twinkle-footer .footer-column {
-    display: block !important;
-    flex: 1 1 0 !important;
-    width: 50% !important;
-    min-width: 0 !important;
-    text-align: center !important;
-}
-
-/* Disclaimer below the columns */
-footer.twinkle-footer .footer-disclaimer {
-    display: block !important;
-    width: 100% !important;
-    max-width: 800px !important;
-    margin: 30px auto 0 !important;
-    padding: 20px 15px !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-    clear: both !important;
-}
-
-/* Copyright at bottom */
-footer.twinkle-footer .footer-bottom {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    margin-top: 0 !important;
-    padding-top: 20px !important;
-}
-
-/* Mobile phone */
-@media (max-width: 600px) {
-
-    footer.twinkle-footer .footer-columns {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-        gap: 25px !important;
-    }
-
-    footer.twinkle-footer .footer-column {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        text-align: center !important;
-    }
-
-    footer.twinkle-footer .footer-disclaimer {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 25px auto 0 !important;
-        padding: 18px 8px !important;
-        box-sizing: border-box !important;
-    }
-
-}
-
-
-/* ========================================
-   TWINKLE TOURS - FOOTER FINAL FIX
-   ======================================== */
-
-footer.twinkle-footer {
-    background: #ffffff !important;
-    color: #173f35 !important;
-    padding: 40px 20px 20px !important;
-    border-top: 5px solid #f4c430 !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-footer.twinkle-footer .footer-inner {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 25px !important;
-    max-width: 1200px !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-}
-
-/* BRAND */
-footer.twinkle-footer .footer-brand {
-    text-align: center !important;
-    width: 100% !important;
-}
-
-footer.twinkle-footer .footer-brand h3 {
-    color: #075b43 !important;
-    font-size: 28px !important;
-    margin: 0 0 8px !important;
-}
-
-footer.twinkle-footer .footer-brand p {
-    color: #555555 !important;
-    margin: 5px 0 !important;
-}
-
-/* CONTACT + QUICK LINKS */
-footer.twinkle-footer .footer-columns {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 30px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    align-items: start !important;
-}
-
-footer.twinkle-footer .footer-column {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    text-align: left !important;
-    color: #173f35 !important;
-}
-
-footer.twinkle-footer .footer-column h4 {
-    color: #075b43 !important;
-    font-size: 20px !important;
-    margin: 0 0 12px !important;
-}
-
-footer.twinkle-footer .footer-column p {
-    color: #555555 !important;
-    margin: 6px 0 !important;
-}
-
-footer.twinkle-footer .footer-column a {
-    color: #555555 !important;
-    text-decoration: none !important;
-    margin: 5px 0 !important;
-}
-
-/* DISCLAIMER */
-footer.twinkle-footer .footer-disclaimer {
-    order: 3 !important;
-    background: #f4f8f5 !important;
-    border: 1px solid #dce8e1 !important;
-    border-radius: 12px !important;
-    padding: 20px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-    color: #555555 !important;
-}
-
-footer.twinkle-footer .footer-disclaimer h4 {
-    color: #075b43 !important;
-    font-size: 20px !important;
-    margin: 0 0 10px !important;
-}
-
-footer.twinkle-footer .footer-disclaimer p {
-    color: #555555 !important;
-    margin: 0 !important;
-}
-
-/* COPYRIGHT */
-footer.twinkle-footer .footer-bottom {
-    order: 4 !important;
-    border-top: 1px solid #dce8e1 !important;
-    padding-top: 18px !important;
-    text-align: center !important;
-    width: 100% !important;
-}
-
-footer.twinkle-footer .footer-bottom p {
-    color: #555555 !important;
-    margin: 0 !important;
-}
-
-/* PHONE */
-@media (max-width: 768px) {
-
-    footer.twinkle-footer {
-        padding: 35px 20px 20px !important;
-    }
-
-    footer.twinkle-footer .footer-columns {
-        grid-template-columns: 1fr !important;
-        gap: 25px !important;
-    }
-
-    footer.twinkle-footer .footer-column {
-        align-items: center !important;
-        text-align: center !important;
-    }
-
-    footer.twinkle-footer .footer-brand h3 {
-        font-size: 25px !important;
-    }
-
-}
-
-
-/* ========================================
-   TWINKLE TOURS - CLEAN FOOTER
-   ======================================== */
-
-.twinkle-footer {
-    background: #ffffff !important;
-    color: #173f35 !important;
-    padding: 50px 6% 20px !important;
-    border-top: 5px solid #f4c430 !important;
-    text-align: center !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-.twinkle-footer * {
-    box-sizing: border-box !important;
-}
-
-.footer-inner {
-    max-width: 1100px !important;
-    margin: 0 auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 30px !important;
-    width: 100% !important;
-}
-
-.footer-brand {
-    width: 100% !important;
-    text-align: center !important;
-}
-
-.footer-brand h3 {
-    color: #075b43 !important;
-    font-size: 28px !important;
-    margin-bottom: 10px !important;
-}
-
-.footer-brand p {
-    color: #173f35 !important;
-    margin: 5px 0 !important;
-}
-
-.footer-columns {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    gap: 80px !important;
-    width: 100% !important;
-    max-width: 800px !important;
-}
-
-.footer-column {
-    flex: 1 !important;
-    width: 100% !important;
-    text-align: center !important;
-}
-
-.footer-column h4,
-.footer-disclaimer h4 {
-    color: #075b43 !important;
-    font-size: 21px !important;
-    margin-bottom: 15px !important;
-}
-
-.footer-column p {
-    color: #173f35 !important;
-    margin: 12px 0 !important;
-}
-
-.footer-column a {
-    color: #173f35 !important;
-    text-decoration: none !important;
-    display: block !important;
-    margin: 10px 0 !important;
-}
-
-.footer-column a:hover {
-    color: #d9a900 !important;
-}
-
-.footer-disclaimer {
-    width: 100% !important;
-    max-width: 750px !important;
-    background: #f4f8f5 !important;
-    border: 1px solid #d9e5df !important;
-    border-radius: 12px !important;
-    padding: 25px !important;
-    text-align: center !important;
-}
-
-.footer-disclaimer p {
-    color: #173f35 !important;
-    line-height: 1.7 !important;
-    margin: 0 !important;
-}
-
-.footer-bottom {
-    width: 100% !important;
-    border-top: 1px solid #d9e5df !important;
-    padding-top: 20px !important;
-    text-align: center !important;
-}
-
-.footer-bottom p {
-    color: #65766f !important;
-    margin: 0 !important;
-}
-
-/* PHONE FOOTER */
-@media (max-width: 768px) {
-
-    .twinkle-footer {
-        padding: 35px 20px 20px !important;
-    }
-
-    .footer-inner {
-        gap: 25px !important;
-    }
-
-    .footer-columns {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 25px !important;
-        width: 100% !important;
-    }
-
-    .footer-column {
-        width: 100% !important;
-        text-align: center !important;
-    }
-
-    .footer-brand h3 {
-        font-size: 25px !important;
-    }
-
-    .footer-disclaimer {
-        width: 100% !important;
-        padding: 20px !important;
-    }
-
-    .footer-disclaimer p {
-        font-size: 15px !important;
-    }
-
-    .footer-bottom p {
-        font-size: 14px !important;
-    }
-}
-
-
-/* ========================================
-   TWINKLE TOURS - VIDEO SECTION
-   ======================================== */
-
-.videos-section {
-    background: #f4f8f5;
-    padding: 60px 5%;
-    text-align: center;
-}
-
-.videos-section h2 {
-    color: #075b43;
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.videos-section > p {
-    color: #65766f;
-    margin-bottom: 30px;
-}
-
-/* FEATURED VIDEO */
-
-.featured-video {
-    max-width: 850px;
-    margin: 0 auto 40px;
-    background: #ffffff;
-    padding: 18px;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
-}
-
-.featured-video video {
-    width: 100%;
-    max-height: 500px;
-    display: block;
-    border-radius: 12px;
-    background: #111;
-}
-
-.featured-video h3 {
-    color: #075b43;
-    font-size: 24px;
-    margin-top: 18px;
-}
-
-.featured-video p {
-    color: #65766f;
-}
-
-/* VIDEO CATEGORY CARDS */
-
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.video-card {
-    background: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-    padding-bottom: 20px;
-}
-
-.video-placeholder {
-    height: 150px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 65px;
-    background: #e9f5ef;
+    padding: 12px 20px 8px;
 }
 
-.video-card h3 {
-    color: #075b43;
-    margin-top: 18px;
-}
-
-.video-card p {
-    color: #65766f;
-    padding: 0 12px;
-}
-
-/* PHONE */
-
-@media (max-width: 768px) {
-
-    .videos-section {
-        padding: 40px 5%;
-    }
-
-    .videos-section h2 {
-        font-size: 27px;
-    }
-
-    .video-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .video-placeholder {
-        height: 110px;
-        font-size: 48px;
-    }
-
-    .video-card h3 {
-        font-size: 17px;
-    }
-
-    .video-card p {
-        font-size: 14px;
-    }
-
-    .featured-video {
-        padding: 12px;
-    }
-
-}
-
-.videos-section {
-    padding: 80px 6%;
-    background: #f4f8f5;
-    text-align: center;
-}
-
-.video-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.video-card {
-    background: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    text-align: left;
-}
-
-.video-card video {
-    width: 100%;
-    height: 220px;
+.brand {
     display: block;
-    background: #000000;
-    object-fit: cover;
+    text-decoration: none;
 }
 
-.video-card h3 {
-    color: #075b43;
-    padding: 18px 20px 5px;
-}
-
-.video-card p {
-    color: #65766f;
-    padding: 0 20px 20px;
-}
-
-@media (max-width: 900px) {
-    .video-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .video-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .video-card video {
-    height: 210px;
+.brand img {
+    width: 150px;
+    height: auto;
+    max-height: 76px;
     object-fit: contain;
 }
 
-.gallery-section {
-    padding: 80px 6%;
-    background: #ffffff;
-    text-align: center;
-}
+/* ================= NAVIGATION ================= */
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 35px;
-}
-
-.gallery-item {
-    overflow: hidden;
-    border-radius: 16px;
-    background: #ffffff;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
-
-.gallery-item img {
+.main-nav {
     width: 100%;
-    height: 260px;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.06);
-}
-
-.gallery-caption {
-    padding: 18px;
-    text-align: left;
-}
-
-.gallery-caption h3 {
-    color: #075b43;
-    margin-bottom: 6px;
-}
-
-.gallery-caption p {
-    color: #65766f;
-    font-size: 14px;
-}
-
-@media (max-width: 900px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-item img {
-        height: 240px;
-    }
-}
-
-/* ========================================
-TWINKLE TOURS - GALLERY
-======================================== */
-
-.gallery-section {
-padding: 80px 5%;
-background: #f4f8f5;
-}
-
-.gallery-section .section-title {
-text-align: center;
-max-width: 750px;
-margin: 0 auto 40px;
-}
-
-.gallery-section .eyebrow {
-color: #075b43;
-font-weight: 700;
-letter-spacing: 2px;
-font-size: 13px;
-margin-bottom: 8px;
-}
-
-.gallery-section .section-title h2 {
-color: #173f35;
-font-size: 38px;
-margin-bottom: 12px;
-}
-
-.gallery-section .section-title p {
-color: #65766f;
-}
-
-/* PHOTO GRID */
-
-.gallery-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 18px;
-max-width: 1300px;
-margin: 0 auto;
-}
-
-.gallery-item {
-position: relative;
-height: 260px;
-overflow: hidden;
-border-radius: 14px;
-background: #ffffff;
-box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
-}
-
-.gallery-item img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-display: block;
-transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-transform: scale(1.08);
-}
-
-.gallery-caption {
-position: absolute;
-left: 0;
-right: 0;
-bottom: 0;
-padding: 35px 15px 15px;
-color: #ffffff;
-font-weight: 700;
-font-size: 17px;
-background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
-}
-
-/* VIDEO SECTION */
-
-.videos-heading {
-margin-top: 85px !important;
-}
-
-.video-gallery {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 25px;
-max-width: 1100px;
-margin: 0 auto;
-}
-
-.video-item {
-background: #ffffff;
-border-radius: 14px;
-overflow: hidden;
-box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
-}
-
-.video-item video {
-width: 100%;
-display: block;
-background: #111111;
-aspect-ratio: 16 / 9;
-}
-
-.video-item h3 {
-padding: 15px 18px;
-color: #173f35;
-font-size: 18px;
-}
-
-/* MOBILE */
-
-@media (max-width: 900px) {
-.gallery-grid {
-grid-template-columns: repeat(2, 1fr);
-}
-}
-
-@media (max-width: 600px) {
-.gallery-section {
-padding: 60px 5%;
-}
-
-.gallery-section .section-title h2 {
-    font-size: 30px;
-}
-
-.gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
-
-.gallery-item {
-    height: 280px;
-}
-
-.video-gallery {
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-}
-
-/* ========================================
-SAFARI VIDEO SIZE FIX
-======================================== */
-
-.video-gallery {
-max-width: 900px;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(2, minmax(0, 1fr));
-gap: 22px;
-}
-
-.video-item {
-width: 100%;
-max-width: 440px;
-margin: 0 auto;
-}
-
-.video-item video {
-width: 100%;
-height: 245px;
-object-fit: cover;
-display: block;
-background: #111;
-border-radius: 0;
-}
-
-@media (max-width: 600px) {
-.video-gallery {
-grid-template-columns: 1fr;
-max-width: 440px;
-}
-
-.video-item {
-    max-width: 100%;
-}
-
-.video-item video {
-    height: 245px;
-}
-
-}
-
-/* FINAL FIX - ALL SAFARI VIDEOS SAME SIZE */
-
-.video-gallery {
-width: 100%;
-max-width: 900px;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 24px;
-}
-
-.video-item {
-width: 100% !important;
-max-width: 438px !important;
-min-width: 0 !important;
-margin: 0 auto;
-overflow: hidden;
-border-radius: 14px;
-}
-
-.video-item video {
-width: 100% !important;
-max-width: 100% !important;
-height: 245px !important;
-min-height: 0 !important;
-object-fit: cover !important;
-display: block !important;
-}
-
-@media (max-width: 600px) {
-.video-gallery {
-width: 100%;
-max-width: 440px;
-grid-template-columns: 1fr;
-}
-
-.video-item {
-    width: 100% !important;
-    max-width: 440px !important;
-}
-
-.video-item video {
-    width: 100% !important;
-    height: 245px !important;
-}
-
-}
-
-<video controls preload="metadata" class="lion-video">
-    <source src="Lion hunting.mp4" type="video/mp4">
-    Your browser does not support video playback.
-</video>
-
-/* ========================================
-SEPARATE PHOTO & VIDEO GALLERIES
-======================================== */
-
-.gallery-section {
-padding-bottom: 55px;
-}
-
-/* VIDEO GALLERY SECTION */
-
-.video-gallery-section {
-padding: 55px 5% 80px;
-background: #ffffff;
-}
-
-.video-gallery-section .section-title {
-text-align: center;
-max-width: 750px;
-margin: 0 auto 35px;
-}
-
-.video-gallery-section .eyebrow {
-color: #075b43;
-font-weight: 700;
-letter-spacing: 2px;
-font-size: 13px;
-margin-bottom: 8px;
-}
-
-.video-gallery-section .section-title h2 {
-color: #173f35;
-font-size: 36px;
-margin-bottom: 10px;
-}
-
-.video-gallery-section .section-title p {
-color: #65766f;
-}
-
-/* VIDEO CARDS */
-
-.video-gallery {
-width: 100%;
-max-width: 900px;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 22px;
-}
-
-.video-item {
-width: 100% !important;
-max-width: 438px !important;
-min-width: 0 !important;
-margin: 0 auto;
-overflow: hidden;
-border-radius: 14px;
-background: #ffffff;
-box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
-}
-
-.video-item video {
-width: 100% !important;
-max-width: 100% !important;
-height: 245px !important;
-min-height: 0 !important;
-object-fit: cover !important;
-display: block !important;
-background: #111111;
-}
-
-.video-item h3 {
-padding: 14px 18px;
-margin: 0;
-color: #173f35;
-font-size: 17px;
-}
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-.video-gallery-section {
-padding: 45px 5% 60px;
-}
-
-.video-gallery-section .section-title h2 {
-    font-size: 30px;
-}
-
-.video-gallery {
-    grid-template-columns: 1fr;
-    max-width: 440px;
-    gap: 18px;
-}
-
-.video-item {
-    max-width: 100% !important;
-}
-
-.video-item video {
-    height: 245px !important;
-}
-
-}
-
-/* ========================================
-   PHOTO & VIDEO PREVIEW
-   ======================================== */
-
-.media-preview {
-    padding: 45px 20px;
-    background: #f4f8f5;
-    text-align: center;
-}
-
-.preview-card {
-    display: block;
-    width: 90%;
-    max-width: 500px;
-    margin: 25px auto;
-    background: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    text-decoration: none;
-    color: #173f35;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
-}
-
-.preview-card img,
-.preview-card video {
-    display: block;
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-}
-
-.preview-content {
-    padding: 18px;
-}
-
-.preview-content h3 {
-    color: #075b43;
-    margin-bottom: 8px;
-}
-
-.preview-content p {
-    color: #65766f;
-}
-
-/* PHOTO GALLERY SIZE */
-
-.photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1100px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-.photo-card {
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-}
-
-.photo-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-}
-
-.photo-card h3 {
-    padding: 12px;
-    margin: 0;
-    text-align: center;
-    font-size: 16px;
-}
-
-@media (max-width: 768px) {
-    .photo-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 0 12px;
-    }
-
-    .photo-card img {
-        height: 170px;
-    }
-}
-
-@media (max-width: 480px) {
-    .photo-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .photo-card img {
-        height: 220px;
-    }
-}
-
-/* ========================================
-   HOMEPAGE PHOTO & VIDEO PREVIEWS
-   ======================================== */
-
-.media-preview {
-    padding: 45px 20px;
-    background: #f4f8f5;
-    text-align: center;
-}
-
-.media-preview .section-title {
-    margin-bottom: 25px;
-}
-
-.media-preview .section-title h2 {
-    color: #075b43;
-    margin: 8px 0;
-}
-
-.preview-card {
-    display: block;
-    width: 90%;
-    max-width: 480px;
-    margin: 25px auto;
-    background: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    text-decoration: none;
-    color: #173f35;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.preview-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
-}
-
-.preview-card img,
-.preview-card video {
-    display: block;
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-}
-
-.preview-content {
-    padding: 18px;
-}
-
-.preview-content h3 {
-    color: #075b43;
-    margin-bottom: 7px;
-    font-size: 20px;
-}
-
-.preview-content p {
-    color: #65766f;
-    margin: 0;
-}
-
-@media (max-width: 480px) {
-    .preview-card {
-        width: 94%;
-    }
-
-    .preview-card img,
-    .preview-card video {
-        height: 200px;
-    }
-}
-
-/* =========================================
-   TWINKLE TOURS - FINAL HOMEPAGE HEADER
-   ========================================= */
-
-.navbar {
-    position: relative !important;
-    width: 100% !important;
-    min-height: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 12px 20px !important;
-    background: #ffffff !important;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
-    border-bottom: 3px solid #f4c430 !important;
-    gap: 8px !important;
-    z-index: 1000 !important;
-}
-
-.navbar .brand-area {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    margin: 0 !important;
-}
-
-.navbar .brand img {
-    width: 180px !important;
-    max-width: 180px !important;
-    max-height: none !important;
-    height: auto !important;
-}
-
-.navbar nav,
-.navbar .main-nav {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: 8px 25px !important;
-    margin: 0 !important;
-}
-
-.navbar nav a,
-.navbar .main-nav a {
-    color: #075b43 !important;
-    text-shadow: none !important;
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    padding: 5px 0 !important;
-}
-
-.navbar nav a:hover,
-.navbar .main-nav a:hover {
-    color: #d9a900 !important;
-}
-
-.navbar nav .book-now,
-.navbar .main-nav .book-now {
-    background: #075b43 !important;
-    color: #ffffff !important;
-    padding: 9px 18px !important;
-    border-radius: 25px !important;
-    border: 2px solid #f4c430 !important;
-}
-
-
-/* =========================================
-   FINAL HERO
-   ========================================= */
-
-.hero {
-    position: relative !important;
-    width: 100% !important;
-    min-height: 620px !important;
-    padding: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    background-position: center center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-}
-
-.hero .overlay {
-    width: 100% !important;
-    max-width: 700px !important;
-    margin-left: 6% !important;
-    padding: 40px !important;
-    background: linear-gradient(
-        90deg,
-        rgba(0,0,0,0.62),
-        rgba(0,0,0,0.10)
-    ) !important;
-}
-
-.hero .overlay p:first-child {
-    color: #f4c430 !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    letter-spacing: 3px !important;
-    font-family: Arial, sans-serif !important;
-}
-
-.hero .overlay p:nth-child(2) {
-    color: #ffffff !important;
-    font-family: Georgia, serif !important;
-    font-size: 42px !important;
-    font-style: italic !important;
-    font-weight: 700 !important;
-    line-height: 1.3 !important;
-    margin-top: 18px !important;
-    margin-bottom: 28px !important;
-}
-
-.hero .overlay .btn {
-    display: inline-block !important;
-    background: #f4c430 !important;
-    color: #173f35 !important;
-    padding: 14px 25px !important;
-    border-radius: 30px !important;
-    font-weight: 700 !important;
-    font-size: 16px !important;
-}
-
-
-/* =========================================
-   PHONE
-   ========================================= */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        position: relative !important;
-        padding: 10px 8px !important;
-        gap: 7px !important;
-    }
-
-    .navbar .brand img {
-        width: 150px !important;
-    }
-
-    .navbar nav,
-    .navbar .main-nav {
-        gap: 5px 12px !important;
-    }
-
-    .navbar nav a,
-    .navbar .main-nav a {
-        font-size: 11px !important;
-    }
-
-    .navbar nav .book-now,
-    .navbar .main-nav .book-now {
-        padding: 7px 12px !important;
-        font-size: 11px !important;
-    }
-
-    .hero {
-        min-height: 570px !important;
-        align-items: flex-end !important;
-        background-position: 65% center !important;
-    }
-
-    .hero .overlay {
-        width: 100% !important;
-        max-width: none !important;
-        margin: 0 !important;
-        padding: 28px 20px !important;
-        background: linear-gradient(
-            90deg,
-            rgba(0,0,0,0.72),
-            rgba(0,0,0,0.25)
-        ) !important;
-    }
-
-    .hero .overlay p:first-child {
-        font-size: 11px !important;
-        letter-spacing: 2px !important;
-    }
-
-    .hero .overlay p:nth-child(2) {
-        font-size: 28px !important;
-        line-height: 1.3 !important;
-        margin-top: 12px !important;
-        margin-bottom: 20px !important;
-    }
-
-    .hero .overlay .btn {
-        font-size: 14px !important;
-        padding: 12px 20px !important;
-    }
-}
-/* FINAL TWINKLE TOURS HEADER + HERO FIX */
-
-.navbar {
-    position: relative !important;
-    width: 100% !important;
-    min-height: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 12px 20px !important;
-    background: #ffffff !important;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
-    border-bottom: 3px solid #f4c430 !important;
-    gap: 8px !important;
-}
-
-.navbar .brand-area {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    margin: 0 !important;
-}
-
-.navbar .brand img {
-    width: 180px !important;
-    height: auto !important;
-    max-width: 180px !important;
-}
-
-.navbar .main-nav,
-.navbar nav {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: 8px 20px !important;
-    margin: 0 !important;
-}
-
-.navbar .main-nav a,
-.navbar nav a {
-    color: #075b43 !important;
-    text-shadow: none !important;
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    padding: 5px 0 !important;
-}
-
-.navbar .main-nav .book-now,
-.navbar nav .book-now {
-    background: #075b43 !important;
-    color: #ffffff !important;
-    padding: 9px 18px !important;
-    border-radius: 25px !important;
-    border: 2px solid #f4c430 !important;
-}
-
-.hero {
-    position: relative !important;
-    width: 100% !important;
-    min-height: 620px !important;
-    padding: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    background-position: center center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-}
-
-.hero .overlay {
-    width: 100% !important;
-    max-width: 700px !important;
-    margin-left: 6% !important;
-    padding: 40px !important;
-    background: linear-gradient(
-        90deg,
-        rgba(0,0,0,0.62),
-        rgba(0,0,0,0.10)
-    ) !important;
-}
-
-.hero .overlay p:first-child {
-    color: #f4c430 !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    letter-spacing: 3px !important;
-}
-
-.hero .overlay p:nth-child(2) {
-    color: #ffffff !important;
-    font-family: Georgia, serif !important;
-    font-size: 42px !important;
-    font-style: italic !important;
-    font-weight: 700 !important;
-    line-height: 1.3 !important;
-    margin-top: 18px !important;
-    margin-bottom: 28px !important;
-}
-
-.hero .overlay a.btn {
-    display: inline-block !important;
-    background: #f4c430 !important;
-    color: #173f35 !important;
-    padding: 14px 25px !important;
-    border-radius: 30px !important;
-    font-weight: 700 !important;
-}
-
-/* PHONE */
-@media (max-width: 768px) {
-
-    .navbar {
-        position: relative !important;
-        padding: 10px 8px !important;
-    }
-
-    .navbar .brand img {
-        width: 150px !important;
-    }
-
-    .navbar .main-nav,
-    .navbar nav {
-        gap: 5px 12px !important;
-    }
-
-    .navbar .main-nav a,
-    .navbar nav a {
-        font-size: 11px !important;
-    }
-
-    .navbar .main-nav .book-now,
-    .navbar nav .book-now {
-        padding: 7px 12px !important;
-        font-size: 11px !important;
-    }
-
-    .hero {
-        min-height: 570px !important;
-        align-items: flex-end !important;
-        padding: 0 !important;
-        background-position: 65% center !important;
-    }
-
-    .hero .overlay {
-        width: 100% !important;
-        max-width: none !important;
-        margin: 0 !important;
-        padding: 28px 20px !important;
-        background: linear-gradient(
-            90deg,
-            rgba(0,0,0,0.72),
-            rgba(0,0,0,0.25)
-        ) !important;
-    }
-
-    .hero .overlay p:first-child {
-        font-size: 11px !important;
-        letter-spacing: 2px !important;
-    }
-
-    .hero .overlay p:nth-child(2) {
-        font-size: 28px !important;
-        line-height: 1.3 !important;
-        margin-top: 12px !important;
-        margin-bottom: 20px !important;
-    }
-}
-
-/* ========================================
-TWINKLE TOURS E-BOOK STORE
-======================================== */
-
-.ebooks-section {
-padding: 80px 6%;
-background: #f7f9f7;
-}
-
-.ebook-store {
-max-width: 1200px;
-margin: 40px auto 0;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 28px;
-}
-
-.ebook-card {
-background: #ffffff;
-border-radius: 16px;
-overflow: hidden;
-box-shadow: 0 8px 25px rgba(0,0,0,0.10);
-border: 1px solid #e2e8e3;
-transition: 0.3s ease;
-}
-
-.ebook-card:hover {
-transform: translateY(-7px);
-box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-}
-
-.ebook-cover {
-height: 330px;
-position: relative;
-overflow: hidden;
-background: #173f35;
-}
-
-.ebook-cover img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-
-.ebook-badge {
-position: absolute;
-top: 15px;
-left: 15px;
-background: #f4c430;
-color: #173f35;
-padding: 7px 12px;
-border-radius: 20px;
-font-size: 12px;
-font-weight: bold;
-}
-
-.ebook-placeholder {
-display: flex;
-align-items: center;
-justify-content: center;
-color: #f4c430;
-font-size: 20px;
-font-weight: bold;
-letter-spacing: 1px;
-}
-
-.ebook-info {
-padding: 24px;
-}
-
-.ebook-category {
-color: #8b6b16;
-font-size: 12px;
-font-weight: bold;
-letter-spacing: 1px;
-margin-bottom: 8px;
-}
-
-.ebook-info h3 {
-color: #173f35;
-font-size: 24px;
-margin-bottom: 12px;
-}
-
-.ebook-info p:not(.ebook-category) {
-color: #65766f;
-line-height: 1.6;
-font-size: 15px;
-}
-
-.ebook-bottom {
-margin-top: 22px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 12px;
-}
-
-.ebook-bottom strong {
-color: #173f35;
-font-size: 20px;
-}
-
-.ebook-btn {
-    display: inline-block;
-    border: none;
-    background: #075b43;
-    color: #ffffff !important;
-    padding: 9px 14px;
-    border-radius: 7px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: 0.3s ease;
-}
-
-.ebook-btn:hover {
-    background: #f4c430;
-    color: #173f35 !important;
-}
-
-.paypal-btn {
-    display: inline-block;
-    background: #0070ba;
-    color: #ffffff !important;
-}
-
-.paypal-btn:hover {
-    background: #003087;
-}
-
-.ebook-btn:hover {
-background: #f4c430;
-color: #173f35;
-}
-
-@media (max-width: 900px) {
-.ebook-store {
-grid-template-columns: repeat(2, 1fr);
-}
-}
-
-@media (max-width: 600px) {
-.ebooks-section {
-padding: 60px 5%;
-}
-
-.ebook-store {
-    grid-template-columns: 1fr;
-}
-
-.ebook-cover {
-    height: 380px;
-}
-
-}
-
-.paypal-btn {
-display: inline-block;
-text-decoration: none;
-text-align: center;
-background: #0070ba;
-color: #ffffff !important;
-padding: 12px 20px;
-border-radius: 8px;
-font-weight: bold;
-transition: 0.3s ease;
-}
-
-.paypal-btn:hover {
-background: #003087;
-transform: translateY(-2px);
-}
-
-/* MAKE ALL E-BOOK BUTTONS THE SAME SIZE */
-.ebook-bottom .ebook-btn,
-.ebook-bottom .paypal-btn {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 4px 18px 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: auto;
-    min-width: 145px;
-    height: 38px;
-    padding: 0 12px;
-    margin: 0;
-    font-size: 12px;
-    line-height: 1;
+
+    min-height: 38px;
+    padding: 7px 11px;
+
+    color: var(--dark-green);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+
     white-space: nowrap;
-    box-sizing: border-box;
+    border-radius: 6px;
+    transition: 0.2s ease;
 }
 
-.ebook-bottom a {
-    font-size: 12px !important;
-    padding: 0 12px !important;
-    height: 38px !important;
-    min-width: 145px !important;
+.main-nav a:hover {
+    color: var(--gold);
+    background: #f8faf8;
 }
 
-/* E-BOOK PURCHASE INFORMATION */
+.main-nav a.active {
+    color: var(--gold);
+}
 
-.ebook-secure {
-    margin-top: 12px;
-    margin-bottom: 2px;
+.main-nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 1px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 2px;
+}
+
+.main-nav .book-now {
+    margin-left: 7px;
+    padding: 9px 16px;
+    color: var(--white);
+    background: var(--green);
+    border-radius: 999px;
+}
+
+.main-nav .book-now:hover {
+    color: var(--white);
+    background: var(--dark-green);
+}
+
+.main-nav .book-now::after {
+    display: none;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.64) 0%,
+            rgba(0, 0, 0, 0.43) 42%,
+            rgba(0, 0, 0, 0.08) 78%
+        ),
+        url("./elephant-safari-hero.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    padding: 70px 30px;
+
+    color: var(--white);
+}
+
+.overlay > p:first-child {
+    margin-bottom: 14px;
+
+    color: var(--bright-gold);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.overlay > p:nth-child(2) {
+    max-width: 610px;
+    margin-bottom: 28px;
+
+    font-size: clamp(22px, 3vw, 38px);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+    padding: 11px 21px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: var(--bright-gold);
+    color: #173f35;
+
+    text-decoration: none;
+    font-weight: 800;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background: var(--gold);
+    transform: translateY(-1px);
+}
+
+/* ================= GENERAL SECTIONS ================= */
+
+.section,
+.media-preview,
+.ebooks-section,
+.consultation-section,
+.about-section,
+.contact-section {
+    padding: 70px 20px;
+}
+
+.section-title {
+    max-width: 760px;
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.eyebrow,
+.consultation-eyebrow,
+.about-eyebrow,
+.contact-eyebrow {
+    margin-bottom: 7px;
+
+    color: var(--gold);
     font-size: 12px;
-    font-weight: 600;
-    color: #075b43;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
-.ebook-download {
-    margin: 0;
-    font-size: 11px;
-    color: #65766f;
-    line-height: 1.4;
-    white-space: nowrap;
+.section-title h2,
+.section > h2,
+.booking-section > h2 {
+    color: var(--dark-green);
+    font-size: clamp(26px, 3vw, 36px);
+    line-height: 1.2;
+    margin-bottom: 10px;
 }
 
-@media (max-width: 600px) {
-    .ebook-download {
-        font-size: 10px;
-        white-space: normal;
-    }
+.section-title > p:last-child,
+.section > p,
+.booking-section > p {
+    color: var(--muted);
+    font-size: 15px;
 }
 
-/* E-BOOK STORE RESPONSIVE LAYOUT */
+/* ================= MEDIA PREVIEWS ================= */
 
-.ebook-store {
-    align-items: stretch;
+.media-preview {
+    background: var(--white);
 }
 
-.ebook-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.ebook-info {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.ebook-bottom {
-    margin-top: auto;
+.media-preview + .media-preview {
     padding-top: 20px;
 }
 
-/* PHONE */
-@media (max-width: 600px) {
-    .ebook-store {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
+.preview-card {
+    width: min(820px, 100%);
+    margin: 0 auto;
 
-    .ebook-card {
-        width: 100%;
-    }
+    display: block;
 
-    .ebook-cover {
-        height: 350px;
-    }
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
 
-    .ebook-info {
-        padding: 20px;
-    }
+    text-decoration: none;
+    box-shadow: var(--shadow);
+
+    transition: 0.2s ease;
 }
 
-/* E-BOOK COVER DISPLAY */
+.preview-card:hover {
+    transform: translateY(-3px);
+}
 
-.ebook-cover {
+.preview-card > img,
+.preview-card > video {
     width: 100%;
     height: 360px;
-    background: #173f35;
+    object-fit: cover;
+}
+
+.preview-content {
+    padding: 18px 20px;
+}
+
+.preview-content h3 {
+    margin-bottom: 4px;
+    color: var(--dark-green);
+    font-size: 20px;
+}
+
+.preview-content p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ================= TRUST CARDS ================= */
+
+.cards {
+    width: min(var(--max-width), 100%);
+    margin: 32px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    min-width: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
     overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.section > .cards .card:not(:has(.card-image)) {
+    padding: 24px;
+}
+
+.section > .cards .card:not(:has(.card-image)) h3 {
+    margin-bottom: 7px;
+    color: var(--dark-green);
+    font-size: 17px;
+}
+
+.section > .cards .card:not(:has(.card-image)) p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ================= PACKAGE CARDS ================= */
+
+.card-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.package-badge {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+
+    padding: 5px 9px;
+
+    background: var(--dark-green);
+    color: var(--white);
+
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: var(--dark-green);
+    font-size: 19px;
+    line-height: 1.25;
+    margin-bottom: 9px;
+}
+
+.package-description {
+    min-height: 70px;
+    margin-bottom: 15px;
+
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.package-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    padding-top: 13px;
+    border-top: 1px solid var(--border);
+}
+
+.package-details span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.package-details strong {
+    color: var(--green);
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.package-btn {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+/* ================= E-BOOKS ================= */
+
+.ebooks-section {
+    background: var(--cream);
+}
+
+.ebook-store {
+    width: min(var(--max-width), 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.ebook-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.ebook-cover {
+    position: relative;
+    height: 300px;
+    background: #eef3ef;
 }
 
 .ebook-cover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-@media (max-width: 600px) {
-    .ebook-cover {
-        height: 390px;
-    }
-}
-
-/* FEATURED E-BOOK BADGE */
-
-.ebook-cover {
-    position: relative;
 }
 
 .ebook-badge {
     position: absolute;
-    top: 14px;
-    left: 14px;
-    background: #f4c430;
-    color: #173f35;
-    padding: 6px 10px;
-    border-radius: 20px;
+    top: 12px;
+    left: 12px;
+
+    padding: 5px 9px;
+    background: var(--gold);
+    color: var(--dark-green);
+
+    border-radius: 5px;
     font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+    font-weight: 800;
 }
 
-/* ========================================
-   E-BOOK PURCHASE AREA
-   RESPONSIVE — PC, TABLET & MOBILE
-   ======================================== */
+.ebook-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #e9f5ef, #dceae3);
+}
+
+.ebook-placeholder span {
+    color: var(--dark-green);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.ebook-info {
+    padding: 20px;
+}
+
+.ebook-category {
+    margin-bottom: 7px;
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.ebook-info h3 {
+    margin-bottom: 8px;
+    color: var(--dark-green);
+    font-size: 20px;
+}
+
+.ebook-info > p:not(.ebook-category):not(.ebook-secure):not(.ebook-download) {
+    color: var(--muted);
+    font-size: 14px;
+}
 
 .ebook-bottom {
-    display: block !important;
-    width: 100%;
-    margin-top: 22px;
-    padding-top: 20px;
+    margin-top: 18px;
 }
 
 .ebook-purchase {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
-    width: 100%;
+    gap: 10px;
 }
 
-.ebook-purchase strong {
-    color: #173f35;
+.ebook-purchase strong,
+.ebook-bottom > strong {
+    color: var(--green);
     font-size: 20px;
-    white-space: nowrap;
 }
 
-.ebook-purchase .ebook-btn {
-    width: auto !important;
-    min-width: 0 !important;
-    height: 38px !important;
-    padding: 0 14px !important;
-    font-size: 12px !important;
-    white-space: nowrap;
-    flex-shrink: 1;
-}
-
-.ebook-secure {
-    display: block !important;
-    width: 100% !important;
-    margin: 12px 0 3px !important;
-    padding: 0 !important;
-    color: #075b43 !important;
-    font-size: 12px !important;
-    line-height: 1.4 !important;
-}
-
-.ebook-download {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    color: #65766f !important;
-    font-size: 10px !important;
-    line-height: 1.4 !important;
-    white-space: normal !important;
-    overflow-wrap: break-word !important;
-}
-
-
-/* ========================================
-   TABLET
-   ======================================== */
-
-@media (max-width: 900px) {
-
-    .ebook-purchase {
-        gap: 12px;
-    }
-
-    .ebook-purchase .ebook-btn {
-        font-size: 12px !important;
-    }
-}
-
-
-/* ========================================
-   PHONE
-   ======================================== */
-
-@media (max-width: 600px) {
-
-    .ebook-purchase {
-        gap: 10px;
-    }
-
-    .ebook-purchase strong {
-        font-size: 19px;
-    }
-
-    .ebook-purchase .ebook-btn {
-        height: 36px !important;
-        padding: 0 11px !important;
-        font-size: 11px !important;
-    }
-
-    .ebook-secure {
-        font-size: 11px !important;
-    }
-
-    .ebook-download {
-        font-size: 10px !important;
-    }
-}
-
-/* ========================================
-   TWINKLE TOURS - 15 PACKAGE CARDS
-   RESPONSIVE DESIGN
-   ======================================== */
-
-.cards {
-    max-width: 1200px;
-    margin: 40px auto 0;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 28px;
-}
-
-/* PACKAGE CARD */
-
-.card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid #e1e8e3;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.13);
-}
-
-
-/* PACKAGE IMAGE */
-
-.card-image {
-    position: relative;
-    width: 100%;
-    height: 230px;
-    overflow: hidden;
-    background: #e8eee9;
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 0.5s ease;
-}
-
-.card:hover .card-image img {
-    transform: scale(1.05);
-}
-
-
-/* PACKAGE BADGE */
-
-.package-badge {
-    position: absolute;
-    top: 14px;
-    left: 14px;
-    padding: 7px 11px;
-    border-radius: 20px;
-    background: #f4c430;
-    color: #173f35;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.6px;
-    line-height: 1;
-}
-
-
-/* PACKAGE CONTENT */
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 22px;
-}
-
-.card-content h3 {
-    margin: 0 0 10px;
-    color: #173f35;
-    font-size: 21px;
-    line-height: 1.3;
-}
-
-.package-description {
-    margin: 0;
-    color: #65766f;
-    font-size: 14px;
-    line-height: 1.65;
-}
-
-
-/* DURATION + PRICE */
-
-.package-details {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: auto;
-    padding-top: 20px;
-}
-
-.package-details span {
-    color: #65766f;
-    font-size: 13px;
-    line-height: 1.4;
-}
-
-.package-details strong {
-    color: #075b43;
-    font-size: 17px;
-    white-space: nowrap;
-}
-
-
-/* BOOKING BUTTON */
-
-.package-btn {
-    display: flex;
+.ebook-btn {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    min-height: 42px;
-    margin-top: 16px;
-    padding: 10px 14px;
-    border-radius: 8px;
+
+    padding: 9px 14px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: var(--green);
+    color: var(--white);
+
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-}
-
-
-/* ========================================
-   TABLET / SMALL LAPTOP
-   ======================================== */
-
-@media (max-width: 1000px) {
-
-    .cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
-    }
-
-    .card-image {
-        height: 220px;
-    }
-
-    .card-content {
-        padding: 20px;
-    }
-
-}
-
-
-/* ========================================
-   PHONE
-   ======================================== */
-
-@media (max-width: 600px) {
-
-    .cards {
-        grid-template-columns: 1fr;
-        gap: 22px;
-        margin-top: 30px;
-    }
-
-    .card {
-        width: 100%;
-    }
-
-    .card-image {
-        height: 240px;
-    }
-
-    .card-content {
-        padding: 20px;
-    }
-
-    .card-content h3 {
-        font-size: 20px;
-    }
-
-    .package-description {
-        font-size: 14px;
-    }
-
-    .package-details {
-        align-items: flex-start;
-    }
-
-    .package-details strong {
-        font-size: 16px;
-    }
-
-    .package-btn {
-        min-height: 44px;
-    }
-
-}
-
-/* ========================================
-   TRAVEL CONSULTATION
-   ======================================== */
-
-.consultation-section {
-    background: #ffffff;
-    padding: 80px 6%;
-}
-
-.consultation-container {
-    max-width: 1150px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.consultation-content {
-    text-align: left;
-}
-
-.consultation-eyebrow {
-    color: #d9a900;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    cursor: pointer;
 }
 
-.consultation-content h2 {
-    color: #003d2d;
-    font-size: 38px;
-    line-height: 1.15;
-    margin-bottom: 18px;
+.ebook-btn:hover {
+    background: var(--dark-green);
 }
 
-.consultation-intro {
-    color: #65766f;
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 30px;
+.ebook-secure,
+.ebook-download {
+    margin-top: 9px;
+    color: var(--muted);
+    font-size: 11px;
 }
 
-.consultation-features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-    margin-bottom: 32px;
-}
-
-.consultation-item {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-}
-
-.consultation-item > span {
-    width: 28px;
-    height: 28px;
-    min-width: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #075b43;
-    color: #ffffff;
-    border-radius: 50%;
-    font-weight: bold;
-}
-
-.consultation-item h3 {
-    color: #003d2d;
-    font-size: 17px;
-    margin-bottom: 4px;
-}
-
-.consultation-item p {
-    color: #65766f;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.consultation-button,
-.consultation-card-button {
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 8px;
-    transition: 0.3s ease;
-}
-
-.consultation-button {
-    background: #f4c430;
-    color: #003d2d;
-    padding: 14px 24px;
-}
-
-.consultation-button:hover {
-    background: #d9a900;
-    color: #ffffff;
-    transform: translateY(-2px);
-}
-
-/* Consultation card */
-
-.consultation-card {
-    background: #003d2d;
-    color: #ffffff;
-    padding: 42px 32px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 35px rgba(0, 61, 45, 0.18);
-}
-
-.consultation-card-icon {
-    width: 65px;
-    height: 65px;
-    margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f4c430;
-    color: #003d2d;
-    border-radius: 50%;
-    font-size: 30px;
-}
-
-.consultation-card h3 {
-    font-size: 27px;
-    margin-bottom: 12px;
-}
-
-.consultation-card > p {
-    color: #dce9e3;
-    line-height: 1.7;
-    margin-bottom: 22px;
-}
-
-.consultation-highlight {
-    border-top: 1px solid rgba(255,255,255,0.2);
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding: 16px 5px;
-    margin-bottom: 24px;
-    color: #f4c430;
-}
-
-.consultation-card-button {
-    background: #f4c430;
-    color: #003d2d;
-    padding: 13px 23px;
-}
-
-.consultation-card-button:hover {
-    background: #d9a900;
-    color: #ffffff;
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-
-    .consultation-section {
-        padding: 60px 20px;
-    }
-
-    .consultation-container {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .consultation-content h2 {
-        font-size: 31px;
-    }
-
-    .consultation-features {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .consultation-card {
-        padding: 35px 24px;
-    }
-}
-
-/* ========================================
-   PROFESSIONAL TRAVEL CONSULTATION
-   ======================================== */
+/* ================= CONSULTATION ================= */
 
 .consultation-section {
-    background: #ffffff;
-    padding: 80px 6%;
+    background: var(--white);
 }
 
 .consultation-container {
-    max-width: 1200px;
+    width: min(var(--max-width), 100%);
     margin: 0 auto;
+
     display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: 55px;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
     align-items: center;
 }
-
-/* CONSULTANT PHOTO */
 
 .consultant-photo {
-    position: relative;
     overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 12px 35px rgba(0, 61, 45, 0.18);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .consultant-photo img {
-    display: block;
     width: 100%;
-    height: auto;
-    max-height: 650px;
-    object-fit: contain;
-    object-position: center;
-}
-
-/* CONTENT */
-
-.consultation-content {
-    text-align: left;
-}
-
-.consultation-eyebrow {
-    color: #d9a900;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    height: 500px;
+    object-fit: cover;
 }
 
 .consultation-content h2 {
-    color: #003d2d;
-    font-size: 40px;
-    line-height: 1.15;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
+    color: var(--dark-green);
+    font-size: clamp(27px, 3vw, 37px);
+    line-height: 1.2;
 }
 
 .consultation-intro {
-    color: #65766f;
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    color: var(--muted);
 }
-
-/* FEATURES */
 
 .consultation-features {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 30px;
+    gap: 14px;
 }
 
 .consultation-item {
     display: flex;
     gap: 12px;
-    align-items: flex-start;
 }
 
 .consultation-item > span {
-    width: 29px;
-    height: 29px;
-    min-width: 29px;
+    flex: 0 0 auto;
+
+    width: 25px;
+    height: 25px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #075b43;
-    color: #ffffff;
+
+    background: var(--light);
+    color: var(--green);
+
     border-radius: 50%;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .consultation-item h3 {
-    color: #003d2d;
-    font-size: 17px;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    color: var(--dark-green);
+    font-size: 15px;
 }
 
 .consultation-item p {
-    color: #65766f;
-    font-size: 14px;
-    line-height: 1.6;
+    color: var(--muted);
+    font-size: 13px;
 }
 
-/* PRICE */
-
 .consultation-price {
-    margin: 25px 0;
-    padding: 18px 22px;
-    background: #f1f8f4;
-    border-left: 5px solid #f4c430;
-    border-radius: 8px;
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+
+    margin: 25px 0 17px;
 }
 
 .consultation-price span {
-    display: block;
-    color: #003d2d;
-    font-size: 40px;
+    color: var(--green);
+    font-size: 30px;
     font-weight: 800;
 }
 
 .consultation-price small {
-    color: #65766f;
-    font-size: 14px;
+    color: var(--muted);
 }
 
-/* BUTTON */
+.consultation-button,
+.about-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-.consultation-button {
-    display: inline-block;
-    background: #f4c430;
-    color: #003d2d;
-    padding: 15px 26px;
+    padding: 11px 19px;
+
+    background: var(--green);
+    color: var(--white);
+
     border-radius: 8px;
     text-decoration: none;
-    font-weight: 700;
-    transition: 0.3s ease;
+    font-size: 13px;
+    font-weight: 800;
 }
 
-.consultation-button:hover {
-    background: #d9a900;
-    color: #ffffff;
-    transform: translateY(-2px);
+.consultation-button:hover,
+.about-button:hover {
+    background: var(--dark-green);
 }
 
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .consultation-section {
-        padding: 60px 20px;
-    }
-
-    .consultation-container {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .consultant-photo img {
-    height: auto;
-    max-height: 600px;
-    object-fit: contain;
-}
-
-    .consultation-content h2 {
-        font-size: 31px;
-    }
-
-    .consultation-features {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .consultation-price {
-        margin-top: 25px;
-    }
-
-    .consultation-button {
-        width: 100%;
-        text-align: center;
-        box-sizing: border-box;
-    }
-}
-
-/* ========================================
-   ABOUT US - TWINKLE TOURS
-   ======================================== */
+/* ================= ABOUT ================= */
 
 .about-section {
-    background: #f4f8f5;
-    padding: 90px 6%;
+    background: var(--light);
 }
 
 .about-container {
-    max-width: 1200px;
+    width: min(var(--max-width), 100%);
     margin: 0 auto;
+
     display: grid;
-    grid-template-columns: 1.45fr 0.8fr;
-    gap: 60px;
-    align-items: center;
-}
-
-/* ABOUT CONTENT */
-
-.about-content {
-    text-align: left;
-}
-
-.about-eyebrow {
-    color: #d9a900;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 45px;
+    align-items: start;
 }
 
 .about-content h2 {
-    color: #003d2d;
-    font-size: 40px;
-    line-height: 1.15;
-    margin-bottom: 22px;
+    margin-bottom: 15px;
+    color: var(--dark-green);
+    font-size: clamp(27px, 3vw, 37px);
+    line-height: 1.2;
 }
 
 .about-content > p {
-    color: #65766f;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
+    color: var(--muted);
+    font-size: 14px;
 }
 
 .about-intro {
-    font-size: 18px !important;
-    color: #355b4f !important;
+    color: var(--text) !important;
+    font-weight: 600;
 }
-
-
-/* MISSION & VISION */
 
 .about-highlights {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 25px;
 }
 
 .about-highlight {
     display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    background: #ffffff;
-    padding: 22px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 61, 45, 0.08);
+    gap: 11px;
+    padding: 16px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
 }
 
 .about-icon {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f4c430;
-    border-radius: 50%;
-    font-size: 21px;
+    font-size: 24px;
 }
 
 .about-highlight h3 {
-    color: #003d2d;
-    font-size: 18px;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
+    color: var(--dark-green);
+    font-size: 15px;
 }
 
 .about-highlight p {
-    color: #65766f;
-    font-size: 14px;
-    line-height: 1.6;
+    color: var(--muted);
+    font-size: 12px;
 }
-
-
-/* VALUES */
 
 .about-values {
-    margin-top: 32px;
+    margin-top: 25px;
 }
 
-.about-values > h3 {
-    color: #003d2d;
-    font-size: 20px;
-    margin-bottom: 15px;
+.about-values h3 {
+    margin-bottom: 10px;
+    color: var(--dark-green);
 }
 
 .values-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
 }
 
 .values-list span {
-    background: #ffffff;
-    color: #075b43;
-    border: 1px solid #d2e3da;
-    border-radius: 30px;
-    padding: 9px 15px;
-    font-size: 14px;
-    font-weight: 600;
+    padding: 7px 10px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 12px;
 }
 
-
-/* ABOUT CARD */
-
 .about-card {
-    background: #003d2d;
-    color: #ffffff;
-    padding: 42px 32px;
-    border-radius: 20px;
+    padding: 35px 28px;
     text-align: center;
-    box-shadow: 0 12px 35px rgba(0, 61, 45, 0.18);
+
+    background: var(--dark-green);
+    color: var(--white);
+
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .about-card-logo {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 18px;
-    margin-bottom: 25px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--white);
+    border-radius: 50%;
 }
 
 .about-card-logo img {
-    display: block;
-    width: 100%;
-    max-width: 210px;
-    height: auto;
-    margin: 0 auto;
+    width: 80px;
 }
 
 .about-card h3 {
-    color: #ffffff;
-    font-size: 25px;
-    line-height: 1.3;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 22px;
 }
 
-.about-card > p {
-    color: #dce9e3;
-    font-size: 15px;
-    line-height: 1.7;
+.about-card p {
+    color: rgba(255,255,255,0.82);
+    font-size: 14px;
 }
 
 .about-card-line {
-    width: 60px;
-    height: 3px;
-    background: #f4c430;
-    margin: 22px auto;
+    width: 50px;
+    height: 2px;
+    margin: 20px auto;
+    background: var(--bright-gold);
 }
 
 .about-tagline {
-    color: #f4c430 !important;
+    color: var(--bright-gold) !important;
     font-weight: 700;
-    font-style: italic;
 }
 
 .about-button {
-    display: inline-block;
-    margin-top: 22px;
-    padding: 14px 23px;
-    background: #f4c430;
-    color: #003d2d;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: 0.3s ease;
+    margin-top: 20px;
+    background: var(--bright-gold);
+    color: var(--dark-green);
 }
 
 .about-button:hover {
-    background: #d9a900;
-    color: #ffffff;
-    transform: translateY(-2px);
+    background: var(--gold);
 }
 
-
-/* DISCLAIMER */
-
 .about-disclaimer {
-    max-width: 1200px;
-    margin: 55px auto 0;
-    padding: 25px 28px;
-    background: #ffffff;
-    border-left: 5px solid #f4c430;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 61, 45, 0.07);
+    width: min(var(--max-width), 100%);
+    margin: 35px auto 0;
+    padding: 18px;
+
+    background: #fffdf4;
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
 }
 
 .about-disclaimer strong {
     display: block;
-    color: #003d2d;
-    font-size: 17px;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+    color: var(--dark-green);
 }
 
 .about-disclaimer p {
-    color: #65766f;
-    font-size: 14px;
-    line-height: 1.7;
-    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
 }
 
+/* ================= FEEDBACK ================= */
 
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .about-section {
-        padding: 65px 20px;
-    }
-
-    .about-container {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .about-content h2 {
-        font-size: 31px;
-    }
-
-    .about-intro {
-        font-size: 17px !important;
-    }
-
-    .about-highlights {
-        grid-template-columns: 1fr;
-    }
-
-    .about-card {
-        padding: 35px 24px;
-    }
-
-    .about-disclaimer {
-        margin-top: 40px;
-        padding: 22px;
-    }
-
-    .about-button {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
+#feedback {
+    background: var(--white);
 }
 
-/* ========================================
-   CONSULTANT PHOTO - FULL IMAGE FIX
-   ======================================== */
-
-.consultant-photo {
-    width: 100% !important;
-    height: auto !important;
-    overflow: visible !important;
-    background: #ffffff !important;
+#feedbackForm {
+    width: min(650px, 100%);
+    margin: 25px auto 0;
 }
 
-.consultant-photo img {
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
-    max-height: none !important;
-    object-fit: contain !important;
-    object-position: center center !important;
+#feedbackForm label {
+    display: block;
+    margin: 12px 0 6px;
+    color: var(--dark-green);
+    font-size: 13px;
+    font-weight: 700;
 }
 
-/* MOBILE FULL IMAGE */
+#feedbackForm input,
+#feedbackForm textarea {
+    width: 100%;
+    padding: 11px 12px;
 
-@media (max-width: 768px) {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
 
-    .consultant-photo {
-        width: 100% !important;
-        height: auto !important;
-        overflow: visible !important;
-    }
-
-    .consultant-photo img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: none !important;
-        object-fit: contain !important;
-    }
-
+    background: var(--white);
 }
 
-/* ========================================
-   CONTACT US - TWINKLE TOURS
-   ======================================== */
+#feedbackForm textarea {
+    resize: vertical;
+}
 
-/* ========================================
-   CONTACT US - TWINKLE TOURS
-   ======================================== */
+#feedbackForm input:focus,
+#feedbackForm textarea:focus,
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus,
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+    border-color: var(--green);
+}
+
+/* ================= BOOKING ================= */
+
+.booking-section {
+    background: var(--light);
+}
+
+.booking-section > h2,
+.booking-section > p {
+    text-align: center;
+}
+
+.booking-form {
+    width: min(720px, 100%);
+    margin: 30px auto 0;
+    padding: 28px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.booking-form label {
+    display: block;
+    margin: 13px 0 6px;
+
+    color: var(--dark-green);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 11px 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    background: var(--white);
+    color: var(--text);
+    outline: none;
+}
+
+.booking-form textarea {
+    resize: vertical;
+}
+
+.booking-form .btn,
+.booking-form .whatsapp-btn {
+    width: 100%;
+    margin-top: 14px;
+}
+
+.whatsapp-btn {
+    min-height: 44px;
+    padding: 10px 18px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #25d366;
+    color: var(--white);
+
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* ================= CONTACT ================= */
 
 .contact-section {
-    background: #f1f8f4;
-    padding: 85px 6%;
-    width: 100%;
-    box-sizing: border-box;
+    background: var(--white);
 }
 
 .contact-container {
-    width: 100%;
-    max-width: 1200px;
+    width: min(var(--max-width), 100%);
     margin: 0 auto;
+
     display: grid;
-    grid-template-columns: 1fr 0.9fr;
-    gap: 60px;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-/* CONTACT INFORMATION */
-
-.contact-info {
-    width: 100%;
-    box-sizing: border-box;
-    text-align: left;
-}
-
-.contact-eyebrow {
-    color: #d9a900;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 45px;
+    align-items: start;
 }
 
 .contact-info h2 {
-    color: #003d2d;
-    font-size: 40px;
-    line-height: 1.15;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
+    color: var(--dark-green);
+    font-size: clamp(27px, 3vw, 37px);
+    line-height: 1.2;
 }
 
 .contact-intro {
-    color: #65766f;
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 32px;
+    max-width: 600px;
+    margin-bottom: 25px;
+    color: var(--muted);
 }
-
-/* CONTACT DETAILS */
 
 .contact-details {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
+    gap: 15px;
 }
 
 .contact-item {
     display: flex;
     gap: 13px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .contact-icon {
-    width: 43px;
-    height: 43px;
-    min-width: 43px;
+    width: 42px;
+    height: 42px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #075b43;
+
+    background: var(--light);
     border-radius: 50%;
-    font-size: 20px;
 }
 
 .contact-item h3 {
-    color: #003d2d;
-    font-size: 16px;
-    margin-bottom: 4px;
+    color: var(--dark-green);
+    font-size: 14px;
 }
 
 .contact-item p,
 .contact-item a {
-    color: #65766f;
-    font-size: 14px;
-    line-height: 1.6;
+    color: var(--muted);
+    font-size: 13px;
     text-decoration: none;
 }
 
 .contact-item a:hover {
-    color: #075b43;
+    color: var(--green);
 }
-
-/* CONTACT BUTTONS */
 
 .contact-buttons {
     display: flex;
-    gap: 14px;
-    margin-top: 32px;
     flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
 }
 
 .contact-whatsapp,
 .contact-book {
-    display: inline-block;
-    padding: 14px 21px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 16px;
+
     border-radius: 8px;
     text-decoration: none;
-    font-weight: 700;
-    transition: 0.3s ease;
+
+    font-size: 13px;
+    font-weight: 800;
 }
 
 .contact-whatsapp {
     background: #25d366;
-    color: #ffffff;
-}
-
-.contact-whatsapp:hover {
-    background: #128c7e;
-    transform: translateY(-2px);
+    color: var(--white);
 }
 
 .contact-book {
-    background: #f4c430;
-    color: #003d2d;
+    background: var(--green);
+    color: var(--white);
 }
-
-.contact-book:hover {
-    background: #d9a900;
-    color: #ffffff;
-    transform: translateY(-2px);
-}
-
-/* CONTACT FORM */
 
 .contact-form-card {
-    width: 100%;
-    background: #ffffff;
-    padding: 38px;
-    border-radius: 18px;
-    box-shadow: 0 10px 35px rgba(0, 61, 45, 0.12);
-    box-sizing: border-box;
+    padding: 28px;
+
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
 }
 
 .contact-form-card h3 {
-    color: #003d2d;
-    font-size: 27px;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+    color: var(--dark-green);
+    font-size: 22px;
 }
 
 .contact-form-card > p {
-    color: #65766f;
-    margin-bottom: 24px;
-    font-size: 15px;
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 13px;
 }
 
 .contact-form-card label {
     display: block;
-    color: #003d2d;
-    font-size: 14px;
+    margin: 11px 0 5px;
+
+    color: var(--dark-green);
+    font-size: 12px;
     font-weight: 700;
-    margin-top: 16px;
-    margin-bottom: 7px;
 }
 
 .contact-form-card input,
 .contact-form-card textarea {
-    display: block;
     width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 13px 15px;
-    border: 1px solid #cbded4;
-    border-radius: 8px;
-    background: #fbfdfc;
-    color: #173f35;
-    font-family: inherit;
-    font-size: 15px;
+    padding: 10px 11px;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    outline: none;
+    background: var(--white);
 }
 
 .contact-form-card textarea {
     resize: vertical;
-    min-height: 120px;
-}
-
-.contact-form-card input:focus,
-.contact-form-card textarea:focus {
-    outline: none;
-    border-color: #075b43;
-    box-shadow: 0 0 0 3px rgba(7, 91, 67, 0.12);
-    background: #ffffff;
 }
 
 .contact-form-card button {
     width: 100%;
-    margin-top: 22px;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    background: #f4c430;
-    color: #003d2d;
-    font-size: 16px;
-    font-weight: 700;
+    margin-top: 14px;
+    padding: 11px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: var(--green);
+    color: var(--white);
+
+    font-weight: 800;
     cursor: pointer;
-    transition: 0.3s ease;
 }
 
-.contact-form-card button:hover {
-    background: #d9a900;
-    color: #ffffff;
-    transform: translateY(-2px);
+/* ================= FOOTER ================= */
+
+.twinkle-footer {
+    background: #12352d;
+    color: rgba(255,255,255,0.82);
+    padding: 50px 20px 22px;
 }
 
-/* ========================================
-   CONTACT - MOBILE
-   ======================================== */
+.footer-inner {
+    width: min(var(--max-width), 100%);
+    margin: 0 auto;
+}
 
-@media (max-width: 768px) {
+.footer-brand h3 {
+    margin-bottom: 5px;
+    color: var(--white);
+    font-size: 22px;
+}
 
-    .contact-section {
-        width: 100%;
-        padding: 60px 20px !important;
-        box-sizing: border-box;
-        overflow: hidden;
+.footer-brand p {
+    font-size: 13px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    margin-top: 28px;
+}
+
+.footer-column h4,
+.footer-disclaimer h4 {
+    margin-bottom: 9px;
+    color: var(--bright-gold);
+    font-size: 14px;
+}
+
+.footer-column p,
+.footer-column a,
+.footer-disclaimer p {
+    display: block;
+    margin-bottom: 6px;
+
+    color: rgba(255,255,255,0.72);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: var(--bright-gold);
+}
+
+.footer-disclaimer {
+    max-width: 720px;
+    margin-top: 28px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgba(255,255,255,0.58);
+    font-size: 11px;
+}
+
+/* ================= FLOATING WHATSAPP ================= */
+
+.whatsapp-floating {
+    position: fixed;
+    right: 17px;
+    bottom: 18px;
+    z-index: 9999;
+
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #25d366;
+    color: var(--white);
+
+    border-radius: 50%;
+    text-decoration: none;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+}
+
+.whatsapp-floating svg {
+    width: 31px;
+    height: 31px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .main-nav {
+        gap: 2px;
     }
+
+    .main-nav a {
+        padding-left: 8px;
+        padding-right: 8px;
+        font-size: 12px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ebook-store {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .consultation-container,
+    .about-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .consultant-photo img {
+        height: 380px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    /* HEADER */
+
+    .navbar {
+        background: var(--white);
+    }
+
+    .brand-area {
+        padding: 7px 12px 3px;
+    }
+
+    .brand img {
+        width: 112px;
+        max-height: 58px;
+    }
+
+    .main-nav {
+        width: 100%;
+        padding: 2px 7px 7px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        gap: 2px;
+
+        background: var(--white);
+    }
+
+    .main-nav a {
+        min-height: 28px;
+        padding: 4px 7px;
+
+        font-size: 10px;
+        line-height: 1.1;
+    }
+
+    .main-nav a.active::after {
+        left: 7px;
+        right: 7px;
+        bottom: 0;
+        height: 2px;
+    }
+
+    .main-nav .book-now {
+        margin-left: 2px;
+        padding: 6px 9px;
+        font-size: 10px;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 390px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,0.60),
+                rgba(0,0,0,0.18)
+            ),
+            url("./elephant-safari-hero.png");
+
+        background-size: cover;
+        background-position: 62% center;
+    }
+
+    .overlay {
+        padding: 45px 18px 42px;
+    }
+
+    .overlay > p:first-child {
+        margin-bottom: 8px;
+        font-size: 10px;
+        letter-spacing: 1.3px;
+    }
+
+    .overlay > p:nth-child(2) {
+        max-width: 360px;
+        margin-bottom: 18px;
+
+        font-size: 20px;
+        line-height: 1.25;
+    }
+
+    .btn {
+        min-height: 40px;
+        padding: 9px 14px;
+        font-size: 12px;
+    }
+
+    /* SECTIONS */
+
+    .section,
+    .media-preview,
+    .ebooks-section,
+    .consultation-section,
+    .about-section,
+    .contact-section {
+        padding: 42px 13px;
+    }
+
+    .section-title {
+        margin-bottom: 23px;
+    }
+
+    .section-title h2,
+    .section > h2,
+    .booking-section > h2 {
+        font-size: 24px;
+    }
+
+    .section-title > p:last-child,
+    .section > p,
+    .booking-section > p {
+        font-size: 13px;
+    }
+
+    /* MEDIA */
+
+    .media-preview + .media-preview {
+        padding-top: 12px;
+    }
+
+    .preview-card {
+        width: 100%;
+    }
+
+    .preview-card > img,
+    .preview-card > video {
+        height: 210px;
+    }
+
+    .preview-content {
+        padding: 14px;
+    }
+
+    .preview-content h3 {
+        font-size: 17px;
+    }
+
+    /* TRUST / PACKAGES */
+
+    .cards {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 22px;
+    }
+
+    .section > .cards .card:not(:has(.card-image)) {
+        padding: 18px;
+    }
+
+    .card-image {
+        height: 190px;
+    }
+
+    .card-content {
+        padding: 16px;
+    }
+
+    .card-content h3 {
+        font-size: 17px;
+    }
+
+    .package-description {
+        min-height: auto;
+        font-size: 13px;
+    }
+
+    .package-details span {
+        font-size: 11px;
+    }
+
+    .package-details strong {
+        font-size: 15px;
+    }
+
+    /* EBOOKS */
+
+    .ebook-store {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .ebook-cover {
+        height: 280px;
+    }
+
+    .ebook-info {
+        padding: 17px;
+    }
+
+    .ebook-info h3 {
+        font-size: 18px;
+    }
+
+    /* CONSULTATION */
+
+    .consultation-container {
+        width: 100%;
+        gap: 24px;
+    }
+
+    .consultant-photo img {
+        height: 290px;
+    }
+
+    .consultation-content h2,
+    .about-content h2,
+    .contact-info h2 {
+        font-size: 25px;
+    }
+
+    .consultation-intro {
+        font-size: 13px;
+    }
+
+    .consultation-item p {
+        font-size: 12px;
+    }
+
+    /* ABOUT */
+
+    .about-container {
+        width: 100%;
+        gap: 24px;
+    }
+
+    .about-content > p {
+        font-size: 13px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 18px;
+    }
+
+    .about-highlight {
+        padding: 13px;
+    }
+
+    .about-card {
+        padding: 27px 18px;
+    }
+
+    .about-disclaimer {
+        margin-top: 22px;
+        padding: 14px;
+    }
+
+    /* FORMS */
+
+    .booking-form,
+    .contact-form-card {
+        padding: 18px;
+    }
+
+    /* CONTACT */
 
     .contact-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        display: block !important;
-        box-sizing: border-box;
-    }
-
-    .contact-info {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box;
-    }
-
-    .contact-info h2 {
-        font-size: 31px !important;
-        line-height: 1.2 !important;
-    }
-
-    .contact-intro {
-        width: 100% !important;
-        font-size: 16px !important;
-        line-height: 1.7 !important;
-    }
-
-    .contact-details {
-        display: block !important;
-        width: 100% !important;
-    }
-
-    .contact-item {
-        width: 100% !important;
-        margin-bottom: 24px;
-        box-sizing: border-box;
+        width: 100%;
+        gap: 25px;
     }
 
     .contact-buttons {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
+        flex-direction: column;
     }
 
     .contact-whatsapp,
     .contact-book {
-        display: block !important;
-        width: 100% !important;
-        box-sizing: border-box;
-        text-align: center;
+        width: 100%;
     }
 
-    .contact-form-card {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-top: 40px;
-        padding: 28px 20px !important;
-        box-sizing: border-box;
+    /* FOOTER */
+
+    .twinkle-footer {
+        padding: 38px 15px 18px;
     }
 
-    .contact-form-card input,
-    .contact-form-card textarea,
-    .contact-form-card button {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box;
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 22px;
     }
 
-    .contact-form-card h3 {
-        font-size: 25px !important;
-    }
-}
+    /* WHATSAPP */
 
-/* ========================================
-   FINAL MOBILE HEADER - COMPACT & WHITE
-   ======================================== */
-
-@media (max-width: 768px) {
-
-    /* WHITE HEADER */
-    .navbar,
-    .brand-area,
-    .main-nav {
-        background: #ffffff !important;
+    .whatsapp-floating {
+        width: 48px;
+        height: 48px;
+        right: 12px;
+        bottom: 12px;
     }
 
-    .navbar {
-        width: 100% !important;
-        min-height: 0 !important;
-        height: auto !important;
-        padding: 6px 0 0 !important;
-        margin: 0 !important;
-        display: block !important;
-        overflow: hidden !important;
-        box-shadow: none !important;
-        border-bottom: 3px solid #f4c430 !important;
-    }
-
-    /* SMALLER LOGO AREA */
-    .brand-area {
-        width: 100% !important;
-        height: 70px !important;
-        min-height: 70px !important;
-        padding: 4px 10px !important;
-        margin: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        box-sizing: border-box !important;
-    }
-
-    .brand img {
-        width: 135px !important;
-        max-width: 135px !important;
-        max-height: 62px !important;
-        height: auto !important;
-        object-fit: contain !important;
-    }
-
-    /* ONE COMPACT NAVIGATION ROW */
-    .main-nav {
-        width: 100% !important;
-        height: 48px !important;
-        min-height: 48px !important;
-
-        padding: 3px 8px !important;
-        margin: 0 !important;
-
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-
-        align-items: center !important;
-        justify-content: flex-start !important;
-
-        gap: 0 !important;
-
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-
-        box-sizing: border-box !important;
-
-        border-top: 1px solid #eeeeee !important;
-        border-bottom: none !important;
-
-        scrollbar-width: none !important;
-        -webkit-overflow-scrolling: touch !important;
-    }
-
-    .main-nav::-webkit-scrollbar {
-        display: none !important;
-    }
-
-    /* NAVIGATION LINKS */
-    .main-nav a {
-        flex: 0 0 auto !important;
-
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-
-        height: 40px !important;
-        box-sizing: border-box !important;
-
-        padding: 8px 12px !important;
-        margin: 0 !important;
-
-        color: #075b43 !important;
-        background: transparent !important;
-
-        font-size: 14px !important;
-        font-weight: 700 !important;
-
-        white-space: nowrap !important;
-        text-decoration: none !important;
-    }
-
-    /* ACTIVE HOME */
-    .main-nav a.active {
-        color: #003d2d !important;
-        background: transparent !important;
-    }
-
-    .main-nav a.active::after {
-        height: 3px !important;
-        bottom: 1px !important;
-        background: #f4c430 !important;
-    }
-
-    /* BOOK NOW */
-    .main-nav .book-now {
-        height: 36px !important;
-        padding: 7px 15px !important;
-        margin: 0 4px !important;
-
-        background: #003d2d !important;
-        color: #ffffff !important;
-
-        border: 2px solid #f4c430 !important;
-        border-radius: 22px !important;
-    }
-
-    /* HERO STARTS IMMEDIATELY */
-    .hero {
-        margin-top: 0 !important;
+    .whatsapp-floating svg {
+        width: 27px;
+        height: 27px;
     }
 }
 
 /* =========================================================
-   TWINKLE TOURS — MOBILE PROFESSIONAL FIT
-   REDUCE OVERSIZED TEXT, IMAGES & EMPTY SPACING
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    /* ================================
-       BASIC MOBILE RESET
-       ================================ */
-
-    html,
-    body {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow-x: hidden !important;
-    }
-
-    * {
-        box-sizing: border-box !important;
-    }
-
-
-    /* ================================
-       HERO — SMALLER & BETTER FIT
-       ================================ */
-
-    .hero {
-        width: 100% !important;
-        min-height: 520px !important;
-        height: 520px !important;
-
-        margin: 0 !important;
-
-        background-size: cover !important;
-        background-position: 62% center !important;
-    }
-
-    .hero .overlay {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-height: 520px !important;
-        height: 520px !important;
-
-        padding: 45px 24px 35px !important;
-
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-
-        box-sizing: border-box !important;
-    }
-
-
-    /* EXPLORE DISCOVER EXPERIENCE */
-
-    .hero .overlay p:first-child {
-        max-width: 100% !important;
-
-        margin: 0 0 14px !important;
-
-        font-size: 11px !important;
-        line-height: 1.3 !important;
-
-        letter-spacing: 2px !important;
-
-        white-space: nowrap !important;
-    }
-
-
-    /* MAIN HERO WORDING */
-
-    .hero .overlay p:nth-of-type(2) {
-        width: 100% !important;
-        max-width: 370px !important;
-
-        margin: 0 0 22px !important;
-
-        font-size: 29px !important;
-        line-height: 1.12 !important;
-
-        letter-spacing: -0.3px !important;
-    }
-
-
-    /* HERO BUTTON */
-
-    .hero .overlay .btn {
-        align-self: flex-start !important;
-
-        padding: 12px 20px !important;
-
-        font-size: 14px !important;
-
-        border-radius: 28px !important;
-    }
-
-
-    /* ================================
-       GENERAL SECTIONS
-       ================================ */
-
-    .section,
-    section {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        box-sizing: border-box !important;
-    }
-
-
-    /* ================================
-       SECTION HEADINGS
-       ================================ */
-
-    .section-title {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin: 0 auto 24px !important;
-
-        padding: 0 18px !important;
-
-        text-align: center !important;
-        box-sizing: border-box !important;
-    }
-
-    .section-title h2 {
-        margin: 0 0 8px !important;
-
-        font-size: 27px !important;
-        line-height: 1.15 !important;
-    }
-
-    .section-title p {
-        margin: 0 auto !important;
-
-        max-width: 100% !important;
-
-        font-size: 15px !important;
-        line-height: 1.45 !important;
-    }
-
-    .section-title .eyebrow {
-        margin-bottom: 8px !important;
-
-        font-size: 11px !important;
-        letter-spacing: 2px !important;
-    }
-
-
-    /* ================================
-       GENERAL HEADINGS
-       ================================ */
-
-    section h2 {
-        font-size: 27px !important;
-        line-height: 1.15 !important;
-    }
-
-    section h3 {
-        font-size: 19px !important;
-        line-height: 1.25 !important;
-    }
-
-    section p {
-        line-height: 1.5 !important;
-    }
-
-
-    /* ================================
-       REMOVE EXCESSIVE SIDE SPACE
-       ================================ */
-
-    .container,
-    .section-container,
-    .gallery-container,
-    .video-container,
-    .packages-container,
-    .destinations-container {
-        width: calc(100% - 24px) !important;
-        max-width: none !important;
-
-        margin-left: auto !important;
-        margin-right: auto !important;
-
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-
-    /* ================================
-       CARDS — USE MOBILE WIDTH
-       ================================ */
-
-    .card,
-    .package-card,
-    .destination-card,
-    .gallery-card,
-    .video-card {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-
-
-    /* ================================
-       IMAGES NEVER OVERFLOW
-       ================================ */
-
-    img,
-    video {
-        max-width: 100% !important;
-    }
-
-
-    /* ================================
-       GALLERY / VIDEO SECTIONS
-       ================================ */
-
-    .gallery-grid,
-    .video-grid {
-        width: calc(100% - 24px) !important;
-
-        margin-left: auto !important;
-        margin-right: auto !important;
-
-        gap: 14px !important;
-    }
-
-
-    /* VIDEO SIZE */
-
-    .video-grid video,
-    .video-card video {
-        width: 100% !important;
-        height: auto !important;
-
-        max-height: 360px !important;
-
-        object-fit: cover !important;
-    }
-
-
-    /* ================================
-       LARGE EMPTY SPACES
-       ================================ */
-
-    .gallery-section,
-    .video-gallery-section,
-    .packages-section,
-    .destinations-section,
-    .consultation-section,
-    .contact-section,
-    .booking-section {
-        padding-top: 42px !important;
-        padding-bottom: 42px !important;
-    }
-
-
-    /* ================================
-       PARAGRAPHS
-       ================================ */
-
-    .gallery-section p,
-    .video-gallery-section p,
-    .packages-section p,
-    .destinations-section p,
-    .consultation-section p,
-    .contact-section p {
-        font-size: 15px !important;
-    }
-
-
-    /* ================================
-       VIEW ALL BUTTON/CARDS
-       ================================ */
-
-    .view-all,
-    .view-all-card {
-        width: calc(100% - 24px) !important;
-
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
+   SMALL PHONES
    ========================================================= */
 
 @media (max-width: 390px) {
 
+    .brand img {
+        width: 105px;
+    }
+
+    .main-nav {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .main-nav a {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 9px;
+    }
+
+    .main-nav .book-now {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
     .hero {
-        min-height: 500px !important;
-        height: 500px !important;
+        min-height: 365px;
     }
 
-    .hero .overlay {
-        min-height: 500px !important;
-        height: 500px !important;
-
-        padding: 40px 20px 30px !important;
+    .overlay {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-    .hero .overlay p:first-child {
-        font-size: 10px !important;
-        letter-spacing: 1.6px !important;
+    .overlay > p:nth-child(2) {
+        font-size: 18px;
     }
 
-    .hero .overlay p:nth-of-type(2) {
-        font-size: 27px !important;
-        line-height: 1.1 !important;
-    }
-
-    .hero .overlay .btn {
-        font-size: 13px !important;
-        padding: 11px 18px !important;
-    }
-
-    .section-title h2,
-    section h2 {
-        font-size: 24px !important;
-    }
-
-    .section-title p {
-        font-size: 14px !important;
+    .section,
+    .media-preview,
+    .ebooks-section,
+    .consultation-section,
+    .about-section,
+    .contact-section {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
