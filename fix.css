@@ -14,6 +14,342 @@ footer.twinkle-footer {
     box-sizing: border-box !important;
 }
 
+
+/* =========================================================
+   TWINKLE TOURS — MOBILE PROFESSIONAL FIT
+   REDUCE OVERSIZED TEXT, IMAGES & EMPTY SPACING
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ================================
+       BASIC MOBILE RESET
+       ================================ */
+
+    html,
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    * {
+        box-sizing: border-box !important;
+    }
+
+
+    /* ================================
+       HERO — SMALLER & BETTER FIT
+       ================================ */
+
+    .hero {
+        width: 100% !important;
+        min-height: 520px !important;
+        height: 520px !important;
+
+        margin: 0 !important;
+
+        background-size: cover !important;
+        background-position: 62% center !important;
+    }
+
+    .hero .overlay {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-height: 520px !important;
+        height: 520px !important;
+
+        padding: 45px 24px 35px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* EXPLORE DISCOVER EXPERIENCE */
+
+    .hero .overlay p:first-child {
+        max-width: 100% !important;
+
+        margin: 0 0 14px !important;
+
+        font-size: 11px !important;
+        line-height: 1.3 !important;
+
+        letter-spacing: 2px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* MAIN HERO WORDING */
+
+    .hero .overlay p:nth-of-type(2) {
+        width: 100% !important;
+        max-width: 370px !important;
+
+        margin: 0 0 22px !important;
+
+        font-size: 29px !important;
+        line-height: 1.12 !important;
+
+        letter-spacing: -0.3px !important;
+    }
+
+
+    /* HERO BUTTON */
+
+    .hero .overlay .btn {
+        align-self: flex-start !important;
+
+        padding: 12px 20px !important;
+
+        font-size: 14px !important;
+
+        border-radius: 28px !important;
+    }
+
+
+    /* ================================
+       GENERAL SECTIONS
+       ================================ */
+
+    .section,
+    section {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* ================================
+       SECTION HEADINGS
+       ================================ */
+
+    .section-title {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 auto 24px !important;
+
+        padding: 0 18px !important;
+
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .section-title h2 {
+        margin: 0 0 8px !important;
+
+        font-size: 27px !important;
+        line-height: 1.15 !important;
+    }
+
+    .section-title p {
+        margin: 0 auto !important;
+
+        max-width: 100% !important;
+
+        font-size: 15px !important;
+        line-height: 1.45 !important;
+    }
+
+    .section-title .eyebrow {
+        margin-bottom: 8px !important;
+
+        font-size: 11px !important;
+        letter-spacing: 2px !important;
+    }
+
+
+    /* ================================
+       GENERAL HEADINGS
+       ================================ */
+
+    section h2 {
+        font-size: 27px !important;
+        line-height: 1.15 !important;
+    }
+
+    section h3 {
+        font-size: 19px !important;
+        line-height: 1.25 !important;
+    }
+
+    section p {
+        line-height: 1.5 !important;
+    }
+
+
+    /* ================================
+       REMOVE EXCESSIVE SIDE SPACE
+       ================================ */
+
+    .container,
+    .section-container,
+    .gallery-container,
+    .video-container,
+    .packages-container,
+    .destinations-container {
+        width: calc(100% - 24px) !important;
+        max-width: none !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+
+    /* ================================
+       CARDS — USE MOBILE WIDTH
+       ================================ */
+
+    .card,
+    .package-card,
+    .destination-card,
+    .gallery-card,
+    .video-card {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+    /* ================================
+       IMAGES NEVER OVERFLOW
+       ================================ */
+
+    img,
+    video {
+        max-width: 100% !important;
+    }
+
+
+    /* ================================
+       GALLERY / VIDEO SECTIONS
+       ================================ */
+
+    .gallery-grid,
+    .video-grid {
+        width: calc(100% - 24px) !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        gap: 14px !important;
+    }
+
+
+    /* VIDEO SIZE */
+
+    .video-grid video,
+    .video-card video {
+        width: 100% !important;
+        height: auto !important;
+
+        max-height: 360px !important;
+
+        object-fit: cover !important;
+    }
+
+
+    /* ================================
+       LARGE EMPTY SPACES
+       ================================ */
+
+    .gallery-section,
+    .video-gallery-section,
+    .packages-section,
+    .destinations-section,
+    .consultation-section,
+    .contact-section,
+    .booking-section {
+        padding-top: 42px !important;
+        padding-bottom: 42px !important;
+    }
+
+
+    /* ================================
+       PARAGRAPHS
+       ================================ */
+
+    .gallery-section p,
+    .video-gallery-section p,
+    .packages-section p,
+    .destinations-section p,
+    .consultation-section p,
+    .contact-section p {
+        font-size: 15px !important;
+    }
+
+
+    /* ================================
+       VIEW ALL BUTTON/CARDS
+       ================================ */
+
+    .view-all,
+    .view-all-card {
+        width: calc(100% - 24px) !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .hero {
+        min-height: 500px !important;
+        height: 500px !important;
+    }
+
+    .hero .overlay {
+        min-height: 500px !important;
+        height: 500px !important;
+
+        padding: 40px 20px 30px !important;
+    }
+
+    .hero .overlay p:first-child {
+        font-size: 10px !important;
+        letter-spacing: 1.6px !important;
+    }
+
+    .hero .overlay p:nth-of-type(2) {
+        font-size: 27px !important;
+        line-height: 1.1 !important;
+    }
+
+    .hero .overlay .btn {
+        font-size: 13px !important;
+        padding: 11px 18px !important;
+    }
+
+    .section-title h2,
+    section h2 {
+        font-size: 24px !important;
+    }
+
+    .section-title p {
+        font-size: 14px !important;
+    }
+}
 footer.twinkle-footer .footer-inner {
     display: flex !important;
     flex-direction: column !important;
