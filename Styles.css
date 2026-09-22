@@ -923,16 +923,23 @@ section {
 /* ================= BOOKING ================= */
 
 .booking-section {
+    width: 100%;
     background: var(--light);
+    box-sizing: border-box;
 }
 
-.booking-section > h2,
-.booking-section > p {
+.booking-section .section-title {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
     text-align: center;
 }
 
 .booking-form {
-    width: min(720px, 100%);
+    width: min(720px, calc(100% - 40px));
     margin: 30px auto 0;
     padding: 28px;
 
@@ -940,6 +947,8 @@ section {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+
+    box-sizing: border-box;
 }
 
 .booking-form label {
@@ -963,6 +972,8 @@ section {
     background: var(--white);
     color: var(--text);
     outline: none;
+
+    box-sizing: border-box;
 }
 
 .booking-form textarea {
@@ -989,6 +1000,22 @@ section {
     cursor: pointer;
 }
 
+
+/* ================= BOOKING MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .booking-section .section-title {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .booking-form {
+        width: calc(100% - 30px);
+        padding: 20px;
+    }
+
+}
 /* ================= CONTACT ================= */
 
 .contact-section {
