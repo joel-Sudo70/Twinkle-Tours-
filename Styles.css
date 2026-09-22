@@ -1651,3 +1651,106 @@ section {
         padding-right: 10px;
     }
 }
+
+/* =========================================================
+   TWINKLE TOURS — ELEGANT SIDE DECORATION
+   ========================================================= */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 100vh;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0.75;
+}
+
+/* LEFT SIDE */
+body::before {
+    left: 0;
+
+    background:
+        radial-gradient(ellipse 90px 25px at 0% 8%, rgba(7,91,67,.28) 0%, transparent 70%),
+        radial-gradient(ellipse 100px 28px at 8% 15%, rgba(7,91,67,.20) 0%, transparent 70%),
+        radial-gradient(ellipse 90px 25px at 0% 25%, rgba(7,91,67,.16) 0%, transparent 70%),
+        linear-gradient(
+            135deg,
+            rgba(7,91,67,.18) 0%,
+            transparent 35%
+        );
+    
+    clip-path: polygon(
+        0 0,
+        72% 0,
+        48% 5%,
+        75% 9%,
+        45% 14%,
+        68% 19%,
+        38% 25%,
+        62% 31%,
+        30% 38%,
+        55% 45%,
+        22% 53%,
+        48% 61%,
+        18% 70%,
+        42% 79%,
+        10% 90%,
+        35% 100%,
+        0 100%
+    );
+}
+
+/* RIGHT SIDE */
+body::after {
+    right: 0;
+
+    background:
+        radial-gradient(ellipse 90px 25px at 100% 8%, rgba(7,91,67,.28) 0%, transparent 70%),
+        radial-gradient(ellipse 100px 28px at 92% 15%, rgba(7,91,67,.20) 0%, transparent 70%),
+        radial-gradient(ellipse 90px 25px at 100% 25%, rgba(7,91,67,.16) 0%, transparent 70%),
+        linear-gradient(
+            225deg,
+            rgba(7,91,67,.18) 0%,
+            transparent 35%
+        );
+
+    clip-path: polygon(
+        100% 0,
+        28% 0,
+        52% 5%,
+        25% 9%,
+        55% 14%,
+        32% 19%,
+        62% 25%,
+        38% 31%,
+        70% 38%,
+        45% 45%,
+        78% 53%,
+        52% 61%,
+        82% 70%,
+        58% 79%,
+        90% 90%,
+        65% 100%,
+        100% 100%
+    );
+}
+
+/* Keep decoration subtle on tablets and phones */
+@media (max-width: 768px) {
+    body::before,
+    body::after {
+        width: 45px;
+        opacity: 0.35;
+    }
+}
+
+@media (max-width: 480px) {
+    body::before,
+    body::after {
+        width: 22px;
+        opacity: 0.22;
+    }
+}
