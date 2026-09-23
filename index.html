@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <title>Twinkle Tours | Travel & Tourism Kenya</title>
 
     <meta name="description"
-          content="Twinkle Tours Travel & Tourism Company. Explore Kenya safaris, beaches, travel consultation and unforgettable adventures.">
+        content="Twinkle Tours Travel & Tourism Company. Explore Kenya safaris, beaches, travel consultation and unforgettable adventures.">
 
     <link rel="stylesheet" href="Styles.css">
 </head>
@@ -17,6 +18,7 @@
 <!-- =====================================================
      HEADER
 ===================================================== -->
+
 <header class="navbar">
 
     <div class="brand-area">
@@ -25,7 +27,7 @@
         </a>
     </div>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Main navigation">
 
         <a href="#home" class="active">Home</a>
         <a href="#destinations">Destinations</a>
@@ -46,6 +48,7 @@
 <!-- =====================================================
      HERO
 ===================================================== -->
+
 <section id="home" class="hero">
 
     <div class="overlay">
@@ -64,6 +67,7 @@
         </p>
 
         <div class="hero-buttons">
+
             <a href="#packages" class="btn">
                 Explore Our Packages →
             </a>
@@ -71,6 +75,7 @@
             <a href="#booking" class="btn btn-outline">
                 Plan Your Trip
             </a>
+
         </div>
 
     </div>
@@ -79,8 +84,9 @@
 
 
 <!-- =====================================================
-     MEDIA PREVIEW
+     PHOTO PREVIEW
 ===================================================== -->
+
 <section class="media-preview">
 
     <div class="section-title">
@@ -97,9 +103,13 @@
 
     <a href="photos.html" class="preview-card">
 
-        <img
-            src="Maasai people.jpg"
-            alt="Maasai people in Kenya">
+        <div class="preview-media">
+
+            <img
+                src="Maasai people.jpg"
+                alt="Maasai people in Kenya">
+
+        </div>
 
         <div class="preview-content">
 
@@ -119,6 +129,7 @@
 <!-- =====================================================
      VIDEO PREVIEW
 ===================================================== -->
+
 <section class="media-preview">
 
     <div class="section-title">
@@ -135,17 +146,22 @@
 
     <a href="videos.html" class="preview-card">
 
-        <video
-            controls
-            muted
-            playsinline
-            poster="Maasai people.jpg">
+        <div class="preview-media">
 
-            <source src="Bird 1.mp4" type="video/mp4">
+            <video
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="Maasai people.jpg">
 
-            Your browser does not support video playback.
+                <source src="Bird 1.mp4" type="video/mp4">
 
-        </video>
+                Your browser does not support video playback.
+
+            </video>
+
+        </div>
 
         <div class="preview-content">
 
@@ -165,6 +181,7 @@
 <!-- =====================================================
      WHY TRAVEL WITH US
 ===================================================== -->
+
 <section class="section">
 
     <div class="section-title">
@@ -181,40 +198,40 @@
 
     <div class="cards">
 
-        <div class="card">
+        <article class="card">
             <div class="card-content">
                 <h3>🛡 Trusted & Safe</h3>
                 <p>Your safety comes first.</p>
             </div>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
             <div class="card-content">
                 <h3>⭐ Great Value</h3>
                 <p>Great value for your travel budget.</p>
             </div>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
             <div class="card-content">
                 <h3>🎧 Travel Support</h3>
                 <p>We are here to help with your travel plans.</p>
             </div>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
             <div class="card-content">
                 <h3>🧭 Local Knowledge</h3>
                 <p>Discover destinations through local insight.</p>
             </div>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
             <div class="card-content">
                 <h3>❤️ Memorable Experiences</h3>
                 <p>More than just a trip.</p>
             </div>
-        </div>
+        </article>
 
     </div>
 
@@ -224,6 +241,7 @@
 <!-- =====================================================
      DESTINATIONS
 ===================================================== -->
+
 <section id="destinations" class="section destinations-section">
 
     <div class="section-title">
@@ -233,8 +251,8 @@
         <h2>Popular Destinations</h2>
 
         <p>
-            From wildlife-rich savannahs to beautiful beaches and
-            spectacular highlands.
+            From wildlife-rich savannahs to beautiful beaches
+            and spectacular highlands.
         </p>
 
     </div>
@@ -242,51 +260,98 @@
     <div class="destination-grid">
 
         <article class="destination-card">
-            <img src="Maasai people.jpg" alt="Maasai culture in Kenya">
+
+            <img
+                src="Maasai people.jpg"
+                alt="Maasai culture in Kenya">
+
             <div>
                 <h3>Maasai Mara</h3>
-                <p>Wildlife, culture and unforgettable safari landscapes.</p>
+                <p>
+                    Wildlife, culture and unforgettable safari landscapes.
+                </p>
             </div>
+
         </article>
 
+
         <article class="destination-card">
-            <img src="elephant-safari-hero.png" alt="Kenya safari elephants">
+
+            <img
+                src="elephant-safari-hero.png"
+                alt="Kenya safari elephants">
+
             <div>
                 <h3>Amboseli</h3>
-                <p>Wildlife adventures beneath the magnificent Kilimanjaro.</p>
+                <p>
+                    Wildlife adventures beneath the magnificent Kilimanjaro.
+                </p>
             </div>
+
         </article>
 
+
         <article class="destination-card">
-            <img src="giraffe 1.jpg" alt="Giraffe in Kenya">
+
+            <img
+                src="giraffe 1.jpg"
+                alt="Giraffe in Kenya">
+
             <div>
                 <h3>Samburu</h3>
-                <p>Unique wildlife and spectacular northern landscapes.</p>
+                <p>
+                    Unique wildlife and spectacular northern landscapes.
+                </p>
             </div>
+
         </article>
 
+
         <article class="destination-card">
-            <img src="zebra 1.jpg" alt="Zebra in Kenya">
+
+            <img
+                src="zebra 1.jpg"
+                alt="Zebra in Kenya">
+
             <div>
                 <h3>Great Rift Valley</h3>
-                <p>Scenic lakes, dramatic landscapes and wildlife.</p>
+                <p>
+                    Scenic lakes, dramatic landscapes and wildlife.
+                </p>
             </div>
+
         </article>
 
+
         <article class="destination-card">
-            <img src="lion 1.jpg" alt="Lion in Kenya">
+
+            <img
+                src="lion 1.jpg"
+                alt="Lion in Kenya">
+
             <div>
                 <h3>Nairobi</h3>
-                <p>Experience wildlife and city attractions in one destination.</p>
+                <p>
+                    Experience wildlife and city attractions in one destination.
+                </p>
             </div>
+
         </article>
 
+
         <article class="destination-card">
-            <img src="hippo.jpg" alt="Hippo in Kenya">
+
+            <img
+                src="hippo.jpg"
+                alt="Hippo in Kenya">
+
             <div>
                 <h3>Kenya Coast</h3>
-                <p>Relax on beautiful beaches and discover Swahili culture.</p>
+                <p>
+                    Relax on beautiful beaches and discover Swahili culture.
+                </p>
             </div>
+
         </article>
 
     </div>
@@ -297,6 +362,7 @@
 <!-- =====================================================
      PACKAGES
 ===================================================== -->
+
 <section id="packages" class="section packages-section">
 
     <div class="section-title">
@@ -306,11 +372,12 @@
         <h2>Popular Tours & Safaris</h2>
 
         <p>
-            Discover unforgettable wildlife, nature, culture and
-            adventure experiences across Kenya and East Africa.
+            Discover unforgettable wildlife, nature, culture
+            and adventure experiences across Kenya and East Africa.
         </p>
 
     </div>
+
 
     <div class="cards package-grid">
 
@@ -319,11 +386,13 @@
         <article class="card package-card">
 
             <div class="card-image">
+
                 <img
                     src="https://commons.wikimedia.org/wiki/Special:FilePath/Wildebeest%20at%20Serengeti%20National%20Park%20in%20Tanzania.jpg"
                     alt="Maasai Mara safari">
 
                 <span class="package-badge">SAFARI</span>
+
             </div>
 
             <div class="card-content">
@@ -340,8 +409,7 @@
                     <strong>KSh 18,500</strong>
                 </div>
 
-                <a href="#booking"
-                   class="btn package-btn">
+                <a href="#booking" class="btn package-btn">
                     Book This Package →
                 </a>
 
@@ -728,714 +796,4 @@
                 <h3>Mombasa Beach Holiday</h3>
 
                 <p class="package-description">
-                    Experience the Kenyan coast through beautiful beaches,
-                    Swahili culture, history and ocean views.
-                </p>
-
-                <div class="package-details">
-                    <span>🗓 3 Days / 2 Nights</span>
-                    <strong>KSh 16,000</strong>
-                </div>
-
-                <a href="#booking" class="btn package-btn">
-                    Book This Package →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- 13 -->
-        <article class="card package-card">
-
-            <div class="card-image">
-
-                <img
-                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Aberdare%20National%20Park%2C%20Kenya.jpg"
-                    alt="Aberdare National Park">
-
-                <span class="package-badge">FOREST SAFARI</span>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>Aberdare Forest Safari</h3>
-
-                <p class="package-description">
-                    Discover cool highlands, forests, waterfalls and
-                    wildlife in the beautiful Aberdare region.
-                </p>
-
-                <div class="package-details">
-                    <span>🗓 2 Days / 1 Night</span>
-                    <strong>KSh 15,500</strong>
-                </div>
-
-                <a href="#booking" class="btn package-btn">
-                    Book This Package →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- 14 -->
-        <article class="card package-card">
-
-            <div class="card-image">
-
-                <img
-                    src="buffalo.jpg"
-                    alt="Lake Naivasha wildlife">
-
-                <span class="package-badge">NATURE</span>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>Lake Naivasha Escape</h3>
-
-                <p class="package-description">
-                    Enjoy a relaxing nature experience around Lake Naivasha,
-                    with wildlife, scenery and peaceful lakeside moments.
-                </p>
-
-                <div class="package-details">
-                    <span>🗓 2 Days / 1 Night</span>
-                    <strong>KSh 13,500</strong>
-                </div>
-
-                <a href="#booking" class="btn package-btn">
-                    Book This Package →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- 15 -->
-        <article class="card package-card">
-
-            <div class="card-image">
-
-                <img
-                    src="lion 1.jpg"
-                    alt="Kenya wildlife safari">
-
-                <span class="package-badge">SAFARI</span>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>Railway Museum & Nairobi City Tour</h3>
-
-                <p class="package-description">
-                    Discover Nairobi's history and culture with a visit
-                    to the Railway Museum and selected city attractions.
-                </p>
-
-                <div class="package-details">
-                    <span>🗓 1 Day Experience</span>
-                    <strong>KSh 8,500</strong>
-                </div>
-
-                <a href="#booking" class="btn package-btn">
-                    Book This Package →
-                </a>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     E-BOOKS
-===================================================== -->
-<section id="ebooks" class="section ebooks-section">
-
-    <div class="section-title">
-
-        <p class="eyebrow">TWINKLE TOURS DIGITAL</p>
-
-        <h2>Travel E-Books</h2>
-
-        <p>
-            Take useful travel knowledge with you wherever you go.
-        </p>
-
-    </div>
-
-    <div class="ebook-grid">
-
-        <article class="ebook-card">
-
-            <div class="ebook-image">
-
-                <img
-                    src="elephant-ebook-cover.png"
-                    alt="Elephant e-book cover">
-
-            </div>
-
-            <div class="ebook-content">
-
-                <span class="ebook-label">DIGITAL BOOK</span>
-
-                <h3>The Elephant</h3>
-
-                <p>
-                    Discover fascinating facts, behaviour, habitats
-                    and the incredible world of elephants.
-                </p>
-
-                <div class="ebook-price">
-                    $20 USD
-                </div>
-
-                <a
-                    href="https://payhip.com/b/qZjAY"
-                    target="_blank"
-                    rel="noopener"
-                    class="btn">
-                    Get the E-Book →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <article class="ebook-card">
-
-            <div class="ebook-placeholder">
-                <span>TRAVEL GUIDE</span>
-            </div>
-
-            <div class="ebook-content">
-
-                <span class="ebook-label">DIGITAL BOOK</span>
-
-                <h3>Modern Travelers Handbook</h3>
-
-                <p>
-                    A practical guide to planning smarter,
-                    safer and more enjoyable trips.
-                </p>
-
-                <a
-                    href="https://payhip.com/b/cV2yI"
-                    target="_blank"
-                    rel="noopener"
-                    class="btn">
-                    Get the E-Book →
-                </a>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CONSULTATION
-===================================================== -->
-<section id="consultation" class="section consultation-section">
-
-    <div class="consultation-box">
-
-        <div class="section-title">
-
-            <p class="eyebrow">TRAVEL CONSULTATION</p>
-
-            <h2>Need Help Planning Your Trip?</h2>
-
-            <p>
-                Let us help you plan a memorable Kenya or East Africa
-                travel experience based on your interests and budget.
-            </p>
-
-        </div>
-
-        <a href="#booking" class="btn">
-            Request Consultation →
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     ABOUT
-===================================================== -->
-<section id="about" class="section about-section">
-
-    <div class="section-title">
-
-        <p class="eyebrow">ABOUT TWINKLE TOURS</p>
-
-        <h2>Travel With Us And Us With You</h2>
-
-    </div>
-
-    <div class="about-grid">
-
-        <div class="about-content">
-
-            <h3>Our Story</h3>
-
-            <p>
-                Twinkle Tours is a travel and tourism initiative focused
-                on helping travelers discover Kenya and East Africa through
-                memorable wildlife, cultural, beach and adventure experiences.
-            </p>
-
-            <p>
-                We provide travel guidance, consultation and connections
-                with registered and licensed tourism companies to help
-                travelers organize their journeys.
-            </p>
-
-            <h3>Founder & Travel Consultant</h3>
-
-            <p>
-                <strong>Joel Austine Lumwachi</strong>
-            </p>
-
-            <p>
-                Founder & Travel Consultant
-            </p>
-
-        </div>
-
-        <div class="about-highlight">
-
-            <h3>Our Promise</h3>
-
-            <p>
-                Personalized travel support, honest guidance and
-                unforgettable experiences.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FEEDBACK
-===================================================== -->
-<section class="section feedback-section">
-
-    <div class="section-title">
-
-        <p class="eyebrow">YOUR EXPERIENCE MATTERS</p>
-
-        <h2>Share Your Feedback</h2>
-
-        <p>
-            Tell us about your experience or what you would like
-            to see from Twinkle Tours.
-        </p>
-
-    </div>
-
-    <form
-        action="https://formsubmit.co/lumwachi03@gmail.com"
-        method="POST"
-        class="feedback-form">
-
-        <input type="hidden" name="_subject"
-               value="Twinkle Tours Website Feedback">
-
-        <input type="hidden" name="_captcha"
-               value="false">
-
-        <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required>
-
-        <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required>
-
-        <textarea
-            name="message"
-            rows="5"
-            placeholder="Your feedback"
-            required></textarea>
-
-        <button type="submit" class="btn">
-            Send Feedback →
-        </button>
-
-    </form>
-
-</section>
-
-
-<!-- =====================================================
-     BOOKING
-===================================================== -->
-<section id="booking" class="section booking-section">
-
-    <div class="section-title">
-
-        <p class="eyebrow">START YOUR JOURNEY</p>
-
-        <h2>Book Your Trip</h2>
-
-        <p>
-            Send us your travel details and we will get back to you.
-        </p>
-
-    </div>
-
-    <form
-        action="https://formsubmit.co/lumwachi03@gmail.com"
-        method="POST"
-        class="booking-form">
-
-        <input
-            type="hidden"
-            name="_subject"
-            value="New Twinkle Tours Booking Request">
-
-        <input
-            type="hidden"
-            name="_captcha"
-            value="false">
-
-        <input
-            type="hidden"
-            name="_template"
-            value="table">
-
-        <div class="form-grid">
-
-            <div class="form-group">
-
-                <label for="name">Full Name</label>
-
-                <input
-                    id="name"
-                    type="text"
-                    name="name"
-                    placeholder="Your full name"
-                    required>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="email">Email Address</label>
-
-                <input
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="Your email address"
-                    required>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="phone">Phone / WhatsApp</label>
-
-                <input
-                    id="phone"
-                    type="tel"
-                    name="phone"
-                    placeholder="Your phone number"
-                    required>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="package">Choose Package</label>
-
-                <select id="package" name="package" required>
-
-                    <option value="">Select a package</option>
-
-                    <option>Maasai Mara Migration Trail</option>
-                    <option>Amboseli & Kilimanjaro</option>
-                    <option>Serengeti & Ngorongoro</option>
-                    <option>Tsavo & Diani Combo</option>
-                    <option>Samburu National Reserve</option>
-                    <option>Hell's Gate & Olkaria Geothermal Spa</option>
-                    <option>Mount Kenya Adventure</option>
-                    <option>Ngong Hills Adventure</option>
-                    <option>Lake Nakuru Wildlife Safari</option>
-                    <option>Nairobi National Park Safari</option>
-                    <option>Diani Beach Escape</option>
-                    <option>Mombasa Beach Holiday</option>
-                    <option>Aberdare Forest Safari</option>
-                    <option>Lake Naivasha Escape</option>
-                    <option>Railway Museum & Nairobi City Tour</option>
-
-                    <option>Custom Trip / Consultation</option>
-
-                </select>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="date">Preferred Travel Date</label>
-
-                <input
-                    id="date"
-                    type="date"
-                    name="travel_date">
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="guests">Number of Travelers</label>
-
-                <input
-                    id="guests"
-                    type="number"
-                    name="travelers"
-                    min="1"
-                    placeholder="Number of travelers">
-
-            </div>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="message">Additional Information</label>
-
-            <textarea
-                id="message"
-                name="message"
-                rows="6"
-                placeholder="Tell us about your travel plans, preferences or questions"></textarea>
-
-        </div>
-
-
-        <button type="submit" class="btn">
-            Submit Booking Request →
-        </button>
-
-    </form>
-
-</section>
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-<section id="contact" class="section contact-section">
-
-    <div class="section-title">
-
-        <p class="eyebrow">GET IN TOUCH</p>
-
-        <h2>Contact Twinkle Tours</h2>
-
-        <p>
-            We would love to hear from you and help with your travel plans.
-        </p>
-
-    </div>
-
-    <div class="contact-grid">
-
-        <div class="contact-card">
-
-            <span class="contact-icon">📧</span>
-
-            <h3>Email</h3>
-
-            <a href="mailto:lumwachi03@gmail.com">
-                lumwachi03@gmail.com
-            </a>
-
-        </div>
-
-
-        <div class="contact-card">
-
-            <span class="contact-icon">📍</span>
-
-            <h3>Location</h3>
-
-            <p>
-                Nairobi, Kenya
-            </p>
-
-        </div>
-
-
-        <div class="contact-card">
-
-            <span class="contact-icon">💬</span>
-
-            <h3>WhatsApp</h3>
-
-            <a
-                href="https://wa.me/254700000000"
-                target="_blank"
-                rel="noopener">
-                Chat With Us
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     DISCLAIMER
-===================================================== -->
-<section class="disclaimer-section">
-
-    <div class="disclaimer">
-
-        <h3>Important Information</h3>
-
-        <p>
-            Twinkle Tours is currently obtaining its tourism licence.
-            We connect clients with registered and licensed tourism
-            companies for tour and travel services.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-<footer class="twinkle-footer">
-
-    <div class="footer-container">
-
-        <div class="footer-column">
-
-            <img
-                src="twinkle_logo_1.png"
-                alt="Twinkle Tours logo"
-                class="footer-logo">
-
-            <p>
-                Travel with us and us with you.
-            </p>
-
-            <p>
-                Explore Kenya. Discover East Africa.
-                Create unforgettable memories.
-            </p>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h3>Quick Links</h3>
-
-            <a href="#home">Home</a>
-            <a href="#destinations">Destinations</a>
-            <a href="#packages">Packages</a>
-            <a href="photos.html">Gallery</a>
-            <a href="videos.html">Videos</a>
-            <a href="#ebooks">E-Books</a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h3>Travel Services</h3>
-
-            <a href="#consultation">Travel Consultation</a>
-            <a href="#booking">Book a Trip</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact Us</a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h3>Contact</h3>
-
-            <a href="mailto:lumwachi03@gmail.com">
-                lumwachi03@gmail.com
-            </a>
-
-            <p>Nairobi, Kenya</p>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Twinkle Tours. All Rights Reserved.
-        </p>
-
-        <p>
-            Travel with us and us with you.
-        </p>
-
-    </div>
-
-</footer>
-
-
-<!-- =====================================================
-     WHATSAPP BUTTON
-===================================================== -->
-<a
-    href="https://wa.me/254700000000"
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chat with Twinkle Tours on WhatsApp">
-
-    💬
-
-</a>
-
-
-</body>
-</html>
+                    Experience the Kenyan coas
