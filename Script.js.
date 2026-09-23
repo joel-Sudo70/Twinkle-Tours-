@@ -476,3 +476,148 @@ function sendBookingToWhatsApp() {
 
     window.open(whatsappURL, "_blank");
 }
+
+/* =========================================================
+   TWINKLE TOURS - PACKAGE WHATSAPP BOOKING
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const packageButtons =
+        document.querySelectorAll(".package-btn");
+
+    const packageSelect =
+        document.getElementById("selectedPackage");
+
+    const bookingForm =
+        document.getElementById("packageBookingForm");
+
+
+    /* BOOK THIS PACKAGE BUTTONS */
+
+    packageButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const selectedPackage =
+                button.getAttribute("data-package");
+
+            if (packageSelect && selectedPackage) {
+
+                packageSelect.value = selectedPackage;
+
+            }
+
+        });
+
+    });
+
+
+    /* WHATSAPP APPLICATION */
+
+    if (bookingForm) {
+
+        bookingForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document.getElementById("customerName").value.trim();
+
+            const phone =
+                document.getElementById("customerPhone").value.trim();
+
+            const packageName =
+                document.getElementById("selectedPackage").value;
+
+            const travelDate =
+                document.getElementById("travelDate").value;
+
+            const travellers =
+                document.getElementById("travellers").value;
+
+            const message =
+                document.getElementById("bookingMessage").value.trim();
+
+
+            if (!name || !phone || !packageName) {
+
+                alert("Please enter your name, phone number and select a package.");
+
+                return;
+
+            }
+
+
+            let whatsappMessage =
+                "Hello Twinkle Tours,%0A%0A" +
+
+                "I would like to apply for the following package:%0A%0A" +
+
+                "Package: " +
+                encodeURIComponent(packageName) +
+
+                "%0A" +
+
+                "Name: " +
+                encodeURIComponent(name) +
+
+                "%0A" +
+
+                "Phone: " +
+                encodeURIComponent(phone);
+
+
+            if (travelDate) {
+
+                whatsappMessage +=
+                    "%0APreferred Travel Date: " +
+                    encodeURIComponent(travelDate);
+
+            }
+
+
+            if (travellers) {
+
+                whatsappMessage +=
+                    "%0ANumber of Travellers: " +
+                    encodeURIComponent(travellers);
+
+            }
+
+
+            if (message) {
+
+                whatsappMessage +=
+                    "%0AAdditional Message: " +
+                    encodeURIComponent(message);
+
+            }
+
+
+            whatsappMessage +=
+                "%0A%0APlease send me more information about this package. Thank you.";
+
+
+            const whatsappNumber =
+                "254713354736";
+
+
+            const whatsappURL =
+                "https://wa.me/" +
+                whatsappNumber +
+                "?text=" +
+                whatsappMessage;
+
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+        });
+
+    }
+
+});
