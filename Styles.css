@@ -1,41 +1,38 @@
 /* =========================================================
    TWINKLE TOURS
-   CLEAN PROFESSIONAL RESPONSIVE STYLES
+   CLEAN PROFESSIONAL RESPONSIVE DESIGN
    ========================================================= */
 
-/* =========================================================
-   1. DESIGN VARIABLES
-   ========================================================= */
+/* =========================
+   COLORS
+========================= */
 
 :root {
     --green: #075b43;
     --dark-green: #003d2d;
     --deep-green: #022f25;
-
     --gold: #d9a900;
     --bright-gold: #f4c430;
 
-    --white: #ffffff;
     --cream: #fbfaf6;
     --light: #f4f7f5;
-    --soft-green: #e9f5ef;
+    --white: #ffffff;
 
     --text: #173f35;
     --muted: #65766f;
-
     --border: #e2e9e5;
 
-    --shadow: 0 8px 25px rgba(0, 55, 40, 0.09);
-    --shadow-hover: 0 14px 32px rgba(0, 55, 40, 0.14);
+    --shadow: 0 10px 30px rgba(0, 45, 35, 0.10);
+    --shadow-hover: 0 16px 38px rgba(0, 45, 35, 0.16);
 
-    --radius: 14px;
+    --radius: 16px;
     --max-width: 1180px;
 }
 
 
-/* =========================================================
-   2. RESET
-   ========================================================= */
+/* =========================
+   RESET
+========================= */
 
 * {
     margin: 0;
@@ -45,7 +42,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 20px;
+    scroll-padding-top: 30px;
 }
 
 body {
@@ -84,29 +81,24 @@ section {
 
 
 /* =========================================================
-   3. HEADER
+   HEADER
    LOGO CENTERED ABOVE NAVIGATION
-   ========================================================= */
+========================================================= */
 
 .navbar {
     position: relative;
     z-index: 1000;
-
     width: 100%;
-
     background: var(--white);
-
     border-bottom: 1px solid var(--border);
-
-    box-shadow: 0 2px 14px rgba(0, 50, 35, 0.06);
+    box-shadow: 0 3px 18px rgba(0, 45, 35, 0.07);
 }
 
 
-/* ---------- CENTERED LOGO ---------- */
+/* LOGO AREA */
 
 .brand-area {
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,38 +108,30 @@ section {
 
 .brand {
     display: block;
-
     text-decoration: none;
-
-    line-height: 0;
 }
 
 .brand img {
     width: 155px;
     height: auto;
-
-    max-height: 78px;
-
+    max-height: 85px;
     object-fit: contain;
 }
 
 
-/* ---------- NAVIGATION ---------- */
+/* NAVIGATION */
 
 .main-nav {
     width: 100%;
     max-width: var(--max-width);
-
     margin: 0 auto;
 
-    padding: 5px 18px 13px;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
 
-    gap: 3px;
+    gap: 5px;
+    padding: 5px 18px 13px;
 
     flex-wrap: wrap;
 }
@@ -156,16 +140,13 @@ section {
     position: relative;
 
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
 
     min-height: 38px;
-
-    padding: 7px 10px;
+    padding: 7px 11px;
 
     color: var(--dark-green);
-
     text-decoration: none;
 
     font-size: 13px;
@@ -197,18 +178,13 @@ section {
 
     left: 10px;
     right: 10px;
-
     bottom: 1px;
 
     height: 2px;
 
     background: var(--gold);
-
-    border-radius: 2px;
+    border-radius: 5px;
 }
-
-
-/* ---------- BOOK NOW ---------- */
 
 .main-nav .book-now {
     margin-left: 7px;
@@ -216,7 +192,6 @@ section {
     padding: 9px 17px;
 
     color: var(--white);
-
     background: var(--green);
 
     border-radius: 999px;
@@ -224,84 +199,83 @@ section {
 
 .main-nav .book-now:hover {
     color: var(--white);
-
     background: var(--dark-green);
-
     transform: translateY(-1px);
-}
-
-.main-nav .book-now::after {
-    display: none;
 }
 
 
 /* =========================================================
-   4. HERO
-   ========================================================= */
+   HERO
+========================================================= */
 
 .hero {
     position: relative;
 
-    min-height: 560px;
+    min-height: 600px;
 
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    text-align: center;
 
     background:
         linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.66) 0%,
-            rgba(0, 0, 0, 0.44) 42%,
-            rgba(0, 0, 0, 0.10) 78%
+            rgba(15, 24, 18, 0.50),
+            rgba(15, 24, 18, 0.32)
         ),
         url("./elephant-safari-hero.png");
 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-}
-
-.overlay {
-    width: min(var(--max-width), 100%);
-
-    margin: 0 auto;
-
-    padding: 70px 30px;
 
     color: var(--white);
 }
 
+.overlay {
+    width: min(900px, 92%);
+
+    padding: 50px 25px;
+}
+
 .overlay > p:first-child {
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 
     color: var(--bright-gold);
 
     font-size: 14px;
     font-weight: 800;
-
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .overlay > p:nth-child(2) {
-    max-width: 650px;
+    max-width: 800px;
+    margin: 0 auto 30px;
 
-    margin-bottom: 28px;
+    font-size: 20px;
+    line-height: 1.7;
+}
 
-    font-size: clamp(26px, 3.4vw, 43px);
+.overlay::before {
+    content: "Discover Kenya Beyond Expectations";
 
-    line-height: 1.18;
+    display: block;
 
-    font-weight: 700;
+    margin-bottom: 18px;
+
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -1.5px;
 }
 
 
 /* =========================================================
-   5. GENERAL BUTTON
-   ========================================================= */
+   BUTTONS
+========================================================= */
 
 .btn {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
 
@@ -309,108 +283,100 @@ section {
 
     padding: 11px 21px;
 
-    border: 0;
-    border-radius: 8px;
+    background: var(--green);
+    color: var(--white);
 
-    background: var(--bright-gold);
-
-    color: var(--dark-green);
+    border: 2px solid var(--green);
+    border-radius: 999px;
 
     text-decoration: none;
 
-    font-weight: 800;
+    font-size: 14px;
+    font-weight: 700;
 
     cursor: pointer;
 
     transition:
         background 0.2s ease,
+        border-color 0.2s ease,
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
 .btn:hover {
-    background: var(--gold);
+    background: var(--dark-green);
+    border-color: var(--dark-green);
 
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 
-    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 8px 18px rgba(0, 61, 45, 0.18);
 }
 
 
 /* =========================================================
-   6. GENERAL SECTIONS
-   ========================================================= */
+   GENERAL SECTIONS
+========================================================= */
 
-.section,
-.media-preview,
-.ebooks-section,
-.consultation-section,
-.about-section,
-.contact-section,
-.booking-section {
-    padding: 72px 20px;
+.section {
+    width: min(var(--max-width), 92%);
+
+    margin: 0 auto;
+
+    padding: 85px 0;
 }
 
 .section-title {
-    width: 100%;
     max-width: 760px;
 
-    margin: 0 auto 38px;
+    margin: 0 auto 45px;
 
     text-align: center;
 }
 
-.eyebrow,
-.consultation-eyebrow,
-.about-eyebrow,
-.contact-eyebrow {
-    margin-bottom: 7px;
+.eyebrow {
+    margin-bottom: 9px;
 
     color: var(--gold);
 
     font-size: 12px;
     font-weight: 800;
 
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
 }
 
-.section-title h2,
-.section > h2,
-.booking-section > h2 {
-    margin-bottom: 10px;
+.section-title h2 {
+    margin-bottom: 13px;
 
     color: var(--dark-green);
 
-    font-size: clamp(26px, 3vw, 36px);
-
-    line-height: 1.2;
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.15;
 }
 
-.section-title > p:last-child,
-.section > p,
-.booking-section > p {
+.section-title > p:last-child {
     color: var(--muted);
 
-    font-size: 15px;
+    font-size: 16px;
 }
 
 
 /* =========================================================
-   7. PHOTO & VIDEO PREVIEWS
-   ========================================================= */
+   MEDIA PREVIEW
+========================================================= */
 
 .media-preview {
-    background: var(--white);
-}
+    width: min(var(--max-width), 92%);
 
-.media-preview + .media-preview {
-    padding-top: 25px;
+    margin: 0 auto;
+
+    padding: 70px 0;
 }
 
 .preview-card {
-    display: block;
+    width: min(760px, 100%);
 
-    width: min(820px, 100%);
+    display: block;
 
     margin: 0 auto;
 
@@ -419,7 +385,6 @@ section {
     background: var(--white);
 
     border: 1px solid var(--border);
-
     border-radius: var(--radius);
 
     box-shadow: var(--shadow);
@@ -432,63 +397,56 @@ section {
 }
 
 .preview-card:hover {
-    transform: translateY(-4px);
-
+    transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
 }
 
-.preview-card > img,
-.preview-card > video {
+.preview-card img,
+.preview-card video {
     width: 100%;
     height: 360px;
 
     object-fit: cover;
+
+    background: #111;
 }
 
 .preview-content {
-    padding: 19px 20px;
+    padding: 24px 26px;
 }
 
 .preview-content h3 {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 
     color: var(--dark-green);
 
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .preview-content p {
     color: var(--muted);
-
-    font-size: 14px;
 }
 
 
 /* =========================================================
-   8. CARD GRID
-   ========================================================= */
+   GENERAL CARDS
+========================================================= */
 
 .cards {
-    width: min(var(--max-width), 100%);
-
-    margin: 32px auto 0;
-
     display: grid;
 
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
 
-    gap: 22px;
+    gap: 25px;
 }
 
 .card {
-    min-width: 0;
-
     overflow: hidden;
 
     background: var(--white);
 
     border: 1px solid var(--border);
-
     border-radius: var(--radius);
 
     box-shadow: var(--shadow);
@@ -499,47 +457,116 @@ section {
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
 
     box-shadow: var(--shadow-hover);
 }
 
-
-/* =========================================================
-   9. SIMPLE TRUST CARDS
-   ========================================================= */
-
-.section > .cards .card:not(:has(.card-image)) {
+.card-content {
     padding: 25px;
 }
 
-.section > .cards .card:not(:has(.card-image)) h3 {
+.card-content h3 {
     margin-bottom: 8px;
 
     color: var(--dark-green);
 
-    font-size: 17px;
+    font-size: 20px;
 }
 
-.section > .cards .card:not(:has(.card-image)) p {
+.card-content p {
     color: var(--muted);
-
-    font-size: 14px;
 }
 
 
 /* =========================================================
-   10. PACKAGE CARDS
-   ========================================================= */
+   DESTINATIONS
+========================================================= */
+
+.destinations-section {
+    padding-top: 85px;
+}
+
+.destination-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.destination-card {
+    overflow: hidden;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+}
+
+.destination-card > div {
+    padding: 22px;
+}
+
+.destination-card h3 {
+    margin-bottom: 7px;
+
+    color: var(--dark-green);
+
+    font-size: 21px;
+}
+
+.destination-card p {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   PACKAGE CARDS
+========================================================= */
+
+.packages-section {
+    width: min(1250px, 94%);
+}
+
+.package-grid {
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+}
+
+.package-card {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
 
 .card-image {
     position: relative;
 
-    height: 225px;
+    width: 100%;
+    height: 245px;
 
     overflow: hidden;
-
-    background: var(--soft-green);
 }
 
 .card-image img {
@@ -548,51 +575,43 @@ section {
 
     object-fit: cover;
 
-    transition: transform 0.35s ease;
+    transition: transform 0.45s ease;
 }
 
 .card:hover .card-image img {
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
 
 .package-badge {
     position: absolute;
 
-    top: 13px;
-    left: 13px;
+    top: 15px;
+    left: 15px;
 
-    padding: 5px 9px;
+    padding: 6px 11px;
 
-    background: rgba(0, 61, 45, 0.94);
-
+    background: rgba(0, 61, 45, 0.92);
     color: var(--white);
 
-    border-radius: 5px;
+    border-radius: 999px;
 
     font-size: 10px;
     font-weight: 800;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 0.7px;
 }
 
-.card-content {
-    padding: 20px;
-}
+.package-card .card-content {
+    display: flex;
+    flex-direction: column;
 
-.card-content h3 {
-    margin-bottom: 9px;
-
-    color: var(--dark-green);
-
-    font-size: 19px;
-
-    line-height: 1.25;
+    flex: 1;
 }
 
 .package-description {
-    min-height: 70px;
+    flex: 1;
 
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
     color: var(--muted);
 
@@ -601,13 +620,14 @@ section {
 
 .package-details {
     display: flex;
-
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
-    gap: 10px;
+    gap: 15px;
 
-    padding-top: 13px;
+    padding: 15px 0;
+
+    margin-top: auto;
 
     border-top: 1px solid var(--border);
 }
@@ -615,13 +635,13 @@ section {
 .package-details span {
     color: var(--muted);
 
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .package-details strong {
     color: var(--green);
 
-    font-size: 16px;
+    font-size: 17px;
 
     white-space: nowrap;
 }
@@ -629,755 +649,662 @@ section {
 .package-btn {
     width: 100%;
 
-    margin-top: 15px;
-
-    font-size: 13px;
+    margin-top: 10px;
 }
 
 
 /* =========================================================
-   11. E-BOOKS
-   ========================================================= */
+   E-BOOKS
+========================================================= */
 
 .ebooks-section {
-    background: var(--cream);
+    max-width: var(--max-width);
 }
 
-.ebook-store {
-    width: min(var(--max-width), 100%);
-
-    margin: 0 auto;
-
+.ebook-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
-    gap: 22px;
+    gap: 30px;
 }
 
 .ebook-card {
+    display: grid;
+
+    grid-template-columns: 190px 1fr;
+
     overflow: hidden;
 
     background: var(--white);
 
     border: 1px solid var(--border);
-
     border-radius: var(--radius);
 
     box-shadow: var(--shadow);
 }
 
-.ebook-cover {
-    position: relative;
+.ebook-image {
+    min-height: 280px;
 
-    height: 300px;
-
-    background: #eef3ef;
+    background: var(--light);
 }
 
-.ebook-cover img {
+.ebook-image img {
     width: 100%;
     height: 100%;
 
     object-fit: cover;
 }
 
-.ebook-badge {
-    position: absolute;
+.ebook-placeholder {
+    min-height: 280px;
 
-    top: 12px;
-    left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    padding: 5px 9px;
+    padding: 20px;
 
-    background: var(--gold);
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--dark-green),
+            var(--green)
+        );
+
+    color: var(--white);
+
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.ebook-content {
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ebook-label {
+    margin-bottom: 9px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.ebook-content h3 {
+    margin-bottom: 10px;
 
     color: var(--dark-green);
 
-    border-radius: 5px;
+    font-size: 23px;
+}
 
-    font-size: 10px;
+.ebook-content p {
+    margin-bottom: 18px;
+
+    color: var(--muted);
+}
+
+.ebook-price {
+    margin-bottom: 18px;
+
+    color: var(--green);
+
+    font-size: 23px;
     font-weight: 800;
 }
 
-.ebook-placeholder {
-    display: flex;
 
-    align-items: center;
-    justify-content: center;
+/* =========================================================
+   CONSULTATION
+========================================================= */
+
+.consultation-section {
+    max-width: var(--max-width);
+}
+
+.consultation-box {
+    padding: 55px 35px;
+
+    text-align: center;
 
     background:
         linear-gradient(
             135deg,
-            #e9f5ef,
-            #dceae3
+            #f1f7f3,
+            #fbfaf6
         );
+
+    border: 1px solid var(--border);
+    border-radius: 22px;
 }
 
-.ebook-placeholder span {
+.consultation-box .section-title {
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section {
+    max-width: var(--max-width);
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.6fr 0.8fr;
+
+    gap: 45px;
+
+    align-items: stretch;
+}
+
+.about-content,
+.about-highlight {
+    padding: 35px;
+
+    border-radius: var(--radius);
+}
+
+.about-content {
+    background: var(--light);
+
+    border: 1px solid var(--border);
+}
+
+.about-content h3 {
+    margin-bottom: 10px;
+
     color: var(--dark-green);
 
-    font-weight: 800;
-
-    letter-spacing: 1px;
+    font-size: 23px;
 }
 
-.ebook-info {
-    padding: 20px;
+.about-content h3:not(:first-child) {
+    margin-top: 28px;
 }
 
-.ebook-category {
+.about-content p {
+    margin-bottom: 14px;
+
+    color: var(--muted);
+}
+
+.about-highlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: var(--dark-green);
+
+    color: var(--white);
+}
+
+.about-highlight h3 {
+    margin-bottom: 12px;
+
+    color: var(--bright-gold);
+
+    font-size: 25px;
+}
+
+.about-highlight p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FEEDBACK
+========================================================= */
+
+.feedback-section {
+    max-width: 900px;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    padding: 35px;
+
+    background: var(--light);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    background: var(--white);
+
+    border: 1px solid #d5dfda;
+    border-radius: 9px;
+
+    color: var(--text);
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 0 3px rgba(7, 91, 67, 0.08);
+}
+
+.feedback-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+
+/* =========================================================
+   BOOKING
+========================================================= */
+
+.booking-section {
+    max-width: 1050px;
+}
+
+.booking-form {
+    padding: 38px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
     margin-bottom: 7px;
 
-    color: var(--gold);
+    color: var(--dark-green);
 
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 700;
 }
 
-.ebook-info h3 {
-    margin-bottom: 8px;
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    background: var(--white);
+
+    border: 1px solid #d5dfda;
+    border-radius: 9px;
+
+    color: var(--text);
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 0 3px rgba(7, 91, 67, 0.08);
+}
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+.booking-form > .btn {
+    width: 100%;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    max-width: var(--max-width);
+}
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+.contact-card {
+    padding: 30px 25px;
+
+    text-align: center;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.contact-icon {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 30px;
+}
+
+.contact-card h3 {
+    margin-bottom: 7px;
+
+    color: var(--dark-green);
+}
+
+.contact-card p,
+.contact-card a {
+    color: var(--muted);
+
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+}
+
+.contact-card a:hover {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   DISCLAIMER
+========================================================= */
+
+.disclaimer-section {
+    width: 100%;
+
+    padding: 28px 5%;
+
+    background: #f6f8f6;
+}
+
+.disclaimer {
+    width: min(1000px, 100%);
+
+    margin: 0 auto;
+
+    padding: 20px 25px;
+
+    border-left: 4px solid var(--gold);
+
+    background: var(--white);
+}
+
+.disclaimer h3 {
+    margin-bottom: 6px;
 
     color: var(--dark-green);
 
-    font-size: 20px;
+    font-size: 17px;
 }
 
-.ebook-info > p:not(.ebook-category):not(.ebook-secure):not(.ebook-download) {
+.disclaimer p {
     color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.twinkle-footer {
+    width: 100%;
+
+    background: #082f27;
+
+    color: #eaf3ef;
+}
+
+.footer-container {
+    width: min(var(--max-width), 92%);
+
+    margin: 0 auto;
+
+    padding: 65px 0 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr 1fr;
+
+    gap: 45px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    width: 145px;
+    height: auto;
+
+    margin-bottom: 18px;
+
+    background: var(--white);
+
+    border-radius: 8px;
+}
+
+.footer-column > p {
+    max-width: 280px;
+
+    margin-bottom: 10px;
+
+    color: #b9ccc5;
 
     font-size: 14px;
 }
 
-.ebook-bottom {
-    margin-top: 18px;
+.footer-column h3 {
+    margin-bottom: 17px;
+
+    color: var(--white);
+
+    font-size: 17px;
 }
 
-.ebook-purchase {
+.footer-column a {
+    margin-bottom: 9px;
+
+    color: #b9ccc5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--bright-gold);
+}
+
+.footer-column > p:last-child {
+    margin-bottom: 0;
+}
+
+
+.footer-bottom {
+    width: min(var(--max-width), 92%);
+
+    margin: 0 auto;
+
+    padding: 22px 0;
+
     display: flex;
 
     align-items: center;
     justify-content: space-between;
 
-    gap: 10px;
-}
+    gap: 20px;
 
-.ebook-purchase strong,
-.ebook-bottom > strong {
-    color: var(--green);
+    border-top: 1px solid rgba(255,255,255,0.12);
 
-    font-size: 20px;
-}
-
-.ebook-btn {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 9px 14px;
-
-    border: 0;
-
-    border-radius: 7px;
-
-    background: var(--green);
-
-    color: var(--white);
-
-    text-decoration: none;
+    color: #9fb5ad;
 
     font-size: 12px;
-    font-weight: 800;
-
-    cursor: pointer;
-
-    transition: background 0.2s ease;
-}
-
-.ebook-btn:hover {
-    background: var(--dark-green);
-}
-
-.ebook-secure,
-.ebook-download {
-    margin-top: 9px;
-
-    color: var(--muted);
-
-    font-size: 11px;
 }
 
 
 /* =========================================================
-   12. CONSULTATION
-   ========================================================= */
+   WHATSAPP FLOATING BUTTON
+========================================================= */
 
-.consultation-section {
-    background: var(--white);
-}
+.whatsapp-float {
+    position: fixed;
 
-.consultation-container {
-    width: min(var(--max-width), 100%);
+    right: 22px;
+    bottom: 22px;
 
-    margin: 0 auto;
+    z-index: 1500;
 
-    display: grid;
-
-    grid-template-columns: 0.9fr 1.1fr;
-
-    gap: 45px;
-
-    align-items: center;
-}
-
-.consultant-photo {
-    overflow: hidden;
-
-    border-radius: var(--radius);
-
-    box-shadow: var(--shadow);
-}
-
-.consultant-photo img {
-    width: 100%;
-    height: 500px;
-
-    object-fit: cover;
-}
-
-.consultation-content h2 {
-    margin-bottom: 12px;
-
-    color: var(--dark-green);
-
-    font-size: clamp(27px, 3vw, 37px);
-
-    line-height: 1.2;
-}
-
-.consultation-intro {
-    margin-bottom: 25px;
-
-    color: var(--muted);
-}
-
-.consultation-features {
-    display: grid;
-
-    gap: 14px;
-}
-
-.consultation-item {
-    display: flex;
-
-    gap: 12px;
-
-    align-items: flex-start;
-}
-
-.consultation-item > span {
-    flex: 0 0 auto;
-
-    width: 25px;
-    height: 25px;
+    width: 58px;
+    height: 58px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
-
-    background: var(--soft-green);
-
-    color: var(--green);
-
-    border-radius: 50%;
-
-    font-weight: 800;
-}
-
-.consultation-item h3 {
-    margin-bottom: 2px;
-
-    color: var(--dark-green);
-
-    font-size: 15px;
-}
-
-.consultation-item p {
-    color: var(--muted);
-
-    font-size: 13px;
-}
-
-.consultation-price {
-    display: flex;
-
-    align-items: baseline;
-
-    gap: 9px;
-
-    margin: 25px 0 17px;
-}
-
-.consultation-price span {
-    color: var(--green);
-
-    font-size: 30px;
-
-    font-weight: 800;
-}
-
-.consultation-price small {
-    color: var(--muted);
-}
-
-.consultation-button,
-.about-button {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 11px 19px;
-
-    background: var(--green);
-
-    color: var(--white);
-
-    border-radius: 8px;
-
-    text-decoration: none;
-
-    font-size: 13px;
-
-    font-weight: 800;
-
-    transition: background 0.2s ease;
-}
-
-.consultation-button:hover,
-.about-button:hover {
-    background: var(--dark-green);
-}
-
-
-/* =========================================================
-   13. ABOUT
-   ========================================================= */
-
-.about-section {
-    background: var(--light);
-}
-
-.about-container {
-    width: min(var(--max-width), 100%);
-
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns: 1.2fr 0.8fr;
-
-    gap: 45px;
-
-    align-items: start;
-}
-
-.about-content h2 {
-    margin-bottom: 15px;
-
-    color: var(--dark-green);
-
-    font-size: clamp(27px, 3vw, 37px);
-
-    line-height: 1.2;
-}
-
-.about-content > p {
-    margin-bottom: 14px;
-
-    color: var(--muted);
-
-    font-size: 14px;
-}
-
-.about-intro {
-    color: var(--text) !important;
-
-    font-weight: 600;
-}
-
-.about-highlights {
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 15px;
-
-    margin-top: 25px;
-}
-
-.about-highlight {
-    display: flex;
-
-    gap: 11px;
-
-    padding: 16px;
-
-    background: var(--white);
-
-    border: 1px solid var(--border);
-
-    border-radius: 10px;
-}
-
-.about-icon {
-    font-size: 24px;
-}
-
-.about-highlight h3 {
-    margin-bottom: 3px;
-
-    color: var(--dark-green);
-
-    font-size: 15px;
-}
-
-.about-highlight p {
-    color: var(--muted);
-
-    font-size: 12px;
-}
-
-.about-values {
-    margin-top: 25px;
-}
-
-.about-values h3 {
-    margin-bottom: 10px;
-
-    color: var(--dark-green);
-}
-
-.values-list {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-}
-
-.values-list span {
-    padding: 7px 10px;
-
-    background: var(--white);
-
-    border: 1px solid var(--border);
-
-    border-radius: 999px;
-
-    color: var(--muted);
-
-    font-size: 12px;
-}
-
-.about-card {
-    padding: 35px 28px;
-
-    text-align: center;
-
-    background: var(--dark-green);
-
-    color: var(--white);
-
-    border-radius: var(--radius);
-
-    box-shadow: var(--shadow);
-}
-
-.about-card-logo {
-    width: 100px;
-    height: 100px;
-
-    margin: 0 auto 20px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    background: var(--white);
-
-    border-radius: 50%;
-}
-
-.about-card-logo img {
-    width: 80px;
-}
-
-.about-card h3 {
-    margin-bottom: 10px;
-
-    font-size: 22px;
-}
-
-.about-card p {
-    color: rgba(255, 255, 255, 0.82);
-
-    font-size: 14px;
-}
-
-.about-card-line {
-    width: 50px;
-    height: 2px;
-
-    margin: 20px auto;
-
-    background: var(--bright-gold);
-}
-
-.about-tagline {
-    color: var(--bright-gold) !important;
-
-    font-weight: 700;
-}
-
-.about-button {
-    margin-top: 20px;
-
-    background: var(--bright-gold);
-
-    color: var(--dark-green);
-}
-
-.about-button:hover {
-    background: var(--gold);
-}
-
-.about-disclaimer {
-    width: min(var(--max-width), 100%);
-
-    margin: 35px auto 0;
-
-    padding: 18px;
-
-    background: #fffdf4;
-
-    border-left: 4px solid var(--gold);
-
-    border-radius: 8px;
-}
-
-.about-disclaimer strong {
-    display: block;
-
-    margin-bottom: 5px;
-
-    color: var(--dark-green);
-}
-
-.about-disclaimer p {
-    color: var(--muted);
-
-    font-size: 13px;
-}
-
-
-/* =========================================================
-   14. FEEDBACK
-   ========================================================= */
-
-#feedback {
-    background: var(--white);
-}
-
-#feedbackForm {
-    width: min(650px, 100%);
-
-    margin: 25px auto 0;
-}
-
-#feedbackForm label {
-    display: block;
-
-    margin: 12px 0 6px;
-
-    color: var(--dark-green);
-
-    font-size: 13px;
-
-    font-weight: 700;
-}
-
-#feedbackForm input,
-#feedbackForm textarea {
-    width: 100%;
-
-    padding: 11px 12px;
-
-    border: 1px solid var(--border);
-
-    border-radius: 8px;
-
-    outline: none;
-
-    background: var(--white);
-
-    color: var(--text);
-}
-
-#feedbackForm textarea {
-    resize: vertical;
-}
-
-
-/* =========================================================
-   15. BOOKING
-   ========================================================= */
-
-.booking-section {
-    background: var(--light);
-}
-
-.booking-section > h2,
-.booking-section > p {
-    text-align: center;
-}
-
-.booking-form {
-    width: min(720px, 100%);
-
-    margin: 30px auto 0;
-
-    padding: 28px;
-
-    background: var(--white);
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    box-shadow: var(--shadow);
-}
-
-.booking-form label {
-    display: block;
-
-    margin: 13px 0 6px;
-
-    color: var(--dark-green);
-
-    font-size: 13px;
-
-    font-weight: 700;
-}
-
-.booking-form input,
-.booking-form select,
-.booking-form textarea {
-    width: 100%;
-
-    padding: 11px 12px;
-
-    border: 1px solid var(--border);
-
-    border-radius: 8px;
-
-    background: var(--white);
-
-    color: var(--text);
-
-    outline: none;
-}
-
-.booking-form textarea {
-    resize: vertical;
-}
-
-.booking-form .btn,
-.booking-form .whatsapp-btn {
-    width: 100%;
-
-    margin-top: 14px;
-}
-
-.whatsapp-btn {
-    min-height: 44px;
-
-    padding: 10px 18px;
-
-    border: 0;
-
-    border-radius: 8px;
 
     background: #25d366;
-
     color: var(--white);
 
-    font-weight: 800;
+    border-radius: 50%;
 
-    cursor: pointer;
+    text-decoration: none;
 
-    transition: opacity 0.2s ease;
+    font-size: 27px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.whatsapp-btn:hover {
-    opacity: 0.9;
+.whatsapp-float:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.25);
 }
 
 
 /* =========================================================
-   16. CONTACT
-   ========================================================= */
+   TABLET
+========================================================= */
 
-.contact-section {
-    background: var(--white);
+@media (max-width: 1000px) {
+
+    .cards,
+    .package-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .destination-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .ebook-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
 }
 
-.contact-container {
-    width: min(var(--max-width), 100%);
 
-    margin: 0 auto;
+/* =========================================================
+   MOBILE
+========================================================= */
 
-    display: grid;
+@media (max-width: 700px) {
 
-    grid-template-columns: 1fr 0.85fr;
+    .brand-area {
+        padding: 12px 15px 7px;
+    }
 
-    gap: 45px;
+    .brand img {
+        width: 130px;
+        max-height: 70px;
+    }
 
-    align-items: start;
-}
+    .main-nav {
+        gap: 2px;
 
-.contact-info h2 {
-    margin-bottom: 12px;
+        padding: 4px 8px 10px;
+    }
 
-    color: var(--dark-green);
-
-    font-size: clamp(27px, 3vw, 37px);
-
-    line-height: 1.2;
-}
-
-.contact-intro {
-    max-width: 600px;
-
-    margin-bottom: 25px;
-
-    color: var(--muted);
-}
-
-.contact-details {
-    display: grid;
-
-    gap: 15px;
-}
-
-.contact-item {
-    display: flex;
-
-    gap: 13px;
-
-    align-i
+   
