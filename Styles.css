@@ -2736,3 +2736,188 @@ section {
     }
 
 }
+
+/* =========================================================
+   PACKAGE BOOKING / WHATSAPP APPLICATION
+   ========================================================= */
+
+.booking-section {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.booking-box {
+    background: #ffffff;
+    border: 1px solid #dfe7e3;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 12px 30px rgba(23, 63, 53, 0.08);
+}
+
+.booking-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 28px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e5ebe8;
+}
+
+.booking-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #e8f8ef;
+    color: #25d366;
+    font-size: 23px;
+}
+
+.booking-heading h3 {
+    margin: 0 0 5px;
+    color: #173f35;
+    font-size: 20px;
+}
+
+.booking-heading p {
+    margin: 0;
+    color: #65766f;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.package-booking-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.booking-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.booking-field-full {
+    grid-column: 1 / -1;
+}
+
+.booking-field label {
+    color: #173f35;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.booking-field input,
+.booking-field select,
+.booking-field textarea {
+    width: 100%;
+    padding: 12px 13px;
+
+    border: 1px solid #d9e2de;
+    border-radius: 8px;
+
+    background: #fbfcfb;
+    color: #173f35;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.booking-field input:focus,
+.booking-field select:focus,
+.booking-field textarea:focus {
+    border-color: #075b43;
+    box-shadow: 0 0 0 3px rgba(7, 91, 67, 0.08);
+}
+
+.booking-field textarea {
+    resize: vertical;
+}
+
+.booking-submit {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.whatsapp-booking-btn {
+    width: 100%;
+    max-width: 360px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 14px 22px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #25d366;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.whatsapp-booking-btn:hover {
+    background: #1fb957;
+    transform: translateY(-2px);
+}
+
+.booking-submit p {
+    margin: 10px 0 0;
+    color: #65766f;
+    font-size: 10px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .booking-box {
+        padding: 22px 18px;
+        border-radius: 15px;
+    }
+
+    .booking-heading {
+        align-items: flex-start;
+    }
+
+    .booking-heading h3 {
+        font-size: 18px;
+    }
+
+    .package-booking-form {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .booking-field-full {
+        grid-column: auto;
+    }
+
+    .booking-submit {
+        grid-column: auto;
+    }
+
+    .whatsapp-booking-btn {
+        max-width: none;
+    }
+
+}
