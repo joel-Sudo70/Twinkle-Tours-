@@ -1853,3 +1853,26 @@ section {
         padding: 20px;
     }
 }
+
+/* CONSULTATION PURCHASE PRICE */
+
+.consultation-purchase-price {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    margin: 18px 0 22px;
+}
+
+.consultation-purchase-price strong {
+    color: #075b43;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.consultation-purchase-price span {
+    color: #65766f;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
