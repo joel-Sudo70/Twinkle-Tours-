@@ -1,36 +1,26 @@
 /* =========================================================
    TWINKLE TOURS
-   CLEAN PROFESSIONAL TRAVEL WEBSITE
-   Built to match the current index.html
-   PC • TABLET • MOBILE
-========================================================= */
-
-
-/* =========================================================
-   1. VARIABLES
-========================================================= */
+   CLEAN PROFESSIONAL RESPONSIVE STYLES
+   ========================================================= */
 
 :root {
     --green: #075b43;
     --dark-green: #003d2d;
-    --light: #e9f5ef;
-    --cream: #f8f6ef;
-    --gold: #f4c430;
-    --dark-gold: #d9a900;
+    --deep-green: #022f25;
+    --gold: #d9a900;
+    --bright-gold: #f4c430;
+    --cream: #fbfaf6;
+    --light: #f4f7f5;
     --white: #ffffff;
     --text: #173f35;
     --muted: #65766f;
-    --border: #dfe8e3;
-
-    --max-width: 1200px;
-    --radius: 12px;
-    --shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    --border: #e4ebe7;
+    --shadow: 0 8px 25px rgba(0, 55, 40, 0.10);
+    --radius: 14px;
+    --max-width: 1180px;
 }
 
-
-/* =========================================================
-   2. RESET
-========================================================= */
+/* ================= RESET ================= */
 
 * {
     margin: 0;
@@ -40,48 +30,221 @@
 
 html {
     scroll-behavior: smooth;
-    width: 100%;
+    scroll-padding-top: 110px;
 }
 
 body {
-    width: 100%;
-    min-width: 0;
-    margin: 0;
-    padding: 0;
-
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f8f5;
+    background: var(--white);
     color: var(--text);
     line-height: 1.6;
-
     overflow-x: hidden;
 }
 
 img,
 video {
-    display: block;
     max-width: 100%;
-}
-
-button,
-input,
-select,
-textarea {
-    font-family: inherit;
+    display: block;
 }
 
 a {
     color: inherit;
 }
 
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 section {
     width: 100%;
 }
 
+/* ================= HEADER ================= */
 
-/* =========================================================
-   3. GENERAL SECTIONS
-========================================================= */
+.navbar {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    background: var(--white);
+    border-bottom: 1px solid #e8eee9;
+    box-shadow: 0 2px 12px rgba(0, 50, 35, 0.06);
+}
+
+.brand-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px 8px;
+}
+
+.brand {
+    display: block;
+    text-decoration: none;
+}
+
+.brand img {
+    width: 150px;
+    height: auto;
+    max-height: 76px;
+    object-fit: contain;
+}
+
+/* ================= NAVIGATION ================= */
+
+.main-nav {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 4px 18px 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+    padding: 7px 11px;
+
+    color: var(--dark-green);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+
+    white-space: nowrap;
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--gold);
+    background: #f8faf8;
+}
+
+.main-nav a.active {
+    color: var(--gold);
+}
+
+.main-nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 1px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 2px;
+}
+
+.main-nav .book-now {
+    margin-left: 7px;
+    padding: 9px 16px;
+    color: var(--white);
+    background: var(--green);
+    border-radius: 999px;
+}
+
+.main-nav .book-now:hover {
+    color: var(--white);
+    background: var(--dark-green);
+}
+
+.main-nav .book-now::after {
+    display: none;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.64) 0%,
+            rgba(0, 0, 0, 0.43) 42%,
+            rgba(0, 0, 0, 0.08) 78%
+        ),
+        url("./elephant-safari-hero.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    padding: 70px 30px;
+
+    color: var(--white);
+}
+
+.overlay > p:first-child {
+    margin-bottom: 14px;
+
+    color: var(--bright-gold);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.overlay > p:nth-child(2) {
+    max-width: 610px;
+    margin-bottom: 28px;
+
+    font-size: clamp(22px, 3vw, 38px);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+    padding: 11px 21px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: var(--bright-gold);
+    color: #173f35;
+
+    text-decoration: none;
+    font-weight: 800;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background: var(--gold);
+    transform: translateY(-1px);
+}
+
+/* ================= GENERAL SECTIONS ================= */
 
 .section,
 .media-preview,
@@ -93,7 +256,7 @@ section {
 }
 
 .section-title {
-    width: min(760px, 100%);
+    max-width: 760px;
     margin: 0 auto 36px;
     text-align: center;
 }
@@ -110,340 +273,58 @@ section {
     letter-spacing: 2px;
 }
 
-.section-title h2 {
-    margin-bottom: 10px;
-
+.section-title h2,
+.section > h2,
+.booking-section > h2 {
     color: var(--dark-green);
     font-size: clamp(26px, 3vw, 36px);
     line-height: 1.2;
+    margin-bottom: 10px;
 }
 
-.section-title > p:last-child {
+.section-title > p:last-child,
+.section > p,
+.booking-section > p {
     color: var(--muted);
     font-size: 15px;
 }
 
+/* ================= MEDIA PREVIEWS ================= */
 
-/* =========================================================
-   4. HEADER
-========================================================= */
-
-.navbar {
-    position: relative;
-    z-index: 1000;
-
-    width: 100%;
-
+.media-preview {
     background: var(--white);
-    border-bottom: 1px solid var(--border);
-
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 }
 
-.brand-area {
-    display: flex;
-    align-items: center;
+.media-preview + .media-preview {
+    padding-top: 20px;
 }
-
-.brand {
-    display: block;
-    text-decoration: none;
-}
-
-.brand img {
-    display: block;
-    width: auto;
-    height: 58px;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 25px;
-
-    padding: 10px max(20px, calc((100% - 1200px) / 2));
-}
-
-.main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    flex-wrap: wrap;
-    gap: 17px;
-}
-
-.main-nav a {
-    position: relative;
-
-    color: var(--text);
-    text-decoration: none;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    white-space: nowrap;
-
-    transition: color 0.2s ease;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    color: var(--green);
-}
-
-.main-nav a:not(.book-now)::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-
-    width: 0;
-    height: 2px;
-
-    background: var(--gold);
-
-    transition: width 0.2s ease;
-}
-
-.main-nav a:not(.book-now):hover::after,
-.main-nav a.active::after {
-    width: 100%;
-}
-
-.main-nav .book-now {
-    padding: 9px 15px;
-
-    background: var(--green);
-    color: var(--white);
-
-    border-radius: 7px;
-}
-
-.main-nav .book-now:hover {
-    background: var(--dark-green);
-    color: var(--white);
-}
-
-
-/* =========================================================
-   5. HERO
-========================================================= */
-
-.hero {
-    position: relative;
-
-    width: 100%;
-    min-height: 620px;
-
-    display: flex;
-    align-items: center;
-
-    background:
-        linear-gradient(
-            rgba(20, 20, 15, 0.52),
-            rgba(20, 20, 15, 0.25)
-        ),
-        url("./elephant-safari-hero.png");
-
-    background-size: cover;
-    background-position: center;
-}
-
-.overlay {
-    width: min(1200px, calc(100% - 40px));
-    margin: 0 auto;
-
-    color: var(--white);
-}
-
-.overlay p:first-child {
-    margin-bottom: 18px;
-
-    color: var(--gold);
-
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-.overlay p:nth-child(2) {
-    max-width: 760px;
-    margin-bottom: 28px;
-
-    color: var(--white);
-
-    font-size: clamp(28px, 4.5vw, 55px);
-    font-weight: 700;
-    line-height: 1.08;
-
-    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.35);
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 44px;
-
-    padding: 11px 20px;
-
-    border: 0;
-    border-radius: 8px;
-
-    background: var(--green);
-    color: var(--white);
-
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 800;
-
-    cursor: pointer;
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
-}
-
-.btn:hover {
-    background: var(--dark-green);
-    transform: translateY(-1px);
-}
-
-
-/* =========================================================
-   6. PHOTO PREVIEW
-========================================================= */
-
-.photo-preview-grid {
-    width: min(var(--max-width), 100%);
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 18px;
-}
-
-.photo-preview-card {
-    position: relative;
-
-    display: block;
-
-    overflow: hidden;
-
-    background: var(--white);
-
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-
-    box-shadow: var(--shadow);
-
-    text-decoration: none;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.photo-preview-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
-}
-
-.photo-preview-card img {
-    width: 100%;
-    height: 230px;
-
-    object-fit: cover;
-
-    transition: transform 0.35s ease;
-}
-
-.photo-preview-card:hover img {
-    transform: scale(1.04);
-}
-
-.photo-preview-overlay {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    padding: 45px 16px 16px;
-
-    background: linear-gradient(
-        transparent,
-        rgba(0, 0, 0, 0.78)
-    );
-
-    color: var(--white);
-}
-
-.photo-preview-overlay span {
-    display: block;
-
-    margin-bottom: 3px;
-
-    color: var(--gold);
-
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-.photo-preview-overlay h3 {
-    color: var(--white);
-    font-size: 18px;
-}
-
-.photo-preview-action {
-    margin-top: 28px;
-    text-align: center;
-}
-
-
-/* =========================================================
-   7. VIDEO PREVIEW
-========================================================= */
 
 .preview-card {
-    display: block;
-
     width: min(820px, 100%);
     margin: 0 auto;
 
-    overflow: hidden;
+    display: block;
 
     background: var(--white);
-
     border: 1px solid var(--border);
     border-radius: var(--radius);
-
-    box-shadow: var(--shadow);
+    overflow: hidden;
 
     text-decoration: none;
+    box-shadow: var(--shadow);
 
-    transition: transform 0.2s ease;
+    transition: 0.2s ease;
 }
 
 .preview-card:hover {
     transform: translateY(-3px);
 }
 
+.preview-card > img,
 .preview-card > video {
     width: 100%;
     height: 360px;
-
     object-fit: cover;
-
-    background: #111;
 }
 
 .preview-content {
@@ -452,7 +333,6 @@ section {
 
 .preview-content h3 {
     margin-bottom: 4px;
-
     color: var(--dark-green);
     font-size: 20px;
 }
@@ -462,10 +342,7 @@ section {
     font-size: 14px;
 }
 
-
-/* =========================================================
-   8. TRUST / PACKAGE CARDS
-========================================================= */
+/* ================= TRUST CARDS ================= */
 
 .cards {
     width: min(var(--max-width), 100%);
@@ -473,20 +350,15 @@ section {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     gap: 20px;
 }
 
 .card {
     min-width: 0;
-
-    overflow: hidden;
-
     background: var(--white);
-
     border: 1px solid var(--border);
     border-radius: var(--radius);
-
+    overflow: hidden;
     box-shadow: var(--shadow);
 }
 
@@ -496,7 +368,6 @@ section {
 
 .section > .cards .card:not(:has(.card-image)) h3 {
     margin-bottom: 7px;
-
     color: var(--dark-green);
     font-size: 17px;
 }
@@ -506,46 +377,31 @@ section {
     font-size: 14px;
 }
 
-
-/* =========================================================
-   9. PACKAGE CARD IMAGES
-========================================================= */
+/* ================= PACKAGE CARDS ================= */
 
 .card-image {
     position: relative;
-
-    width: 100%;
     height: 220px;
-
     overflow: hidden;
 }
 
 .card-image img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
-    transition: transform 0.35s ease;
-}
-
-.card:hover .card-image img {
-    transform: scale(1.03);
 }
 
 .package-badge {
     position: absolute;
-
     top: 13px;
     left: 13px;
 
     padding: 5px 9px;
 
-    background: rgba(0, 61, 45, 0.94);
+    background: var(--dark-green);
     color: var(--white);
 
     border-radius: 5px;
-
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 0.5px;
@@ -556,12 +412,10 @@ section {
 }
 
 .card-content h3 {
-    margin-bottom: 9px;
-
     color: var(--dark-green);
-
     font-size: 19px;
     line-height: 1.25;
+    margin-bottom: 9px;
 }
 
 .package-description {
@@ -569,19 +423,16 @@ section {
     margin-bottom: 15px;
 
     color: var(--muted);
-
     font-size: 14px;
 }
 
 .package-details {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
+    align-items: center;
     gap: 10px;
 
     padding-top: 13px;
-
     border-top: 1px solid var(--border);
 }
 
@@ -592,77 +443,77 @@ section {
 
 .package-details strong {
     color: var(--green);
-
     font-size: 16px;
-
     white-space: nowrap;
 }
 
 .package-btn {
     width: 100%;
     margin-top: 15px;
+    font-size: 13px;
 }
 
-
-/* =========================================================
-   10. E-BOOKS
-========================================================= */
+/* ================= E-BOOKS ================= */
 
 .ebooks-section {
     background: var(--cream);
 }
 
 .ebook-store {
-    width: min(1000px, 100%);
+    width: min(var(--max-width), 100%);
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
 
 .ebook-card {
-    overflow: hidden;
-
     background: var(--white);
-
     border: 1px solid var(--border);
     border-radius: var(--radius);
-
+    overflow: hidden;
     box-shadow: var(--shadow);
 }
 
 .ebook-cover {
     position: relative;
-
-    height: 320px;
-
+    height: 300px;
     background: #eef3ef;
 }
 
 .ebook-cover img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
 .ebook-badge {
     position: absolute;
-
     top: 12px;
     left: 12px;
 
     padding: 5px 9px;
-
     background: var(--gold);
     color: var(--dark-green);
 
     border-radius: 5px;
-
     font-size: 10px;
     font-weight: 800;
+}
+
+.ebook-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #e9f5ef, #dceae3);
+}
+
+.ebook-placeholder span {
+    color: var(--dark-green);
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
 .ebook-info {
@@ -671,9 +522,7 @@ section {
 
 .ebook-category {
     margin-bottom: 7px;
-
     color: var(--gold);
-
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 1px;
@@ -681,7 +530,6 @@ section {
 
 .ebook-info h3 {
     margin-bottom: 8px;
-
     color: var(--dark-green);
     font-size: 20px;
 }
@@ -699,11 +547,11 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 10px;
 }
 
-.ebook-purchase strong {
+.ebook-purchase strong,
+.ebook-bottom > strong {
     color: var(--green);
     font-size: 20px;
 }
@@ -715,15 +563,16 @@ section {
 
     padding: 9px 14px;
 
+    border: 0;
+    border-radius: 7px;
+
     background: var(--green);
     color: var(--white);
 
-    border-radius: 7px;
-
     text-decoration: none;
-
     font-size: 12px;
     font-weight: 800;
+    cursor: pointer;
 }
 
 .ebook-btn:hover {
@@ -733,16 +582,11 @@ section {
 .ebook-secure,
 .ebook-download {
     margin-top: 9px;
-
     color: var(--muted);
-
     font-size: 11px;
 }
 
-
-/* =========================================================
-   11. CONSULTATION
-========================================================= */
+/* ================= CONSULTATION ================= */
 
 .consultation-section {
     background: var(--white);
@@ -754,39 +598,31 @@ section {
 
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
-
     gap: 45px;
-
     align-items: center;
 }
 
 .consultant-photo {
     overflow: hidden;
-
     border-radius: var(--radius);
-
     box-shadow: var(--shadow);
 }
 
 .consultant-photo img {
     width: 100%;
     height: 500px;
-
     object-fit: cover;
 }
 
 .consultation-content h2 {
     margin-bottom: 12px;
-
     color: var(--dark-green);
-
     font-size: clamp(27px, 3vw, 37px);
     line-height: 1.2;
 }
 
 .consultation-intro {
     margin-bottom: 25px;
-
     color: var(--muted);
 }
 
@@ -814,13 +650,11 @@ section {
     color: var(--green);
 
     border-radius: 50%;
-
     font-weight: 800;
 }
 
 .consultation-item h3 {
     margin-bottom: 2px;
-
     color: var(--dark-green);
     font-size: 15px;
 }
@@ -833,7 +667,6 @@ section {
 .consultation-price {
     display: flex;
     align-items: baseline;
-
     gap: 9px;
 
     margin: 25px 0 17px;
@@ -841,7 +674,6 @@ section {
 
 .consultation-price span {
     color: var(--green);
-
     font-size: 30px;
     font-weight: 800;
 }
@@ -862,9 +694,7 @@ section {
     color: var(--white);
 
     border-radius: 8px;
-
     text-decoration: none;
-
     font-size: 13px;
     font-weight: 800;
 }
@@ -874,10 +704,7 @@ section {
     background: var(--dark-green);
 }
 
-
-/* =========================================================
-   12. ABOUT
-========================================================= */
+/* ================= ABOUT ================= */
 
 .about-section {
     background: var(--light);
@@ -889,26 +716,20 @@ section {
 
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
-
     gap: 45px;
-
     align-items: start;
 }
 
 .about-content h2 {
     margin-bottom: 15px;
-
     color: var(--dark-green);
-
     font-size: clamp(27px, 3vw, 37px);
     line-height: 1.2;
 }
 
 .about-content > p {
     margin-bottom: 14px;
-
     color: var(--muted);
-
     font-size: 14px;
 }
 
@@ -920,32 +741,26 @@ section {
 .about-highlights {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     gap: 15px;
-
     margin-top: 25px;
 }
 
 .about-highlight {
     display: flex;
     gap: 11px;
-
     padding: 16px;
 
     background: var(--white);
-
     border: 1px solid var(--border);
     border-radius: 10px;
 }
 
 .about-icon {
-    flex: 0 0 auto;
     font-size: 24px;
 }
 
 .about-highlight h3 {
     margin-bottom: 3px;
-
     color: var(--dark-green);
     font-size: 15px;
 }
@@ -956,106 +771,102 @@ section {
 }
 
 .about-values {
-    margin-top: 28px;
+    margin-top: 25px;
 }
 
 .about-values h3 {
-    margin-bottom: 12px;
-
+    margin-bottom: 10px;
     color: var(--dark-green);
 }
 
 .values-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 9px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .values-list span {
-    padding: 9px 12px;
-
+    padding: 7px 10px;
     background: var(--white);
-
     border: 1px solid var(--border);
-    border-radius: 7px;
-
-    color: var(--text);
-
-    font-size: 13px;
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 12px;
 }
 
 .about-card {
-    padding: 30px;
+    padding: 35px 28px;
+    text-align: center;
+
+    background: var(--dark-green);
+    color: var(--white);
+
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.about-card-logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     background: var(--white);
-
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-
-    box-shadow: var(--shadow);
-
-    text-align: center;
+    border-radius: 50%;
 }
 
 .about-card-logo img {
-    width: auto;
-    height: 65px;
-
-    margin: 0 auto 18px;
+    width: 80px;
 }
 
 .about-card h3 {
     margin-bottom: 10px;
-
-    color: var(--dark-green);
-
     font-size: 22px;
-    line-height: 1.25;
 }
 
-.about-card > p {
-    color: var(--muted);
+.about-card p {
+    color: rgba(255,255,255,0.82);
     font-size: 14px;
 }
 
 .about-card-line {
-    width: 60px;
-    height: 3px;
-
+    width: 50px;
+    height: 2px;
     margin: 20px auto;
-
-    background: var(--gold);
-
-    border-radius: 3px;
+    background: var(--bright-gold);
 }
 
 .about-tagline {
-    color: var(--text) !important;
+    color: var(--bright-gold) !important;
     font-weight: 700;
 }
 
-.about-card .about-button {
-    margin-top: 18px;
+.about-button {
+    margin-top: 20px;
+    background: var(--bright-gold);
+    color: var(--dark-green);
+}
+
+.about-button:hover {
+    background: var(--gold);
 }
 
 .about-disclaimer {
     width: min(var(--max-width), 100%);
-
     margin: 35px auto 0;
-    padding: 20px;
+    padding: 18px;
 
     background: #fffdf4;
-
     border-left: 4px solid var(--gold);
     border-radius: 8px;
 }
 
 .about-disclaimer strong {
     display: block;
-
     margin-bottom: 5px;
-
     color: var(--dark-green);
 }
 
@@ -1064,32 +875,21 @@ section {
     font-size: 13px;
 }
 
+/* ================= FEEDBACK ================= */
 
-/* =========================================================
-   13. FEEDBACK
-========================================================= */
+#feedback {
+    background: var(--white);
+}
 
 #feedbackForm {
     width: min(650px, 100%);
-
-    margin: 0 auto;
-    padding: 28px;
-
-    background: var(--white);
-
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-
-    box-shadow: var(--shadow);
+    margin: 25px auto 0;
 }
 
 #feedbackForm label {
     display: block;
-
-    margin: 13px 0 6px;
-
+    margin: 12px 0 6px;
     color: var(--dark-green);
-
     font-size: 13px;
     font-weight: 700;
 }
@@ -1097,68 +897,56 @@ section {
 #feedbackForm input,
 #feedbackForm textarea {
     width: 100%;
-
     padding: 11px 12px;
 
     border: 1px solid var(--border);
     border-radius: 8px;
+    outline: none;
 
     background: var(--white);
-    color: var(--text);
-
-    outline: none;
-}
-
-#feedbackForm input:focus,
-#feedbackForm textarea:focus {
-    border-color: var(--green);
 }
 
 #feedbackForm textarea {
     resize: vertical;
 }
 
-#feedbackForm .btn {
-    width: 100%;
-    margin-top: 15px;
+#feedbackForm input:focus,
+#feedbackForm textarea:focus,
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus,
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+    border-color: var(--green);
 }
 
-
-/* =========================================================
-   14. BOOKING
-========================================================= */
+/* ================= BOOKING ================= */
 
 .booking-section {
     background: var(--light);
 }
 
-.booking-section .section-title {
-    margin-bottom: 30px;
+.booking-section > h2,
+.booking-section > p {
+    text-align: center;
 }
 
 .booking-form {
-    display: block;
-
-    width: min(720px, calc(100% - 40px));
-
-    margin: 0 auto;
-    padding: 30px;
+    width: min(720px, 100%);
+    margin: 30px auto 0;
+    padding: 28px;
 
     background: var(--white);
-
     border: 1px solid var(--border);
     border-radius: var(--radius);
-
     box-shadow: var(--shadow);
 }
 
 .booking-form label {
     display: block;
-
     margin: 13px 0 6px;
 
     color: var(--dark-green);
-
     font-size: 13px;
     font-weight: 700;
 }
@@ -1166,50 +954,30 @@ section {
 .booking-form input,
 .booking-form select,
 .booking-form textarea {
-    display: block;
-
     width: 100%;
-    max-width: 100%;
-
-    padding: 12px 13px;
+    padding: 11px 12px;
 
     border: 1px solid var(--border);
     border-radius: 8px;
 
     background: var(--white);
     color: var(--text);
-
-    font-size: 14px;
-
     outline: none;
 }
 
-.booking-form input:focus,
-.booking-form select:focus,
-.booking-form textarea:focus {
-    border-color: var(--green);
-    box-shadow: 0 0 0 2px rgba(7, 91, 67, 0.08);
-}
-
 .booking-form textarea {
-    min-height: 120px;
     resize: vertical;
 }
 
-.booking-form .btn {
+.booking-form .btn,
+.booking-form .whatsapp-btn {
     width: 100%;
-    margin-top: 16px;
+    margin-top: 14px;
 }
 
 .whatsapp-btn {
-    display: block;
-
-    width: 100%;
-
     min-height: 44px;
-
-    margin-top: 12px;
-    padding: 11px 18px;
+    padding: 10px 18px;
 
     border: 0;
     border-radius: 8px;
@@ -1217,22 +985,11 @@ section {
     background: #25d366;
     color: var(--white);
 
-    font-size: 14px;
     font-weight: 800;
-
     cursor: pointer;
-
-    transition: background 0.2s ease;
 }
 
-.whatsapp-btn:hover {
-    background: #1ebe5d;
-}
-
-
-/* =========================================================
-   15. CONTACT
-========================================================= */
+/* ================= CONTACT ================= */
 
 .contact-section {
     background: var(--white);
@@ -1243,50 +1000,211 @@ section {
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-
+    grid-template-columns: 1fr 0.85fr;
     gap: 45px;
-
     align-items: start;
 }
 
 .contact-info h2 {
     margin-bottom: 12px;
-
     color: var(--dark-green);
-
     font-size: clamp(27px, 3vw, 37px);
     line-height: 1.2;
 }
 
 .contact-intro {
+    max-width: 600px;
     margin-bottom: 25px;
-
     color: var(--muted);
 }
 
 .contact-details {
     display: grid;
-    gap: 16px;
+    gap: 15px;
 }
 
 .contact-item {
     display: flex;
-    align-items: flex-start;
-
     gap: 13px;
+    align-items: center;
 }
 
 .contact-icon {
-    flex: 0 0 auto;
-
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     background: var(--light);
+    border-radius: 50%;
+}
 
-    border
+.contact-item h3 {
+    color: var(--dark-green);
+    font-size: 14px;
+}
+
+.contact-item p,
+.contact-item a {
+    color: var(--muted);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--green);
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.contact-whatsapp,
+.contact-book {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 16px;
+
+    border-radius: 8px;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.contact-whatsapp {
+    background: #25d366;
+    color: var(--white);
+}
+
+.contact-book {
+    background: var(--green);
+    color: var(--white);
+}
+
+.contact-form-card {
+    padding: 28px;
+
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.contact-form-card h3 {
+    margin-bottom: 5px;
+    color: var(--dark-green);
+    font-size: 22px;
+}
+
+.contact-form-card > p {
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.contact-form-card label {
+    display: block;
+    margin: 11px 0 5px;
+
+    color: var(--dark-green);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.contact-form-card input,
+.contact-form-card textarea {
+    width: 100%;
+    padding: 10px 11px;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    outline: none;
+    background: var(--white);
+}
+
+.contact-form-card textarea {
+    resize: vertical;
+}
+
+.contact-form-card button {
+    width: 100%;
+    margin-top: 14px;
+    padding: 11px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: var(--green);
+    color: var(--white);
+
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+
+.twinkle-footer {
+    background: #12352d;
+    color: rgba(255,255,255,0.82);
+    padding: 50px 20px 22px;
+}
+
+.footer-inner {
+    width: min(var(--max-width), 100%);
+    margin: 0 auto;
+}
+
+.footer-brand h3 {
+    margin-bottom: 5px;
+    color: var(--white);
+    font-size: 22px;
+}
+
+.footer-brand p {
+    font-size: 13px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    margin-top: 28px;
+}
+
+.footer-column h4,
+.footer-disclaimer h4 {
+    margin-bottom: 9px;
+    color: var(--bright-gold);
+    font-size: 14px;
+}
+
+.footer-column p,
+.footer-column a,
+.footer-disclaimer p {
+    display: block;
+    margin-bottom: 6px;
+
+    color: rgba(255,255,255,0.72);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: var(--bright-gold);
+}
+
+.footer-disclaimer {
+    max-width: 720px;
+    margin-top: 28px;
+}
+
+.footer-bot
