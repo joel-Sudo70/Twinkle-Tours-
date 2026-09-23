@@ -2403,3 +2403,336 @@ section {
     font-weight: 700;
     letter-spacing: 0.5px;
 }
+
+/* =========================================================
+   TWINKLE TOURS - CLEAN PROFESSIONAL FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: #102f29;
+    color: #ffffff;
+    margin-top: 60px;
+    padding-top: 50px;
+    overflow: hidden;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 35px 45px;
+
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.footer-brand {
+    min-width: 0;
+}
+
+.footer-logo-wrap {
+    display: inline-block;
+    background: #ffffff;
+    padding: 7px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.footer-logo-wrap img {
+    display: block;
+    width: 135px;
+    height: auto;
+}
+
+.footer-tagline {
+    margin: 0 0 10px;
+    color: #d7b65a;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.footer-description {
+    max-width: 330px;
+    margin: 0 0 22px;
+    color: #c7d4cf;
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.footer-social h4 {
+    margin: 0 0 11px;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.social-link {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.04);
+    color: #ffffff;
+
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: .25s ease;
+}
+
+.social-link:hover {
+    background: #d7b65a;
+    border-color: #d7b65a;
+    color: #102f29;
+    transform: translateY(-3px);
+}
+
+
+/* FOOTER COLUMNS */
+
+.footer-column {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+.footer-column h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.footer-line {
+    width: 30px;
+    height: 2px;
+    margin: 1px 0 7px;
+
+    background: #d7b65a;
+    border-radius: 10px;
+}
+
+.footer-column a,
+.footer-column > span {
+    color: #c7d4cf;
+    font-size: 12px;
+    line-height: 1.5;
+    text-decoration: none;
+
+    transition: .2s ease;
+}
+
+.footer-column a:hover {
+    color: #d7b65a;
+    transform: translateX(3px);
+}
+
+
+/* CONTACT */
+
+.footer-contact > a,
+.footer-contact > span {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.footer-contact-icon {
+    flex: 0 0 30px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(215,182,90,0.10);
+    color: #d7b65a;
+
+    font-size: 12px;
+}
+
+
+/* CALL TO ACTION */
+
+.footer-cta {
+    width: calc(100% - 70px);
+    max-width: 1130px;
+
+    margin: 0 auto 35px;
+    padding: 23px 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+}
+
+.footer-cta-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #d7b65a;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.footer-cta h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 19px;
+}
+
+.footer-book-btn {
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    background: #d7b65a;
+    color: #102f29;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition: .25s ease;
+}
+
+.footer-book-btn:hover {
+    background: #e5ca78;
+    transform: translateY(-2px);
+}
+
+
+/* BOTTOM BAR */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+.footer-bottom-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 17px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #91a59e;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.footer-bottom strong {
+    color: #d7b65a;
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-contact {
+        grid-column: span 3;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .site-footer {
+        margin-top: 45px;
+        padding-top: 40px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+
+        padding: 0 22px 35px;
+    }
+
+    .footer-contact {
+        grid-column: auto;
+    }
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+    .footer-cta {
+        width: calc(100% - 36px);
+
+        margin: 0 18px 28px;
+        padding: 21px 18px;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-book-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-bottom-inner {
+        padding: 16px 22px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 6px;
+    }
+
+}
