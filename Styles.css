@@ -1006,6 +1006,98 @@ section {
 
 
 /* =========================================================
+   IMPORTANT TRAVEL INFORMATION
+   ========================================================= */
+
+.important-info-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.important-info {
+    display: flex;
+    gap: 22px;
+
+    padding: 30px;
+
+    background: #f7faf8;
+
+    border: 1px solid #dfe8e3;
+    border-left: 4px solid #b18a22;
+
+    border-radius: 16px;
+}
+
+.important-info-icon {
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #b18a22;
+
+    font-size: 20px;
+}
+
+.important-info-content .eyebrow {
+    margin-bottom: 7px;
+}
+
+.important-info-content h2 {
+    margin-bottom: 13px;
+
+    color: #173f35;
+
+    font-size: 23px;
+}
+
+.important-info-content p:not(.eyebrow) {
+    margin-bottom: 10px;
+
+    color: #65766f;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.important-info-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 600px) {
+
+    .important-info {
+        gap: 15px;
+
+        padding: 22px 18px;
+
+        border-radius: 14px;
+    }
+
+    .important-info-icon {
+        flex: 0 0 40px;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 17px;
+    }
+
+    .important-info-content h2 {
+        font-size: 20px;
+    }
+
+}
+
+/* =========================================================
    DISCLAIMER
    ========================================================= */
 
