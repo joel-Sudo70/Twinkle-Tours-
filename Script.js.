@@ -27,37 +27,31 @@ function sendBookingByEmail() {
     const message = document.getElementById("booking-message").value.trim();
 
     if (!name || !email || !phone || !destination || !message) {
-        alert("Please complete the required booking details.");
+        alert("Please complete the required booking details first.");
         return;
     }
 
     const subject =
         "Twinkle Tours Booking - " + destination;
 
-    let body =
+    const body =
         "Hello Twinkle Tours,\n\n" +
         "I would like to book a trip.\n\n" +
         "Name: " + name + "\n" +
         "Email: " + email + "\n" +
         "Phone / WhatsApp: " + phone + "\n" +
-        "Destination: " + destination + "\n";
+        "Destination: " + destination + "\n" +
+        "Preferred Travel Date: " + (travelDate || "Not specified") + "\n" +
+        "Number of Travelers: " + (travelers || "Not specified") + "\n" +
+        "Additional Information: " + message +
+        "\n\nThank you. I look forward to hearing from you.";
 
-    body +=
-        "Preferred Travel Date: " +
-        (travelDate || "Not specified") + "\n";
-
-    body +=
-        "Number of Travelers: " +
-        (travelers || "Not specified") + "\n";
-
-    body +=
-        "Additional Information: " +
-        message;
-
-    window.location.href =
+    const mailtoURL =
         "mailto:lumwachi03@gmail.com" +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
+
+    window.location.href = mailtoURL;
 }
 
 
