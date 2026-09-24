@@ -1357,225 +1357,22 @@
      BOOKING
 ===================================================== -->
 
-<section id="booking" class="section booking-section">
-
-    <div class="section-title">
-
-        <p class="eyebrow">
-            PLAN YOUR JOURNEY
-        </p>
-
-        <h2>
-            Book Your Trip
-        </h2>
-
-        <p>
-            Tell us about your preferred destination and travel plans.
-            We will get back to you with the next steps.
-        </p>
-
-    </div>
-
-
-    <form
-        class="booking-form"
-        action="https://formsubmit.co/lumwachi03@gmail.com"
-        method="POST">
-
-        <input
-            type="hidden"
-            name="_subject"
-            value="New Twinkle Tours Booking Request">
-
-        <input
-            type="hidden"
-            name="_captcha"
-            value="false">
-
-
-        <div class="form-grid">
-
-            <div class="form-group">
-
-                <label for="booking-name">
-                    Full Name
-                </label>
-
-                <input
-                    id="booking-name"
-                    type="text"
-                    name="name"
-                    placeholder="Your full name"
-                    required>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="booking-email">
-                    Email Address
-                </label>
-
-                <input
-                    id="booking-email"
-                    type="email"
-                    name="email"
-                    placeholder="Your email address"
-                    required>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="booking-phone">
-                    Phone / WhatsApp
-                </label>
-
-                <input
-                    id="booking-phone"
-                    type="tel"
-                    name="phone"
-                    placeholder="Your phone number"
-                    required>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="destination">
-                    Preferred Destination
-                </label>
-
-                <select
-                    id="destination"
-                    name="destination"
-                    required>
-
-                    <option value="">
-                        Select a destination
-                    </option>
-
-                    <option>
-                        Maasai Mara
-                    </option>
-
-                    <option>
-                        Amboseli
-                    </option>
-
-                    <option>
-                        Samburu
-                    </option>
-
-                    <option>
-                        Hell's Gate & Geothermal Spa
-                    </option>
-
-                    <option>
-                        Mount Kenya
-                    </option>
-
-                    <option>
-                        Ngong Hills
-                    </option>
-
-                    <option>
-                        Lake Nakuru
-                    </option>
-
-                    <option>
-                        Nairobi
-                    </option>
-
-                    <option>
-                        Diani Beach
-                    </option>
-
-                    <option>
-                        Mombasa
-                    </option>
-
-                    <option>
-                        Aberdare
-                    </option>
-
-                    <option>
-                        Lake Naivasha
-                    </option>
-
-                    <option>
-                        Other
-                    </option>
-
-                </select>
-
-            </div>
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="travel-date">
-                Preferred Travel Date
-            </label>
-
-            <input
-                id="travel-date"
-                type="date"
-                name="travel_date">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="travelers">
-                Number of Travelers
-            </label>
-
-            <input
-                id="travelers"
-                type="number"
-                name="travelers"
-                min="1"
-                placeholder="Number of travelers">
-
-        </div>
-
-
-        <div class="form-group">
-
-            <label for="booking-message">
-                Additional Information
-            </label>
-
-            <textarea
-                id="booking-message"
-                name="message"
-                placeholder="Tell us anything else about your trip..."
-                required></textarea>
-
-        </div>
-
-
-        <div class="booking-action-buttons"><button
+<div class="booking-action-buttons"><button
     type="submit"
     class="btn email-booking-btn">
     <i class="fa-solid fa-envelope"></i>
     Book via Email
-<a
-    href="https://wa.me/254713354736"
+</button>
+
+<button
+    type="button"
     class="btn whatsapp-booking-btn"
-    target="_blank"
-    rel="noopener">
+    onclick="sendBookingByWhatsApp();">
     <i class="fa-brands fa-whatsapp"></i>
     Book via WhatsApp
-</a>
+</button>
 
+</div></form></section>
 </section>
 
 
@@ -1654,13 +1451,12 @@
 
                 <span>WhatsApp</span>
 
-                <button
-type="button"
-class="btn whatsapp-booking-btn"
-onclick="sendBookingByWhatsApp()">
-<i class="fa-brands fa-whatsapp"></i>
-Book via WhatsApp
-</button>
+<a
+href="https://wa.me/254713354736"
+target="_blank"
+rel="noopener">
+Chat with us
+</a>
 
 </section>
 <!-- =====================================================
