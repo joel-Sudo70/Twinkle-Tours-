@@ -2923,214 +2923,101 @@ section {
 }
 
 /* =====================================================
-   WHY TRAVEL WITH US - SAFARI SIGNATURE
+   WHY TRAVEL WITH US - SIGNATURE DESIGN
 ===================================================== */
 
 .why-travel-section {
     position: relative;
-    padding: 95px 7%;
     overflow: hidden;
-    color: #ffffff;
+    padding: 100px 7%;
 
     background:
         radial-gradient(
-            circle at 15% 20%,
-            rgba(244,196,48,.12),
-            transparent 28%
+            circle at 10% 90%,
+            rgba(244,196,48,.20),
+            transparent 30%
         ),
         radial-gradient(
-            circle at 85% 80%,
-            rgba(43,124,93,.16),
+            circle at 90% 10%,
+            rgba(213,141,53,.18),
             transparent 30%
         ),
         linear-gradient(
             135deg,
-            #062c24 0%,
-            #073f31 45%,
-            #021e19 100%
+            #351d12 0%,
+            #684020 42%,
+            #173f35 100%
         );
+
+    color: #ffffff;
 }
 
 
-/* subtle decorative lines */
+/* Decorative sunset */
 
 .why-travel-section::before {
     content: "";
     position: absolute;
-    width: 500px;
-    height: 500px;
-    right: -220px;
-    top: -250px;
-    border: 1px solid rgba(244,196,48,.12);
+
+    width: 430px;
+    height: 430px;
+
+    right: -160px;
+    top: -190px;
+
     border-radius: 50%;
+
+    background: rgba(244,196,48,.12);
+    box-shadow:
+        0 0 0 45px rgba(244,196,48,.04),
+        0 0 0 90px rgba(244,196,48,.025);
 }
+
+
+/* Decorative horizon */
 
 .why-travel-section::after {
     content: "";
+
     position: absolute;
-    width: 350px;
-    height: 350px;
-    left: -180px;
-    bottom: -220px;
-    border: 1px solid rgba(255,255,255,.06);
-    border-radius: 50%;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 90px;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(0,0,0,.18)
+        );
+
+    pointer-events: none;
 }
 
 
-/* SECTION TITLE */
-
-.why-travel-section .section-title {
-    position: relative;
-    z-index: 2;
-    max-width: 760px;
-    margin: 0 auto 58px;
-    text-align: center;
-}
-
-.why-travel-section .eyebrow {
-    color: #f4c430;
-    letter-spacing: 3px;
-    font-size: 11px;
-    font-weight: 800;
-}
-
-.why-travel-section .section-title h2 {
-    margin: 10px 0 15px;
-    color: #ffffff;
-    font-size: clamp(32px, 4vw, 46px);
-}
-
-.why-travel-section .section-title p:last-child {
-    max-width: 650px;
-    margin: auto;
-    color: rgba(255,255,255,.70);
-    line-height: 1.75;
-}
-
-
-/* MAIN LAYOUT */
-
-.why-travel-layout {
+.why-travel-content {
     position: relative;
     z-index: 2;
 
     max-width: 1180px;
     margin: auto;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
 }
 
 
-/* FEATURED EXPERIENCE */
+/* HEADING */
 
-.why-featured-card {
-    position: relative;
-    min-height: 440px;
-
-    padding: 42px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    border-radius: 24px;
-
-    background:
-        linear-gradient(
-            160deg,
-            rgba(255,255,255,.11),
-            rgba(255,255,255,.035)
-        );
-
-    border: 1px solid rgba(255,255,255,.13);
-
-    box-shadow:
-        0 25px 60px rgba(0,0,0,.22);
-
-    overflow: hidden;
+.why-travel-heading {
+    max-width: 720px;
+    margin-bottom: 65px;
 }
 
+.why-travel-heading span {
+    display: inline-block;
 
-/* large decorative circle */
-
-.why-featured-card::before {
-    content: "";
-    position: absolute;
-
-    width: 300px;
-    height: 300px;
-
-    right: -120px;
-    top: -120px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(244,196,48,.22);
-}
-
-
-/* second circle */
-
-.why-featured-card::after {
-    content: "";
-    position: absolute;
-
-    width: 210px;
-    height: 210px;
-
-    right: -75px;
-    top: -75px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(244,196,48,.12);
-}
-
-
-.why-featured-number {
-    position: absolute;
-    top: 30px;
-    right: 32px;
-
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 3px;
-
-    color: rgba(255,255,255,.40);
-}
-
-
-.why-icon-large {
-    position: relative;
-    z-index: 2;
-
-    width: 70px;
-    height: 70px;
-
-    margin-bottom: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 18px;
-
-    background: rgba(244,196,48,.12);
-    border: 1px solid rgba(244,196,48,.25);
-
-    color: #f4c430;
-
-    font-size: 27px;
-}
-
-
-.why-featured-card span {
-    position: relative;
-    z-index: 2;
-
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 
     color: #f4c430;
 
@@ -3139,60 +3026,59 @@ section {
     letter-spacing: 3px;
 }
 
-
-.why-featured-card h3 {
-    position: relative;
-    z-index: 2;
-
-    max-width: 470px;
-
-    margin-bottom: 15px;
+.why-travel-heading h2 {
+    margin: 0;
 
     color: #ffffff;
 
-    font-size: 30px;
-    line-height: 1.2;
+    font-size: clamp(42px, 6vw, 70px);
+
+    line-height: .98;
+
+    font-weight: 400;
 }
 
+.why-travel-heading h2 strong {
+    color: #f4c430;
+    font-weight: 800;
+}
 
-.why-featured-card p {
-    position: relative;
-    z-index: 2;
+.why-travel-heading p {
+    max-width: 610px;
 
-    max-width: 480px;
+    margin-top: 25px;
 
-    margin: 0;
+    color: rgba(255,255,255,.76);
 
-    color: rgba(255,255,255,.68);
+    font-size: 15px;
 
-    font-size: 14px;
     line-height: 1.8;
 }
 
 
-/* RIGHT SIDE */
+/* BENEFITS */
 
-.why-side-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.why-travel-benefits {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 14px;
 }
 
 
-.why-small-card {
-    flex: 1;
+.why-benefit {
+    min-height: 220px;
 
-    display: grid;
-    grid-template-columns: 40px 1fr;
-    gap: 18px;
+    padding: 27px 23px;
 
-    padding: 24px;
+    background: rgba(255,255,255,.07);
 
-    background: rgba(255,255,255,.055);
+    border: 1px solid rgba(255,255,255,.13);
 
-    border: 1px solid rgba(255,255,255,.11);
+    border-radius: 18px;
 
-    border-radius: 17px;
+    backdrop-filter: blur(8px);
 
     transition:
         transform .25s ease,
@@ -3201,29 +3087,30 @@ section {
 }
 
 
-.why-small-card:hover {
-    transform: translateX(7px);
+.why-benefit:hover {
+    transform: translateY(-8px);
 
-    background: rgba(255,255,255,.09);
+    background: rgba(255,255,255,.11);
 
-    border-color: rgba(244,196,48,.28);
+    border-color: rgba(244,196,48,.35);
 }
 
 
-.why-number {
-    padding-top: 3px;
+/* ICON */
 
-    color: rgba(255,255,255,.32);
+.why-benefit-icon {
+    width: 52px;
+    height: 52px;
 
-    font-size: 12px;
-    font-weight: 800;
-}
+    margin-bottom: 35px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.why-small-card i {
-    display: inline-flex;
+    border-radius: 14px;
 
-    margin-bottom: 10px;
+    background: rgba(244,196,48,.13);
 
     color: #f4c430;
 
@@ -3231,8 +3118,8 @@ section {
 }
 
 
-.why-small-card h3 {
-    margin-bottom: 7px;
+.why-benefit h3 {
+    margin-bottom: 10px;
 
     color: #ffffff;
 
@@ -3240,26 +3127,23 @@ section {
 }
 
 
-.why-small-card p {
+.why-benefit p {
     margin: 0;
 
     color: rgba(255,255,255,.62);
 
     font-size: 13px;
+
     line-height: 1.7;
 }
 
 
 /* TABLET */
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
 
-    .why-travel-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .why-featured-card {
-        min-height: 400px;
+    .why-travel-benefits {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -3270,25 +3154,23 @@ section {
 @media (max-width: 600px) {
 
     .why-travel-section {
-        padding: 70px 5%;
+        padding: 75px 5%;
     }
 
-    .why-travel-section .section-title {
+    .why-travel-heading {
         margin-bottom: 40px;
     }
 
-    .why-featured-card {
-        min-height: 390px;
-        padding: 30px;
-        border-radius: 20px;
+    .why-travel-heading h2 {
+        font-size: 46px;
     }
 
-    .why-featured-card h3 {
-        font-size: 25px;
+    .why-travel-benefits {
+        grid-template-columns: 1fr;
     }
 
-    .why-small-card {
-        padding: 21px;
+    .why-benefit {
+        min-height: auto;
     }
 
 }
