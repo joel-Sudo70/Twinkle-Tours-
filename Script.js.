@@ -1,160 +1,103 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-const bookingForm = document.querySelector(".booking-form");
+    const bookingForm = document.querySelector(".booking-form");
 
-if (bookingForm) {
-
-    bookingForm.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        sendBookingByEmail();
-
-    });
-
-}
+    if (bookingForm) {
+        bookingForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            sendBookingByEmail();
+        });
+    }
 
 });
 
+
 /* =========================================================
-EMAIL BOOKING
+   EMAIL BOOKING
 ========================================================= */
 
 function sendBookingByEmail() {
 
-const name = document.getElementById("booking-name").value.trim();
-const email = document.getElementById("booking-email").value.trim();
-const phone = document.getElementById("booking-phone").value.trim();
-const destination = document.getElementById("destination").value;
-const travelDate = document.getElementById("travel-date").value;
-const travelers = document.getElementById("travelers").value;
-const message = document.getElementById("booking-message").value.trim();
+    const name = document.getElementById("booking-name").value.trim();
+    const email = document.getElementById("booking-email").value.trim();
+    const phone = document.getElementById("booking-phone").value.trim();
+    const destination = document.getElementById("destination").value;
+    const travelDate = document.getElementById("travel-date").value;
+    const travelers = document.getElementById("travelers").value;
+    const message = document.getElementById("booking-message").value.trim();
 
-if (!name || !email || !phone || !destination || !message) {
-    alert("Please complete the required booking details.");
-    return;
-}
+    if (!name || !email || !phone || !destination || !message) {
+        alert("Please complete the required booking details.");
+        return;
+    }
 
-const subject =
-    "Twinkle Tours Booking - " + destination;
+    const subject =
+        "Twinkle Tours Booking - " + destination;
 
-let body =
-    "Hello Twinkle Tours,%0A%0A" +
-    "I would like to book a trip.%0A%0A" +
-    "Name: " + encodeURIComponent(name) + "%0A" +
-    "Email: " + encodeURIComponent(email) + "%0A" +
-    "Phone / WhatsApp: " + encodeURIComponent(phone) + "%0A" +
-    "Destination: " + encodeURIComponent(destination);
+    let body =
+        "Hello Twinkle Tours,\n\n" +
+        "I would like to book a trip.\n\n" +
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Phone / WhatsApp: " + phone + "\n" +
+        "Destination: " + destination + "\n";
 
-if (travelDate) {
     body +=
-        "%0APreferred Travel Date: " +
-        encodeURIComponent(travelDate);
-}
+        "Preferred Travel Date: " +
+        (travelDate || "Not specified") + "\n";
 
-if (travelers) {
     body +=
-        "%0ANumber of Travelers: " +
-        encodeURIComponent(travelers);
+        "Number of Travelers: " +
+        (travelers || "Not specified") + "\n";
+
+    body +=
+        "Additional Information: " +
+        message;
+
+    window.location.href =
+        "mailto:lumwachi03@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
 }
 
-body +=
-    "%0AAdditional Information: " +
-    encodeURIComponent(message);
-
-window.location.href =
-    "mailto:lumwachi03@gmail.com" +
-    "?subject=" +
-    encodeURIComponent(subject) +
-    "&body=" +
-    body;
-
-}
 
 /* =========================================================
-WHATSAPP BOOKING
+   WHATSAPP BOOKING
 ========================================================= */
 
 function sendBookingByWhatsApp() {
 
-const name = document.getElementById("booking-name").value.trim();
-const email = document.getElementById("booking-email").value.trim();
-const phone = document.getElementById("booking-phone").value.trim();
-const destination = document.getElementById("destination").value;
-const travelDate = document.getElementById("travel-date").value;
-const travelers = document.getElementById("travelers").value;
-const message = document.getElementById("booking-message").value.trim();
+    const name = document.getElementById("booking-name").value.trim();
+    const email = document.getElementById("booking-email").value.trim();
+    const phone = document.getElementById("booking-phone").value.trim();
+    const destination = document.getElementById("destination").value;
+    const travelDate = document.getElementById("travel-date").value;
+    const travelers = document.getElementById("travelers").value;
+    const message = document.getElementById("booking-message").value.trim();
 
-if (!name || !email || !phone || !destination || !message) {
-    alert("Please complete the required booking details.");
-    return;
-}
+    if (!name || !email || !phone || !destination || !message) {
+        alert("Please complete the required booking details first.");
+        return;
+    }
 
-let whatsappMessage =
-    "Hello Twinkle Tours,%0A%0A" +
-    "I would like to book a trip.%0A%0A" +
-    "Name: " + encodeURIComponent(name) + "%0A" +
-    "Email: " + encodeURIComponent(email) + "%0A" +
-    "Phone / WhatsApp: " + encodeURIComponent(phone) + "%0A" +
-    "Destination: " + encodeURIComponent(destination);
+    let whatsappMessage =
+        "Hello Twinkle Tours,\n\n" +
+        "I would like to book a trip.\n\n" +
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Phone / WhatsApp: " + phone + "\n" +
+        "Destination: " + destination + "\n" +
+        "Preferred Travel Date: " +
+        (travelDate || "Not specified") + "\n" +
+        "Number of Travelers: " +
+        (travelers || "Not specified") + "\n" +
+        "Additional Information: " +
+        message +
+        "\n\nThank you. I look forward to hearing from you.";
 
-if (travelDate) {
-    whatsappMessage +=
-        "%0APreferred Travel Date: " +
-        encodeURIComponent(travelDate);
-}
+    const whatsappURL =
+        "https://wa.me/254713354736?text=" +
+        encodeURIComponent(whatsappMessage);
 
-if (travelers) {
-    whatsappMessage +=
-        "%0ANumber of Travelers: " +
-        encodeURIComponent(travelers);
-}
-
-whatsappMessage +=
-    "%0AAdditional Information: " +
-    encodeURIComponent(message);
-
-whatsappMessage +=
-    "%0A%0AThank you. I look forward to hearing from you.";
-
-const whatsappURL =
-    "https://wa.me/254713354736?text=" +
-    whatsappMessage;
-
-window.open(whatsappURL, "_blank");
-
-}
-
-function sendBookingByWhatsApp() {
-
-const name = document.getElementById("booking-name").value.trim();
-const email = document.getElementById("booking-email").value.trim();
-const phone = document.getElementById("booking-phone").value.trim();
-const destination = document.getElementById("destination").value;
-const travelDate = document.getElementById("travel-date").value;
-const travelers = document.getElementById("travelers").value;
-const message = document.getElementById("booking-message").value.trim();
-
-if (!name || !email || !phone || !destination || !message) {
-    alert("Please complete the required booking details first.");
-    return;
-}
-
-const text =
-    "Hello Twinkle Tours,%0A%0A" +
-    "I would like to book a trip.%0A%0A" +
-    "Name: " + encodeURIComponent(name) + "%0A" +
-    "Email: " + encodeURIComponent(email) + "%0A" +
-    "Phone / WhatsApp: " + encodeURIComponent(phone) + "%0A" +
-    "Destination: " + encodeURIComponent(destination) + "%0A" +
-    "Travel Date: " + encodeURIComponent(travelDate || "Not specified") + "%0A" +
-    "Number of Travelers: " + encodeURIComponent(travelers || "Not specified") + "%0A" +
-    "Additional Information: " + encodeURIComponent(message) +
-    "%0A%0AThank you.";
-
-const url =
-    "https://wa.me/254713354736?text=" + text;
-
-window.open(url, "_blank");
-
+    window.location.href = whatsappURL;
 }
