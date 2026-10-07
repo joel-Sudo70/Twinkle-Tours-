@@ -3441,110 +3441,120 @@ section {
 
 .car-rental-section {
     width: 100%;
-    padding: 65px 20px;
-    background: #f7f8f6;
+    padding: 70px 20px;
+    background: #f7f8f6 !important;
     box-sizing: border-box;
 }
 
 .car-rental-content {
-    width: min(100%, 900px);
-    margin: 0 auto;
-    padding: 45px 30px;
-    text-align: center;
+    width: min(100%, 900px) !important;
+    margin: 0 auto !important;
+    padding: 45px 35px !important;
 
-    background: #ffffff;
-    border: 1px solid #e2e8e4;
-    border-radius: 16px;
-    box-sizing: border-box;
+    text-align: center !important;
 
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    background: #ffffff !important;
+    border: 1px solid #e2e8e4 !important;
+    border-radius: 18px !important;
+
+    box-sizing: border-box !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06) !important;
 }
 
 .car-rental-section .eyebrow {
-    margin: 0 0 10px;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #9a7615;
-    text-transform: uppercase;
+    margin: 0 0 10px !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    color: #9a7615 !important;
+    text-transform: uppercase !important;
 }
 
 .car-rental-section h2 {
-    margin: 0 0 15px;
-    font-size: clamp(1.9rem, 4vw, 2.5rem);
-    line-height: 1.2;
-    color: #173f35;
+    margin: 0 0 16px !important;
+    font-size: clamp(1.8rem, 4vw, 2.5rem) !important;
+    line-height: 1.2 !important;
+    color: #173f35 !important;
 }
 
 .car-rental-intro {
-    max-width: 680px;
-    margin: 0 auto 28px;
-    color: #65766f;
-    font-size: 1rem;
-    line-height: 1.7;
+    max-width: 700px !important;
+    margin: 0 auto 28px !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    color: #65766f !important;
 }
 
 .car-rental-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
-    min-height: 48px;
-    padding: 13px 28px;
+    min-width: 210px !important;
+    min-height: 48px !important;
 
-    background: #075b43;
+    padding: 13px 25px !important;
+
+    background: #075b43 !important;
     color: #ffffff !important;
 
-    border-radius: 8px;
+    border: none !important;
+    border-radius: 8px !important;
+
     text-decoration: none !important;
 
-    font-size: 0.96rem;
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: 0.96rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
 
-    box-sizing: border-box;
-    transition: background 0.2s ease,
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
+    box-sizing: border-box !important;
+    transition: all 0.2s ease !important;
 }
 
 .car-rental-btn:hover {
-    background: #003d2d;
+    background: #003d2d !important;
     color: #ffffff !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
 }
 
 .car-rental-note {
-    display: block;
-    margin-top: 18px;
-    color: #7a8882;
-    font-size: 0.82rem;
+    display: block !important;
+    margin-top: 18px !important;
+    color: #7a8882 !important;
+    font-size: 0.82rem !important;
+    line-height: 1.5 !important;
 }
 
-/* Mobile */
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
 
 @media (max-width: 600px) {
 
     .car-rental-section {
-        padding: 45px 15px;
+        padding: 50px 15px !important;
     }
 
     .car-rental-content {
-        padding: 35px 20px;
-        border-radius: 14px;
+        width: 100% !important;
+        padding: 35px 20px !important;
+        border-radius: 14px !important;
     }
 
     .car-rental-section h2 {
-        font-size: 1.75rem;
+        font-size: 1.75rem !important;
     }
 
     .car-rental-intro {
-        font-size: 0.95rem;
+        font-size: 0.95rem !important;
+        line-height: 1.65 !important;
     }
 
     .car-rental-btn {
-        width: 100%;
-        max-width: 320px;
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
     }
 }
