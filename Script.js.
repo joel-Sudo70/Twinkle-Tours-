@@ -80,22 +80,22 @@ const serviceType = document.getElementById("service-type").value;
     const message = document.getElementById("booking-message").value.trim();
 
     if (!name || !email || !phone || !serviceType || !destination || !message) {
-        alert("Please complete the required booking details first.");
-        return false;
-    }
+    alert("Please complete the required booking details first.");
+    return false;
+}
 
-    const whatsappMessage =
-        "Hello Twinkle Tours,\n\n" +
-        "I would like to book a trip.\n\n" +
-        "Name: " + name + "\n" +
-        "Email: " + email + "\n" +
-        "Phone / WhatsApp: " + phone + "\n" +
-        "Destination: " + destination + "\n" +
-        "Preferred Travel Date: " + (travelDate || "Not specified") + "\n" +
-        "Number of Travelers: " + (travelers || "Not specified") + "\n" +
-        "Additional Information: " + message +
-        "\n\nThank you. I look forward to hearing from you.";
-
+const whatsappMessage =
+    "Hello Twinkle Tours,\n\n" +
+    "I would like to book a trip.\n\n" +
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Phone / WhatsApp: " + phone + "\n" +
+    "Destination: " + destination + "\n" +
+    "Service: " + serviceType + "\n" +
+    "Preferred Travel Date: " + (travelDate || "Not specified") + "\n" +
+    "Number of Travelers: " + (travelers || "Not specified") + "\n" +
+    "Additional Information: " + message +
+    "\n\nThank you. I look forward to hearing from you.";
     const whatsappURL =
         "https://wa.me/254713354736?text=" +
         encodeURIComponent(whatsappMessage);
