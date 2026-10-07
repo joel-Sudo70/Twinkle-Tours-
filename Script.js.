@@ -70,6 +70,9 @@ function sendBookingByWhatsApp(event) {
     const email = document.getElementById("booking-email").value.trim();
     const phone = document.getElementById("booking-phone").value.trim();
     const destination = document.getElementById("destination").value;
+
+const serviceType = document.getElementById("service-type").value;
+
     const travelDate = document.getElementById("travel-date").value;
     const travelers = document.getElementById("travelers").value;
     const message = document.getElementById("booking-message").value.trim();
