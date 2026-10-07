@@ -3434,3 +3434,117 @@ section {
         max-width: 300px;
     }
 }
+
+/* =====================================================
+   DISCOVERCARS CAR RENTAL AFFILIATE
+   ===================================================== */
+
+.car-rental-section {
+    width: 100%;
+    padding: 65px 20px;
+    background: #f7f8f6;
+    box-sizing: border-box;
+}
+
+.car-rental-content {
+    width: min(100%, 900px);
+    margin: 0 auto;
+    padding: 45px 30px;
+    text-align: center;
+
+    background: #ffffff;
+    border: 1px solid #e2e8e4;
+    border-radius: 16px;
+    box-sizing: border-box;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.car-rental-section .eyebrow {
+    margin: 0 0 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #9a7615;
+    text-transform: uppercase;
+}
+
+.car-rental-section h2 {
+    margin: 0 0 15px;
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    color: #173f35;
+}
+
+.car-rental-intro {
+    max-width: 680px;
+    margin: 0 auto 28px;
+    color: #65766f;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.car-rental-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 13px 28px;
+
+    background: #075b43;
+    color: #ffffff !important;
+
+    border-radius: 8px;
+    text-decoration: none !important;
+
+    font-size: 0.96rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+    box-sizing: border-box;
+    transition: background 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.car-rental-btn:hover {
+    background: #003d2d;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.car-rental-note {
+    display: block;
+    margin-top: 18px;
+    color: #7a8882;
+    font-size: 0.82rem;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .car-rental-section {
+        padding: 45px 15px;
+    }
+
+    .car-rental-content {
+        padding: 35px 20px;
+        border-radius: 14px;
+    }
+
+    .car-rental-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .car-rental-intro {
+        font-size: 0.95rem;
+    }
+
+    .car-rental-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+}
