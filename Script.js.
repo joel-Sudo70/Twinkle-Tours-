@@ -26,7 +26,7 @@ function sendBookingByEmail() {
     const travelers = document.getElementById("travelers").value;
     const message = document.getElementById("booking-message").value.trim();
 
-    if (!name || !email || !phone || !destination || !message) {
+    if (!name || !email || !phone || !serviceType || !destination || !message) {
         alert("Please complete the required booking details first.");
         return;
     }
