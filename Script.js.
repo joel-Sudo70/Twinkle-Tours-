@@ -41,6 +41,8 @@ function sendBookingByEmail() {
         "Email: " + email + "\n" +
         "Phone / WhatsApp: " + phone + "\n" +
         "Destination: " + destination + "\n" +
+
+"Service: " + serviceType + "\n" +
         "Preferred Travel Date: " + (travelDate || "Not specified") + "\n" +
         "Number of Travelers: " + (travelers || "Not specified") + "\n" +
         "Additional Information: " + message +
