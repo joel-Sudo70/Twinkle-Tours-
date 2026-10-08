@@ -3558,3 +3558,21 @@ section {
         margin: 0 auto !important;
     }
 }
+
+/* =====================================================
+   AFFILIATE DISCLOSURE
+   ===================================================== */
+
+.affiliate-disclosure {
+    max-width: 850px;
+    margin: 28px auto 0;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: #7a8882;
+}
+
+.affiliate-disclosure strong {
+    color: #5f6d67;
+}
