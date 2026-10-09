@@ -26,8 +26,18 @@ function sendBookingByEmail() {
     const travelers = document.getElementById("travelers").value;
     const message = document.getElementById("booking-message").value.trim();
 
-    if (!name || !email || !phone || !serviceType || !destination || !message) {
-        alert("Please complete the required booking details first.");
+    if (
+    !name ||
+    !email ||
+    !phone ||
+    !serviceType ||
+    !message ||
+    (serviceType === "Travel Package / Tour" && !destination)
+) {
+   
+const serviceType = document.getElementById("service-type").value;
+
+     alert("Please complete the required booking details first.");
         return;
     }
 
@@ -125,19 +135,21 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const serviceSelect = document.getElementById("service-type");
 
-    const tripFields = [
-        document.getElementById("destination-field"),
-        document.getElementById("travel-date-field"),
-        document.getElementById("travelers-field")
-    ];
+    const destinationField = document.getElementById("destination-field");
+    const travelDateField = document.getElementById("travel-date-field");
+    const travelersField = document.getElementById("travelers-field");
 
     const destinationSelect = document.getElementById("destination");
+    const travelDateInput = document.getElementById("travel-date");
+    const travelersInput = document.getElementById("travelers");
+
+    if (!serviceSelect) return;
 
     function updateBookingFields() {
         const isConsultation =
-            serviceSelect.value === "Travel Consultation – $70 USD";
+            serviceSelect.value.trim() === "Travel Consultation – $70 USD";
 
-        tripFields.forEach(function (field) {
+        [destinationField, travelDateField, travelersField].forEach(function (field) {
             if (field) {
                 field.hidden = isConsultation;
             }
@@ -145,6 +157,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (destinationSelect) {
             destinationSelect.required = !isConsultation;
+        }
+
+        if (travelDateInput) {
+            travelDateInput.required = false;
+        }
+
+        if (travelersInput) {
+            travelersInput.required = false;
         }
     }
 
