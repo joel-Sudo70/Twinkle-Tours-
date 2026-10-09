@@ -111,4 +111,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!whatsappButton) return;
 
-    
+    /* =====================================================
+   SHOW OR HIDE FIELDS BY BOOKING TYPE
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const serviceSelect = document.getElementById("service-type");
+
+    const tripFields = [
+        document.getElementById("destination-field"),
+        document.getElementById("travel-date-field"),
+        document.getElementById("travelers-field")
+    ];
+
+    const destinationSelect = document.getElementById("destination");
+
+    function updateBookingFields() {
+        const isConsultation =
+            serviceSelect.value === "Travel Consultation – $70 USD";
+
+        tripFields.forEach(function (field) {
+            if (field) {
+                field.hidden = isConsultation;
+            }
+        });
+
+        if (destinationSelect) {
+            destinationSelect.required = !isConsultation;
+        }
+    }
+
+    serviceSelect.addEventListener("change", updateBookingFields);
+
+    updateBookingFields();
+});
