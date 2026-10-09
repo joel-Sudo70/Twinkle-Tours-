@@ -79,14 +79,21 @@ const serviceType = document.getElementById("service-type").value;
     const travelers = document.getElementById("travelers").value;
     const message = document.getElementById("booking-message").value.trim();
 
-    if (!name || !email || !phone || !serviceType || !destination || !message) {
+    if (
+    !name ||
+    !email ||
+    !phone ||
+    !serviceType ||
+    !message ||
+    (serviceType === "Travel Package / Tour" && !destination)
+) {
     alert("Please complete the required booking details first.");
     return false;
 }
 
 const whatsappMessage =
     "Hello Twinkle Tours,\n\n" +
-    "I would like to book a trip.\n\n" +
+    "I would like to book: " + serviceType + ".\n\n" +
     "Name: " + name + "\n" +
     "Email: " + email + "\n" +
     "Phone / WhatsApp: " + phone + "\n" +
