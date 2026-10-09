@@ -3576,3 +3576,8 @@ section {
 .affiliate-disclosure strong {
     color: #5f6d67;
 }
+
+/* Hide trip-specific fields for consultation bookings */
+.trip-only-field[hidden] {
+    display: none !important;
+}
