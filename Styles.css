@@ -226,7 +226,7 @@ section {
 
     color: var(--white);
 }
-
+url("./elephant-safari-hero.jpg");
 .overlay {
     width: min(850px,92%);
     padding: 40px 20px;
