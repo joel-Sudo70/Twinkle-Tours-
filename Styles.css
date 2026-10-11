@@ -219,7 +219,7 @@ section {
             rgba(15,24,18,.53),
             rgba(15,24,18,.35)
         ),
-        url("./elephant-safari-hero.jpg.");
+        url("./url("./elephant-safari-hero.jpg");
 
     background-size: cover;
     background-position: center;
