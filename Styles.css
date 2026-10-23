@@ -3576,3 +3576,35 @@ section {
 .trip-only-field[hidden] {
     display: none !important;
 }
+
+
+/* ROANCREST TOURS & SAFARIS - CIRCULAR LOGO */
+.brand-area {
+    padding: 10px 16px;
+}
+
+.brand img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Keep the logo balanced on mobile phones */
+@media (max-width: 600px) {
+    .brand-area {
+        padding: 8px 12px;
+    }
+
+    .brand img {
+        width: 82px;
+        height: 82px;
+    }
+
+    .brand-area::before,
+    .brand-area::after {
+        width: 12vw;
+    }
+}
